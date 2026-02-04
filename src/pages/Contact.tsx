@@ -241,6 +241,10 @@ export default function Contact() {
                       {errors.message && (
                         <p className="text-destructive text-sm mt-1">{errors.message.message}</p>
                       )}
+                      <p className="text-sm text-muted-foreground mt-2">
+                        <span className="font-medium text-secondary">Upload 3 clear photos:</span>{" "}
+                        1) Full area, 2) Close-up of damage, 3) Water source
+                      </p>
                     </div>
 
                     <Button
