@@ -35,9 +35,9 @@ const blogPosts: BlogPost[] = [
     readTime: "7 min read",
   },
   {
-    slug: "concrete-cancer-prevention",
-    title: "How to Prevent Concrete Cancer in Your Building",
-    excerpt: "Concrete cancer can cause serious structural damage. Learn the causes, warning signs, and prevention strategies to protect your property.",
+    slug: "concrete-degradation-prevention",
+    title: "How to Prevent Concrete Degradation in Your Building",
+    excerpt: "Concrete degradation (spalling) can cause serious structural damage. Learn the causes, warning signs, and prevention strategies to protect your property.",
     category: "Balcony Repairs",
     author: "Sydney Leak Repairs Pro",
     date: "2024-01-05",
@@ -82,7 +82,7 @@ export default function Blog() {
     <>
       <SEOHead
         title="Blog | Leak Repair Tips & Guides"
-        description="Expert advice on shower leaks, balcony waterproofing, concrete cancer prevention, and more. Stay informed with Sydney Leak Repairs Pro."
+        description="Expert advice on shower leaks, balcony waterproofing, concrete degradation prevention, and more. Stay informed with Sydney Leak Repairs Pro."
       />
 
       <div className="min-h-screen bg-background">

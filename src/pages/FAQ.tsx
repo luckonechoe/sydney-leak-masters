@@ -66,8 +66,8 @@ const faqs: FAQItem[] = [
   },
   {
     category: "Technical",
-    question: "What is concrete cancer?",
-    answer: "Concrete cancer occurs when water penetrates concrete and reaches the steel reinforcement inside. The steel rusts and expands, cracking the concrete further. Left untreated, it can cause serious structural damage. Proper waterproofing prevents this.",
+    question: "What is spalling (concrete degradation)?",
+    answer: "Concrete degradation (spalling) occurs when water penetrates concrete and reaches the steel reinforcement inside. The steel rusts and expands, cracking the concrete further. Left untreated, it can cause serious structural damage. Proper waterproofing prevents this.",
   },
   {
     category: "Service",

@@ -8,7 +8,7 @@ import { QuoteForm } from "@/components/QuoteForm";
 import { SEOHead, ServiceSchema, Breadcrumbs } from "@/components/seo";
 
 const benefits = [
-  "Prevents concrete cancer",
+  "Prevents spalling",
   "Full membrane restoration",
   "Strata-approved methods",
   "Minimal disruption to residents",
@@ -35,12 +35,12 @@ export default function BalconyRepairs() {
   return (
     <>
       <SEOHead
-        title="Balcony Leak Repairs Sydney | Prevent Concrete Cancer"
-        description="Expert balcony waterproofing and leak repairs. Prevent concrete cancer and structural damage. Starting from $2,390. 10-year warranty. Strata approved."
+        title="Balcony Leak Repairs Sydney | Prevent Concrete Degradation"
+        description="Expert balcony waterproofing and leak repairs. Prevent concrete degradation and structural damage. Starting from $2,390. 10-year warranty. Strata approved."
       />
       <ServiceSchema
         name="Balcony Leak Repair Service"
-        description="Professional balcony waterproofing and leak repair. Prevents concrete cancer and structural damage. 10-year warranty included."
+        description="Professional balcony waterproofing and leak repair. Prevents concrete degradation and structural damage. 10-year warranty included."
         price="2390"
       />
 
@@ -74,7 +74,7 @@ export default function BalconyRepairs() {
                 </h1>
 
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  Protect your property from costly concrete cancer and structural 
+                  Protect your property from costly concrete degradation and structural 
                   damage. Our expert waterproofing solutions seal balcony leaks 
                   permanently with strata-compliant methods.
                 </p>
@@ -141,7 +141,7 @@ export default function BalconyRepairs() {
                 </div>
                 <p className="text-muted-foreground mb-8">
                   Don't ignore these signs. Left untreated, balcony leaks lead to 
-                  concrete cancer — a costly structural problem that only gets worse 
+                  spalling — a costly structural problem that only gets worse 
                   with time.
                 </p>
 
@@ -171,7 +171,7 @@ export default function BalconyRepairs() {
                 className="p-8 bg-card rounded-xl border border-border"
               >
                 <h3 className="font-heading font-bold text-xl text-foreground mb-4">
-                  What is Concrete Cancer?
+                  What is Spalling?
                 </h3>
                 <p className="text-muted-foreground mb-6">
                   When water penetrates concrete through cracks or failed waterproofing, 
@@ -250,7 +250,7 @@ export default function BalconyRepairs() {
                     Protected
                   </h3>
                   <p className="text-sm text-muted-foreground">
-                    Prevents concrete cancer
+                    Prevents spalling
                   </p>
                 </div>
                 <div className="col-span-2 p-6 bg-card rounded-lg border border-border">
