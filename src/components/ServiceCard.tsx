@@ -24,12 +24,12 @@ const serviceData = {
   },
   balcony: {
     title: "Balcony Leak Repairs",
-    description: "Prevent concrete cancer and structural damage with expert waterproofing membrane solutions.",
+    description: "Prevent concrete degradation and structural damage with expert waterproofing membrane solutions.",
     price: "2,390",
     icon: Building2,
     href: "/services/balcony-repairs",
     features: [
-      "Prevents concrete cancer",
+      "Prevents spalling",
       "Full membrane restoration",
       "Strata approved methods",
     ],
