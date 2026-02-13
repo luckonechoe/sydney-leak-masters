@@ -32,12 +32,12 @@ const faqs: FAQItem[] = [
   {
     category: "Pricing",
     question: "How much does shower leak repair cost?",
-    answer: "Shower leak repairs start from $890 for a standard shower. The exact cost depends on the size of the shower, extent of the damage, and any additional work required. We provide free, detailed quotes with no hidden costs.",
+    answer: "Shower leak repairs start from $790 for a standard shower. The exact cost depends on the size of the shower, extent of the damage, and any additional work required. We provide free, detailed quotes with no hidden costs.",
   },
   {
     category: "Pricing",
     question: "How much does balcony leak repair cost?",
-    answer: "Balcony repairs start from $2,390, depending on the size and condition of the balcony. Complex repairs involving membrane replacement or structural work may cost more. We'll provide a detailed assessment and quote after inspection.",
+    answer: "Balcony repairs start from $1,390, depending on the size and condition of the balcony. Complex repairs involving membrane replacement or structural work may cost more. We'll provide a detailed assessment and quote after inspection.",
   },
   {
     category: "Process",

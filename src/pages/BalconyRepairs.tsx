@@ -36,12 +36,12 @@ export default function BalconyRepairs() {
     <>
       <SEOHead
         title="Balcony Leak Repairs Sydney | Prevent Concrete Degradation"
-        description="Expert balcony waterproofing and leak repairs. Prevent concrete degradation and structural damage. Starting from $2,390. 10-year warranty. Strata approved."
+        description="Expert balcony waterproofing and leak repairs. Prevent concrete degradation and structural damage. Starting from $1,390. 10-year warranty. Strata approved."
       />
       <ServiceSchema
         name="Balcony Leak Repair Service"
         description="Professional balcony waterproofing and leak repair. Prevents concrete degradation and structural damage. 10-year warranty included."
-        price="2390"
+        price="1390"
       />
 
       <div className="min-h-screen bg-background">
@@ -82,7 +82,7 @@ export default function BalconyRepairs() {
                 <div className="flex items-center gap-6 mb-8 p-4 bg-card rounded-lg border border-border">
                   <div>
                     <span className="text-muted-foreground text-sm">Starting from</span>
-                    <div className="text-3xl font-heading font-bold text-foreground">$2,390</div>
+                    <div className="text-3xl font-heading font-bold text-foreground">$1,390</div>
                   </div>
                   <div className="h-12 w-px bg-border" />
                   <div className="flex items-center gap-1">

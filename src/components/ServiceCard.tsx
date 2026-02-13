@@ -13,7 +13,7 @@ const serviceData = {
   shower: {
     title: "Shower Leak Repairs",
     description: "Stop shower leaks permanently with our premium epoxy grout technology. No need to remove tiles.",
-    price: "890",
+    price: "790",
     icon: Droplets,
     href: "/services/shower-repairs",
     features: [
@@ -25,7 +25,7 @@ const serviceData = {
   balcony: {
     title: "Balcony Leak Repairs",
     description: "Prevent concrete degradation and structural damage with expert waterproofing membrane solutions.",
-    price: "2,390",
+    price: "1,390",
     icon: Building2,
     href: "/services/balcony-repairs",
     features: [
