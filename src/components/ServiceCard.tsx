@@ -13,7 +13,7 @@ const serviceData = {
   shower: {
     title: "Shower Leak Repairs",
     description: "Stop shower leaks permanently with our premium epoxy grout technology. No need to remove tiles.",
-    price: "790",
+    
     icon: Droplets,
     href: "/services/shower-repairs",
     features: [
@@ -25,7 +25,7 @@ const serviceData = {
   balcony: {
     title: "Balcony Leak Repairs",
     description: "Prevent concrete degradation and structural damage with expert waterproofing membrane solutions.",
-    price: "1,390",
+    
     icon: Building2,
     href: "/services/balcony-repairs",
     features: [
@@ -54,16 +54,8 @@ export function ServiceCard({ type, className }: ServiceCardProps) {
           <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           
           <CardHeader className="relative">
-            <div className="flex items-start justify-between">
-              <div className="p-3 rounded-lg bg-secondary/10 text-secondary mb-4">
-                <Icon className="w-6 h-6" />
-              </div>
-              <div className="text-right">
-                <span className="text-muted-foreground text-sm">From</span>
-                <div className="text-2xl font-heading font-bold text-foreground">
-                  ${data.price}
-                </div>
-              </div>
+            <div className="p-3 rounded-lg bg-secondary/10 text-secondary mb-4">
+              <Icon className="w-6 h-6" />
             </div>
             <CardTitle className="text-xl font-heading text-foreground group-hover:text-secondary transition-colors">
               {data.title}

@@ -22,7 +22,7 @@ const benefits = [
   "Stop leaks without costly re-tiling",
   "Expert epoxy grout application",
   "Sydney-wide service coverage",
-  "Transparent, upfront pricing",
+  "Transparent, upfront quotes",
   "Licensed and insured technicians",
   "Strata and property manager friendly",
 ];

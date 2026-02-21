@@ -36,12 +36,12 @@ export default function BalconyRepairs() {
     <>
       <SEOHead
         title="Balcony Leak Repairs Sydney | Prevent Concrete Degradation"
-        description="Expert balcony waterproofing and leak repairs. Prevent concrete degradation and structural damage. Starting from $1,390. 10-year warranty. Strata approved."
+        description="Expert balcony waterproofing and leak repairs. Prevent concrete degradation and structural damage. 10-year warranty. Strata approved."
       />
       <ServiceSchema
         name="Balcony Leak Repair Service"
         description="Professional balcony waterproofing and leak repair. Prevents concrete degradation and structural damage. 10-year warranty included."
-        price="1390"
+        
       />
 
       <div className="min-h-screen bg-background">
@@ -79,12 +79,7 @@ export default function BalconyRepairs() {
                   permanently with strata-compliant methods.
                 </p>
 
-                <div className="flex items-center gap-6 mb-8 p-4 bg-card rounded-lg border border-border">
-                  <div>
-                    <span className="text-muted-foreground text-sm">Starting from</span>
-                    <div className="text-3xl font-heading font-bold text-foreground">$1,390</div>
-                  </div>
-                  <div className="h-12 w-px bg-border" />
+                <div className="flex items-center gap-3 mb-8 p-4 bg-card rounded-lg border border-border">
                   <div className="flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-accent fill-accent" />

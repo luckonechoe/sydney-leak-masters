@@ -47,12 +47,12 @@ export default function ShowerRepairs() {
     <>
       <SEOHead
         title="Shower Leak Repairs Sydney | Fix Without Re-Tiling"
-        description="Stop shower leaks permanently with our premium epoxy grout solutions. No tile removal needed. Starting from $790. 10-year warranty. Sydney-wide service."
+        description="Stop shower leaks permanently with our premium epoxy grout solutions. No tile removal needed. 10-year warranty. Sydney-wide service."
       />
       <ServiceSchema
         name="Shower Leak Repair Service"
         description="Professional shower leak repair using premium epoxy grout technology. No tile removal required. 10-year warranty included."
-        price="790"
+        
       />
 
       <div className="min-h-screen bg-background">
@@ -90,12 +90,7 @@ export default function ShowerRepairs() {
                   effective, lasting repairs backed by a 10-year warranty.
                 </p>
 
-                <div className="flex items-center gap-6 mb-8 p-4 bg-card rounded-lg border border-border">
-                  <div>
-                    <span className="text-muted-foreground text-sm">Starting from</span>
-                    <div className="text-3xl font-heading font-bold text-foreground">$790</div>
-                  </div>
-                  <div className="h-12 w-px bg-border" />
+                <div className="flex items-center gap-3 mb-8 p-4 bg-card rounded-lg border border-border">
                   <div className="flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-accent fill-accent" />
