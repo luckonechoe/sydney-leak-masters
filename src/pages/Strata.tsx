@@ -1,11 +1,18 @@
 import { motion } from "framer-motion";
-import { Building, Users, FileCheck, Clock, Shield, Phone, Mail, Check } from "lucide-react";
+import { Building, Users, FileCheck, Clock, Shield, Phone, Mail, Check, Droplets, AlertTriangle, Scale } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTAButton } from "@/components/CTAButton";
 import { WarrantyBadge } from "@/components/WarrantyBadge";
 import { QuoteForm } from "@/components/QuoteForm";
-import { SEOHead, Breadcrumbs } from "@/components/seo";
+import { SEOHead, Breadcrumbs, FAQSchema } from "@/components/seo";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const benefits = [
   {
@@ -39,6 +46,48 @@ const process = [
   "Ongoing maintenance recommendations",
 ];
 
+const commonIssues = [
+  {
+    title: "Shared Bathroom Walls",
+    description: "Leaks between adjoining units through shared wet walls are one of the most common strata complaints. Failed shower waterproofing allows water to migrate through party walls, causing damage to neighbouring units.",
+    icon: Droplets,
+  },
+  {
+    title: "Aging Balcony Membranes",
+    description: "Balcony waterproofing membranes in older buildings deteriorate over time, leading to water ingress and concrete degradation. Regular inspection can identify membrane failure before spalling develops.",
+    icon: Building,
+  },
+  {
+    title: "Common Area Water Ingress",
+    description: "Leaks in corridors, stairwells, and car parks often stem from failed expansion joints or degraded waterproofing. These affect multiple residents and require prompt, professional attention.",
+    icon: AlertTriangle,
+  },
+  {
+    title: "Planter Box Leaks",
+    description: "Built-in planter boxes on balconies and podiums are a frequent source of water ingress. Constant moisture exposure and root growth accelerate membrane breakdown.",
+    icon: Shield,
+  },
+];
+
+const strataFAQs = [
+  {
+    question: "How do you handle repairs across multiple units?",
+    answer: "We coordinate a staged repair schedule to minimise disruption. Each unit is assessed individually, then we consolidate the work into an efficient timeline. Residents receive advance notice, and most repairs are completed within a single day per unit.",
+  },
+  {
+    question: "What documentation do you provide for strata records?",
+    answer: "We provide comprehensive documentation including detailed inspection reports, before/after photo records, scope of works, work completion certificates, 10-year warranty documentation, compliance statements referencing relevant Australian Standards, and maintenance recommendations for your capital works plan.",
+  },
+  {
+    question: "Do you offer volume pricing for strata complexes?",
+    answer: "Yes, we provide competitive volume pricing for complexes with multiple units requiring repair. The more units in a single engagement, the more cost-effective each repair becomes. Contact us for a portfolio quote tailored to your complex.",
+  },
+  {
+    question: "Are your methods compliant with Australian Standards?",
+    answer: "All our waterproofing work complies with AS 4654.2 (waterproofing of wet areas) and relevant NCC/BCA requirements. We use materials and methods that meet or exceed these standards, and our compliance documentation supports levy fund claims and insurance requirements.",
+  },
+];
+
 export default function Strata() {
   const breadcrumbItems = [
     { name: "Home", href: "/" },
@@ -48,9 +97,10 @@ export default function Strata() {
   return (
     <>
       <SEOHead
-        title="Strata Leak Repair Services Sydney | Property Manager Portal"
-        description="Dedicated leak repair services for strata managers and property managers. Priority scheduling, volume pricing, and compliant documentation. Sydney-wide service."
+        title="Strata Leak Repair Services Sydney | Property Manager Waterproofing Solutions"
+        description="Dedicated leak repair and waterproofing for strata managers across Sydney. Priority scheduling, volume pricing, compliant documentation. Shower and balcony specialists."
       />
+      <FAQSchema faqs={strataFAQs} />
 
       <div className="min-h-screen bg-background">
         <Header />
@@ -85,7 +135,14 @@ export default function Strata() {
 
                 <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                   Streamlined leak repair services designed for strata managers and 
-                  property management companies. Priority service, volume pricing, 
+                  property management companies across Sydney. From{" "}
+                  <Link to="/services/shower-repairs" className="text-secondary hover:underline">
+                    shower leak repairs
+                  </Link>{" "}
+                  to{" "}
+                  <Link to="/services/balcony-repairs" className="text-secondary hover:underline">
+                    balcony waterproofing
+                  </Link>, we provide priority service, volume pricing, 
                   and comprehensive documentation for your records.
                 </p>
 
@@ -110,7 +167,7 @@ export default function Strata() {
                 </div>
               </motion.div>
 
-              {/* Stats/Image */}
+              {/* Stats */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -152,7 +209,7 @@ export default function Strata() {
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 We understand the unique challenges of managing multiple properties. 
-                Our strata services are designed to make your job easier.
+                Our strata waterproofing services are designed to make your job easier.
               </p>
             </motion.div>
 
@@ -184,8 +241,54 @@ export default function Strata() {
           </div>
         </section>
 
-        {/* Process Section */}
+        {/* Common Strata Leak Issues Section */}
         <section className="py-16 lg:py-24">
+          <div className="section-container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground mb-4">
+                Common Strata Leak Issues
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Strata buildings face unique waterproofing challenges. Here are the most common 
+                leak problems we resolve for property managers across Sydney.
+              </p>
+            </motion.div>
+
+            <div className="grid sm:grid-cols-2 gap-6">
+              {commonIssues.map((issue, index) => {
+                const Icon = issue.icon;
+                return (
+                  <motion.div
+                    key={issue.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="p-6 bg-card rounded-lg border border-border"
+                  >
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="p-2 rounded-lg bg-secondary/10">
+                        <Icon className="w-5 h-5 text-secondary" />
+                      </div>
+                      <h3 className="font-heading font-bold text-lg text-foreground">
+                        {issue.title}
+                      </h3>
+                    </div>
+                    <p className="text-sm text-muted-foreground">{issue.description}</p>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Process Section */}
+        <section className="py-16 lg:py-24 bg-muted/30">
           <div className="section-container">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <motion.div
@@ -265,8 +368,104 @@ export default function Strata() {
           </div>
         </section>
 
+        {/* Compliance Section */}
+        <section className="py-16 lg:py-24">
+          <div className="section-container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 rounded-lg bg-secondary/10">
+                  <Scale className="w-8 h-8 text-secondary" />
+                </div>
+                <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground">
+                  Strata Compliance & Australian Standards
+                </h2>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-4">
+                  <p className="text-muted-foreground">
+                    All our waterproofing work for strata properties complies with{" "}
+                    <strong className="text-foreground">AS 4654.2</strong> — the Australian Standard 
+                    for waterproofing of wet areas in residential buildings. This ensures every 
+                    repair meets the required standard for materials, application, and testing.
+                  </p>
+                  <p className="text-muted-foreground">
+                    We also adhere to relevant sections of the{" "}
+                    <strong className="text-foreground">National Construction Code (NCC)</strong> and{" "}
+                    <strong className="text-foreground">Building Code of Australia (BCA)</strong>, 
+                    ensuring our methods are fully compliant for strata building maintenance.
+                  </p>
+                </div>
+                <div className="p-6 bg-card rounded-lg border border-border">
+                  <h3 className="font-heading font-bold text-lg text-foreground mb-4">
+                    Supporting Your Strata Records
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Our compliance documentation is designed to support:
+                  </p>
+                  <ul className="space-y-2">
+                    {[
+                      "Capital works fund claims",
+                      "Insurance claim documentation",
+                      "Annual building inspection reports",
+                      "Defect rectification records",
+                      "Long-term maintenance planning",
+                    ].map((item) => (
+                      <li key={item} className="flex items-center gap-2 text-sm">
+                        <Check className="w-4 h-4 text-secondary flex-shrink-0" />
+                        <span className="text-foreground">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 lg:py-24 bg-muted/30">
+          <div className="section-container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-3xl mx-auto"
+            >
+              <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground mb-4 text-center">
+                Strata Services FAQ
+              </h2>
+              <p className="text-muted-foreground text-center mb-8">
+                Common questions from strata and property managers. Visit our{" "}
+                <Link to="/faq" className="text-secondary hover:underline">
+                  full FAQ page
+                </Link>{" "}
+                for more answers.
+              </p>
+
+              <Accordion type="single" collapsible className="w-full">
+                {strataFAQs.map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`}>
+                    <AccordionTrigger className="text-left text-foreground font-medium">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Contact Form Section */}
-        <section id="contact-form" className="py-16 lg:py-24 bg-muted/30">
+        <section id="contact-form" className="py-16 lg:py-24">
           <div className="section-container">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               <motion.div

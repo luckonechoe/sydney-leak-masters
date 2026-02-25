@@ -1,11 +1,18 @@
 import { motion } from "framer-motion";
-import { Check, Building2, Shield, AlertTriangle, Star, Droplets } from "lucide-react";
+import { Check, Building2, Shield, AlertTriangle, Star, Droplets, Layers, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTAButton } from "@/components/CTAButton";
 import { WarrantyBadge } from "@/components/WarrantyBadge";
 import { QuoteForm } from "@/components/QuoteForm";
-import { SEOHead, ServiceSchema, Breadcrumbs } from "@/components/seo";
+import { SEOHead, ServiceSchema, Breadcrumbs, FAQSchema } from "@/components/seo";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const benefits = [
   "Prevents spalling",
@@ -25,6 +32,48 @@ const warningsSigns = [
   "Damaged or missing grout",
 ];
 
+const waterproofingSteps = [
+  {
+    title: "Surface Preparation",
+    description: "Existing tiles and failed membrane are removed. The concrete substrate is cleaned, repaired, and levelled to create a solid base.",
+  },
+  {
+    title: "Primer Application",
+    description: "A specialised primer is applied to ensure maximum adhesion between the concrete substrate and the new waterproof membrane.",
+  },
+  {
+    title: "Liquid Membrane Application",
+    description: "Multiple coats of high-grade liquid waterproofing membrane are applied, with reinforcing fabric at critical junctions and corners.",
+  },
+  {
+    title: "Curing & Testing",
+    description: "The membrane is allowed to fully cure before flood testing to verify complete waterproof integrity across the entire surface.",
+  },
+  {
+    title: "Protective Screed & Tiling",
+    description: "A protective screed layer is applied over the membrane, followed by new tiles with epoxy grout for a finished, long-lasting result.",
+  },
+];
+
+const balconyFAQs = [
+  {
+    question: "How do I know if my balcony membrane has failed?",
+    answer: "Common signs include water stains on the ceiling below your balcony, lifting or cracking tiles, efflorescence (white salt deposits) on concrete, rust stains, and water pooling that doesn't drain properly. If you notice any of these, we recommend a professional inspection before the damage worsens.",
+  },
+  {
+    question: "Can balcony leaks cause structural damage?",
+    answer: "Yes, untreated balcony leaks are a serious concern. Water penetrating through failed waterproofing reaches the steel reinforcement inside the concrete, causing rust and expansion. This leads to spalling — where chunks of concrete crack and fall away — which can compromise structural integrity and become extremely costly to repair.",
+  },
+  {
+    question: "Do you need strata approval for balcony repairs?",
+    answer: "In most strata complexes, balcony waterproofing is considered common property maintenance and requires strata committee approval. We provide all necessary documentation, scope of works, and compliance statements to support your strata application. Learn more about our strata services.",
+  },
+  {
+    question: "How long does balcony waterproofing last?",
+    answer: "When professionally installed using quality materials, a balcony waterproofing membrane should last 15–25 years. We use premium-grade membranes that meet Australian Standards and back all our work with a 10-year written warranty for your peace of mind.",
+  },
+];
+
 export default function BalconyRepairs() {
   const breadcrumbItems = [
     { name: "Home", href: "/" },
@@ -35,14 +84,14 @@ export default function BalconyRepairs() {
   return (
     <>
       <SEOHead
-        title="Balcony Leak Repairs Sydney | Prevent Concrete Degradation"
-        description="Expert balcony waterproofing and leak repairs. Prevent concrete degradation and structural damage. 10-year warranty. Strata approved."
+        title="Balcony Leak Repairs Sydney | Waterproofing & Spalling Prevention"
+        description="Expert balcony waterproofing and leak repair across Sydney. Prevent spalling and concrete degradation with professional membrane restoration. 10-year warranty. Strata approved."
       />
       <ServiceSchema
         name="Balcony Leak Repair Service"
         description="Professional balcony waterproofing and leak repair. Prevents concrete degradation and structural damage. 10-year warranty included."
-        
       />
+      <FAQSchema faqs={balconyFAQs} />
 
       <div className="min-h-screen bg-background">
         <Header />
@@ -75,8 +124,12 @@ export default function BalconyRepairs() {
 
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                   Protect your property from costly concrete degradation and structural 
-                  damage. Our expert waterproofing solutions seal balcony leaks 
-                  permanently with strata-compliant methods.
+                  damage. Our expert balcony waterproofing solutions seal leaks 
+                  permanently with strata-compliant methods. We also specialise in{" "}
+                  <Link to="/services/shower-repairs" className="text-secondary hover:underline">
+                    shower leak repairs
+                  </Link>{" "}
+                  using premium epoxy grout.
                 </p>
 
                 <div className="flex items-center gap-3 mb-8 p-4 bg-card rounded-lg border border-border">
@@ -98,7 +151,6 @@ export default function BalconyRepairs() {
                 </div>
               </motion.div>
 
-              {/* Image Placeholder */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -168,14 +220,25 @@ export default function BalconyRepairs() {
                 <h3 className="font-heading font-bold text-xl text-foreground mb-4">
                   What is Spalling?
                 </h3>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-muted-foreground mb-4">
                   When water penetrates concrete through cracks or failed waterproofing, 
                   it reaches the steel reinforcement inside. This causes rust, which 
                   expands and cracks the concrete further — creating a cycle of 
                   deterioration that can compromise structural integrity.
                 </p>
+                <p className="text-muted-foreground mb-4">
+                  Concrete degradation progresses through stages: initial cracking allows moisture in, 
+                  which corrodes the steel rebar. The expanding rust creates internal pressure, causing 
+                  the concrete cover to crack and eventually break away in chunks. Sydney's coastal climate — 
+                  with salt-laden air and high humidity — accelerates this process significantly compared 
+                  to inland areas.
+                </p>
                 <p className="text-sm text-accent font-medium">
-                  Early intervention can save you thousands in structural repairs.
+                  Early intervention is critical. What starts as a minor waterproofing repair can 
+                  become a major structural project if left untreated. If you manage a{" "}
+                  <Link to="/strata" className="underline hover:text-secondary">
+                    strata complex
+                  </Link>, regular balcony inspections should be part of your maintenance plan.
                 </p>
               </motion.div>
             </div>
@@ -198,7 +261,7 @@ export default function BalconyRepairs() {
                 <p className="text-muted-foreground mb-8">
                   We use professional-grade waterproofing membranes and techniques 
                   that meet Australian Standards. Perfect for strata complexes, 
-                  apartments, and residential properties.
+                  apartments, and residential properties across Sydney.
                 </p>
 
                 <ul className="grid sm:grid-cols-2 gap-4 mb-8">
@@ -260,6 +323,83 @@ export default function BalconyRepairs() {
                 </div>
               </motion.div>
             </div>
+          </div>
+        </section>
+
+        {/* How Waterproofing Works Section */}
+        <section className="py-16 lg:py-24 bg-muted/30">
+          <div className="section-container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground mb-4">
+                How Balcony Waterproofing Works
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Our professional membrane restoration process ensures your balcony is fully waterproofed 
+                to Australian Standards, preventing future leaks and concrete degradation.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {waterproofingSteps.map((step, index) => (
+                <motion.div
+                  key={step.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.08 }}
+                  className="relative p-6 bg-card rounded-lg border border-border"
+                >
+                  <div className="absolute -top-3 left-4 px-2 py-1 bg-secondary text-secondary-foreground text-xs font-bold rounded">
+                    Step {index + 1}
+                  </div>
+                  <h3 className="font-heading font-bold text-lg text-foreground mt-2 mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">{step.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 lg:py-24">
+          <div className="section-container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-3xl mx-auto"
+            >
+              <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground mb-4 text-center">
+                Balcony Repair FAQ
+              </h2>
+              <p className="text-muted-foreground text-center mb-8">
+                Common questions about balcony waterproofing and leak repair. Visit our{" "}
+                <Link to="/faq" className="text-secondary hover:underline">
+                  full FAQ page
+                </Link>{" "}
+                for more answers.
+              </p>
+
+              <Accordion type="single" collapsible className="w-full">
+                {balconyFAQs.map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`}>
+                    <AccordionTrigger className="text-left text-foreground font-medium">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </motion.div>
           </div>
         </section>
 
