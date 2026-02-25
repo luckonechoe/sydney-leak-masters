@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, Droplets } from "lucide-react";
+import { Menu, X, ChevronDown, Droplets, Sun, Moon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { CTAButton, PHONE_NUMBER } from "./CTAButton";
 import { Button } from "@/components/ui/button";
+import { useTheme } from "@/hooks/use-theme";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -26,6 +27,7 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const location = useLocation();
+  const { theme, toggleTheme } = useTheme();
 
   const isActive = (href: string) => {
     if (href === "/") return location.pathname === "/";
@@ -120,8 +122,17 @@ export function Header() {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block">
+          {/* Theme Toggle + CTA Button */}
+          <div className="hidden lg:flex items-center gap-2">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleTheme}
+              aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+              className="text-muted-foreground hover:text-foreground"
+            >
+              {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </Button>
             <CTAButton variant="phone">{PHONE_NUMBER}</CTAButton>
           </div>
 
@@ -187,7 +198,15 @@ export function Header() {
                     )}
                   </div>
                 ))}
-                <div className="pt-4 px-4">
+                <div className="pt-4 px-4 flex flex-col gap-2">
+                  <Button
+                    variant="outline"
+                    onClick={toggleTheme}
+                    className="w-full justify-center gap-2"
+                  >
+                    {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+                    {theme === "dark" ? "Light Mode" : "Dark Mode"}
+                  </Button>
                   <CTAButton variant="phone" className="w-full justify-center">
                     {PHONE_NUMBER}
                   </CTAButton>
