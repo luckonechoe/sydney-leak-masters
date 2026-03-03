@@ -142,28 +142,30 @@ export default function Index() {
         </section>
 
         {/* Trust Statistics */}
-        <section className="py-12 lg:py-16 bg-muted/30 border-y border-border">
+        <section className="py-12 lg:py-16">
           <div className="section-container">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
+              className="rounded-xl bg-primary/10 border border-primary/20 p-8 lg:p-12"
             >
-              {[
-                { value: "500+", label: "Happy Customers" },
-                { value: "24hr", label: "Response Time" },
-                { value: "10yr", label: "Warranty" },
-              ].map((stat) => (
-                <div key={stat.label}>
-                  <p className="font-heading text-4xl lg:text-5xl font-bold text-secondary mb-2">
-                    {stat.value}
-                  </p>
-                  <p className="text-muted-foreground text-sm uppercase tracking-wider">
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                {[
+                  { value: "500+", label: "Happy Customers" },
+                  { value: "24hr", label: "Response Time" },
+                  { value: "10yr", label: "Warranty" },
+                ].map((stat) => (
+                  <div key={stat.label}>
+                    <p className="font-heading text-4xl lg:text-5xl font-bold text-primary mb-2">
+                      {stat.value}
+                    </p>
+                    <p className="text-muted-foreground text-sm uppercase tracking-wider">
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </motion.div>
           </div>
         </section>
