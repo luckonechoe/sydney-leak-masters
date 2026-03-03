@@ -274,6 +274,36 @@ export default function Index() {
           </div>
         </section>
 
+        {/* Performance Metrics */}
+        <section className="py-12 lg:py-16">
+          <div className="section-container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="rounded-xl bg-primary/10 border border-primary/20 p-8 lg:p-12"
+            >
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                {[
+                  { value: "100%", label: "Success Rate" },
+                  { value: "3-6hrs", label: "Average Job Time" },
+                  { value: "48hr", label: "Full Cure Time" },
+                  { value: "Lifetime", label: "Mould Protection" },
+                ].map((stat) => (
+                  <div key={stat.label}>
+                    <p className="font-heading text-3xl lg:text-4xl font-bold text-primary mb-2">
+                      {stat.value}
+                    </p>
+                    <p className="text-muted-foreground text-sm">
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Testimonials Section */}
         <section className="py-16 lg:py-24">
           <div className="section-container">
