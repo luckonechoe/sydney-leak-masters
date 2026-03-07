@@ -11,6 +11,7 @@ import ShowerRepairs from "./pages/ShowerRepairs";
 import BalconyRepairs from "./pages/BalconyRepairs";
 import Strata from "./pages/Strata";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import SuburbPage from "./pages/SuburbPage";
