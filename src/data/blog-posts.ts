@@ -195,7 +195,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 2: Epoxy Grout vs Cement Grout =====
   {
     slug: "epoxy-grout-vs-cement-grout",
-    image: epoxyGroutVsCementGrout,
+    image: BLOG_IMAGES.epoxyGroutVsCementGrout,
     title: "Epoxy Grout vs Cement Grout: Which Is Better for Shower Waterproofing?",
     metaTitle: "Epoxy Grout vs Cement Grout for Showers | Complete Comparison Guide",
     metaDescription: "Compare epoxy grout vs cement grout for shower waterproofing. Learn which lasts longer, prevents leaks, and offers the best value. Expert guide from Sydney specialists.",
