@@ -195,6 +195,40 @@ export default function Index() {
           </div>
         </section>
 
+        {/* Preventative Maintenance Banner */}
+        <section className="py-12 lg:py-16">
+          <div className="section-container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="rounded-xl bg-gradient-to-r from-secondary/10 via-accent/10 to-secondary/10 border border-secondary/20 p-8 lg:p-12"
+            >
+              <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+                <div className="flex-1 text-center lg:text-left">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 text-secondary text-xs font-bold uppercase tracking-wider mb-4">
+                    <Shield className="w-3.5 h-3.5" />
+                    Annual Maintenance Plan
+                  </div>
+                  <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground mb-3">
+                    Preventative Maintenance —{" "}
+                    <span className="text-secondary">$249/year</span>
+                  </h2>
+                  <p className="text-muted-foreground max-w-2xl text-lg">
+                    Includes a full inspection, professional cleaning, and touch-up services 
+                    to maintain your warranty coverage and keep your seals performing at their best.
+                  </p>
+                </div>
+                <div className="flex-shrink-0">
+                  <CTAButton variant="phone" size="lg">
+                    Book Maintenance
+                  </CTAButton>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Process Section */}
         <section className="py-16 lg:py-24">
           <div className="section-container">
