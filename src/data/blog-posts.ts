@@ -46,6 +46,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 1: Signs of Shower Leak =====
   {
     slug: "signs-of-shower-leak",
+    image: signsOfShowerLeak,
     title: "5 Warning Signs Your Shower Is Leaking (And What to Do About It)",
     metaTitle: "5 Warning Signs Your Shower Is Leaking | Sydney Leak Repairs Pro",
     metaDescription: "Learn how to spot a leaking shower early. Musty smells, peeling paint, and damp walls are red flags. Expert advice from Sydney's shower leak repair specialists.",
