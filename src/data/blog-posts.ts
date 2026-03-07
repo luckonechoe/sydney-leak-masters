@@ -1603,7 +1603,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 18: Grout Replacement Sydney =====
   {
     slug: "grout-replacement-sydney",
-    image: groutReplacementSydney,
+    image: BLOG_IMAGES.groutReplacementSydney,
     title: "Grout Replacement in Sydney: Costs, Options, and Expert Advice",
     metaTitle: "Grout Replacement Sydney | Costs, Options & Expert Guide",
     metaDescription: "Complete guide to grout replacement in Sydney. Compare cement vs epoxy grout costs, learn when replacement is needed, and find professional grout specialists near you.",
