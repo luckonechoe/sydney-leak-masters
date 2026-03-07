@@ -1376,6 +1376,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 14: Tiled Shower Sealing =====
   {
     slug: "tiled-shower-sealing",
+    image: tiledShowerSealing,
     title: "Tiled Shower Sealing in Sydney: Protecting Your Bathroom from Water Damage",
     metaTitle: "Tiled Shower Sealing Sydney | Professional Tile Sealing Guide",
     metaDescription: "Expert guide to tiled shower sealing in Sydney. Learn how tile sealing protects your bathroom, extends grout life, and complements waterproofing. Professional service available.",
