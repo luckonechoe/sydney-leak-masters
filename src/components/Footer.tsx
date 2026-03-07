@@ -111,20 +111,10 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Company */}
           <div>
-            <h3 className="font-heading font-bold text-foreground mb-4">Resources</h3>
+            <h3 className="font-heading font-bold text-foreground mb-4">Company</h3>
             <ul className="space-y-3">
-              {footerLinks.resources.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-muted-foreground hover:text-secondary transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
@@ -138,10 +128,10 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Service Areas with keyword-rich anchor text */}
+          {/* Popular Service Areas - single list */}
           <div className="lg:col-span-2">
             <h3 className="font-heading font-bold text-foreground mb-4">Popular Service Areas</h3>
-            <ul className="space-y-2 columns-2">
+            <ul className="space-y-2">
               {footerLinks.suburbs.map((link) => (
                 <li key={link.name}>
                   <Link
