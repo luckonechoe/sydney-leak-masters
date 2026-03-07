@@ -465,6 +465,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 4: Strata Waterproofing Guide =====
   {
     slug: "strata-waterproofing-guide",
+    image: strataWaterproofingGuide,
     title: "A Strata Manager's Complete Guide to Waterproofing Maintenance",
     metaTitle: "Strata Waterproofing Guide Sydney | Property Manager's Handbook",
     metaDescription: "Essential waterproofing guide for Sydney strata managers. Learn maintenance schedules, compliance requirements, common leak issues, and cost-effective repair strategies.",
