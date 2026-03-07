@@ -1434,6 +1434,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 15: Tiled Balcony Sealing =====
   {
     slug: "tiled-balcony-sealing",
+    image: tiledBalconySealing,
     title: "Tiled Balcony Sealing: Extending the Life of Your Balcony Waterproofing",
     metaTitle: "Tiled Balcony Sealing Sydney | Protect Your Balcony Investment",
     metaDescription: "Professional tiled balcony sealing services in Sydney. Learn how sealing protects your balcony tiles, extends waterproofing life, and prevents costly repairs.",
