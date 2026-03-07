@@ -1323,6 +1323,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 13: Shower Membrane Repair =====
   {
     slug: "shower-membrane-repair",
+    image: showerMembraneRepair,
     title: "Shower Membrane Repair: When You Need It and What to Expect",
     metaTitle: "Shower Membrane Repair Sydney | When You Need It & Costs",
     metaDescription: "Expert guide to shower membrane repair in Sydney. Learn when membrane repair is needed, what the process involves, costs, and alternatives. Free inspections available.",
