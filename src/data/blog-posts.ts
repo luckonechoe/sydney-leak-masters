@@ -747,7 +747,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 6: Bathroom Waterproofing Standards =====
   {
     slug: "bathroom-waterproofing-standards",
-    image: bathroomWaterproofingStandards,
+    image: BLOG_IMAGES.bathroomWaterproofingStandards,
     title: "Australian Bathroom Waterproofing Standards Explained (AS 3740-2021)",
     metaTitle: "Australian Bathroom Waterproofing Standards AS 3740 | Complete Guide",
     metaDescription: "Understand Australian bathroom waterproofing standards AS 3740-2021. What they require, why they matter, and how they affect your bathroom repair or renovation project.",
