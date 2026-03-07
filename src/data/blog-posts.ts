@@ -1,23 +1,27 @@
-import signsOfShowerLeak from "@/assets/blog/signs-of-shower-leak.jpg";
-import epoxyGroutVsCementGrout from "@/assets/blog/epoxy-grout-vs-cement-grout.jpg";
-import concreteDegradationPrevention from "@/assets/blog/concrete-degradation-prevention.jpg";
-import strataWaterproofingGuide from "@/assets/blog/strata-waterproofing-guide.jpg";
-import diyLeakDetection from "@/assets/blog/diy-leak-detection.jpg";
-import bathroomWaterproofingStandards from "@/assets/blog/bathroom-waterproofing-standards.jpg";
-import howToFixLeakingBalconyTiles from "@/assets/blog/how-to-fix-leaking-balcony-tiles.jpg";
-import waterproofMembraneFailure from "@/assets/blog/waterproof-membrane-failure.jpg";
-import balconyWaterproofingSystems from "@/assets/blog/balcony-waterproofing-systems.jpg";
-import causesOfCrackedGrout from "@/assets/blog/causes-of-cracked-grout.jpg";
-import showerWaterproofingSydney from "@/assets/blog/shower-waterproofing-sydney.jpg";
-import balconyLeakDetection from "@/assets/blog/balcony-leak-detection.jpg";
-import showerMembraneRepair from "@/assets/blog/shower-membrane-repair.jpg";
-import tiledShowerSealing from "@/assets/blog/tiled-shower-sealing.jpg";
-import tiledBalconySealing from "@/assets/blog/tiled-balcony-sealing.jpg";
-import balconyMembraneRepair from "@/assets/blog/balcony-membrane-repair.jpg";
-import epoxyRegroutingGuide from "@/assets/blog/epoxy-regrouting-guide.jpg";
-import groutReplacementSydney from "@/assets/blog/grout-replacement-sydney.jpg";
-import tileSealingServicesSydney from "@/assets/blog/tile-sealing-services-sydney.jpg";
-import balconyWaterproofingCost from "@/assets/blog/balcony-waterproofing-cost.jpg";
+// Curated Unsplash stock photos for blog cards (free for commercial use)
+const BLOG_IMAGES = {
+  signsOfShowerLeak: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1200&h=800&fit=crop",
+  epoxyGroutVsCementGrout: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1200&h=800&fit=crop",
+  concreteDegradationPrevention: "https://images.unsplash.com/photo-1590274853856-f22d5ee3d228?w=1200&h=800&fit=crop",
+  strataWaterproofingGuide: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&h=800&fit=crop",
+  diyLeakDetection: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=1200&h=800&fit=crop",
+  bathroomWaterproofingStandards: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1200&h=800&fit=crop&q=80",
+  howToFixLeakingBalconyTiles: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=800&fit=crop",
+  waterproofMembraneFailure: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&h=800&fit=crop",
+  balconyWaterproofingSystems: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=800&fit=crop",
+  causesOfCrackedGrout: "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=1200&h=800&fit=crop",
+  showerWaterproofingSydney: "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=1200&h=800&fit=crop&q=85",
+  balconyLeakDetection: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&h=800&fit=crop",
+  showerMembraneRepair: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&h=800&fit=crop",
+  tiledShowerSealing: "https://images.unsplash.com/photo-1600566753086-00f18e6f4347?w=1200&h=800&fit=crop",
+  tiledBalconySealing: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=1200&h=800&fit=crop",
+  balconyMembraneRepair: "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=1200&h=800&fit=crop",
+  epoxyRegroutingGuide: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=1200&h=800&fit=crop",
+  groutReplacementSydney: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1200&h=800&fit=crop",
+  tileSealingServicesSydney: "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?w=1200&h=800&fit=crop",
+  balconyWaterproofingCost: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&h=800&fit=crop",
+};
+
 
 export interface BlogPostContent {
   slug: string;
