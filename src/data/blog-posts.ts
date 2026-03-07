@@ -1138,7 +1138,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 10: Causes of Cracked Grout =====
   {
     slug: "causes-of-cracked-grout",
-    image: causesOfCrackedGrout,
+    image: BLOG_IMAGES.causesOfCrackedGrout,
     title: "What Causes Grout to Crack? Understanding Grout Failure in Showers and Bathrooms",
     metaTitle: "What Causes Grout to Crack in Showers? | Expert Guide",
     metaDescription: "Discover why shower grout cracks and deteriorates. Learn the common causes of grout failure and how to prevent costly water damage with professional repair solutions.",
