@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Droplets, Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import logoImg from "@/assets/logo.png";
 import { WarrantyBadge } from "./WarrantyBadge";
 import { PHONE_NUMBER, PHONE_HREF } from "./CTAButton";
 
