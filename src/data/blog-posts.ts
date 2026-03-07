@@ -1539,6 +1539,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 17: Epoxy Regrouting Guide =====
   {
     slug: "epoxy-regrouting-guide",
+    image: epoxyRegroutingGuide,
     title: "Epoxy Regrouting Sydney: The Complete Guide to Professional Shower Repair",
     metaTitle: "Epoxy Regrouting Sydney | Complete Professional Guide",
     metaDescription: "Everything you need to know about epoxy regrouting in Sydney. Process, costs, benefits, and what to expect from professional shower leak repair. 10-year warranty.",
