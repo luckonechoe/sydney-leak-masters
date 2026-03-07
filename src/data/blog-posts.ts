@@ -339,6 +339,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 3: Concrete Degradation Prevention =====
   {
     slug: "concrete-degradation-prevention",
+    image: concreteDegradationPrevention,
     title: "How to Prevent Concrete Degradation (Spalling) in Your Building",
     metaTitle: "Prevent Concrete Degradation & Spalling | Sydney Building Guide",
     metaDescription: "Learn how to prevent concrete degradation and spalling in Sydney buildings. Expert guide on causes, warning signs, and professional repair solutions. Protect your property.",
