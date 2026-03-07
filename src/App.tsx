@@ -16,6 +16,7 @@ import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import SuburbPage from "./pages/SuburbPage";
 import CompleteGuide from "./pages/CompleteGuide";
+import Suburbs from "./pages/Suburbs";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
@@ -35,6 +36,7 @@ const App = () => (
               <Route path="/services/shower-repairs" element={<ShowerRepairs />} />
               <Route path="/services/balcony-repairs" element={<BalconyRepairs />} />
               <Route path="/services/:suburb" element={<SuburbPage />} />
+              <Route path="/suburbs" element={<Suburbs />} />
               <Route path="/strata" element={<Strata />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
