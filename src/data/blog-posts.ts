@@ -1,3 +1,24 @@
+import signsOfShowerLeak from "@/assets/blog/signs-of-shower-leak.jpg";
+import epoxyGroutVsCementGrout from "@/assets/blog/epoxy-grout-vs-cement-grout.jpg";
+import concreteDegradationPrevention from "@/assets/blog/concrete-degradation-prevention.jpg";
+import strataWaterproofingGuide from "@/assets/blog/strata-waterproofing-guide.jpg";
+import diyLeakDetection from "@/assets/blog/diy-leak-detection.jpg";
+import bathroomWaterproofingStandards from "@/assets/blog/bathroom-waterproofing-standards.jpg";
+import howToFixLeakingBalconyTiles from "@/assets/blog/how-to-fix-leaking-balcony-tiles.jpg";
+import waterproofMembraneFailure from "@/assets/blog/waterproof-membrane-failure.jpg";
+import balconyWaterproofingSystems from "@/assets/blog/balcony-waterproofing-systems.jpg";
+import causesOfCrackedGrout from "@/assets/blog/causes-of-cracked-grout.jpg";
+import showerWaterproofingSydney from "@/assets/blog/shower-waterproofing-sydney.jpg";
+import balconyLeakDetection from "@/assets/blog/balcony-leak-detection.jpg";
+import showerMembraneRepair from "@/assets/blog/shower-membrane-repair.jpg";
+import tiledShowerSealing from "@/assets/blog/tiled-shower-sealing.jpg";
+import tiledBalconySealing from "@/assets/blog/tiled-balcony-sealing.jpg";
+import balconyMembraneRepair from "@/assets/blog/balcony-membrane-repair.jpg";
+import epoxyRegroutingGuide from "@/assets/blog/epoxy-regrouting-guide.jpg";
+import groutReplacementSydney from "@/assets/blog/grout-replacement-sydney.jpg";
+import tileSealingServicesSydney from "@/assets/blog/tile-sealing-services-sydney.jpg";
+import balconyWaterproofingCost from "@/assets/blog/balcony-waterproofing-cost.jpg";
+
 export interface BlogPostContent {
   slug: string;
   title: string;
