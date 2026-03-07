@@ -1,23 +1,27 @@
-import signsOfShowerLeak from "@/assets/blog/signs-of-shower-leak.jpg";
-import epoxyGroutVsCementGrout from "@/assets/blog/epoxy-grout-vs-cement-grout.jpg";
-import concreteDegradationPrevention from "@/assets/blog/concrete-degradation-prevention.jpg";
-import strataWaterproofingGuide from "@/assets/blog/strata-waterproofing-guide.jpg";
-import diyLeakDetection from "@/assets/blog/diy-leak-detection.jpg";
-import bathroomWaterproofingStandards from "@/assets/blog/bathroom-waterproofing-standards.jpg";
-import howToFixLeakingBalconyTiles from "@/assets/blog/how-to-fix-leaking-balcony-tiles.jpg";
-import waterproofMembraneFailure from "@/assets/blog/waterproof-membrane-failure.jpg";
-import balconyWaterproofingSystems from "@/assets/blog/balcony-waterproofing-systems.jpg";
-import causesOfCrackedGrout from "@/assets/blog/causes-of-cracked-grout.jpg";
-import showerWaterproofingSydney from "@/assets/blog/shower-waterproofing-sydney.jpg";
-import balconyLeakDetection from "@/assets/blog/balcony-leak-detection.jpg";
-import showerMembraneRepair from "@/assets/blog/shower-membrane-repair.jpg";
-import tiledShowerSealing from "@/assets/blog/tiled-shower-sealing.jpg";
-import tiledBalconySealing from "@/assets/blog/tiled-balcony-sealing.jpg";
-import balconyMembraneRepair from "@/assets/blog/balcony-membrane-repair.jpg";
-import epoxyRegroutingGuide from "@/assets/blog/epoxy-regrouting-guide.jpg";
-import groutReplacementSydney from "@/assets/blog/grout-replacement-sydney.jpg";
-import tileSealingServicesSydney from "@/assets/blog/tile-sealing-services-sydney.jpg";
-import balconyWaterproofingCost from "@/assets/blog/balcony-waterproofing-cost.jpg";
+// Curated Unsplash stock photos for blog cards (free for commercial use)
+const BLOG_IMAGES = {
+  signsOfShowerLeak: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1200&h=800&fit=crop",
+  epoxyGroutVsCementGrout: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1200&h=800&fit=crop",
+  concreteDegradationPrevention: "https://images.unsplash.com/photo-1590274853856-f22d5ee3d228?w=1200&h=800&fit=crop",
+  strataWaterproofingGuide: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&h=800&fit=crop",
+  diyLeakDetection: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=1200&h=800&fit=crop",
+  bathroomWaterproofingStandards: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1200&h=800&fit=crop&q=80",
+  howToFixLeakingBalconyTiles: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=800&fit=crop",
+  waterproofMembraneFailure: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&h=800&fit=crop",
+  balconyWaterproofingSystems: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=800&fit=crop",
+  causesOfCrackedGrout: "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=1200&h=800&fit=crop",
+  showerWaterproofingSydney: "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=1200&h=800&fit=crop&q=85",
+  balconyLeakDetection: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&h=800&fit=crop",
+  showerMembraneRepair: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&h=800&fit=crop",
+  tiledShowerSealing: "https://images.unsplash.com/photo-1600566753086-00f18e6f4347?w=1200&h=800&fit=crop",
+  tiledBalconySealing: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=1200&h=800&fit=crop",
+  balconyMembraneRepair: "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=1200&h=800&fit=crop",
+  epoxyRegroutingGuide: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=1200&h=800&fit=crop",
+  groutReplacementSydney: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1200&h=800&fit=crop",
+  tileSealingServicesSydney: "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?w=1200&h=800&fit=crop",
+  balconyWaterproofingCost: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&h=800&fit=crop",
+};
+
 
 export interface BlogPostContent {
   slug: string;
@@ -46,7 +50,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 1: Signs of Shower Leak =====
   {
     slug: "signs-of-shower-leak",
-    image: signsOfShowerLeak,
+    image: BLOG_IMAGES.signsOfShowerLeak,
     title: "5 Warning Signs Your Shower Is Leaking (And What to Do About It)",
     metaTitle: "5 Warning Signs Your Shower Is Leaking | Sydney Leak Repairs Pro",
     metaDescription: "Learn how to spot a leaking shower early. Musty smells, peeling paint, and damp walls are red flags. Expert advice from Sydney's shower leak repair specialists.",
@@ -191,7 +195,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 2: Epoxy Grout vs Cement Grout =====
   {
     slug: "epoxy-grout-vs-cement-grout",
-    image: epoxyGroutVsCementGrout,
+    image: BLOG_IMAGES.epoxyGroutVsCementGrout,
     title: "Epoxy Grout vs Cement Grout: Which Is Better for Shower Waterproofing?",
     metaTitle: "Epoxy Grout vs Cement Grout for Showers | Complete Comparison Guide",
     metaDescription: "Compare epoxy grout vs cement grout for shower waterproofing. Learn which lasts longer, prevents leaks, and offers the best value. Expert guide from Sydney specialists.",
@@ -339,7 +343,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 3: Concrete Degradation Prevention =====
   {
     slug: "concrete-degradation-prevention",
-    image: concreteDegradationPrevention,
+    image: BLOG_IMAGES.concreteDegradationPrevention,
     title: "How to Prevent Concrete Degradation (Spalling) in Your Building",
     metaTitle: "Prevent Concrete Degradation & Spalling | Sydney Building Guide",
     metaDescription: "Learn how to prevent concrete degradation and spalling in Sydney buildings. Expert guide on causes, warning signs, and professional repair solutions. Protect your property.",
@@ -465,7 +469,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 4: Strata Waterproofing Guide =====
   {
     slug: "strata-waterproofing-guide",
-    image: strataWaterproofingGuide,
+    image: BLOG_IMAGES.strataWaterproofingGuide,
     title: "A Strata Manager's Complete Guide to Waterproofing Maintenance",
     metaTitle: "Strata Waterproofing Guide Sydney | Property Manager's Handbook",
     metaDescription: "Essential waterproofing guide for Sydney strata managers. Learn maintenance schedules, compliance requirements, common leak issues, and cost-effective repair strategies.",
@@ -594,7 +598,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 5: DIY Leak Detection =====
   {
     slug: "diy-leak-detection",
-    image: diyLeakDetection,
+    image: BLOG_IMAGES.diyLeakDetection,
     title: "DIY Leak Detection: Simple Tests You Can Do (And When to Call a Pro)",
     metaTitle: "DIY Leak Detection Guide | When to Call a Professional in Sydney",
     metaDescription: "Learn simple DIY leak detection methods for showers and balconies. Know when to call a professional. Expert guide from Sydney's leak repair specialists.",
@@ -743,7 +747,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 6: Bathroom Waterproofing Standards =====
   {
     slug: "bathroom-waterproofing-standards",
-    image: bathroomWaterproofingStandards,
+    image: BLOG_IMAGES.bathroomWaterproofingStandards,
     title: "Australian Bathroom Waterproofing Standards Explained (AS 3740-2021)",
     metaTitle: "Australian Bathroom Waterproofing Standards AS 3740 | Complete Guide",
     metaDescription: "Understand Australian bathroom waterproofing standards AS 3740-2021. What they require, why they matter, and how they affect your bathroom repair or renovation project.",
@@ -875,7 +879,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 7: How to Fix Leaking Balcony Tiles =====
   {
     slug: "how-to-fix-leaking-balcony-tiles",
-    image: howToFixLeakingBalconyTiles,
+    image: BLOG_IMAGES.howToFixLeakingBalconyTiles,
     title: "How to Fix Leaking Balcony Tiles: A Complete Guide for Sydney Homeowners",
     metaTitle: "How to Fix Leaking Balcony Tiles | Sydney Waterproofing Guide",
     metaDescription: "Learn how to fix leaking balcony tiles in Sydney. Expert guide covering causes, repair methods, waterproofing options, and when to call a professional. 10-year warranty available.",
@@ -959,7 +963,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 8: Waterproof Membrane Failure =====
   {
     slug: "waterproof-membrane-failure",
-    image: waterproofMembraneFailure,
+    image: BLOG_IMAGES.waterproofMembraneFailure,
     title: "Waterproof Membrane Failure: Signs, Causes, and Professional Repair Solutions",
     metaTitle: "Waterproof Membrane Failure Signs & Repair | Sydney Expert Guide",
     metaDescription: "Identify waterproof membrane failure in showers and balconies. Learn the causes, warning signs, and professional repair options. Sydney specialists with 10-year warranty.",
@@ -1051,7 +1055,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 9: Balcony Waterproofing Systems =====
   {
     slug: "balcony-waterproofing-systems",
-    image: balconyWaterproofingSystems,
+    image: BLOG_IMAGES.balconyWaterproofingSystems,
     title: "Balcony Waterproofing Systems Explained: Which Is Right for Your Sydney Property?",
     metaTitle: "Balcony Waterproofing Systems Explained | Sydney Expert Guide",
     metaDescription: "Compare balcony waterproofing systems for Sydney properties. Liquid membranes, torch-on, sheet systems explained. Expert advice on choosing the right solution.",
@@ -1134,7 +1138,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 10: Causes of Cracked Grout =====
   {
     slug: "causes-of-cracked-grout",
-    image: causesOfCrackedGrout,
+    image: BLOG_IMAGES.causesOfCrackedGrout,
     title: "What Causes Grout to Crack? Understanding Grout Failure in Showers and Bathrooms",
     metaTitle: "What Causes Grout to Crack in Showers? | Expert Guide",
     metaDescription: "Discover why shower grout cracks and deteriorates. Learn the common causes of grout failure and how to prevent costly water damage with professional repair solutions.",
@@ -1201,7 +1205,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 11: Shower Waterproofing Sydney =====
   {
     slug: "shower-waterproofing-sydney",
-    image: showerWaterproofingSydney,
+    image: BLOG_IMAGES.showerWaterproofingSydney,
     title: "Shower Waterproofing in Sydney: Everything You Need to Know",
     metaTitle: "Shower Waterproofing Sydney | Complete Homeowner's Guide",
     metaDescription: "Complete guide to shower waterproofing in Sydney. Covers Australian Standards, membrane systems, repair options, and costs. Expert advice from local specialists.",
@@ -1268,7 +1272,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 12: Balcony Leak Detection =====
   {
     slug: "balcony-leak-detection",
-    image: balconyLeakDetection,
+    image: BLOG_IMAGES.balconyLeakDetection,
     title: "Balcony Leak Detection: Professional Methods and DIY Tips for Sydney Properties",
     metaTitle: "Balcony Leak Detection Methods | Professional Sydney Guide",
     metaDescription: "Learn professional and DIY methods for detecting balcony leaks. Flood testing, moisture mapping, thermal imaging explained. Sydney leak detection specialists.",
@@ -1323,7 +1327,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 13: Shower Membrane Repair =====
   {
     slug: "shower-membrane-repair",
-    image: showerMembraneRepair,
+    image: BLOG_IMAGES.showerMembraneRepair,
     title: "Shower Membrane Repair: When You Need It and What to Expect",
     metaTitle: "Shower Membrane Repair Sydney | When You Need It & Costs",
     metaDescription: "Expert guide to shower membrane repair in Sydney. Learn when membrane repair is needed, what the process involves, costs, and alternatives. Free inspections available.",
@@ -1376,7 +1380,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 14: Tiled Shower Sealing =====
   {
     slug: "tiled-shower-sealing",
-    image: tiledShowerSealing,
+    image: BLOG_IMAGES.tiledShowerSealing,
     title: "Tiled Shower Sealing in Sydney: Protecting Your Bathroom from Water Damage",
     metaTitle: "Tiled Shower Sealing Sydney | Professional Tile Sealing Guide",
     metaDescription: "Expert guide to tiled shower sealing in Sydney. Learn how tile sealing protects your bathroom, extends grout life, and complements waterproofing. Professional service available.",
@@ -1434,7 +1438,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 15: Tiled Balcony Sealing =====
   {
     slug: "tiled-balcony-sealing",
-    image: tiledBalconySealing,
+    image: BLOG_IMAGES.tiledBalconySealing,
     title: "Tiled Balcony Sealing: Extending the Life of Your Balcony Waterproofing",
     metaTitle: "Tiled Balcony Sealing Sydney | Protect Your Balcony Investment",
     metaDescription: "Professional tiled balcony sealing services in Sydney. Learn how sealing protects your balcony tiles, extends waterproofing life, and prevents costly repairs.",
@@ -1486,7 +1490,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 16: Balcony Membrane Repair =====
   {
     slug: "balcony-membrane-repair",
-    image: balconyMembraneRepair,
+    image: BLOG_IMAGES.balconyMembraneRepair,
     title: "Balcony Membrane Repair in Sydney: A Complete Guide to Restoring Waterproofing",
     metaTitle: "Balcony Membrane Repair Sydney | Professional Restoration Guide",
     metaDescription: "Expert guide to balcony membrane repair in Sydney. Learn when repair vs replacement is needed, costs, methods, and how to choose the right specialist. Strata approved.",
@@ -1539,7 +1543,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 17: Epoxy Regrouting Guide =====
   {
     slug: "epoxy-regrouting-guide",
-    image: epoxyRegroutingGuide,
+    image: BLOG_IMAGES.epoxyRegroutingGuide,
     title: "Epoxy Regrouting Sydney: The Complete Guide to Professional Shower Repair",
     metaTitle: "Epoxy Regrouting Sydney | Complete Professional Guide",
     metaDescription: "Everything you need to know about epoxy regrouting in Sydney. Process, costs, benefits, and what to expect from professional shower leak repair. 10-year warranty.",
@@ -1599,7 +1603,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 18: Grout Replacement Sydney =====
   {
     slug: "grout-replacement-sydney",
-    image: groutReplacementSydney,
+    image: BLOG_IMAGES.groutReplacementSydney,
     title: "Grout Replacement in Sydney: Costs, Options, and Expert Advice",
     metaTitle: "Grout Replacement Sydney | Costs, Options & Expert Guide",
     metaDescription: "Complete guide to grout replacement in Sydney. Compare cement vs epoxy grout costs, learn when replacement is needed, and find professional grout specialists near you.",
@@ -1651,7 +1655,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 19: Tile Sealing Services Sydney =====
   {
     slug: "tile-sealing-services-sydney",
-    image: tileSealingServicesSydney,
+    image: BLOG_IMAGES.tileSealingServicesSydney,
     title: "Tile Sealing Services in Sydney: Protect Your Tiles and Extend Their Life",
     metaTitle: "Tile Sealing Services Sydney | Professional Tile Protection",
     metaDescription: "Professional tile sealing services across Sydney. Protect tiles from stains, water damage, and wear. Interior and exterior tile sealing for homes and strata buildings.",
@@ -1703,7 +1707,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 20: Balcony Waterproofing Cost =====
   {
     slug: "balcony-waterproofing-cost",
-    image: balconyWaterproofingCost,
+    image: BLOG_IMAGES.balconyWaterproofingCost,
     title: "Balcony Waterproofing Cost in Sydney: Complete Pricing Guide for 2024",
     metaTitle: "Balcony Waterproofing Cost Sydney 2024 | Complete Pricing Guide",
     metaDescription: "Understand balcony waterproofing costs in Sydney. Detailed pricing for membrane systems, tile removal, concrete repairs, and re-tiling. Free quotes from local specialists.",
