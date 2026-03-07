@@ -1205,7 +1205,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 11: Shower Waterproofing Sydney =====
   {
     slug: "shower-waterproofing-sydney",
-    image: showerWaterproofingSydney,
+    image: BLOG_IMAGES.showerWaterproofingSydney,
     title: "Shower Waterproofing in Sydney: Everything You Need to Know",
     metaTitle: "Shower Waterproofing Sydney | Complete Homeowner's Guide",
     metaDescription: "Complete guide to shower waterproofing in Sydney. Covers Australian Standards, membrane systems, repair options, and costs. Expert advice from local specialists.",
