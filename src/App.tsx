@@ -11,6 +11,7 @@ import ShowerRepairs from "./pages/ShowerRepairs";
 import BalconyRepairs from "./pages/BalconyRepairs";
 import Strata from "./pages/Strata";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import SuburbPage from "./pages/SuburbPage";
@@ -34,6 +35,7 @@ const App = () => (
               <Route path="/services/:suburb" element={<SuburbPage />} />
               <Route path="/strata" element={<Strata />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
