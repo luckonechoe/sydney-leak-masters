@@ -608,6 +608,13 @@ export default function BalconyRepairs() {
           </div>
         </section>
 
+        {/* Pricing Calculator */}
+        <section className="py-16 lg:py-24 bg-muted/30">
+          <div className="section-container">
+            <PricingCalculator type="balcony" />
+          </div>
+        </section>
+
         {/* FAQ Section */}
         <section className="py-16 lg:py-24">
           <div className="section-container">

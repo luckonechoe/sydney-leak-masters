@@ -676,6 +676,13 @@ export default function ShowerRepairs() {
           </div>
         </section>
 
+        {/* Pricing Calculator */}
+        <section className="py-16 lg:py-24">
+          <div className="section-container">
+            <PricingCalculator type="shower" />
+          </div>
+        </section>
+
         {/* FAQ Section */}
         <section className="py-16 lg:py-24 bg-muted/30">
           <div className="section-container">
