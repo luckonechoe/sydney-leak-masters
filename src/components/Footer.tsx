@@ -5,22 +5,32 @@ import { PHONE_NUMBER, PHONE_HREF } from "./CTAButton";
 
 const footerLinks = {
   services: [
-    { name: "Shower Repairs", href: "/services/shower-repairs" },
-    { name: "Balcony Repairs", href: "/services/balcony-repairs" },
-    { name: "Strata Services", href: "/strata" },
+    { name: "Leaking Shower Repairs", href: "/services/shower-repairs" },
+    { name: "Leaking Balcony Repairs", href: "/services/balcony-repairs" },
+    { name: "Strata Waterproofing", href: "/strata" },
+    { name: "Epoxy Regrouting", href: "/blog/epoxy-regrouting-guide" },
+    { name: "Tile Sealing Services", href: "/blog/tile-sealing-services-sydney" },
+  ],
+  resources: [
+    { name: "Complete Leak Repair Guide", href: "/guides/complete-guide-leak-repairs-sydney" },
+    { name: "Blog & Expert Tips", href: "/blog" },
+    { name: "FAQ", href: "/faq" },
+    { name: "Epoxy vs Cement Grout", href: "/blog/epoxy-grout-vs-cement-grout" },
+    { name: "Waterproofing Standards", href: "/blog/bathroom-waterproofing-standards" },
   ],
   company: [
     { name: "About Us", href: "/about" },
-    { name: "Blog", href: "/blog" },
-    { name: "FAQ", href: "/faq" },
-    { name: "Contact", href: "/contact" },
+    { name: "Contact & Free Quote", href: "/contact" },
+    { name: "Service Areas", href: "/suburbs" },
   ],
   suburbs: [
-    { name: "Parramatta", href: "/services/parramatta" },
-    { name: "Bondi", href: "/services/bondi" },
-    { name: "Chatswood", href: "/services/chatswood" },
-    { name: "Manly", href: "/services/manly" },
-    { name: "View All Suburbs", href: "/suburbs" },
+    { name: "Shower Repairs Parramatta", href: "/leaking-shower-repairs/parramatta" },
+    { name: "Balcony Repairs Bondi", href: "/leaking-balcony-repairs/bondi" },
+    { name: "Shower Repairs Chatswood", href: "/leaking-shower-repairs/chatswood" },
+    { name: "Shower Repairs Blacktown", href: "/leaking-shower-repairs/blacktown" },
+    { name: "Balcony Repairs Manly", href: "/leaking-balcony-repairs/manly" },
+    { name: "Shower Repairs Mosman", href: "/leaking-shower-repairs/mosman" },
+    { name: "View All 50+ Suburbs", href: "/suburbs" },
   ],
 };
 
@@ -35,7 +45,7 @@ export function Footer() {
     <footer className="bg-card border-t border-border">
       {/* Main Footer */}
       <div className="section-container py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-4">
@@ -53,8 +63,10 @@ export function Footer() {
             </Link>
             
             <p className="text-muted-foreground mb-6 max-w-sm">
-              Sydney's trusted specialists in shower and balcony leak repairs. 
-              Premium epoxy grout solutions with a 10-year warranty.
+              Sydney's trusted specialists in <Link to="/services/shower-repairs" className="text-secondary hover:underline">shower leak repairs</Link> and{" "}
+              <Link to="/services/balcony-repairs" className="text-secondary hover:underline">balcony waterproofing</Link>.{" "}
+              Premium epoxy grout solutions with a 10-year warranty. Servicing{" "}
+              <Link to="/suburbs" className="text-secondary hover:underline">50+ Sydney suburbs</Link>.
             </p>
             
             <WarrantyBadge size="sm" animated={false} className="mb-6" />
@@ -90,7 +102,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-muted-foreground hover:text-secondary transition-colors"
+                    className="text-muted-foreground hover:text-secondary transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -99,15 +111,25 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Resources */}
           <div>
-            <h3 className="font-heading font-bold text-foreground mb-4">Company</h3>
+            <h3 className="font-heading font-bold text-foreground mb-4">Resources</h3>
             <ul className="space-y-3">
+              {footerLinks.resources.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="text-muted-foreground hover:text-secondary transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-muted-foreground hover:text-secondary transition-colors"
+                    className="text-muted-foreground hover:text-secondary transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -116,15 +138,15 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Service Areas */}
-          <div>
-            <h3 className="font-heading font-bold text-foreground mb-4">Service Areas</h3>
-            <ul className="space-y-3">
+          {/* Service Areas with keyword-rich anchor text */}
+          <div className="lg:col-span-2">
+            <h3 className="font-heading font-bold text-foreground mb-4">Popular Service Areas</h3>
+            <ul className="space-y-2 columns-2">
               {footerLinks.suburbs.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-muted-foreground hover:text-secondary transition-colors"
+                    className="text-muted-foreground hover:text-secondary transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -140,7 +162,7 @@ export function Footer() {
         <div className="section-container py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-muted-foreground text-sm">
-              © {new Date().getFullYear()} Sydney Leak Repairs Pro. All rights reserved.
+              © {new Date().getFullYear()} Sydney Leak Repairs Pro. All rights reserved. ABN: XX XXX XXX XXX. Licensed waterproofing contractor.
             </p>
             
             {/* Social Links */}
@@ -151,8 +173,9 @@ export function Footer() {
                   <a
                     key={social.name}
                     href={social.href}
-                    aria-label={social.name}
+                    aria-label={`Follow Sydney Leak Repairs Pro on ${social.name}`}
                     className="p-2 rounded-lg text-muted-foreground hover:text-secondary hover:bg-secondary/10 transition-colors"
+                    rel="noopener noreferrer"
                   >
                     <Icon className="w-5 h-5" />
                   </a>
