@@ -24,13 +24,13 @@ const footerLinks = {
     { name: "Service Areas", href: "/suburbs" },
   ],
   suburbs: [
-    { name: "Shower Repairs Parramatta", href: "/leaking-shower-repairs/parramatta" },
-    { name: "Balcony Repairs Bondi", href: "/leaking-balcony-repairs/bondi" },
-    { name: "Shower Repairs Chatswood", href: "/leaking-shower-repairs/chatswood" },
-    { name: "Shower Repairs Blacktown", href: "/leaking-shower-repairs/blacktown" },
-    { name: "Balcony Repairs Manly", href: "/leaking-balcony-repairs/manly" },
-    { name: "Shower Repairs Mosman", href: "/leaking-shower-repairs/mosman" },
-    { name: "View All 50+ Suburbs", href: "/suburbs" },
+    { name: "Parramatta", href: "/leaking-shower-repairs/parramatta" },
+    { name: "Bondi", href: "/leaking-shower-repairs/bondi" },
+    { name: "Chatswood", href: "/leaking-shower-repairs/chatswood" },
+    { name: "Manly", href: "/leaking-shower-repairs/manly" },
+    { name: "Blacktown", href: "/leaking-shower-repairs/blacktown" },
+    { name: "Mosman", href: "/leaking-shower-repairs/mosman" },
+    { name: "View All Suburbs", href: "/suburbs" },
   ],
 };
 
