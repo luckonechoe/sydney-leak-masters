@@ -15,6 +15,7 @@ import BlogPost from "./pages/BlogPost";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import SuburbPage from "./pages/SuburbPage";
+import CompleteGuide from "./pages/CompleteGuide";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
