@@ -959,6 +959,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 8: Waterproof Membrane Failure =====
   {
     slug: "waterproof-membrane-failure",
+    image: waterproofMembraneFailure,
     title: "Waterproof Membrane Failure: Signs, Causes, and Professional Repair Solutions",
     metaTitle: "Waterproof Membrane Failure Signs & Repair | Sydney Expert Guide",
     metaDescription: "Identify waterproof membrane failure in showers and balconies. Learn the causes, warning signs, and professional repair options. Sydney specialists with 10-year warranty.",
