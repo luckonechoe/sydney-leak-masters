@@ -1486,6 +1486,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 16: Balcony Membrane Repair =====
   {
     slug: "balcony-membrane-repair",
+    image: balconyMembraneRepair,
     title: "Balcony Membrane Repair in Sydney: A Complete Guide to Restoring Waterproofing",
     metaTitle: "Balcony Membrane Repair Sydney | Professional Restoration Guide",
     metaDescription: "Expert guide to balcony membrane repair in Sydney. Learn when repair vs replacement is needed, costs, methods, and how to choose the right specialist. Strata approved.",
