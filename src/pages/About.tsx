@@ -88,7 +88,7 @@ export default function About() {
             <Breadcrumbs
               items={[
                 { name: "Home", href: "/" },
-                { name: "About Us" },
+                { name: "About Us", href: "/about" },
               ]}
             />
 
