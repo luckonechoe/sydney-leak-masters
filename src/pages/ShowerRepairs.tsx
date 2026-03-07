@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Check, Droplets, Clock, Shield, Star, ArrowRight, AlertTriangle, Layers, MapPin, Eye, Award, DollarSign, Users, Wrench, Home } from "lucide-react";
+import { PricingCalculator } from "@/components/PricingCalculator";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
