@@ -32,6 +32,7 @@ export interface BlogPostContent {
   keywords: string[];
   sections: BlogSection[];
   faqs: { question: string; answer: string }[];
+  image?: string;
   relatedPosts: string[];
 }
 
