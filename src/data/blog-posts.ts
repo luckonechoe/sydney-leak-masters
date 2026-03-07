@@ -594,6 +594,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 5: DIY Leak Detection =====
   {
     slug: "diy-leak-detection",
+    image: diyLeakDetection,
     title: "DIY Leak Detection: Simple Tests You Can Do (And When to Call a Pro)",
     metaTitle: "DIY Leak Detection Guide | When to Call a Professional in Sydney",
     metaDescription: "Learn simple DIY leak detection methods for showers and balconies. Know when to call a professional. Expert guide from Sydney's leak repair specialists.",
