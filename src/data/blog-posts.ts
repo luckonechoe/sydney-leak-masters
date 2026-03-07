@@ -1051,6 +1051,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 9: Balcony Waterproofing Systems =====
   {
     slug: "balcony-waterproofing-systems",
+    image: balconyWaterproofingSystems,
     title: "Balcony Waterproofing Systems Explained: Which Is Right for Your Sydney Property?",
     metaTitle: "Balcony Waterproofing Systems Explained | Sydney Expert Guide",
     metaDescription: "Compare balcony waterproofing systems for Sydney properties. Liquid membranes, torch-on, sheet systems explained. Expert advice on choosing the right solution.",
