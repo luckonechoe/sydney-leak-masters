@@ -1,6 +1,6 @@
-import { useParams, Navigate } from "react-router-dom";
+import { useParams, Navigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { MapPin, Check, Phone } from "lucide-react";
+import { MapPin, Check, Phone, ArrowRight, BookOpen } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTAButton } from "@/components/CTAButton";
@@ -78,6 +78,50 @@ export default function SuburbPage() {
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               <ServiceCard type="shower" />
               <ServiceCard type="balcony" />
+            </div>
+          </div>
+        </section>
+
+        {/* Internal Links Section */}
+        <section className="py-12">
+          <div className="section-container">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="font-heading text-2xl font-bold text-foreground mb-4">
+                Expert Leak Repair Resources
+              </h2>
+              <p className="text-muted-foreground mb-6">
+                Learn more about protecting your {suburbData.name} property from water damage with our expert guides and service information.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <Link to="/guides/complete-guide-leak-repairs-sydney" className="flex items-start gap-3 p-4 bg-card border border-border rounded-lg hover:border-secondary/50 transition-colors group">
+                  <BookOpen className="w-5 h-5 text-secondary mt-0.5 shrink-0" />
+                  <div>
+                    <span className="font-medium text-foreground group-hover:text-secondary transition-colors">Complete Guide to Leak Repairs</span>
+                    <p className="text-sm text-muted-foreground mt-1">Everything you need to know about shower and balcony leak repairs in Sydney.</p>
+                  </div>
+                </Link>
+                <Link to="/blog/signs-of-shower-leak" className="flex items-start gap-3 p-4 bg-card border border-border rounded-lg hover:border-secondary/50 transition-colors group">
+                  <BookOpen className="w-5 h-5 text-secondary mt-0.5 shrink-0" />
+                  <div>
+                    <span className="font-medium text-foreground group-hover:text-secondary transition-colors">5 Warning Signs of a Shower Leak</span>
+                    <p className="text-sm text-muted-foreground mt-1">Learn how to spot leaks before they cause serious damage.</p>
+                  </div>
+                </Link>
+                <Link to="/blog/epoxy-grout-vs-cement-grout" className="flex items-start gap-3 p-4 bg-card border border-border rounded-lg hover:border-secondary/50 transition-colors group">
+                  <BookOpen className="w-5 h-5 text-secondary mt-0.5 shrink-0" />
+                  <div>
+                    <span className="font-medium text-foreground group-hover:text-secondary transition-colors">Epoxy Grout vs Cement Grout</span>
+                    <p className="text-sm text-muted-foreground mt-1">Why epoxy grout is the professional's choice for lasting waterproofing.</p>
+                  </div>
+                </Link>
+                <Link to="/blog/concrete-degradation-prevention" className="flex items-start gap-3 p-4 bg-card border border-border rounded-lg hover:border-secondary/50 transition-colors group">
+                  <BookOpen className="w-5 h-5 text-secondary mt-0.5 shrink-0" />
+                  <div>
+                    <span className="font-medium text-foreground group-hover:text-secondary transition-colors">Preventing Concrete Degradation</span>
+                    <p className="text-sm text-muted-foreground mt-1">Protect your balcony from spalling and structural damage.</p>
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
         </section>

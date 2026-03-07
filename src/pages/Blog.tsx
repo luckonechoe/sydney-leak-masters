@@ -1,76 +1,10 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Calendar, Clock, User } from "lucide-react";
+import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEOHead, Breadcrumbs } from "@/components/seo";
-
-interface BlogPost {
-  slug: string;
-  title: string;
-  excerpt: string;
-  category: string;
-  author: string;
-  date: string;
-  readTime: string;
-}
-
-const blogPosts: BlogPost[] = [
-  {
-    slug: "signs-of-shower-leak",
-    title: "5 Warning Signs Your Shower is Leaking",
-    excerpt: "Learn how to identify early signs of shower leaks before they cause serious damage to your home. From musty odors to peeling paint, here's what to look for.",
-    category: "Shower Repairs",
-    author: "Sydney Leak Repairs Pro",
-    date: "2024-01-15",
-    readTime: "5 min read",
-  },
-  {
-    slug: "epoxy-grout-vs-cement-grout",
-    title: "Epoxy Grout vs Cement Grout: Which is Better?",
-    excerpt: "A comprehensive comparison of epoxy and cement grouts for bathroom waterproofing. Discover why epoxy grout is the preferred choice for lasting leak repairs.",
-    category: "Education",
-    author: "Sydney Leak Repairs Pro",
-    date: "2024-01-10",
-    readTime: "7 min read",
-  },
-  {
-    slug: "concrete-degradation-prevention",
-    title: "How to Prevent Concrete Degradation in Your Building",
-    excerpt: "Concrete degradation (spalling) can cause serious structural damage. Learn the causes, warning signs, and prevention strategies to protect your property.",
-    category: "Balcony Repairs",
-    author: "Sydney Leak Repairs Pro",
-    date: "2024-01-05",
-    readTime: "6 min read",
-  },
-  {
-    slug: "strata-waterproofing-guide",
-    title: "A Strata Manager's Guide to Waterproofing",
-    excerpt: "Everything strata managers need to know about maintaining waterproofing in multi-unit buildings. From inspections to compliance requirements.",
-    category: "Strata",
-    author: "Sydney Leak Repairs Pro",
-    date: "2023-12-28",
-    readTime: "8 min read",
-  },
-  {
-    slug: "diy-leak-detection",
-    title: "DIY Leak Detection: When to Call a Professional",
-    excerpt: "Some leaks can be identified at home, but others require professional expertise. Here's how to know when it's time to call in the experts.",
-    category: "Tips",
-    author: "Sydney Leak Repairs Pro",
-    date: "2023-12-20",
-    readTime: "4 min read",
-  },
-  {
-    slug: "bathroom-waterproofing-standards",
-    title: "Australian Bathroom Waterproofing Standards Explained",
-    excerpt: "Understanding AS 3740-2010 and what it means for your bathroom renovation or repair project. A guide to compliance requirements.",
-    category: "Education",
-    author: "Sydney Leak Repairs Pro",
-    date: "2023-12-15",
-    readTime: "6 min read",
-  },
-];
+import { blogPostsData } from "@/data/blog-posts";
 
 export default function Blog() {
   const breadcrumbItems = [
@@ -82,7 +16,7 @@ export default function Blog() {
     <>
       <SEOHead
         title="Blog | Leak Repair Tips & Guides"
-        description="Expert advice on shower leaks, balcony waterproofing, concrete degradation prevention, and more. Stay informed with Sydney Leak Repairs Pro."
+        description="Expert advice on shower leaks, balcony waterproofing, epoxy regrouting, tile sealing, and concrete degradation prevention. Stay informed with Sydney Leak Repairs Pro."
       />
 
       <div className="min-h-screen bg-background">
@@ -113,27 +47,51 @@ export default function Blog() {
           </div>
         </section>
 
+        {/* Featured Pillar Guide */}
+        <section className="pb-8">
+          <div className="section-container">
+            <Link to="/guides/complete-guide-leak-repairs-sydney" className="group block">
+              <div className="bg-card border-2 border-secondary/30 rounded-lg overflow-hidden hover:border-secondary/60 transition-colors p-6 lg:p-8">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="px-3 py-1 bg-secondary text-secondary-foreground text-xs font-bold rounded">FEATURED GUIDE</span>
+                  <span className="text-xs text-muted-foreground">25 min read</span>
+                </div>
+                <h2 className="font-heading font-bold text-xl lg:text-2xl text-foreground mb-2 group-hover:text-secondary transition-colors">
+                  Complete Guide to Leaking Shower and Balcony Repairs in Sydney
+                </h2>
+                <p className="text-muted-foreground mb-4">
+                  Everything you need to know about identifying, repairing, and preventing shower and balcony leaks. Covers causes, warning signs, repair methods, waterproofing systems, costs, and preventative maintenance.
+                </p>
+                <span className="inline-flex items-center gap-1 text-sm text-secondary group-hover:gap-2 transition-all font-medium">
+                  Read the complete guide
+                  <ArrowRight className="w-4 h-4" />
+                </span>
+              </div>
+            </Link>
+          </div>
+        </section>
+
         {/* Blog Posts Grid */}
         <section className="py-12 lg:py-16">
           <div className="section-container">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {blogPosts.map((post, index) => (
+              {blogPostsData.map((post, index) => (
                 <motion.article
                   key={post.slug}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={{ delay: (index % 6) * 0.1 }}
                   className="group"
                 >
                   <Link to={`/blog/${post.slug}`}>
-                    <div className="bg-card border border-border rounded-lg overflow-hidden hover:border-secondary/50 transition-colors">
+                    <div className="bg-card border border-border rounded-lg overflow-hidden hover:border-secondary/50 transition-colors h-full flex flex-col">
                       {/* Placeholder Image */}
                       <div className="aspect-video bg-gradient-to-br from-muted to-card flex items-center justify-center">
                         <span className="text-muted-foreground text-sm">Featured Image</span>
                       </div>
 
-                      <div className="p-6">
+                      <div className="p-6 flex-1 flex flex-col">
                         <div className="flex items-center gap-2 mb-3">
                           <span className="px-2 py-1 bg-secondary/10 text-secondary text-xs font-medium rounded">
                             {post.category}
@@ -148,7 +106,7 @@ export default function Blog() {
                           {post.title}
                         </h2>
 
-                        <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
+                        <p className="text-muted-foreground text-sm mb-4 line-clamp-3 flex-1">
                           {post.excerpt}
                         </p>
 
