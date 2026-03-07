@@ -2580,6 +2580,7 @@ export const blogPostsData: BlogPostContent[] = [
       }
     ]
   }
+];
 
 export function getBlogPostBySlug(slug: string): BlogPostContent | undefined {
   return blogPostsData.find((post) => post.slug === slug);
