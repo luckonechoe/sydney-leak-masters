@@ -86,10 +86,20 @@ export default function Blog() {
                 >
                   <Link to={`/blog/${post.slug}`}>
                     <div className="bg-card border border-border rounded-lg overflow-hidden hover:border-secondary/50 transition-colors h-full flex flex-col">
-                      {/* Placeholder Image */}
-                      <div className="aspect-video bg-gradient-to-br from-muted to-card flex items-center justify-center">
-                        <span className="text-muted-foreground text-sm">Featured Image</span>
-                      </div>
+                      {post.image ? (
+                        <div className="aspect-video overflow-hidden">
+                          <img
+                            src={post.image}
+                            alt={post.title}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            loading="lazy"
+                          />
+                        </div>
+                      ) : (
+                        <div className="aspect-video bg-gradient-to-br from-muted to-card flex items-center justify-center">
+                          <span className="text-muted-foreground text-sm">Featured Image</span>
+                        </div>
+                      )}
 
                       <div className="p-6 flex-1 flex flex-col">
                         <div className="flex items-center gap-2 mb-3">
