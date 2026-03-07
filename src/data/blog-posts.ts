@@ -1703,6 +1703,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 20: Balcony Waterproofing Cost =====
   {
     slug: "balcony-waterproofing-cost",
+    image: balconyWaterproofingCost,
     title: "Balcony Waterproofing Cost in Sydney: Complete Pricing Guide for 2024",
     metaTitle: "Balcony Waterproofing Cost Sydney 2024 | Complete Pricing Guide",
     metaDescription: "Understand balcony waterproofing costs in Sydney. Detailed pricing for membrane systems, tile removal, concrete repairs, and re-tiling. Free quotes from local specialists.",
