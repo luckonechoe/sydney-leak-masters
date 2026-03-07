@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Check, Droplets, Clock, Shield, Star, ArrowRight, AlertTriangle, Layers, MapPin, Eye, Award, DollarSign, Users, Wrench, Home } from "lucide-react";
+import { PricingCalculator } from "@/components/PricingCalculator";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -672,6 +673,13 @@ export default function ShowerRepairs() {
                 );
               })}
             </div>
+          </div>
+        </section>
+
+        {/* Pricing Calculator */}
+        <section className="py-16 lg:py-24">
+          <div className="section-container">
+            <PricingCalculator type="shower" />
           </div>
         </section>
 
