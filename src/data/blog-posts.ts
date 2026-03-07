@@ -879,7 +879,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 7: How to Fix Leaking Balcony Tiles =====
   {
     slug: "how-to-fix-leaking-balcony-tiles",
-    image: howToFixLeakingBalconyTiles,
+    image: BLOG_IMAGES.howToFixLeakingBalconyTiles,
     title: "How to Fix Leaking Balcony Tiles: A Complete Guide for Sydney Homeowners",
     metaTitle: "How to Fix Leaking Balcony Tiles | Sydney Waterproofing Guide",
     metaDescription: "Learn how to fix leaking balcony tiles in Sydney. Expert guide covering causes, repair methods, waterproofing options, and when to call a professional. 10-year warranty available.",
