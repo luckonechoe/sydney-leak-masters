@@ -1651,6 +1651,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 19: Tile Sealing Services Sydney =====
   {
     slug: "tile-sealing-services-sydney",
+    image: tileSealingServicesSydney,
     title: "Tile Sealing Services in Sydney: Protect Your Tiles and Extend Their Life",
     metaTitle: "Tile Sealing Services Sydney | Professional Tile Protection",
     metaDescription: "Professional tile sealing services across Sydney. Protect tiles from stains, water damage, and wear. Interior and exterior tile sealing for homes and strata buildings.",
