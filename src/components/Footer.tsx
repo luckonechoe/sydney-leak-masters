@@ -20,8 +20,11 @@ const footerLinks = {
   ],
   company: [
     { name: "About Us", href: "/about" },
-    { name: "Contact & Free Quote", href: "/contact" },
     { name: "Service Areas", href: "/suburbs" },
+    { name: "FAQ", href: "/faq" },
+    { name: "Blog & Expert Tips", href: "/blog" },
+    { name: "Complete Leak Repair Guide", href: "/guides/complete-guide-leak-repairs-sydney" },
+    { name: "Contact & Free Quote", href: "/contact" },
   ],
   suburbs: [
     { name: "Parramatta", href: "/leaking-shower-repairs/parramatta" },
