@@ -17,6 +17,7 @@ const navigation = [
       { name: "Balcony Repairs", href: "/services/balcony-repairs" },
     ],
   },
+  { name: "About", href: "/about" },
   { name: "Strata", href: "/strata" },
   { name: "Blog", href: "/blog" },
   { name: "FAQ", href: "/faq" },
