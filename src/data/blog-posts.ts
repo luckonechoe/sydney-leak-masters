@@ -1272,7 +1272,7 @@ export const blogPostsData: BlogPostContent[] = [
   // ===== BLOG POST 12: Balcony Leak Detection =====
   {
     slug: "balcony-leak-detection",
-    image: balconyLeakDetection,
+    image: BLOG_IMAGES.balconyLeakDetection,
     title: "Balcony Leak Detection: Professional Methods and DIY Tips for Sydney Properties",
     metaTitle: "Balcony Leak Detection Methods | Professional Sydney Guide",
     metaDescription: "Learn professional and DIY methods for detecting balcony leaks. Flood testing, moisture mapping, thermal imaging explained. Sydney leak detection specialists.",
