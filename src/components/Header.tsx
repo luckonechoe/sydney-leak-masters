@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, Droplets, Sun, Moon } from "lucide-react";
+import { Menu, X, ChevronDown, Sun, Moon } from "lucide-react";
+import logoImg from "@/assets/logo.png";
 import { cn } from "@/lib/utils";
 import { CTAButton, PHONE_NUMBER } from "./CTAButton";
 import { Button } from "@/components/ui/button";
@@ -41,9 +42,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="p-2 rounded-lg bg-secondary/10 group-hover:bg-secondary/20 transition-colors">
-              <Droplets className="w-6 h-6 text-secondary" />
-            </div>
+            <img src={logoImg} alt="Sydney Leak Repairs Pro Logo" className="w-10 h-10 object-contain" />
             <div className="hidden sm:block">
               <span className="font-heading font-bold text-lg text-foreground">
                 Sydney Leak Repairs
