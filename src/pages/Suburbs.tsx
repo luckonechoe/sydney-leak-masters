@@ -4,7 +4,7 @@ import { MapPin, ArrowRight, Shield, Clock, Star, Phone } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTAButton } from "@/components/CTAButton";
-import { SEOHead, Breadcrumbs } from "@/components/seo";
+import { SEOHead, Breadcrumbs, FAQSchema } from "@/components/seo";
 import { sydneySuburbs, type SuburbData } from "@/lib/suburbs";
 
 // Group suburbs by region
@@ -40,6 +40,25 @@ const trustSignals = [
   { icon: MapPin, label: "50+ Suburbs", desc: "All of Greater Sydney" },
 ];
 
+const serviceAreaFAQs = [
+  {
+    question: "Do you charge travel fees for any Sydney suburb?",
+    answer: "No. There are no call-out or travel charges for any suburb within the Greater Sydney metropolitan area, including the Central Coast and Wollongong.",
+  },
+  {
+    question: "How quickly can you attend my property for a leak inspection?",
+    answer: "Most inspections are booked within 24–48 hours, with same-day emergency availability for active leaks causing immediate damage.",
+  },
+  {
+    question: "Is my suburb covered if it's not listed on this page?",
+    answer: "Yes. We service all of Greater Sydney. The suburbs listed are our most common service areas, but we're happy to visit any location within the metro region.",
+  },
+  {
+    question: "Do you offer both shower and balcony repairs in all suburbs?",
+    answer: "Yes. Every suburb we service has access to our full range of services including leaking shower repairs, leaking balcony repairs, epoxy regrouting, membrane replacement, and strata waterproofing.",
+  },
+];
+
 export default function Suburbs() {
   const grouped = groupByRegion(sydneySuburbs);
   const sortedRegions = regionOrder.filter((r) => grouped[r]);
@@ -52,10 +71,12 @@ export default function Suburbs() {
   return (
     <>
       <SEOHead
-        title="Sydney Leak Repair Service Areas | 50+ Suburbs Covered"
-        description="Professional shower and balcony leak repairs across 50+ Sydney suburbs. From the Eastern Suburbs to Western Sydney, we provide expert waterproofing with a 10-year warranty. Find your local area."
+        title="Leak Repair Service Areas Sydney | 50+ Suburbs | Shower & Balcony Specialists"
+        description="Professional leaking shower repairs and balcony waterproofing across 50+ Sydney suburbs. Eastern Suburbs, North Shore, Inner West, Western Sydney & more. 10-year warranty, free quotes, no travel fees."
         canonical="https://sydneyleakrepairspro.com.au/suburbs"
+        keywords="leak repair Sydney suburbs, shower repairs near me, balcony repairs Sydney, waterproofing Sydney, epoxy grout Sydney suburbs, local leak repair specialist"
       />
+      <FAQSchema faqs={serviceAreaFAQs} />
 
       <div className="min-h-screen bg-background">
         <Header />
@@ -98,10 +119,12 @@ export default function Suburbs() {
               </p>
 
               <p className="text-muted-foreground mb-8 max-w-2xl">
-                Whether you're dealing with a leaking shower in Bondi, a
-                cracked balcony membrane in Parramatta, or strata waterproofing
-                in Chatswood — our team delivers fast, code-compliant repairs
-                built to Australian Standards AS 3740 and AS 4654.2.
+                Whether you need a{" "}
+                <Link to="/services/shower-repairs" className="text-secondary hover:underline">leaking shower repair</Link> in Bondi, a{" "}
+                <Link to="/services/balcony-repairs" className="text-secondary hover:underline">balcony waterproofing</Link> job in Parramatta, or{" "}
+                <Link to="/strata" className="text-secondary hover:underline">strata waterproofing</Link> in Chatswood — our team delivers fast, code-compliant repairs
+                built to Australian Standards{" "}
+                <Link to="/blog/bathroom-waterproofing-standards" className="text-secondary hover:underline">AS 3740</Link> and AS 4654.2.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -152,9 +175,10 @@ export default function Suburbs() {
                 Find Your Local Leak Repair Specialists
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Select your suburb below to see how we can help protect your
-                property. Each area page includes local service details,
-                pricing guidance, and a free quote form.
+                Select your suburb below for{" "}
+                <Link to="/services/shower-repairs" className="text-secondary hover:underline">leaking shower repairs</Link> or{" "}
+                <Link to="/services/balcony-repairs" className="text-secondary hover:underline">leaking balcony repairs</Link>.{" "}
+                Each area page includes local service details, pricing guidance, and a free quote form.
               </p>
             </motion.div>
 
@@ -173,21 +197,23 @@ export default function Suburbs() {
                   </h3>
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
                     {grouped[region].map((suburb) => (
-                      <Link
-                        key={suburb.slug}
-                        to={`/services/${suburb.slug}`}
-                        className="group flex items-center justify-between p-3 bg-card border border-border rounded-lg hover:border-secondary/50 hover:bg-muted/50 transition-all duration-200"
-                      >
-                        <div>
-                          <span className="text-sm font-medium text-foreground group-hover:text-secondary transition-colors">
-                            {suburb.name}
-                          </span>
-                          <p className="text-xs text-muted-foreground">
-                            {suburb.postcode}
-                          </p>
-                        </div>
-                        <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-secondary transition-colors shrink-0" />
-                      </Link>
+                      <div key={suburb.slug} className="space-y-1">
+                        <Link
+                          to={`/leaking-shower-repairs/${suburb.slug}`}
+                          className="group flex items-center justify-between p-3 bg-card border border-border rounded-lg hover:border-secondary/50 hover:bg-muted/50 transition-all duration-200"
+                          title={`Leaking shower repairs in ${suburb.name} ${suburb.postcode}`}
+                        >
+                          <div>
+                            <span className="text-sm font-medium text-foreground group-hover:text-secondary transition-colors">
+                              {suburb.name}
+                            </span>
+                            <p className="text-xs text-muted-foreground">
+                              {suburb.postcode}
+                            </p>
+                          </div>
+                          <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-secondary transition-colors shrink-0" />
+                        </Link>
+                      </div>
                     ))}
                   </div>
                 </motion.div>
@@ -199,30 +225,39 @@ export default function Suburbs() {
         {/* SEO Content Section */}
         <section className="py-16 bg-muted/30">
           <div className="section-container">
-            <div className="max-w-3xl mx-auto prose prose-invert">
+            <div className="max-w-3xl mx-auto">
               <h2 className="font-heading text-2xl font-bold text-foreground mb-6">
                 Why Sydney Homeowners Trust Us for Local Leak Repairs
               </h2>
 
               <p className="text-muted-foreground mb-4">
                 Every Sydney suburb has its own waterproofing challenges.
-                Coastal properties in Bondi, Coogee, and Manly face constant
-                salt spray exposure that accelerates membrane degradation.
-                Older terraces in Surry Hills and Marrickville often have
-                outdated waterproofing that no longer meets Australian
-                Standards. New developments in Kellyville, Rouse Hill, and
-                Camden can suffer from construction defects that appear within
-                the first few years.
+                Coastal properties in{" "}
+                <Link to="/leaking-shower-repairs/bondi" className="text-secondary hover:underline">Bondi</Link>,{" "}
+                <Link to="/leaking-shower-repairs/coogee" className="text-secondary hover:underline">Coogee</Link>, and{" "}
+                <Link to="/leaking-shower-repairs/manly" className="text-secondary hover:underline">Manly</Link>{" "}
+                face constant salt spray exposure that accelerates{" "}
+                <Link to="/blog/waterproof-membrane-failure" className="text-secondary hover:underline">membrane degradation</Link>.
+                Older terraces in{" "}
+                <Link to="/leaking-shower-repairs/surry-hills" className="text-secondary hover:underline">Surry Hills</Link> and{" "}
+                <Link to="/leaking-shower-repairs/marrickville" className="text-secondary hover:underline">Marrickville</Link>{" "}
+                often have outdated waterproofing that no longer meets{" "}
+                <Link to="/blog/bathroom-waterproofing-standards" className="text-secondary hover:underline">Australian Standards</Link>.
+                New developments in{" "}
+                <Link to="/leaking-shower-repairs/kellyville" className="text-secondary hover:underline">Kellyville</Link>,{" "}
+                <Link to="/leaking-shower-repairs/rouse-hill" className="text-secondary hover:underline">Rouse Hill</Link>, and{" "}
+                <Link to="/leaking-shower-repairs/camden" className="text-secondary hover:underline">Camden</Link>{" "}
+                can suffer from construction defects that appear within the first few years.
               </p>
 
               <p className="text-muted-foreground mb-4">
                 Our technicians are trained to identify and solve the specific
                 issues common to each area. We don't apply a one-size-fits-all
                 approach — we tailor every repair to the property type, age,
-                and local environmental conditions. That's why strata managers
+                and local environmental conditions. That's why{" "}
+                <Link to="/strata" className="text-secondary hover:underline">strata managers</Link>{" "}
                 across the North Shore, Hills District, and Inner West
-                consistently choose Sydney Leak Repairs Pro for their
-                buildings.
+                consistently choose Sydney Leak Repairs Pro for their buildings.
               </p>
 
               <h3 className="font-heading text-xl font-bold text-foreground mt-8 mb-4">
@@ -233,7 +268,7 @@ export default function Suburbs() {
                 <li className="flex items-start gap-2">
                   <ArrowRight className="w-4 h-4 text-secondary mt-1 shrink-0" />
                   <span>
-                    <strong className="text-foreground">Shower Leak Repairs</strong> — Epoxy
+                    <Link to="/services/shower-repairs" className="text-secondary hover:underline font-semibold">Shower Leak Repairs</Link> — Epoxy
                     regrouting, membrane replacement, and full shower
                     restoration without removing tiles.
                   </span>
@@ -241,7 +276,7 @@ export default function Suburbs() {
                 <li className="flex items-start gap-2">
                   <ArrowRight className="w-4 h-4 text-secondary mt-1 shrink-0" />
                   <span>
-                    <strong className="text-foreground">Balcony Waterproofing</strong> — Liquid
+                    <Link to="/services/balcony-repairs" className="text-secondary hover:underline font-semibold">Balcony Waterproofing</Link> — Liquid
                     membrane application, tile sealing, and structural crack
                     repair for outdoor areas.
                   </span>
@@ -249,7 +284,7 @@ export default function Suburbs() {
                 <li className="flex items-start gap-2">
                   <ArrowRight className="w-4 h-4 text-secondary mt-1 shrink-0" />
                   <span>
-                    <strong className="text-foreground">Strata & Commercial</strong> — Multi-unit
+                    <Link to="/strata" className="text-secondary hover:underline font-semibold">Strata & Commercial</Link> — Multi-unit
                     waterproofing programs, common area repairs, and compliance
                     reporting for body corporates.
                   </span>
@@ -257,7 +292,7 @@ export default function Suburbs() {
                 <li className="flex items-start gap-2">
                   <ArrowRight className="w-4 h-4 text-secondary mt-1 shrink-0" />
                   <span>
-                    <strong className="text-foreground">Leak Detection</strong> — Non-invasive
+                    <Link to="/blog/diy-leak-detection" className="text-secondary hover:underline font-semibold">Leak Detection</Link> — Non-invasive
                     moisture mapping and thermal imaging to find hidden leaks
                     before they cause structural damage.
                   </span>
@@ -268,28 +303,14 @@ export default function Suburbs() {
                 Frequently Asked Questions About Our Service Areas
               </h3>
 
-              <p className="text-muted-foreground mb-2">
-                <strong className="text-foreground">Do you charge travel fees?</strong> No.
-                There are no call-out or travel charges for any suburb within
-                the Greater Sydney metropolitan area.
-              </p>
-
-              <p className="text-muted-foreground mb-2">
-                <strong className="text-foreground">
-                  How quickly can you attend my property?
-                </strong>{" "}
-                Most inspections are booked within 48 hours, with same-day
-                emergency availability for active leaks.
-              </p>
-
-              <p className="text-muted-foreground mb-2">
-                <strong className="text-foreground">
-                  Is my suburb covered if it's not listed?
-                </strong>{" "}
-                Yes. We service all of Greater Sydney. The suburbs listed above
-                are our most common service areas, but we're happy to visit any
-                location within the metro region.
-              </p>
+              {serviceAreaFAQs.map((faq, i) => (
+                <div key={i} className="mb-4">
+                  <p className="text-muted-foreground mb-2">
+                    <strong className="text-foreground">{faq.question}</strong>{" "}
+                    {faq.answer}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -307,7 +328,7 @@ export default function Suburbs() {
                 Don't See Your Suburb? We Still Service Your Area.
               </h2>
               <p className="text-muted-foreground mb-8">
-                Call us today for a free, no-obligation quote. We'll have a
+                <Link to="/contact" className="text-secondary hover:underline">Contact us</Link> today for a free, no-obligation quote. We'll have a
                 local technician at your door within 48 hours.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
