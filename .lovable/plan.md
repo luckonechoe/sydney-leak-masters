@@ -1,67 +1,121 @@
 
 
-# Plan: Expand Blog Posts to 2000+ Words
+# Add SEO-Optimized Copy to Service Pages
 
-## Analysis
+## Summary
+Expand the content on all three service pages (Shower Repairs, Balcony Repairs, Strata) with additional informative sections, keyword-rich copy, and SEO best practices including FAQ schema, improved meta descriptions, internal linking, and semantic HTML improvements.
 
-After reviewing all 20 blog posts in `src/data/blog-posts.ts`, the first ~6-8 posts have substantial content (8-9 sections each with detailed paragraphs, lists, and tables — estimated 2000+ words). The remaining posts are significantly shorter. Here's the breakdown:
+## SEO Strategy
 
-**Already 2000+ words (no changes needed):**
-1. `signs-of-shower-leak` — 9 sections, rich content
-2. `epoxy-grout-vs-cement-grout` — 9 sections with comparison table
-3. `concrete-degradation-prevention` — 8 sections, detailed
-4. `strata-waterproofing-guide` — 7 sections, comprehensive
-5. `diy-leak-detection` — 7+ sections, thorough
-6. `bathroom-waterproofing-standards` — 7 sections, detailed
+**Target Keywords:**
+- Shower page: "shower leak repair Sydney", "leaking shower fix", "epoxy grout shower", "shower waterproofing Sydney", "fix shower leak without removing tiles"
+- Balcony page: "balcony leak repair Sydney", "balcony waterproofing", "balcony membrane repair", "spalling repair Sydney", "concrete degradation repair"
+- Strata page: "strata leak repairs Sydney", "strata waterproofing services", "property manager leak repair", "strata building maintenance Sydney"
 
-**Under 2000 words — need expansion (estimated current word count):**
-7. `how-to-fix-leaking-balcony-tiles` — ~1500 words, needs moderate expansion
-8. `waterproof-membrane-failure` — ~1200 words, needs expansion
-9. `balcony-waterproofing-systems` — ~1200 words, needs expansion
-10. `causes-of-cracked-grout` — ~900 words, needs major expansion
-11. `shower-waterproofing-sydney` — ~800 words, needs major expansion
-12. `balcony-leak-detection` — ~800 words, needs major expansion
-13. `shower-membrane-repair` — ~800 words, needs major expansion
-14. `tiled-shower-sealing` — ~500 words, needs major expansion
-15. `tiled-balcony-sealing` — ~500 words, needs major expansion
-16. `balcony-membrane-repair` — ~600 words, needs major expansion
-17. `epoxy-regrouting-guide` — ~700 words, needs major expansion
-18. `grout-replacement-sydney` — ~500 words, needs major expansion
-19. `tile-sealing-services-sydney` — ~400 words, needs major expansion
-20. `balcony-waterproofing-cost` — ~500 words, needs major expansion
+**SEO Best Practices Applied:**
+- Longer, keyword-rich meta descriptions (150-160 chars)
+- FAQ schema markup (JSON-LD) on each service page for rich snippets in Google
+- Internal cross-links between service pages
+- Semantic heading hierarchy (H2/H3 properly nested)
+- Natural keyword density in new copy sections
+- Descriptive anchor text on internal links
 
-## Implementation Plan
+---
 
-**File:** `src/data/blog-posts.ts` — all changes in this single file.
+## Changes by File
 
-For each under-2000-word post, I will:
+### 1. `src/pages/ShowerRepairs.tsx`
 
-1. **Add 4-8 new sections** with H2/H3 headings targeting long-tail keywords
-2. **Expand existing sections** with deeper technical detail, Australian Standards references, Sydney suburb internal links, and cost/timeline information
-3. **Add psychological triggers**: urgency ("every week you wait..."), social proof ("thousands of Sydney homeowners"), authority (AS 3740/AS 4654.2 references), loss aversion ("damage that could have been prevented")
-4. **Maintain SEO patterns**: internal links to related blog posts and service pages, keyword-rich headings, suburb anchor links, E-E-A-T signals
-5. **Update `readTime`** to reflect new content length (12-15 min read)
-6. **Add additional FAQs** where posts have fewer than 4
+**Enhanced SEO meta:**
+- Title: "Shower Leak Repairs Sydney | Fix Leaking Shower Without Removing Tiles"
+- Description: "Professional shower leak repair in Sydney using premium epoxy grout. Fix your leaking shower without tile removal. Same-day service, 10-year warranty. Free inspection."
 
-### Content expansion themes per post:
+**New section: "Common Causes of Shower Leaks" (after Benefits)**
+An educational H2 section with 4-5 common causes (failed grout, cracked waterproof membrane, poor original installation, movement cracks, degraded silicone seals) presented as a grid of cards. Naturally incorporates keywords like "leaking shower", "shower waterproofing failure", "grout deterioration".
 
-- **#10 Causes of Cracked Grout**: Add sections on climate-specific factors in Sydney, cost of ignoring cracked grout, prevention checklist, case study scenarios, choosing a repair specialist
-- **#11 Shower Waterproofing Sydney**: Add membrane types comparison, maintenance guide, strata considerations, cost-benefit analysis, choosing a contractor
-- **#12 Balcony Leak Detection**: Add thermal imaging explanation, moisture mapping, seasonal detection tips, strata detection protocols, cost of delayed detection
-- **#13 Shower Membrane Repair**: Add membrane types, repair vs replacement decision tree, timeline expectations, maintenance after repair
-- **#14 Tiled Shower Sealing**: Add sealer product comparison, application techniques, maintenance schedule, common mistakes, cost analysis
-- **#15 Tiled Balcony Sealing**: Add Sydney climate considerations, UV protection details, sealer longevity comparison, strata maintenance programs
-- **#16 Balcony Membrane Repair**: Add membrane system comparison, concrete repair details, strata approval process, warranty considerations
-- **#17 Epoxy Regrouting Guide**: Add material science section, before/after expectations, maintenance guide, common mistakes, comparison with alternatives
-- **#18 Grout Replacement Sydney**: Add suburb-specific advice, timeline guide, material comparison table, maintenance after replacement
-- **#19 Tile Sealing Services Sydney**: Add tile type guide, sealer chemistry, commercial vs residential, maintenance schedules
-- **#20 Balcony Waterproofing Cost**: Add cost comparison table, hidden costs section, ROI analysis, insurance considerations, strata budgeting guide
+**New section: "Epoxy Grout vs Cement Grout" (after Process)**
+A comparison section with two columns explaining why epoxy grout outperforms traditional cement grout. Covers waterproof properties, lifespan, stain resistance, and flexibility. Targets "epoxy grout vs cement grout" search queries.
 
-## Scope
+**New section: "Shower Repair FAQ" (before Quote Form)**
+3-4 inline FAQs specific to shower repairs, rendered as an accordion. Also output as FAQ schema JSON-LD for rich snippets. Questions:
+- "Can you fix a leaking shower without removing tiles?"
+- "How long does epoxy grout last in a shower?"
+- "Is epoxy grout safe for bathrooms?"
+- "How soon can I use my shower after repair?"
 
-- **14 blog posts** to expand
-- All edits within `src/data/blog-posts.ts`
-- Preserving all existing content, internal links, keywords, and SEO structure
-- Each post will reach 2000-2500 words with 7-10 sections
-- Due to file size, this will be a substantial edit — the file will grow from ~1786 lines to approximately ~3500+ lines
+**New section: "Areas We Service" (brief)**
+A short paragraph mentioning Sydney-wide coverage with a link to the suburb pages. Targets local SEO queries.
+
+**Internal links added:**
+- Link to Balcony Repairs page from a contextual mention
+- Link to FAQ page
+- Link to Contact page
+
+---
+
+### 2. `src/pages/BalconyRepairs.tsx`
+
+**Enhanced SEO meta:**
+- Title: "Balcony Leak Repairs Sydney | Waterproofing & Spalling Prevention"
+- Description: "Expert balcony waterproofing and leak repair across Sydney. Prevent spalling and concrete degradation with professional membrane restoration. 10-year warranty. Strata approved."
+
+**New section: "How Balcony Waterproofing Works" (after Warning Signs)**
+Detailed explanation of the membrane restoration process: surface preparation, primer application, liquid membrane application, curing, and protective screed. Targets "balcony waterproofing process" and "membrane restoration".
+
+**New section: "Balcony Repair FAQ" (before Quote Form)**
+3-4 inline FAQs with schema markup:
+- "How do I know if my balcony membrane has failed?"
+- "Can balcony leaks cause structural damage?"
+- "Do you need strata approval for balcony repairs?"
+- "How long does balcony waterproofing last?"
+
+**Expand "What is Spalling?" card:**
+Add 2-3 more sentences explaining the stages of concrete degradation, why Sydney's coastal climate accelerates it, and the importance of early intervention. Targets "spalling repair Sydney".
+
+**Internal links added:**
+- Link to Strata page from strata-related mentions
+- Link to Shower Repairs page
+- Link to FAQ page
+
+---
+
+### 3. `src/pages/Strata.tsx`
+
+**Enhanced SEO meta:**
+- Title: "Strata Leak Repair Services Sydney | Property Manager Waterproofing Solutions"
+- Description: "Dedicated leak repair and waterproofing for strata managers across Sydney. Priority scheduling, volume pricing, compliant documentation. Shower and balcony specialists."
+
+**New section: "Common Strata Leak Issues" (after Benefits)**
+A section covering the most common leak problems in strata buildings: shared bathroom walls, aging balcony membranes, common area water ingress, planter box leaks. Each with a brief description and how we address it.
+
+**New section: "Strata Compliance & Australian Standards" (after Process)**
+A brief section explaining compliance with AS 4654.2 (waterproofing of wet areas), relevant NCC/BCA requirements, and how documentation supports levy fund claims and insurance. Targets "strata waterproofing compliance" and "Australian Standards waterproofing".
+
+**Internal links added:**
+- Links to Shower Repairs and Balcony Repairs pages from relevant mentions
+- Link to FAQ page
+
+---
+
+### 4. New Component: `src/components/seo/FAQSchema.tsx`
+
+A reusable component that accepts an array of `{question, answer}` objects and renders:
+- A `<script type="application/ld+json">` block with FAQPage schema
+- Used on each service page to generate rich snippet markup
+
+---
+
+### 5. `src/components/seo/index.ts`
+
+Add export for the new `FAQSchema` component.
+
+---
+
+## Technical Notes
+
+- All new sections follow the existing pattern: `motion.div` with `whileInView` animations, `section-container` wrapper, consistent heading/text styling
+- FAQ schema follows Google's structured data guidelines for FAQPage type
+- New copy uses natural keyword placement (not keyword stuffing) -- primary keyword in H2, secondary keywords in body text
+- Internal links use `<Link>` from react-router-dom with descriptive anchor text
+- The terminology rule is maintained: "spalling" for short labels, "concrete degradation" for descriptive contexts
 
