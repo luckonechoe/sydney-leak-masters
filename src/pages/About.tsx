@@ -180,6 +180,31 @@ export default function About() {
                     by sloppy work and Band-Aid solutions. We believed there was a better way — 
                     and we built our entire business around it.
                   </p>
+                  <p>
+                    Our founder spent years working alongside tilers, plumbers, and waterproofing contractors across Sydney — 
+                    and saw the same problems repeated on every job site. Contractors using the cheapest materials to maximise 
+                    their margins. Repairs that looked fine on the surface but failed within months. Homeowners left footing 
+                    the bill for damage that should never have happened.
+                  </p>
+                  <p>
+                    That experience shaped everything about how we operate today. We invested in training our team on the 
+                    latest epoxy grout systems and waterproofing technologies used in commercial construction — not the 
+                    hardware-store products most residential contractors rely on. We developed a diagnostic process that 
+                    identifies the <span className="text-foreground font-medium">root cause</span> of every leak, not just 
+                    the visible symptoms. And we committed to using only materials that meet or exceed Australian Standards 
+                    AS 3740 and AS 4654.2 — because your home deserves the same quality as a hospital or a high-rise.
+                  </p>
+                  <p>
+                    The result? A repair method that genuinely lasts. We don't just patch the problem — we engineer a 
+                    long-term waterproofing solution tailored to your property's specific conditions. Whether it's a 
+                    heritage terrace in the Inner West dealing with decades-old plumbing, or a modern apartment on the 
+                    North Shore with construction defects, we approach every job with the same level of care and precision.
+                  </p>
+                  <p>
+                    That's why we're confident enough to back every repair with a <span className="text-accent font-semibold">10-year written warranty</span>. 
+                    It's not a marketing gimmick — it's a reflection of how much we trust our materials, our methods, and 
+                    our people. When we say your leak is fixed, we mean it.
+                  </p>
                 </div>
               </motion.div>
             </div>
