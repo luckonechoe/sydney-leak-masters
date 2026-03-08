@@ -83,18 +83,19 @@ export default function Contact() {
         {/* Contact Section */}
         <section className="py-12 lg:py-16">
           <div className="section-container">
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
               {/* Contact Info */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <h2 className="font-heading text-2xl font-bold text-foreground mb-6">
-                  Get In Touch
-                </h2>
+                <div className="p-6 bg-card rounded-lg border border-border mb-8">
+                  <h2 className="font-heading text-xl font-bold text-foreground mb-6">
+                    Get In Touch
+                  </h2>
 
-                <div className="space-y-6 mb-8">
+                  <div className="space-y-4">
                   <a
                     href={PHONE_HREF}
                     className="flex items-start gap-4 p-4 bg-card rounded-lg border border-border hover:border-secondary/50 transition-colors"
