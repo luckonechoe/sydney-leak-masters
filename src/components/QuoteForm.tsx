@@ -136,7 +136,7 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
     if (currentStep === 1) {
       fieldsToValidate = ["name", "email", "phone"];
     } else if (currentStep === 2) {
-      fieldsToValidate = ["propertyType", "suburb", "issueType"];
+      fieldsToValidate = ["propertyType", "address", "issueType"];
     }
 
     const isValid = await form.trigger(fieldsToValidate);
