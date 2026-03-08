@@ -24,8 +24,8 @@ const footerLinks = {
     { name: "Service Areas", href: "/suburbs" },
     { name: "FAQ", href: "/faq" },
     { name: "Blog & Expert Tips", href: "/blog" },
-    { name: "Complete Leak Repair Guide", href: "/guides/complete-guide-leak-repairs-sydney" },
     { name: "Contact & Free Quote", href: "/contact" },
+    { name: "Terms of Service", href: "/terms-of-service" },
   ],
   suburbs: [
     { name: "Parramatta", href: "/leaking-shower-repairs/parramatta" },

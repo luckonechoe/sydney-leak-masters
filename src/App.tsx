@@ -20,6 +20,7 @@ import Suburbs from "./pages/Suburbs";
 import About from "./pages/About";
 import PreventativeMaintenance from "./pages/PreventativeMaintenance";
 import NotFound from "./pages/NotFound";
+import TermsOfService from "./pages/TermsOfService";
 
 const queryClient = new QueryClient();
 
@@ -62,6 +63,7 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/preventative-maintenance" element={<PreventativeMaintenance />} />
               <Route path="/about" element={<About />} />
+              <Route path="/terms-of-service" element={<TermsOfService />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
