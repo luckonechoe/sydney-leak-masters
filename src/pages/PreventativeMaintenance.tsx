@@ -92,7 +92,7 @@ const faqs = [
   {
     question: "How often is the maintenance visit?",
     answer:
-      "The plan includes one annual visit. We'll contact you to schedule at a convenient time. If we identify any concerns during the inspection that need attention sooner, we'll let you know and provide priority scheduling.",
+      "The plan includes two annual visits. We'll contact you to schedule at convenient times, typically six months apart. If we identify any concerns during an inspection that need attention sooner, we'll let you know and provide priority scheduling.",
   },
   {
     question: "Do I need this plan if my grout was recently done?",
