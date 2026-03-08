@@ -323,7 +323,7 @@ export default function PreventativeMaintenance() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: idx * 0.1 }}
-                    className={`rounded-xl p-6 border ${
+                    className={`rounded-xl p-6 border flex flex-col ${
                       item.highlight
                         ? "bg-secondary/10 border-secondary/30 ring-2 ring-secondary/20"
                         : "bg-card border-border"
