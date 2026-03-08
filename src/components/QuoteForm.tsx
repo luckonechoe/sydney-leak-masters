@@ -27,7 +27,7 @@ const quoteFormSchema = z.object({
   phone: z.string().min(8, "Valid phone number required"),
   // Step 2: Property
   propertyType: z.string().min(1, "Select property type"),
-  suburb: z.string().min(2, "Enter your suburb"),
+  address: z.string().min(3, "Please enter your address"),
   issueType: z.string().min(1, "Select issue type"),
   description: z.string().optional(),
   // Step 3: Files (handled separately)
