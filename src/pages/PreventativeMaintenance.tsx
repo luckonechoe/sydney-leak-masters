@@ -62,21 +62,21 @@ const comparisonData = [
   },
   {
     scenario: "Minor Grout Repair",
-    cost: "$500–$1,200",
+    cost: "$400–$600",
     outcome: "Needed when small cracks are left unattended for 1–2 years",
     icon: Wrench,
     highlight: false,
   },
   {
     scenario: "Full Shower Re-seal",
-    cost: "$2,000–$4,500",
+    cost: "$790–$1,200",
     outcome: "Required when waterproofing membrane fails from neglect",
     icon: AlertTriangle,
     highlight: false,
   },
   {
-    scenario: "Complete Re-tile & Waterproof",
-    cost: "$8,000–$15,000+",
+    scenario: "Complete Re-tile",
+    cost: "$3,800–$8,000",
     outcome: "Worst case — structural water damage from years of ignored leaks",
     icon: AlertTriangle,
     highlight: false,
@@ -323,7 +323,7 @@ export default function PreventativeMaintenance() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: idx * 0.1 }}
-                    className={`rounded-xl p-6 border ${
+                    className={`rounded-xl p-6 border flex flex-col ${
                       item.highlight
                         ? "bg-secondary/10 border-secondary/30 ring-2 ring-secondary/20"
                         : "bg-card border-border"
@@ -353,7 +353,7 @@ export default function PreventativeMaintenance() {
                     >
                       {item.cost}
                     </p>
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-muted-foreground text-sm mt-auto">
                       {item.outcome}
                     </p>
                   </motion.div>
