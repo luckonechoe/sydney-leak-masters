@@ -222,7 +222,7 @@ export default function ShowerRepairs() {
                   <CTAButton variant="phone" size="lg">
                     Get Free Quote
                   </CTAButton>
-                  <CTAButton variant="link" to="#quote-form" size="lg">
+                  <CTAButton variant="link" to="/contact" size="lg">
                     Book Free Inspection
                   </CTAButton>
                 </div>
@@ -366,7 +366,7 @@ export default function ShowerRepairs() {
               <p className="text-muted-foreground mb-4">
                 Spotted any of these signs? Don't wait for the damage to spread.
               </p>
-              <CTAButton variant="link" to="#quote-form">
+              <CTAButton variant="link" to="/contact">
                 Book a Free Inspection <ArrowRight className="w-4 h-4 ml-1 inline" />
               </CTAButton>
             </motion.div>

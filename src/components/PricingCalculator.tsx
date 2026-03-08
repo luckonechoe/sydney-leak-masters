@@ -163,7 +163,7 @@ export function PricingCalculator({ type }: PricingCalculatorProps) {
             <CTAButton variant="phone" size="lg">
               Get Exact Quote
             </CTAButton>
-            <CTAButton variant="link" to="#quote-form" size="lg">
+            <CTAButton variant="link" to="/contact" size="lg">
               Book Free Inspection
             </CTAButton>
           </div>
