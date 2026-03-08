@@ -96,7 +96,7 @@ export default function Index() {
                   <CTAButton variant="phone" size="lg">
                     Call For Free Quote
                   </CTAButton>
-                  <CTAButton variant="link" to="#quote-form" size="lg">
+                  <CTAButton variant="link" to="/contact" size="lg">
                     Get Online Quote
                   </CTAButton>
                 </div>
