@@ -187,15 +187,6 @@ export default function Contact() {
     { name: "Contact", href: "/contact" },
   ];
 
-  // Group suburbs by region for better UX
-  const suburbsByRegion = sydneySuburbs.reduce((acc, suburb) => {
-    if (!acc[suburb.region]) {
-      acc[suburb.region] = [];
-    }
-    acc[suburb.region].push(suburb);
-    return acc;
-  }, {} as Record<string, typeof sydneySuburbs>);
-
   return (
     <>
       <SEOHead
