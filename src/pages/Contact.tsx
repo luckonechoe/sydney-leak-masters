@@ -156,9 +156,10 @@ export default function Contact() {
                       </div>
                     </div>
                   </div>
+                  </div>
                 </div>
 
-                <CTAButton variant="phone" size="lg" className="w-full justify-center">
+                <CTAButton variant="phone" size="lg" className="w-full justify-center mt-6">
                   Call Now For Free Quote
                 </CTAButton>
               </motion.div>
