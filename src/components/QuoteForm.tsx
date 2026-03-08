@@ -17,6 +17,7 @@ import {
   SelectValue 
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import { AddressAutocomplete } from "@/components/AddressAutocomplete";
 
 // Form schema
 const quoteFormSchema = z.object({
