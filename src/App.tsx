@@ -18,6 +18,7 @@ import SuburbPage from "./pages/SuburbPage";
 import CompleteGuide from "./pages/CompleteGuide";
 import Suburbs from "./pages/Suburbs";
 import About from "./pages/About";
+import PreventativeMaintenance from "./pages/PreventativeMaintenance";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
