@@ -88,7 +88,7 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
       email: "",
       phone: "",
       propertyType: "",
-      suburb: "",
+      address: "",
       issueType: "",
       description: "",
       preferredTime: "",
