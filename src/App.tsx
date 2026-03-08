@@ -60,6 +60,7 @@ const App = () => (
               <Route path="/guides/complete-guide-leak-repairs-sydney" element={<CompleteGuide />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/preventative-maintenance" element={<PreventativeMaintenance />} />
               <Route path="/about" element={<About />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
