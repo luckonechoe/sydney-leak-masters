@@ -39,7 +39,7 @@ const contactSchema = z.object({
   name: z.string().min(2, "Name is required").max(100),
   email: z.string().email("Valid email required").max(255),
   phone: z.string().min(8, "Valid phone required").max(20),
-  suburb: z.string().min(1, "Please select your suburb"),
+  address: z.string().min(3, "Please enter your address"),
   serviceType: z.string().min(1, "Please select a service type"),
   urgency: z.string().min(1, "Please select urgency level"),
   subject: z.string().min(2, "Subject is required").max(200),
