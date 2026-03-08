@@ -16,6 +16,7 @@ const navigation = [
     children: [
       { name: "Shower Repairs", href: "/services/shower-repairs" },
       { name: "Balcony Repairs", href: "/services/balcony-repairs" },
+      { name: "Preventative Maintenance", href: "/preventative-maintenance" },
     ],
   },
   { name: "About", href: "/about" },

@@ -18,6 +18,7 @@ import SuburbPage from "./pages/SuburbPage";
 import CompleteGuide from "./pages/CompleteGuide";
 import Suburbs from "./pages/Suburbs";
 import About from "./pages/About";
+import PreventativeMaintenance from "./pages/PreventativeMaintenance";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -59,6 +60,7 @@ const App = () => (
               <Route path="/guides/complete-guide-leak-repairs-sydney" element={<CompleteGuide />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/preventative-maintenance" element={<PreventativeMaintenance />} />
               <Route path="/about" element={<About />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

@@ -220,9 +220,12 @@ export default function Index() {
                   </p>
                 </div>
                 <div className="flex-shrink-0">
-                  <CTAButton variant="phone" size="lg">
-                    Book Maintenance
-                  </CTAButton>
+                  <Link
+                    to="/preventative-maintenance"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground font-bold rounded-lg hover:bg-secondary/90 transition-colors"
+                  >
+                    Learn More <ArrowRight className="w-4 h-4" />
+                  </Link>
                 </div>
               </div>
             </motion.div>
