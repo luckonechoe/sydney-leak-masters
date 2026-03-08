@@ -360,31 +360,15 @@ export default function Contact() {
                       </div>
                     </div>
 
-                    {/* Location/Suburb */}
+                    {/* Address */}
                     <div>
-                      <Label htmlFor="suburb">Your Suburb *</Label>
-                      <Select onValueChange={(value) => setValue("suburb", value)}>
-                        <SelectTrigger className="mt-1">
-                          <SelectValue placeholder="Select your suburb" />
-                        </SelectTrigger>
-                        <SelectContent className="max-h-[300px]">
-                          {Object.entries(suburbsByRegion).map(([region, suburbs]) => (
-                            <div key={region}>
-                              <div className="px-2 py-1.5 text-xs font-semibold text-muted-foreground bg-muted/50">
-                                {region}
-                              </div>
-                              {suburbs.map((suburb) => (
-                                <SelectItem key={suburb.slug} value={suburb.name}>
-                                  {suburb.name} ({suburb.postcode})
-                                </SelectItem>
-                              ))}
-                            </div>
-                          ))}
-                          <SelectItem value="Other">Other (Not listed)</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      {errors.suburb && (
-                        <p className="text-destructive text-sm mt-1">{errors.suburb.message}</p>
+                      <Label htmlFor="address">Your Address *</Label>
+                      <AddressAutocomplete
+                        onAddressSelect={(address) => setValue("address", address, { shouldValidate: true })}
+                        className="mt-1"
+                      />
+                      {errors.address && (
+                        <p className="text-destructive text-sm mt-1">{errors.address.message}</p>
                       )}
                     </div>
 
