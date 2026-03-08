@@ -117,7 +117,7 @@ export default function SuburbPage({ serviceType = "shower" }: SuburbPageProps) 
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <CTAButton variant="phone" size="lg">Call For Free Quote</CTAButton>
-                <CTAButton variant="link" to="#quote" size="lg">Get Online Quote</CTAButton>
+                <CTAButton variant="link" to="/contact" size="lg">Get Online Quote</CTAButton>
               </div>
             </motion.div>
           </div>
