@@ -1,4 +1,5 @@
-import { useEffect, useRef } from "react";
+/// <reference types="google.maps" />
+import { useEffect, useRef, useCallback } from "react";
 import { Input } from "@/components/ui/input";
 
 interface AddressAutocompleteProps {
@@ -6,38 +7,51 @@ interface AddressAutocompleteProps {
   className?: string;
 }
 
-declare global {
-  interface Window {
-    google: typeof google;
-  }
-}
-
 export function AddressAutocomplete({ onAddressSelect, className }: AddressAutocompleteProps) {
   const inputRef = useRef<HTMLInputElement>(null);
   const autocompleteRef = useRef<google.maps.places.Autocomplete | null>(null);
 
+  const stableCallback = useCallback(onAddressSelect, [onAddressSelect]);
+
   useEffect(() => {
-    if (!inputRef.current || !window.google?.maps?.places) return;
+    if (!inputRef.current) return;
 
-    autocompleteRef.current = new google.maps.places.Autocomplete(inputRef.current, {
-      componentRestrictions: { country: "au" },
-      types: ["address"],
-      fields: ["formatted_address"],
-    });
+    const initAutocomplete = () => {
+      if (!window.google?.maps?.places || !inputRef.current) return;
 
-    autocompleteRef.current.addListener("place_changed", () => {
-      const place = autocompleteRef.current?.getPlace();
-      if (place?.formatted_address) {
-        onAddressSelect(place.formatted_address);
-      }
-    });
+      autocompleteRef.current = new google.maps.places.Autocomplete(inputRef.current, {
+        componentRestrictions: { country: "au" },
+        types: ["address"],
+        fields: ["formatted_address"],
+      });
+
+      autocompleteRef.current.addListener("place_changed", () => {
+        const place = autocompleteRef.current?.getPlace();
+        if (place?.formatted_address) {
+          stableCallback(place.formatted_address);
+        }
+      });
+    };
+
+    if (window.google?.maps?.places) {
+      initAutocomplete();
+    } else {
+      // Wait for script to load
+      const interval = setInterval(() => {
+        if (window.google?.maps?.places) {
+          clearInterval(interval);
+          initAutocomplete();
+        }
+      }, 200);
+      return () => clearInterval(interval);
+    }
 
     return () => {
       if (autocompleteRef.current) {
         google.maps.event.clearInstanceListeners(autocompleteRef.current);
       }
     };
-  }, [onAddressSelect]);
+  }, [stableCallback]);
 
   return (
     <Input
