@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -17,6 +17,7 @@ import {
   SelectValue 
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import { AddressAutocomplete } from "@/components/AddressAutocomplete";
 
 // Form schema
 const quoteFormSchema = z.object({
@@ -26,7 +27,7 @@ const quoteFormSchema = z.object({
   phone: z.string().min(8, "Valid phone number required"),
   // Step 2: Property
   propertyType: z.string().min(1, "Select property type"),
-  suburb: z.string().min(2, "Enter your suburb"),
+  address: z.string().min(3, "Please enter your address"),
   issueType: z.string().min(1, "Select issue type"),
   description: z.string().optional(),
   // Step 3: Files (handled separately)
@@ -87,7 +88,7 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
       email: "",
       phone: "",
       propertyType: "",
-      suburb: "",
+      address: "",
       issueType: "",
       description: "",
       preferredTime: "",
@@ -135,7 +136,7 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
     if (currentStep === 1) {
       fieldsToValidate = ["name", "email", "phone"];
     } else if (currentStep === 2) {
-      fieldsToValidate = ["propertyType", "suburb", "issueType"];
+      fieldsToValidate = ["propertyType", "address", "issueType"];
     }
 
     const isValid = await form.trigger(fieldsToValidate);
@@ -295,15 +296,13 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
                   )}
                 </div>
                 <div>
-                  <Label htmlFor="suburb">Suburb *</Label>
-                  <Input
-                    id="suburb"
-                    {...register("suburb")}
-                    placeholder="e.g. Parramatta"
+                  <Label>Your Address *</Label>
+                  <AddressAutocomplete
+                    onAddressSelect={(address) => setValue("address", address, { shouldValidate: true })}
                     className="mt-1"
                   />
-                  {errors.suburb && (
-                    <p className="text-destructive text-sm mt-1">{errors.suburb.message}</p>
+                  {errors.address && (
+                    <p className="text-destructive text-sm mt-1">{errors.address.message}</p>
                   )}
                 </div>
                 <div>
@@ -441,7 +440,7 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
                     <p><strong>Name:</strong> {watch("name")}</p>
                     <p><strong>Email:</strong> {watch("email")}</p>
                     <p><strong>Phone:</strong> {watch("phone")}</p>
-                    <p><strong>Property:</strong> {watch("propertyType")} in {watch("suburb")}</p>
+                    <p><strong>Property:</strong> {watch("propertyType")} — {watch("address")}</p>
                     <p><strong>Issue:</strong> {watch("issueType")}</p>
                     {files.length > 0 && (
                       <p><strong>Files:</strong> {files.length} uploaded</p>
