@@ -231,7 +231,7 @@ export default function BalconyRepairs() {
                   <CTAButton variant="phone" size="lg">
                     Get Free Quote
                   </CTAButton>
-                  <CTAButton variant="link" to="#quote-form" size="lg">
+                  <CTAButton variant="link" to="/contact" size="lg">
                     Book Free Inspection
                   </CTAButton>
                 </div>
