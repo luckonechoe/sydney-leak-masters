@@ -353,7 +353,7 @@ export default function PreventativeMaintenance() {
                     >
                       {item.cost}
                     </p>
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-muted-foreground text-sm mt-auto">
                       {item.outcome}
                     </p>
                   </motion.div>
