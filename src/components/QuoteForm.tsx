@@ -296,15 +296,13 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
                   )}
                 </div>
                 <div>
-                  <Label htmlFor="suburb">Suburb *</Label>
-                  <Input
-                    id="suburb"
-                    {...register("suburb")}
-                    placeholder="e.g. Parramatta"
+                  <Label>Your Address *</Label>
+                  <AddressAutocomplete
+                    onAddressSelect={(address) => setValue("address", address, { shouldValidate: true })}
                     className="mt-1"
                   />
-                  {errors.suburb && (
-                    <p className="text-destructive text-sm mt-1">{errors.suburb.message}</p>
+                  {errors.address && (
+                    <p className="text-destructive text-sm mt-1">{errors.address.message}</p>
                   )}
                 </div>
                 <div>
