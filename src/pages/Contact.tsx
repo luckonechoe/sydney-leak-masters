@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, Upload, X, Image, Video } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -11,39 +12,189 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { sydneySuburbs } from "@/lib/suburbs";
+
+const SERVICE_TYPES = [
+  "Leaking Shower Repair",
+  "Leaking Balcony Repair",
+  "Epoxy Regrouting",
+  "Tile Sealing",
+  "Waterproof Membrane Repair",
+  "Preventative Maintenance",
+  "Strata/Body Corporate",
+  "Other",
+] as const;
+
+const URGENCY_LEVELS = [
+  { value: "low", label: "Low - Can wait a few weeks" },
+  { value: "medium", label: "Medium - Within the next week" },
+  { value: "high", label: "High - As soon as possible" },
+  { value: "emergency", label: "Emergency - Urgent attention needed" },
+] as const;
 
 const contactSchema = z.object({
-  name: z.string().min(2, "Name is required"),
-  email: z.string().email("Valid email required"),
-  phone: z.string().min(8, "Valid phone required"),
-  subject: z.string().min(2, "Subject is required"),
-  message: z.string().min(10, "Please provide more details"),
+  name: z.string().min(2, "Name is required").max(100),
+  email: z.string().email("Valid email required").max(255),
+  phone: z.string().min(8, "Valid phone required").max(20),
+  suburb: z.string().min(1, "Please select your suburb"),
+  serviceType: z.string().min(1, "Please select a service type"),
+  urgency: z.string().min(1, "Please select urgency level"),
+  subject: z.string().min(2, "Subject is required").max(200),
+  message: z.string().min(10, "Please provide more details").max(2000),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
 
+interface UploadedFile {
+  file: File;
+  preview: string;
+  type: "image" | "video";
+}
+
 export default function Contact() {
   const { toast } = useToast();
-  const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm<ContactFormData>({
+  const [uploadedFiles, setUploadedFiles] = useState<UploadedFile[]>([]);
+  const [isUploading, setIsUploading] = useState(false);
+  
+  const { register, handleSubmit, formState: { errors, isSubmitting }, reset, setValue } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = async (data: ContactFormData) => {
-    // Simulate form submission
-    await new Promise((r) => setTimeout(r, 1500));
-    console.log("Contact form:", data);
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours.",
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files;
+    if (!files) return;
+
+    const newFiles: UploadedFile[] = [];
+    
+    Array.from(files).forEach((file) => {
+      if (uploadedFiles.length + newFiles.length >= 5) {
+        toast({
+          title: "Maximum files reached",
+          description: "You can upload up to 5 files",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      const isImage = file.type.startsWith("image/");
+      const isVideo = file.type.startsWith("video/");
+      
+      if (!isImage && !isVideo) {
+        toast({
+          title: "Invalid file type",
+          description: "Please upload images or videos only",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      if (file.size > 50 * 1024 * 1024) {
+        toast({
+          title: "File too large",
+          description: "Maximum file size is 50MB",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      newFiles.push({
+        file,
+        preview: URL.createObjectURL(file),
+        type: isImage ? "image" : "video",
+      });
     });
-    reset();
+
+    setUploadedFiles((prev) => [...prev, ...newFiles]);
+    e.target.value = "";
+  };
+
+  const removeFile = (index: number) => {
+    setUploadedFiles((prev) => {
+      const newFiles = [...prev];
+      URL.revokeObjectURL(newFiles[index].preview);
+      newFiles.splice(index, 1);
+      return newFiles;
+    });
+  };
+
+  const uploadFilesToStorage = async (): Promise<string[]> => {
+    const uploadedUrls: string[] = [];
+    
+    for (const { file } of uploadedFiles) {
+      const fileExt = file.name.split(".").pop();
+      const fileName = `${Date.now()}-${Math.random().toString(36).substring(7)}.${fileExt}`;
+      
+      const { error } = await supabase.storage
+        .from("contact-uploads")
+        .upload(fileName, file);
+
+      if (error) {
+        console.error("Upload error:", error);
+        throw error;
+      }
+
+      const { data: { publicUrl } } = supabase.storage
+        .from("contact-uploads")
+        .getPublicUrl(fileName);
+      
+      uploadedUrls.push(publicUrl);
+    }
+    
+    return uploadedUrls;
+  };
+
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      setIsUploading(true);
+      
+      let mediaUrls: string[] = [];
+      if (uploadedFiles.length > 0) {
+        mediaUrls = await uploadFilesToStorage();
+      }
+
+      // Log the submission (in production, send to backend/email service)
+      console.log("Contact form submission:", {
+        ...data,
+        mediaUrls,
+      });
+
+      toast({
+        title: "Message Sent!",
+        description: "We'll get back to you within 24 hours.",
+      });
+      
+      // Cleanup
+      uploadedFiles.forEach(({ preview }) => URL.revokeObjectURL(preview));
+      setUploadedFiles([]);
+      reset();
+    } catch (error) {
+      console.error("Submission error:", error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsUploading(false);
+    }
   };
 
   const breadcrumbItems = [
     { name: "Home", href: "/" },
     { name: "Contact", href: "/contact" },
   ];
+
+  // Group suburbs by region for better UX
+  const suburbsByRegion = sydneySuburbs.reduce((acc, suburb) => {
+    if (!acc[suburb.region]) {
+      acc[suburb.region] = [];
+    }
+    acc[suburb.region].push(suburb);
+    return acc;
+  }, {} as Record<string, typeof sydneySuburbs>);
 
   return (
     <>
@@ -218,6 +369,74 @@ export default function Contact() {
                       </div>
                     </div>
 
+                    {/* Location/Suburb */}
+                    <div>
+                      <Label htmlFor="suburb">Your Suburb *</Label>
+                      <Select onValueChange={(value) => setValue("suburb", value)}>
+                        <SelectTrigger className="mt-1">
+                          <SelectValue placeholder="Select your suburb" />
+                        </SelectTrigger>
+                        <SelectContent className="max-h-[300px]">
+                          {Object.entries(suburbsByRegion).map(([region, suburbs]) => (
+                            <div key={region}>
+                              <div className="px-2 py-1.5 text-xs font-semibold text-muted-foreground bg-muted/50">
+                                {region}
+                              </div>
+                              {suburbs.map((suburb) => (
+                                <SelectItem key={suburb.slug} value={suburb.name}>
+                                  {suburb.name} ({suburb.postcode})
+                                </SelectItem>
+                              ))}
+                            </div>
+                          ))}
+                          <SelectItem value="Other">Other (Not listed)</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      {errors.suburb && (
+                        <p className="text-destructive text-sm mt-1">{errors.suburb.message}</p>
+                      )}
+                    </div>
+
+                    {/* Service Type */}
+                    <div>
+                      <Label htmlFor="serviceType">Service Required *</Label>
+                      <Select onValueChange={(value) => setValue("serviceType", value)}>
+                        <SelectTrigger className="mt-1">
+                          <SelectValue placeholder="Select service type" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {SERVICE_TYPES.map((service) => (
+                            <SelectItem key={service} value={service}>
+                              {service}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                      {errors.serviceType && (
+                        <p className="text-destructive text-sm mt-1">{errors.serviceType.message}</p>
+                      )}
+                    </div>
+
+                    {/* Urgency */}
+                    <div>
+                      <Label htmlFor="urgency">How Urgent? *</Label>
+                      <Select onValueChange={(value) => setValue("urgency", value)}>
+                        <SelectTrigger className="mt-1">
+                          <SelectValue placeholder="Select urgency level" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {URGENCY_LEVELS.map((level) => (
+                            <SelectItem key={level.value} value={level.value}>
+                              {level.label}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                      {errors.urgency && (
+                        <p className="text-destructive text-sm mt-1">{errors.urgency.message}</p>
+                      )}
+                    </div>
+
                     <div>
                       <Label htmlFor="subject">Subject *</Label>
                       <Input
@@ -236,25 +455,95 @@ export default function Contact() {
                       <Textarea
                         id="message"
                         {...register("message")}
-                        placeholder="Tell us about your leak issue..."
-                        rows={5}
+                        placeholder="Describe your leak issue, when it started, and any visible damage..."
+                        rows={4}
                         className="mt-1"
                       />
                       {errors.message && (
                         <p className="text-destructive text-sm mt-1">{errors.message.message}</p>
                       )}
-                      <p className="text-sm text-muted-foreground mt-2">
-                        <span className="font-medium text-secondary">Upload 3 clear photos:</span>{" "}
+                    </div>
+
+                    {/* Media Upload */}
+                    <div>
+                      <Label>Upload Photos/Videos (Optional)</Label>
+                      <p className="text-sm text-muted-foreground mb-2">
+                        <span className="font-medium text-secondary">Tip:</span> Upload 3 clear photos: 
                         1) Full area, 2) Close-up of damage, 3) Water source
                       </p>
+                      
+                      <div className="mt-2">
+                        <label
+                          htmlFor="media-upload"
+                          className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-border rounded-lg cursor-pointer bg-background hover:bg-muted/50 transition-colors"
+                        >
+                          <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                            <Upload className="w-8 h-8 mb-2 text-muted-foreground" />
+                            <p className="text-sm text-muted-foreground">
+                              <span className="font-semibold text-foreground">Click to upload</span> or drag and drop
+                            </p>
+                            <p className="text-xs text-muted-foreground mt-1">
+                              Images & Videos (Max 50MB each, up to 5 files)
+                            </p>
+                          </div>
+                          <input
+                            id="media-upload"
+                            type="file"
+                            className="hidden"
+                            accept="image/*,video/*"
+                            multiple
+                            onChange={handleFileUpload}
+                          />
+                        </label>
+                      </div>
+
+                      {/* Preview uploaded files */}
+                      {uploadedFiles.length > 0 && (
+                        <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                          {uploadedFiles.map((file, index) => (
+                            <div
+                              key={index}
+                              className="relative group rounded-lg overflow-hidden border border-border"
+                            >
+                              {file.type === "image" ? (
+                                <img
+                                  src={file.preview}
+                                  alt={`Upload ${index + 1}`}
+                                  className="w-full h-24 object-cover"
+                                />
+                              ) : (
+                                <div className="w-full h-24 bg-muted flex items-center justify-center">
+                                  <Video className="w-8 h-8 text-muted-foreground" />
+                                </div>
+                              )}
+                              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <button
+                                  type="button"
+                                  onClick={() => removeFile(index)}
+                                  className="p-1.5 bg-destructive rounded-full text-destructive-foreground"
+                                >
+                                  <X className="w-4 h-4" />
+                                </button>
+                              </div>
+                              <div className="absolute bottom-1 left-1">
+                                {file.type === "image" ? (
+                                  <Image className="w-4 h-4 text-white drop-shadow" />
+                                ) : (
+                                  <Video className="w-4 h-4 text-white drop-shadow" />
+                                )}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
 
                     <Button
                       type="submit"
-                      disabled={isSubmitting}
+                      disabled={isSubmitting || isUploading}
                       className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90"
                     >
-                      {isSubmitting ? (
+                      {isSubmitting || isUploading ? (
                         "Sending..."
                       ) : (
                         <>
