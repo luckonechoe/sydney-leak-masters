@@ -440,7 +440,7 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
                     <p><strong>Name:</strong> {watch("name")}</p>
                     <p><strong>Email:</strong> {watch("email")}</p>
                     <p><strong>Phone:</strong> {watch("phone")}</p>
-                    <p><strong>Property:</strong> {watch("propertyType")} in {watch("suburb")}</p>
+                    <p><strong>Property:</strong> {watch("propertyType")} — {watch("address")}</p>
                     <p><strong>Issue:</strong> {watch("issueType")}</p>
                     {files.length > 0 && (
                       <p><strong>Files:</strong> {files.length} uploaded</p>
