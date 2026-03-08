@@ -164,8 +164,8 @@ export default function PreventativeMaintenance() {
           <div className="section-container relative">
             <Breadcrumbs
               items={[
-                { label: "Home", href: "/" },
-                { label: "Preventative Maintenance" },
+                { name: "Home", href: "/" },
+                { name: "Preventative Maintenance", href: "/preventative-maintenance" },
               ]}
             />
 
