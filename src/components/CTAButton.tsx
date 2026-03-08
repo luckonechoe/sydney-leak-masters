@@ -32,10 +32,10 @@ export function CTAButton({ variant, to, children, className, size = "default" }
         )}
         size={size}
       >
-        <a href={PHONE_HREF} aria-label={`Call us at ${PHONE_NUMBER}`}>
+        <Link to="/contact" aria-label="Contact us for a free quote">
           <Phone className="w-4 h-4 mr-2" />
           {children || PHONE_NUMBER}
-        </a>
+        </Link>
       </Button>
     );
   }
