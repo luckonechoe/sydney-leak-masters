@@ -21,8 +21,6 @@ const SERVICE_TYPES = [
   "Leaking Shower Repair",
   "Leaking Balcony Repair",
   "Epoxy Regrouting",
-  "Tile Sealing",
-  "Waterproof Membrane Repair",
   "Preventative Maintenance",
   "Strata/Body Corporate",
   "Other",
