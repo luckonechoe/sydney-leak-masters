@@ -15,7 +15,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import { sydneySuburbs } from "@/lib/suburbs";
+import { AddressAutocomplete } from "@/components/AddressAutocomplete";
 
 const SERVICE_TYPES = [
   "Leaking Shower Repair",
@@ -39,7 +39,7 @@ const contactSchema = z.object({
   name: z.string().min(2, "Name is required").max(100),
   email: z.string().email("Valid email required").max(255),
   phone: z.string().min(8, "Valid phone required").max(20),
-  suburb: z.string().min(1, "Please select your suburb"),
+  address: z.string().min(3, "Please enter your address"),
   serviceType: z.string().min(1, "Please select a service type"),
   urgency: z.string().min(1, "Please select urgency level"),
   subject: z.string().min(2, "Subject is required").max(200),
@@ -186,15 +186,6 @@ export default function Contact() {
     { name: "Home", href: "/" },
     { name: "Contact", href: "/contact" },
   ];
-
-  // Group suburbs by region for better UX
-  const suburbsByRegion = sydneySuburbs.reduce((acc, suburb) => {
-    if (!acc[suburb.region]) {
-      acc[suburb.region] = [];
-    }
-    acc[suburb.region].push(suburb);
-    return acc;
-  }, {} as Record<string, typeof sydneySuburbs>);
 
   return (
     <>
@@ -369,31 +360,15 @@ export default function Contact() {
                       </div>
                     </div>
 
-                    {/* Location/Suburb */}
+                    {/* Address */}
                     <div>
-                      <Label htmlFor="suburb">Your Suburb *</Label>
-                      <Select onValueChange={(value) => setValue("suburb", value)}>
-                        <SelectTrigger className="mt-1">
-                          <SelectValue placeholder="Select your suburb" />
-                        </SelectTrigger>
-                        <SelectContent className="max-h-[300px]">
-                          {Object.entries(suburbsByRegion).map(([region, suburbs]) => (
-                            <div key={region}>
-                              <div className="px-2 py-1.5 text-xs font-semibold text-muted-foreground bg-muted/50">
-                                {region}
-                              </div>
-                              {suburbs.map((suburb) => (
-                                <SelectItem key={suburb.slug} value={suburb.name}>
-                                  {suburb.name} ({suburb.postcode})
-                                </SelectItem>
-                              ))}
-                            </div>
-                          ))}
-                          <SelectItem value="Other">Other (Not listed)</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      {errors.suburb && (
-                        <p className="text-destructive text-sm mt-1">{errors.suburb.message}</p>
+                      <Label htmlFor="address">Your Address *</Label>
+                      <AddressAutocomplete
+                        onAddressSelect={(address) => setValue("address", address, { shouldValidate: true })}
+                        className="mt-1"
+                      />
+                      {errors.address && (
+                        <p className="text-destructive text-sm mt-1">{errors.address.message}</p>
                       )}
                     </div>
 
