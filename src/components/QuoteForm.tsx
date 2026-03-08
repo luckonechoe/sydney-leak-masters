@@ -63,6 +63,7 @@ const ISSUE_TYPES = [
   "Bathroom Leak",
   "Waterproofing Issue",
   "Grout Damage",
+  "Preventative Maintenance",
   "Other",
 ];
 
