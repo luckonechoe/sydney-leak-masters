@@ -228,10 +228,10 @@ export default function Strata() {
                     <div className="inline-flex p-3 rounded-lg bg-secondary/10 mb-4">
                       <Icon className="w-6 h-6 text-secondary" />
                     </div>
-                    <h3 className="font-heading font-bold text-lg text-foreground mb-2">
+                    <h3 className="font-heading font-bold text-lg text-foreground mb-2 min-h-[3.5rem] flex items-center">
                       {benefit.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-muted-foreground mt-auto">
                       {benefit.description}
                     </p>
                   </motion.div>
