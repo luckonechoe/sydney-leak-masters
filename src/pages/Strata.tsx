@@ -223,7 +223,7 @@ export default function Strata() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="p-6 bg-card rounded-lg border border-border text-center"
+                    className="h-full flex flex-col items-center p-6 bg-card rounded-lg border border-border text-center"
                   >
                     <div className="inline-flex p-3 rounded-lg bg-secondary/10 mb-4">
                       <Icon className="w-6 h-6 text-secondary" />
