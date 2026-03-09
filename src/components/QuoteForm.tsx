@@ -305,13 +305,13 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
                   )}
                 </div>
                 <div>
-                  <Label>Issue Type *</Label>
+                  <Label>Service Required *</Label>
                   <Select
                     value={watch("issueType")}
                     onValueChange={(value) => setValue("issueType", value)}
                   >
                     <SelectTrigger className="mt-1">
-                      <SelectValue placeholder="Select issue type" />
+                      <SelectValue placeholder="Select service type" />
                     </SelectTrigger>
                     <SelectContent>
                       {ISSUE_TYPES.map((type) => (
@@ -322,7 +322,7 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
                     </SelectContent>
                   </Select>
                   {errors.issueType && (
-                    <p className="text-destructive text-sm mt-1">{errors.issueType.message}</p>
+                    <p className="text-destructive text-sm mt-1">Please select a service type</p>
                   )}
                 </div>
                 <div>
