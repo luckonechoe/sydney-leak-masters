@@ -59,12 +59,11 @@ const PROPERTY_TYPES = [
 ];
 
 const ISSUE_TYPES = [
-  "Shower Leak",
-  "Balcony Leak",
-  "Bathroom Leak",
-  "Waterproofing Issue",
-  "Grout Damage",
+  "Leaking Shower Repair",
+  "Leaking Balcony Repair",
+  "Epoxy Regrouting",
   "Preventative Maintenance",
+  "Strata/Body Corporate",
   "Other",
 ];
 
