@@ -414,6 +414,41 @@ export const sydneySuburbs: SuburbData[] = [
     postcode: "2567",
     description: "Trusted leak repair specialists in Narellan. Protecting new and established homes in the Macarthur growth corridor.",
   },
+  {
+    slug: "mount-druitt",
+    name: "Mount Druitt",
+    region: "Western Sydney",
+    postcode: "2770",
+    description: "Reliable leak repair services in Mount Druitt. Affordable shower and balcony waterproofing for Western Sydney properties.",
+  },
+  {
+    slug: "narrabeen",
+    name: "Narrabeen",
+    region: "Northern Beaches",
+    postcode: "2101",
+    description: "Expert leak repair specialists in Narrabeen. Coastal waterproofing solutions for Northern Beaches homes and units.",
+  },
+  {
+    slug: "st-leonards",
+    name: "St Leonards",
+    region: "North Shore",
+    postcode: "2065",
+    description: "Professional shower and balcony leak repairs in St Leonards. Trusted waterproofing for apartments and commercial buildings on the North Shore.",
+  },
+  {
+    slug: "macquarie-park",
+    name: "Macquarie Park",
+    region: "Northern Sydney",
+    postcode: "2113",
+    description: "Expert leak repair services in Macquarie Park. Quality waterproofing for modern apartments and strata properties in Northern Sydney.",
+  },
+  {
+    slug: "darlinghurst",
+    name: "Darlinghurst",
+    region: "Inner Sydney",
+    postcode: "2010",
+    description: "Trusted leak repair specialists in Darlinghurst. Expert waterproofing for terraces, apartments, and heritage buildings in inner Sydney.",
+  },
 ];
 
 export function getSuburbBySlug(slug: string): SuburbData | undefined {
