@@ -248,7 +248,7 @@ export default function Contact() {
                         Phone
                       </h3>
                       <p className="text-secondary font-medium">{PHONE_NUMBER}</p>
-                      <p className="text-sm text-muted-foreground">Mon-Fri 7am-6pm, Sat 8am-2pm</p>
+                      <p className="text-sm text-muted-foreground">Mon-Fri 7:30am-3pm, Sat 8:30am-1pm</p>
                     </div>
                   </a>
 
@@ -290,8 +290,8 @@ export default function Contact() {
                         Business Hours
                       </h3>
                       <div className="text-sm text-muted-foreground space-y-1">
-                        <p>Monday - Friday: 7:00am - 6:00pm</p>
-                        <p>Saturday: 8:00am - 2:00pm</p>
+                        <p>Monday - Friday: 7:30am - 3:00pm</p>
+                        <p>Saturday: 8:30am - 1:00pm</p>
                         <p>Sunday: Closed</p>
                       </div>
                     </div>

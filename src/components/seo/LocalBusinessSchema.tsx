@@ -44,14 +44,14 @@ export function LocalBusinessSchema({
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "07:00",
-        closes: "18:00",
+        opens: "07:30",
+        closes: "15:00",
       },
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: "Saturday",
-        opens: "08:00",
-        closes: "14:00",
+        opens: "08:30",
+        closes: "13:00",
       },
     ],
     sameAs: [
