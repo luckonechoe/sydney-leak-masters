@@ -515,6 +515,7 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
                     <p><strong>Name:</strong> {watch("name")}</p>
                     <p><strong>Email:</strong> {watch("email")}</p>
                     <p><strong>Phone:</strong> {watch("phone")}</p>
+                    <p><strong>Role:</strong> {watch("callerType")}</p>
                     <p><strong>Property:</strong> {watch("propertyType")} — {watch("address")}</p>
                     <p><strong>Service:</strong> {watch("issueType")}</p>
                     <p><strong>Urgency:</strong> {watch("urgency")}</p>
