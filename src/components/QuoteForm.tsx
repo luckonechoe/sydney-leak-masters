@@ -29,6 +29,8 @@ const quoteFormSchema = z.object({
   propertyType: z.string().min(1, "Select property type"),
   address: z.string().min(3, "Please enter your address"),
   issueType: z.string().min(1, "Select issue type"),
+  urgency: z.string().min(1, "Please select urgency level"),
+  subject: z.string().min(2, "Subject is required").max(200),
   description: z.string().optional(),
   // Step 3: Files (handled separately)
   // Step 4: Contact time
@@ -67,6 +69,13 @@ const ISSUE_TYPES = [
   "Other",
 ];
 
+const URGENCY_LEVELS = [
+  { value: "low", label: "Low - Can wait a few weeks" },
+  { value: "medium", label: "Medium - Within the next week" },
+  { value: "high", label: "High - As soon as possible" },
+  { value: "emergency", label: "Emergency - Urgent attention needed" },
+] as const;
+
 const CONTACT_TIMES = [
   "Morning (8am - 12pm)",
   "Afternoon (12pm - 5pm)",
@@ -89,6 +98,8 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
       propertyType: "",
       address: "",
       issueType: "",
+      urgency: "",
+      subject: "",
       description: "",
       preferredTime: "",
     },
@@ -135,7 +146,7 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
     if (currentStep === 1) {
       fieldsToValidate = ["name", "email", "phone"];
     } else if (currentStep === 2) {
-      fieldsToValidate = ["propertyType", "address", "issueType"];
+      fieldsToValidate = ["propertyType", "address", "issueType", "urgency", "subject"];
     }
 
     const isValid = await form.trigger(fieldsToValidate);
@@ -325,6 +336,42 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
                     <p className="text-destructive text-sm mt-1">Please select a service type</p>
                   )}
                 </div>
+
+                <div>
+                  <Label>How Urgent? *</Label>
+                  <Select
+                    value={watch("urgency")}
+                    onValueChange={(value) => setValue("urgency", value, { shouldValidate: true })}
+                  >
+                    <SelectTrigger className="mt-1">
+                      <SelectValue placeholder="Select urgency level" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {URGENCY_LEVELS.map((level) => (
+                        <SelectItem key={level.value} value={level.value}>
+                          {level.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  {errors.urgency && (
+                    <p className="text-destructive text-sm mt-1">{errors.urgency.message}</p>
+                  )}
+                </div>
+
+                <div>
+                  <Label htmlFor="subject">Subject *</Label>
+                  <Input
+                    id="subject"
+                    {...register("subject")}
+                    placeholder="Quote request for shower leak"
+                    className="mt-1"
+                  />
+                  {errors.subject && (
+                    <p className="text-destructive text-sm mt-1">{errors.subject.message}</p>
+                  )}
+                </div>
+
                 <div>
                   <Label htmlFor="description">Description (Optional)</Label>
                   <Textarea
@@ -440,7 +487,9 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
                     <p><strong>Email:</strong> {watch("email")}</p>
                     <p><strong>Phone:</strong> {watch("phone")}</p>
                     <p><strong>Property:</strong> {watch("propertyType")} — {watch("address")}</p>
-                    <p><strong>Issue:</strong> {watch("issueType")}</p>
+                    <p><strong>Service:</strong> {watch("issueType")}</p>
+                    <p><strong>Urgency:</strong> {watch("urgency")}</p>
+                    <p><strong>Subject:</strong> {watch("subject")}</p>
                     {files.length > 0 && (
                       <p><strong>Files:</strong> {files.length} uploaded</p>
                     )}
