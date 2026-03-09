@@ -20,11 +20,18 @@ import { useToast } from "@/hooks/use-toast";
 import { AddressAutocomplete } from "@/components/AddressAutocomplete";
 
 // Form schema
+const CALLER_TYPES = [
+  "Owner / Occupier",
+  "Strata Manager",
+  "Property Manager",
+] as const;
+
 const quoteFormSchema = z.object({
   // Step 1: Contact
   name: z.string().min(2, "Name is required"),
   email: z.string().email("Valid email required"),
   phone: z.string().min(8, "Valid phone number required"),
+  callerType: z.string().min(1, "Please select who you are"),
   // Step 2: Property
   propertyType: z.string().min(1, "Select property type"),
   address: z.string().min(3, "Please enter your address"),
