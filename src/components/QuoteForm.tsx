@@ -280,6 +280,27 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
                     <p className="text-destructive text-sm mt-1">{errors.phone.message}</p>
                   )}
                 </div>
+                <div>
+                  <Label>I am a… *</Label>
+                  <Select
+                    value={watch("callerType")}
+                    onValueChange={(value) => setValue("callerType", value, { shouldValidate: true })}
+                  >
+                    <SelectTrigger className="mt-1">
+                      <SelectValue placeholder="Select your role" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {CALLER_TYPES.map((type) => (
+                        <SelectItem key={type} value={type}>
+                          {type}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  {errors.callerType && (
+                    <p className="text-destructive text-sm mt-1">{errors.callerType.message}</p>
+                  )}
+                </div>
               </motion.div>
             )}
 

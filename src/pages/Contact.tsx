@@ -336,6 +336,26 @@ export default function Contact() {
                       )}
                     </div>
 
+                    {/* Caller Type */}
+                    <div>
+                      <Label>I am a… *</Label>
+                      <Select onValueChange={(value) => setValue("callerType", value)}>
+                        <SelectTrigger className="mt-1">
+                          <SelectValue placeholder="Select your role" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {CALLER_TYPES.map((type) => (
+                            <SelectItem key={type} value={type}>
+                              {type}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                      {errors.callerType && (
+                        <p className="text-destructive text-sm mt-1">{errors.callerType.message}</p>
+                      )}
+                    </div>
+
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="email">Email *</Label>
