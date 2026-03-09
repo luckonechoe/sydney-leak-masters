@@ -98,6 +98,8 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
       propertyType: "",
       address: "",
       issueType: "",
+      urgency: "",
+      subject: "",
       description: "",
       preferredTime: "",
     },
