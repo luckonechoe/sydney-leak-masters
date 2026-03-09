@@ -29,6 +29,8 @@ const quoteFormSchema = z.object({
   propertyType: z.string().min(1, "Select property type"),
   address: z.string().min(3, "Please enter your address"),
   issueType: z.string().min(1, "Select issue type"),
+  urgency: z.string().min(1, "Please select urgency level"),
+  subject: z.string().min(2, "Subject is required").max(200),
   description: z.string().optional(),
   // Step 3: Files (handled separately)
   // Step 4: Contact time
