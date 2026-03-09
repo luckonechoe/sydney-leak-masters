@@ -152,7 +152,7 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
     let fieldsToValidate: (keyof QuoteFormData)[] = [];
     
     if (currentStep === 1) {
-      fieldsToValidate = ["name", "email", "phone"];
+      fieldsToValidate = ["name", "email", "phone", "callerType"];
     } else if (currentStep === 2) {
       fieldsToValidate = ["propertyType", "address", "issueType", "urgency", "subject"];
     }
