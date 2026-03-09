@@ -358,6 +358,62 @@ export const sydneySuburbs: SuburbData[] = [
     postcode: "2010",
     description: "Trusted leak repair specialists in Surry Hills. Expert shower and balcony repairs for terraces, apartments, and heritage buildings.",
   },
+  {
+    slug: "redfern",
+    name: "Redfern",
+    region: "Inner Sydney",
+    postcode: "2016",
+    description: "Professional leak repair services in Redfern. Expert waterproofing for terraces, apartments, and mixed-use buildings in inner Sydney.",
+  },
+  {
+    slug: "woolloomooloo",
+    name: "Woolloomooloo",
+    region: "Inner Sydney",
+    postcode: "2011",
+    description: "Trusted shower and balcony leak repairs in Woolloomooloo. Specialising in heritage and harbourside property waterproofing.",
+  },
+  {
+    slug: "willoughby",
+    name: "Willoughby",
+    region: "North Shore",
+    postcode: "2068",
+    description: "Expert leak repair services in Willoughby. Professional waterproofing solutions for North Shore homes and strata buildings.",
+  },
+  {
+    slug: "artarmon",
+    name: "Artarmon",
+    region: "North Shore",
+    postcode: "2064",
+    description: "Reliable shower and balcony leak repairs in Artarmon. Serving residential and commercial properties across the North Shore.",
+  },
+  {
+    slug: "fairfield",
+    name: "Fairfield",
+    region: "South Western Sydney",
+    postcode: "2165",
+    description: "Affordable leak repair specialists in Fairfield. Quality shower and balcony waterproofing for South Western Sydney properties.",
+  },
+  {
+    slug: "cabramatta",
+    name: "Cabramatta",
+    region: "South Western Sydney",
+    postcode: "2166",
+    description: "Professional leak repair services in Cabramatta. Trusted waterproofing solutions for homes and units in South Western Sydney.",
+  },
+  {
+    slug: "ingleburn",
+    name: "Ingleburn",
+    region: "Macarthur",
+    postcode: "2565",
+    description: "Expert shower and balcony leak repairs in Ingleburn. Reliable waterproofing services throughout the Macarthur region.",
+  },
+  {
+    slug: "narellan",
+    name: "Narellan",
+    region: "Macarthur",
+    postcode: "2567",
+    description: "Trusted leak repair specialists in Narellan. Protecting new and established homes in the Macarthur growth corridor.",
+  },
 ];
 
 export function getSuburbBySlug(slug: string): SuburbData | undefined {
