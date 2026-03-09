@@ -102,6 +102,7 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
       name: "",
       email: "",
       phone: "",
+      callerType: "",
       propertyType: "",
       address: "",
       issueType: "",
