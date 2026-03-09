@@ -248,7 +248,7 @@ export default function Contact() {
                         Phone
                       </h3>
                       <p className="text-secondary font-medium">{PHONE_NUMBER}</p>
-                      <p className="text-sm text-muted-foreground">Mon-Fri 7am-6pm, Sat 8am-2pm</p>
+                      <p className="text-sm text-muted-foreground">Mon-Fri 7:30am-3pm, Sat 8:30am-1pm</p>
                     </div>
                   </a>
 
