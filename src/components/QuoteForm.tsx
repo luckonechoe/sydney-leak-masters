@@ -69,6 +69,13 @@ const ISSUE_TYPES = [
   "Other",
 ];
 
+const URGENCY_LEVELS = [
+  { value: "low", label: "Low - Can wait a few weeks" },
+  { value: "medium", label: "Medium - Within the next week" },
+  { value: "high", label: "High - As soon as possible" },
+  { value: "emergency", label: "Emergency - Urgent attention needed" },
+] as const;
+
 const CONTACT_TIMES = [
   "Morning (8am - 12pm)",
   "Afternoon (12pm - 5pm)",
