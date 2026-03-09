@@ -336,6 +336,42 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
                     <p className="text-destructive text-sm mt-1">Please select a service type</p>
                   )}
                 </div>
+
+                <div>
+                  <Label>How Urgent? *</Label>
+                  <Select
+                    value={watch("urgency")}
+                    onValueChange={(value) => setValue("urgency", value, { shouldValidate: true })}
+                  >
+                    <SelectTrigger className="mt-1">
+                      <SelectValue placeholder="Select urgency level" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {URGENCY_LEVELS.map((level) => (
+                        <SelectItem key={level.value} value={level.value}>
+                          {level.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  {errors.urgency && (
+                    <p className="text-destructive text-sm mt-1">{errors.urgency.message}</p>
+                  )}
+                </div>
+
+                <div>
+                  <Label htmlFor="subject">Subject *</Label>
+                  <Input
+                    id="subject"
+                    {...register("subject")}
+                    placeholder="Quote request for shower leak"
+                    className="mt-1"
+                  />
+                  {errors.subject && (
+                    <p className="text-destructive text-sm mt-1">{errors.subject.message}</p>
+                  )}
+                </div>
+
                 <div>
                   <Label htmlFor="description">Description (Optional)</Label>
                   <Textarea
