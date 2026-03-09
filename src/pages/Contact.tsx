@@ -33,10 +33,17 @@ const URGENCY_LEVELS = [
   { value: "emergency", label: "Emergency - Urgent attention needed" },
 ] as const;
 
+const CALLER_TYPES = [
+  "Owner / Occupier",
+  "Strata Manager",
+  "Property Manager",
+] as const;
+
 const contactSchema = z.object({
   name: z.string().min(2, "Name is required").max(100),
   email: z.string().email("Valid email required").max(255),
   phone: z.string().min(8, "Valid phone required").max(20),
+  callerType: z.string().min(1, "Please select who you are"),
   address: z.string().min(3, "Please enter your address"),
   serviceType: z.string().min(1, "Please select a service type"),
   urgency: z.string().min(1, "Please select urgency level"),
@@ -326,6 +333,26 @@ export default function Contact() {
                       />
                       {errors.name && (
                         <p className="text-destructive text-sm mt-1">{errors.name.message}</p>
+                      )}
+                    </div>
+
+                    {/* Caller Type */}
+                    <div>
+                      <Label>I am a… *</Label>
+                      <Select onValueChange={(value) => setValue("callerType", value)}>
+                        <SelectTrigger className="mt-1">
+                          <SelectValue placeholder="Select your role" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {CALLER_TYPES.map((type) => (
+                            <SelectItem key={type} value={type}>
+                              {type}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                      {errors.callerType && (
+                        <p className="text-destructive text-sm mt-1">{errors.callerType.message}</p>
                       )}
                     </div>
 

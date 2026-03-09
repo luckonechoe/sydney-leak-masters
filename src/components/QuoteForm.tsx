@@ -20,11 +20,18 @@ import { useToast } from "@/hooks/use-toast";
 import { AddressAutocomplete } from "@/components/AddressAutocomplete";
 
 // Form schema
+const CALLER_TYPES = [
+  "Owner / Occupier",
+  "Strata Manager",
+  "Property Manager",
+] as const;
+
 const quoteFormSchema = z.object({
   // Step 1: Contact
   name: z.string().min(2, "Name is required"),
   email: z.string().email("Valid email required"),
   phone: z.string().min(8, "Valid phone number required"),
+  callerType: z.string().min(1, "Please select who you are"),
   // Step 2: Property
   propertyType: z.string().min(1, "Select property type"),
   address: z.string().min(3, "Please enter your address"),
@@ -95,6 +102,7 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
       name: "",
       email: "",
       phone: "",
+      callerType: "",
       propertyType: "",
       address: "",
       issueType: "",
@@ -144,7 +152,7 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
     let fieldsToValidate: (keyof QuoteFormData)[] = [];
     
     if (currentStep === 1) {
-      fieldsToValidate = ["name", "email", "phone"];
+      fieldsToValidate = ["name", "email", "phone", "callerType"];
     } else if (currentStep === 2) {
       fieldsToValidate = ["propertyType", "address", "issueType", "urgency", "subject"];
     }
@@ -270,6 +278,27 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
                   />
                   {errors.phone && (
                     <p className="text-destructive text-sm mt-1">{errors.phone.message}</p>
+                  )}
+                </div>
+                <div>
+                  <Label>I am a… *</Label>
+                  <Select
+                    value={watch("callerType")}
+                    onValueChange={(value) => setValue("callerType", value, { shouldValidate: true })}
+                  >
+                    <SelectTrigger className="mt-1">
+                      <SelectValue placeholder="Select your role" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {CALLER_TYPES.map((type) => (
+                        <SelectItem key={type} value={type}>
+                          {type}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  {errors.callerType && (
+                    <p className="text-destructive text-sm mt-1">{errors.callerType.message}</p>
                   )}
                 </div>
               </motion.div>
@@ -486,6 +515,7 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
                     <p><strong>Name:</strong> {watch("name")}</p>
                     <p><strong>Email:</strong> {watch("email")}</p>
                     <p><strong>Phone:</strong> {watch("phone")}</p>
+                    <p><strong>Role:</strong> {watch("callerType")}</p>
                     <p><strong>Property:</strong> {watch("propertyType")} — {watch("address")}</p>
                     <p><strong>Service:</strong> {watch("issueType")}</p>
                     <p><strong>Urgency:</strong> {watch("urgency")}</p>
