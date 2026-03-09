@@ -517,7 +517,7 @@ export default function PreventativeMaintenance() {
                     Call {PHONE_NUMBER}
                   </CTAButton>
                   <p className="text-sm text-muted-foreground">
-                    Available Monday – Saturday, 7am – 6pm
+                    Available Monday – Saturday, 7:30am – 3pm
                   </p>
                 </div>
               </motion.div>
