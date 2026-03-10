@@ -7,6 +7,7 @@ import { CTAButton } from "@/components/CTAButton";
 import { WarrantyBadge } from "@/components/WarrantyBadge";
 import { ServiceCard } from "@/components/ServiceCard";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
+import { TrustPillars } from "@/components/TrustPillars";
 import { QuoteForm } from "@/components/QuoteForm";
 import { Testimonials } from "@/components/Testimonials";
 import { SEOHead, LocalBusinessSchema } from "@/components/seo";
