@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Check, Building2, Shield, AlertTriangle, Star, Droplets, Layers, MapPin, Award, DollarSign, Users, Eye, Home, Wrench, ArrowRight } from "lucide-react";
+import { TrustPillars } from "@/components/TrustPillars";
 import { PricingCalculator } from "@/components/PricingCalculator";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
@@ -749,6 +750,8 @@ export default function BalconyRepairs() {
             </div>
           </div>
         </section>
+
+        <TrustPillars />
 
         <Footer />
       </div>

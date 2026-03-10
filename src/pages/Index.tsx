@@ -7,6 +7,7 @@ import { CTAButton } from "@/components/CTAButton";
 import { WarrantyBadge } from "@/components/WarrantyBadge";
 import { ServiceCard } from "@/components/ServiceCard";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
+import { TrustPillars } from "@/components/TrustPillars";
 import { QuoteForm } from "@/components/QuoteForm";
 import { Testimonials } from "@/components/Testimonials";
 import { SEOHead, LocalBusinessSchema } from "@/components/seo";
@@ -194,6 +195,9 @@ export default function Index() {
             </div>
           </div>
         </section>
+
+        {/* Trust Pillars */}
+        <TrustPillars />
 
         {/* Preventative Maintenance Banner */}
         <section className="py-12 lg:py-16">
