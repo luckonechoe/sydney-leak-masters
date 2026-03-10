@@ -196,6 +196,9 @@ export default function Index() {
           </div>
         </section>
 
+        {/* Trust Pillars */}
+        <TrustPillars />
+
         {/* Preventative Maintenance Banner */}
         <section className="py-12 lg:py-16">
           <div className="section-container">

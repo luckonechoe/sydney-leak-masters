@@ -813,6 +813,8 @@ export default function ShowerRepairs() {
           </div>
         </section>
 
+        <TrustPillars />
+
         <Footer />
       </div>
     </>

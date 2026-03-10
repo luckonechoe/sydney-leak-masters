@@ -751,6 +751,8 @@ export default function BalconyRepairs() {
           </div>
         </section>
 
+        <TrustPillars />
+
         <Footer />
       </div>
     </>
