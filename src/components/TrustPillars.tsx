@@ -5,7 +5,7 @@ const pillars = [
   {
     icon: MapPin,
     title: "Sydney Owned & Independent",
-    description: "Locally owned and operated — no franchises, no outsourcing. Just real tradespeople who know Sydney.",
+    description: "Locally owned and operated — no franchises, no outsourcing. Just real technicians who know Sydney.",
   },
   {
     icon: Search,
