@@ -266,7 +266,7 @@ export default function CompleteGuide() {
 
                 <h3 className="font-heading text-xl font-semibold mt-6 mb-3">Full Re-Waterproofing</h3>
                 <p>For severely damaged showers, a complete strip-out and re-waterproofing may be necessary. This involves removing all tiles, stripping back to the substrate, applying new waterproofing membrane to current Australian Standards, and re-tiling with epoxy grout.</p>
-                <p><strong>Best for:</strong> Showers with extensive membrane failure, structural damage, or non-compliant original waterproofing. Costs vary from $5,000–$15,000+.</p>
+                <p><strong>Best for:</strong> Showers with extensive membrane failure, structural damage, or non-compliant original waterproofing. Costs vary from $4,500–$12,000+.</p>
                 <p>Learn more about our approach on our <Link to="/services/shower-repairs" className="text-secondary hover:underline">shower leak repairs</Link> service page.</p>
               </motion.div>
 
