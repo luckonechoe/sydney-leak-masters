@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface CTAButtonProps {
   variant: "link" | "phone";
@@ -15,6 +16,8 @@ const PHONE_NUMBER = "0400 000 000";
 const PHONE_HREF = "tel:+61400000000";
 
 export function CTAButton({ variant, to, children, className, size = "default" }: CTAButtonProps) {
+  const isMobile = useIsMobile();
+
   const baseStyles = cn(
     "font-heading font-semibold transition-all duration-300",
     size === "lg" && "text-lg px-8 py-6",
@@ -32,10 +35,17 @@ export function CTAButton({ variant, to, children, className, size = "default" }
         )}
         size={size}
       >
-        <Link to="/contact" aria-label="Contact us for a free quote">
-          <Phone className="w-4 h-4 mr-2" />
-          {children || PHONE_NUMBER}
-        </Link>
+        {isMobile ? (
+          <a href={PHONE_HREF} aria-label="Call us now">
+            <Phone className="w-4 h-4 mr-2" />
+            {children || PHONE_NUMBER}
+          </a>
+        ) : (
+          <Link to="/contact" aria-label="Contact us for a free quote">
+            <Phone className="w-4 h-4 mr-2" />
+            {children || PHONE_NUMBER}
+          </Link>
+        )}
       </Button>
     );
   }
