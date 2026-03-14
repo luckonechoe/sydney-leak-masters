@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface CTAButtonProps {
   variant: "link" | "phone";
