@@ -1016,7 +1016,7 @@ export const blogPostsData: BlogPostContent[] = [
 <ul>
 <li><strong>Specific balcony repair experience</strong> — general tilers may not understand waterproofing systems and leak diagnostics</li>
 <li><strong>Diagnostic capability</strong> — the contractor should be able to identify the leak source, not just quote on tile replacement</li>
-<li><strong>Knowledge of Australian Standards</strong> — repairs should comply with AS 4654.2 for external waterproofing</li>
+<li><strong>Knowledge of waterproofing standards</strong> — repairs should comply with professional standards for external waterproofing</li>
 <li><strong>Written warranty</strong> — insist on a minimum 10-year warranty covering materials and workmanship</li>
 <li><strong>Insurance</strong> — comprehensive public liability insurance is essential, especially for work at height</li>
 <li><strong>Transparent quoting</strong> — a detailed, itemised quote should be provided after inspection, with no hidden costs</li>
