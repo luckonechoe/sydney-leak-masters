@@ -15,8 +15,8 @@ export default function Blog() {
   return (
     <>
       <SEOHead
-        title="Blog | Leak Repair Tips & Guides"
-        description="Expert advice on shower leaks, balcony waterproofing, epoxy regrouting, tile sealing, and concrete degradation prevention. Stay informed with Sydney Leak Repairs Pro."
+        title="Blog | Practical Leak Repair Guides for Sydney Homeowners"
+        description="Straightforward advice on shower leaks, balcony waterproofing, regrouting and long-term property care from Sydney's trusted leak repair specialists."
       />
 
       <div className="min-h-screen bg-background">
