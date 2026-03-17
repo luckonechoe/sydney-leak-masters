@@ -36,12 +36,12 @@ export default function Blog() {
               className="max-w-3xl"
             >
               <h1 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-6">
-                Leak Repair{" "}
-                <span className="gradient-text">Blog</span>
+                Practical Advice for{" "}
+                <span className="gradient-text">Sydney Homeowners</span>
               </h1>
               <p className="text-lg text-muted-foreground">
-                Expert advice, tips, and guides on shower repairs, balcony 
-                waterproofing, and protecting your property from water damage.
+                Straightforward guides on shower leaks, balcony repairs, waterproofing 
+                and long-term property care — written by the team that fixes them every day.
               </p>
             </motion.div>
           </div>
