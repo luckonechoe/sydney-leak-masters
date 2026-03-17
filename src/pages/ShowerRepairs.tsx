@@ -104,7 +104,7 @@ const whyChooseUs = [
   {
     icon: Award,
     title: "Licensed Waterproofing Specialists",
-    description: "Our technicians are fully licensed and trained in wet area waterproofing, complying with Australian Standards AS 3740 for waterproofing of domestic wet areas.",
+    description: "Our technicians are fully licensed and trained in wet area waterproofing, using professional-grade materials and methods for domestic wet areas.",
   },
   {
     icon: Layers,
@@ -139,7 +139,7 @@ const showerFAQs = [
   },
   {
     question: "Is epoxy grout safe for bathrooms?",
-    answer: "Absolutely. Epoxy grout is non-toxic once cured, resistant to mould and mildew growth, and meets Australian Standards for use in wet areas. It's actually more hygienic than cement grout because its non-porous surface prevents bacteria build-up.",
+    answer: "Absolutely. Epoxy grout is non-toxic once cured, resistant to mould and mildew growth, and is specifically designed for use in wet areas. It's actually more hygienic than cement grout because its non-porous surface prevents bacteria build-up.",
   },
   {
     question: "How soon can I use my shower after repair?",

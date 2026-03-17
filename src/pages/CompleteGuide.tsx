@@ -75,15 +75,15 @@ const pillarFaqs = [
   },
   {
     question: "What is a waterproof membrane?",
-    answer: "A waterproof membrane is a thin layer of material applied beneath tiles in wet areas (showers, bathrooms, balconies) to prevent water from penetrating into the building structure. In Australia, membranes must comply with AS 3740 for internal wet areas and AS 4654.2 for external areas. Common types include liquid-applied membranes (painted on) and sheet membranes (rolled or torched on)."
+    answer: "A waterproof membrane is a thin layer of material applied beneath tiles in wet areas (showers, bathrooms, balconies) to prevent water from penetrating into the building structure. Membranes must meet professional standards for both internal and external wet areas. Common types include liquid-applied membranes (painted on) and sheet membranes (rolled or torched on)."
   },
   {
     question: "How do you test for a balcony leak?",
     answer: "Professional balcony leak testing involves several methods: a flood test (blocking drains and flooding the surface with water for 24 hours while checking below for moisture), electronic leak detection using impedance testing equipment, moisture mapping with calibrated moisture meters, and thermal imaging to identify wet areas behind surfaces. These methods pinpoint the exact location and source of leaks."
   },
   {
-    question: "What Australian Standards apply to bathroom waterproofing?",
-    answer: "The primary standard is AS 3740-2021 (Waterproofing of domestic wet areas), which specifies minimum requirements for waterproof membranes, shower recesses, and bathroom floors. AS 4654.2 applies to external wet areas like balconies. The National Construction Code (NCC/BCA) references these standards as deemed-to-satisfy provisions. All waterproofing work should be carried out by licensed professionals in compliance with these standards."
+    question: "What standards apply to bathroom waterproofing?",
+    answer: "Current waterproofing standards specify minimum requirements for waterproof membranes, shower recesses, and bathroom floors. Separate standards apply to external wet areas like balconies. The National Construction Code (NCC/BCA) references these standards as deemed-to-satisfy provisions. All waterproofing work should be carried out by licensed professionals in compliance with current requirements."
   },
   {
     question: "Is shower regrouting worth it?",
@@ -219,7 +219,7 @@ export default function CompleteGuide() {
                 <p>Effective waterproofing is a system, not a single product. Understanding the components helps you make informed decisions about repairs and maintenance.</p>
 
                 <h3 className="font-heading text-xl font-semibold mt-6 mb-3">Shower Waterproofing Systems</h3>
-                <p>A compliant shower waterproofing system under <strong>AS 3740-2021</strong> includes:</p>
+                <p>A compliant shower waterproofing system includes:</p>
                 <ul className="space-y-2">
                   <li><strong>Substrate preparation</strong> — the wall and floor surfaces must be clean, dry, and structurally sound</li>
                   <li><strong>Primer</strong> — applied to improve membrane adhesion to the substrate</li>
@@ -231,7 +231,7 @@ export default function CompleteGuide() {
                 </ul>
 
                 <h3 className="font-heading text-xl font-semibold mt-6 mb-3">Balcony Waterproofing Systems</h3>
-                <p>External balcony waterproofing under <strong>AS 4654.2</strong> requires more robust systems to withstand weather exposure:</p>
+                <p>External balcony waterproofing requires more robust systems to withstand weather exposure:</p>
                 <ul className="space-y-2">
                   <li><strong>Structural substrate</strong> — concrete slab with correct falls (minimum 1:60 to drainage)</li>
                   <li><strong>Surface preparation</strong> — grinding, cleaning, and crack repair</li>

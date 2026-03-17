@@ -76,15 +76,15 @@ const strataFAQs = [
   },
   {
     question: "What documentation do you provide for strata records?",
-    answer: "We provide comprehensive documentation including detailed inspection reports, before/after photo records, scope of works, work completion certificates, 10-year warranty documentation, compliance statements referencing relevant Australian Standards, and maintenance recommendations for your capital works plan.",
+    answer: "We provide comprehensive documentation including detailed inspection reports, before/after photo records, scope of works, work completion certificates, 10-year warranty documentation, and maintenance recommendations for your capital works plan.",
   },
   {
     question: "Do you offer volume pricing for strata complexes?",
     answer: "Yes, we provide competitive volume pricing for complexes with multiple units requiring repair. The more units in a single engagement, the more cost-effective each repair becomes. Contact us for a portfolio quote tailored to your complex.",
   },
   {
-    question: "Are your methods compliant with Australian Standards?",
-    answer: "All our waterproofing work complies with AS 4654.2 (waterproofing of wet areas) and relevant NCC/BCA requirements. We use materials and methods that meet or exceed these standards, and our compliance documentation supports levy fund claims and insurance requirements.",
+    question: "Are your methods professionally compliant?",
+    answer: "All our waterproofing work uses professional-grade materials and industry-recognised methods. We provide full compliance documentation that supports levy fund claims and insurance requirements.",
   },
 ];
 
@@ -389,10 +389,10 @@ export default function Strata() {
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-4">
                   <p className="text-muted-foreground">
-                    All our waterproofing work for strata properties complies with{" "}
-                    <strong className="text-foreground">AS 4654.2</strong> — the Australian Standard 
-                    for waterproofing of wet areas in residential buildings. This ensures every 
-                    repair meets the required standard for materials, application, and testing.
+                    All our waterproofing work for strata properties meets professional 
+                    industry standards for waterproofing of wet areas in residential buildings. 
+                    This ensures every repair meets the required standard for materials, 
+                    application, and testing.
                   </p>
                   <p className="text-muted-foreground">
                     We also adhere to relevant sections of the{" "}

@@ -108,8 +108,8 @@ export default function SuburbPage({ serviceType = "shower" }: SuburbPageProps) 
               
               <p className="text-muted-foreground mb-6">
                 {isShower 
-                  ? `Our expert technicians provide professional shower leak repairs throughout ${suburbData.name} and the ${suburbData.region} area. Using premium epoxy grout technology, we fix leaking showers without removing tiles — saving you thousands compared to a full bathroom renovation. All work is completed to Australian Standards AS 3740 and backed by our 10-year warranty.`
-                  : `Our licensed waterproofing specialists repair leaking balconies across ${suburbData.name} and the ${suburbData.region} area. We use commercial-grade epoxy grout and flexible membrane systems to permanently seal your balcony — without demolition. All repairs comply with AS 4654.2 and include a 10-year written warranty.`
+                  ? `Our expert technicians provide professional shower leak repairs throughout ${suburbData.name} and the ${suburbData.region} area. Using premium epoxy grout technology, we fix leaking showers without removing tiles — saving you thousands compared to a full bathroom renovation. All work is backed by our 10-year warranty.`
+                  : `Our licensed waterproofing specialists repair leaking balconies across ${suburbData.name} and the ${suburbData.region} area. We use commercial-grade epoxy grout and flexible membrane systems to permanently seal your balcony — without demolition. All repairs include a 10-year written warranty.`
                 }
               </p>
 
@@ -160,7 +160,7 @@ export default function SuburbPage({ serviceType = "shower" }: SuburbPageProps) 
                     suburbData.region.includes("Eastern") || suburbData.region.includes("Beaches") || suburbData.region.includes("Northern Beaches")
                       ? `Coastal salt spray and humidity in the ${suburbData.region} accelerate grout deterioration and membrane failure. Our technicians understand these local conditions and use UV-resistant, salt-tolerant materials.`
                       : suburbData.region.includes("Inner")
-                        ? `Heritage terraces and older apartments in the ${suburbData.region} often have outdated waterproofing that no longer meets current Australian Standards. We specialise in non-invasive repairs that preserve character while providing modern protection.`
+                        ? `Heritage terraces and older apartments in the ${suburbData.region} often have outdated waterproofing. We specialise in non-invasive repairs that preserve character while providing modern protection.`
                         : suburbData.region.includes("Hills") || suburbData.region.includes("Western")
                           ? `Clay-rich soils in the ${suburbData.region} cause significant building movement, leading to cracked grout and stressed membranes. We use flexible waterproofing systems designed to accommodate this movement.`
                           : `Properties throughout the ${suburbData.region} area require expert waterproofing solutions tailored to local building styles and environmental conditions. Our team has extensive experience in ${suburbData.name} and surrounding suburbs.`

@@ -178,7 +178,7 @@ export const blogPostsData: BlogPostContent[] = [
 <li><strong>Deteriorated grout</strong> — standard cement grout breaks down within 5–10 years, allowing water to penetrate behind tiles</li>
 <li><strong>Failed waterproof membrane</strong> — the membrane beneath your tiles is your primary water barrier. Age, movement, and poor initial installation can cause it to fail</li>
 <li><strong>Cracked tiles</strong> — even small cracks provide a pathway for water</li>
-<li><strong>Poor original installation</strong> — bathrooms that weren't waterproofed to <a href="/blog/bathroom-waterproofing-standards">Australian Standards (AS 3740-2010)</a> are prone to early failure</li>
+<li><strong>Poor original installation</strong> — bathrooms that weren't properly waterproofed are prone to early failure</li>
 <li><strong>Building movement</strong> — natural settling and thermal expansion create stress points in grout and membranes</li>
 </ul>
 <p>In many Sydney properties — particularly those built before 2000 — waterproofing standards were less rigorous than today's requirements. If your home is more than 15–20 years old and has the original bathroom, it's worth arranging a preventative inspection.</p>`
@@ -514,8 +514,8 @@ export const blogPostsData: BlogPostContent[] = [
         answer: "Yes. Waterproofing repairs to common property can be funded from the strata capital works fund (formerly the sinking fund). Planned waterproofing maintenance should be included in the 10-year capital works plan with appropriate funding provisions. Emergency waterproofing repairs can also be funded from the administrative fund if urgent action is required. For major remediation works, a special levy may be necessary if the capital works fund is insufficient."
       },
       {
-        question: "What Australian Standards apply to waterproofing in strata buildings?",
-        answer: "The primary standards are AS 3740-2021 (Waterproofing of domestic wet areas), AS 4654.1 and AS 4654.2 (Waterproofing membranes for external above-ground use), and the National Construction Code (NCC/BCA) which references these standards. All waterproofing work in strata buildings should comply with these standards and be carried out by licensed practitioners. Documentation of compliance is important for both regulatory purposes and potential insurance claims."
+        question: "What standards apply to waterproofing in strata buildings?",
+        answer: "All waterproofing work in strata buildings should comply with industry-recognised standards and the National Construction Code (NCC/BCA). Work should be carried out by licensed practitioners, and documentation of compliance is important for both regulatory purposes and potential insurance claims."
       },
       {
         question: "How do you handle leak disputes between strata lot owners?",
@@ -568,14 +568,13 @@ export const blogPostsData: BlogPostContent[] = [
 </ul>`
       },
       {
-        heading: "Compliance Requirements: Australian Standards and the NCC",
+        heading: "Compliance Requirements: Industry Standards and the NCC",
         headingLevel: "h2",
-        content: `<p>All waterproofing work in strata buildings must comply with relevant Australian Standards and the National Construction Code (NCC). Key standards include:</p>
-<p><strong>AS 3740-2021 — Waterproofing of domestic wet areas:</strong> This standard specifies requirements for waterproofing in bathrooms, showers, laundries, and other wet areas. It covers membrane selection, application methods, termination heights, and testing requirements. Any <a href="/services/shower-repairs">shower waterproofing repair</a> must comply with this standard.</p>
-<p><strong>AS 4654.1 & AS 4654.2 — Waterproofing membranes for external above-ground use:</strong> These standards apply to <a href="/services/balcony-repairs">balcony waterproofing</a>, roof decks, and podium levels. They specify membrane types, installation requirements, drainage provisions, and quality assurance testing.</p>
-<p><strong>National Construction Code (NCC):</strong> The NCC references these Australian Standards and sets performance requirements for waterproofing in all building classes. Compliance with the NCC is a legal requirement for all building work, including repair and maintenance.</p>
-<p>For strata managers, ensuring compliance serves multiple purposes: it protects the building and its occupants, satisfies regulatory requirements, supports insurance claims, and provides documentation for future reference. We always provide compliance documentation with our <a href="/strata">strata waterproofing services</a>.</p>
-<p>Read more about the specific requirements in our detailed guide to <a href="/blog/bathroom-waterproofing-standards">Australian bathroom waterproofing standards</a>.</p>`
+        content: `<p>All waterproofing work in strata buildings must comply with relevant industry standards and the National Construction Code (NCC). Key areas of compliance include:</p>
+<p><strong>Domestic wet area waterproofing:</strong> Standards specify requirements for waterproofing in bathrooms, showers, laundries, and other wet areas. This covers membrane selection, application methods, termination heights, and testing requirements. Any <a href="/services/shower-repairs">shower waterproofing repair</a> must meet these professional standards.</p>
+<p><strong>External waterproofing membranes:</strong> Standards for <a href="/services/balcony-repairs">balcony waterproofing</a>, roof decks, and podium levels specify membrane types, installation requirements, drainage provisions, and quality assurance testing.</p>
+<p><strong>National Construction Code (NCC):</strong> The NCC sets performance requirements for waterproofing in all building classes. Compliance with the NCC is a legal requirement for all building work, including repair and maintenance.</p>
+<p>For strata managers, ensuring compliance serves multiple purposes: it protects the building and its occupants, satisfies regulatory requirements, supports insurance claims, and provides documentation for future reference. We always provide compliance documentation with our <a href="/strata">strata waterproofing services</a>.</p>`
       },
       {
         heading: "Cost-Effective Repair Strategies for Strata Buildings",
@@ -768,32 +767,32 @@ export const blogPostsData: BlogPostContent[] = [
   {
     slug: "bathroom-waterproofing-standards",
     image: BLOG_IMAGES.bathroomWaterproofingStandards,
-    title: "Australian Bathroom Waterproofing Standards Explained (AS 3740-2021)",
-    metaTitle: "Australian Bathroom Waterproofing Standards AS 3740 | Complete Guide",
-    metaDescription: "Understand Australian bathroom waterproofing standards AS 3740-2021. What they require, why they matter, and how they affect your bathroom repair or renovation project.",
-    excerpt: "Understanding AS 3740-2021 and what it means for your bathroom renovation or repair project. A guide to compliance requirements.",
+    title: "Bathroom Waterproofing Standards Explained: What Sydney Homeowners Need to Know",
+    metaTitle: "Bathroom Waterproofing Standards | What You Need to Know",
+    metaDescription: "Understand bathroom waterproofing standards and what they require. Why they matter and how they affect your bathroom repair or renovation project in Sydney.",
+    excerpt: "Understanding waterproofing standards and what they mean for your bathroom renovation or repair project. A guide to compliance requirements.",
     category: "Education",
     author: "Sydney Leak Repairs Pro",
     date: "2023-12-15",
     readTime: "13 min read",
-    keywords: ["Australian waterproofing standards", "AS 3740", "bathroom waterproofing requirements", "waterproofing compliance", "NCC waterproofing"],
+    keywords: ["waterproofing standards", "bathroom waterproofing requirements", "waterproofing compliance", "NCC waterproofing"],
     relatedPosts: ["strata-waterproofing-guide", "epoxy-grout-vs-cement-grout", "signs-of-shower-leak"],
     faqs: [
       {
         question: "Do I need a waterproofing certificate for bathroom renovations in NSW?",
-        answer: "Yes. In NSW, all waterproofing work in bathrooms and wet areas must be carried out by a licensed waterproofer, and a waterproofing compliance certificate should be issued upon completion. This certificate confirms that the waterproofing has been installed in accordance with AS 3740 and the National Construction Code. The certificate is important for building compliance, insurance purposes, and if you sell the property. Always insist on receiving a waterproofing certificate for any bathroom renovation or repair work."
+        answer: "Yes. In NSW, all waterproofing work in bathrooms and wet areas must be carried out by a licensed waterproofer, and a waterproofing compliance certificate should be issued upon completion. This certificate confirms that the waterproofing has been installed in accordance with current standards and the National Construction Code. The certificate is important for building compliance, insurance purposes, and if you sell the property. Always insist on receiving a waterproofing certificate for any bathroom renovation or repair work."
       },
       {
         question: "How high does waterproofing need to go up shower walls?",
-        answer: "According to AS 3740-2021, waterproof membrane in a shower must extend to a minimum height of 1800mm above the finished floor level on all shower walls, and to the full height of any wall within the shower recess. The membrane must also extend at least 150mm beyond the shower screen or enclosure on adjacent walls. For showers without a screen (open showers or wet rooms), the entire room may need to be waterproofed. These are minimum requirements — going higher provides additional protection."
+        answer: "Current standards require the waterproof membrane in a shower to extend to a minimum height of 1800mm above the finished floor level on all shower walls, and to the full height of any wall within the shower recess. The membrane must also extend at least 150mm beyond the shower screen or enclosure on adjacent walls. For showers without a screen (open showers or wet rooms), the entire room may need to be waterproofed. These are minimum requirements — going higher provides additional protection."
       },
       {
         question: "What is the difference between water-resistant and waterproof?",
-        answer: "In the context of AS 3740, 'waterproof' means completely impervious to water — no water can penetrate through the material. A waterproof membrane creates a continuous barrier that prevents water passage. 'Water-resistant' means the material can resist water to some degree but is not completely impervious. For example, cement render is water-resistant but not waterproof. In shower recesses and other wet areas, the standard requires waterproof membranes — water-resistant treatments alone are not sufficient."
+        answer: "In waterproofing terms, 'waterproof' means completely impervious to water — no water can penetrate through the material. A waterproof membrane creates a continuous barrier that prevents water passage. 'Water-resistant' means the material can resist water to some degree but is not completely impervious. For example, cement render is water-resistant but not waterproof. In shower recesses and other wet areas, waterproof membranes are required — water-resistant treatments alone are not sufficient."
       },
       {
-        question: "Does AS 3740 apply to existing bathrooms or only new construction?",
-        answer: "AS 3740 applies to all new bathroom construction and to any renovation work that involves removing existing waterproofing. If you're replacing tiles, modifying the layout, or carrying out any work that disturbs the existing waterproof membrane, the new waterproofing must comply with the current standard. For repair work that doesn't involve removing the existing membrane (such as epoxy grout repairs), the standard provides guidance but the existing membrane's original compliance standard applies."
+        question: "Do waterproofing standards apply to existing bathrooms or only new construction?",
+        answer: "Current standards apply to all new bathroom construction and to any renovation work that involves removing existing waterproofing. If you're replacing tiles, modifying the layout, or carrying out any work that disturbs the existing waterproof membrane, the new waterproofing must comply with the current standard. For repair work that doesn't involve removing the existing membrane (such as epoxy grout repairs), the standard provides guidance but the existing membrane's original compliance standard applies."
       },
       {
         question: "Can I waterproof my own bathroom in NSW?",
@@ -802,17 +801,16 @@ export const blogPostsData: BlogPostContent[] = [
     ],
     sections: [
       {
-        heading: "Why Australian Waterproofing Standards Matter for Every Homeowner",
+        heading: "Why Waterproofing Standards Matter for Every Homeowner",
         headingLevel: "h2",
-        content: `<p>Whether you're renovating a bathroom, repairing a <a href="/blog/signs-of-shower-leak">leaking shower</a>, or building a new home, understanding Australian waterproofing standards is essential. These standards exist to protect your property from water damage, ensure the health and safety of occupants, and provide a framework for quality workmanship.</p>
+        content: `<p>Whether you're renovating a bathroom, repairing a <a href="/blog/signs-of-shower-leak">leaking shower</a>, or building a new home, understanding waterproofing standards is essential. These standards exist to protect your property from water damage, ensure the health and safety of occupants, and provide a framework for quality workmanship.</p>
 <p>Yet many Sydney homeowners are unaware of what these standards require — and more importantly, what it means when they're not followed. Non-compliant waterproofing is one of the leading causes of building defects in Australia, and the consequences can be severe: structural damage, mould-related health issues, and costly remediation work.</p>
-<p>In this comprehensive guide, we break down the key requirements of <strong>AS 3740-2021</strong> (the primary Australian Standard for waterproofing domestic wet areas) in plain language, explain how they apply to common bathroom situations, and help you ensure your bathroom work is properly compliant.</p>`
+<p>In this comprehensive guide, we break down the key requirements for waterproofing domestic wet areas in plain language, explain how they apply to common bathroom situations, and help you ensure your bathroom work is properly compliant.</p>`
       },
       {
-        heading: "AS 3740-2021: The Key Standard for Bathroom Waterproofing",
+        heading: "Key Waterproofing Standards for Bathrooms",
         headingLevel: "h2",
-        content: `<p><strong>AS 3740-2021 — Waterproofing of domestic wet areas</strong> is the Australian Standard that specifies requirements for waterproofing in bathrooms, showers, laundries, and other wet areas in residential buildings. It was most recently updated in 2021, replacing the previous 2010 edition.</p>
-<p>The standard covers:</p>
+        content: `<p>The primary standards for waterproofing domestic wet areas specify requirements for bathrooms, showers, laundries, and other wet areas in residential buildings. These cover:</p>
 <ul>
 <li><strong>Where waterproofing is required</strong> — which areas of a bathroom must have a waterproof membrane</li>
 <li><strong>Membrane height requirements</strong> — how high the waterproof membrane must extend on walls</li>
@@ -822,12 +820,12 @@ export const blogPostsData: BlogPostContent[] = [
 <li><strong>Testing and verification</strong> — how to confirm the membrane is performing correctly</li>
 <li><strong>Documentation</strong> — what records should be maintained</li>
 </ul>
-<p>The standard is referenced by the <strong>National Construction Code (NCC)</strong>, which makes compliance a legal requirement for all new construction and renovation work in Australia. For <a href="/strata">strata buildings</a>, compliance is particularly important for insurance and dispute resolution purposes.</p>`
+<p>These standards are referenced by the <strong>National Construction Code (NCC)</strong>, which makes compliance a legal requirement for all new construction and renovation work in Australia. For <a href="/strata">strata buildings</a>, compliance is particularly important for insurance and dispute resolution purposes.</p>`
       },
       {
         heading: "Key Requirements You Need to Know",
         headingLevel: "h2",
-        content: `<p>Here are the most important requirements from AS 3740-2021 that affect common bathroom projects:</p>
+        content: `<p>Here are the most important requirements that affect common bathroom projects:</p>
 <p><strong>Shower recesses:</strong></p>
 <ul>
 <li>The entire shower floor must be waterproofed with a continuous membrane</li>
@@ -848,7 +846,7 @@ export const blogPostsData: BlogPostContent[] = [
 <li>Walls adjacent to baths, vanities, and other water-using fixtures must be waterproofed to appropriate heights</li>
 <li>Walls between a bathroom and a habitable room must be moisture-managed to prevent water migration</li>
 </ul>
-<p>Many older bathrooms in Sydney — particularly those in <a href="/services/marrickville">Marrickville</a>, <a href="/services/strathfield">Strathfield</a>, <a href="/services/burwood">Burwood</a>, and other established suburbs — were built before the current standard and may not meet these requirements. While existing bathrooms aren't required to be retrospectively upgraded, any renovation work that disturbs the existing waterproofing triggers compliance with the current standard.</p>`
+<p>Many older bathrooms in Sydney — particularly those in established suburbs — were built before current standards and may not meet these requirements. While existing bathrooms aren't required to be retrospectively upgraded, any renovation work that disturbs the existing waterproofing triggers compliance with the current standard.</p>`
       },
       {
         heading: "Common Waterproofing Failures and Non-Compliance Issues",
@@ -864,10 +862,10 @@ export const blogPostsData: BlogPostContent[] = [
       {
         heading: "What This Means for Your Bathroom Renovation",
         headingLevel: "h2",
-        content: `<p>If you're planning a bathroom renovation, here's how AS 3740-2021 affects your project:</p>
-<p><strong>Full renovation (removing existing tiles and waterproofing):</strong> The new waterproofing must fully comply with AS 3740-2021. This includes all membrane height requirements, junction treatments, penetration sealing, and testing. A licensed waterproofer must carry out the membrane installation and provide a compliance certificate.</p>
+        content: `<p>If you're planning a bathroom renovation, here's how waterproofing standards affect your project:</p>
+<p><strong>Full renovation (removing existing tiles and waterproofing):</strong> The new waterproofing must fully comply with current standards. This includes all membrane height requirements, junction treatments, penetration sealing, and testing. A licensed waterproofer must carry out the membrane installation and provide a compliance certificate.</p>
 <p><strong>Partial renovation (keeping existing tiles in some areas):</strong> Any areas where the existing waterproofing is disturbed must be brought up to current standards. This can create complications at junctions between old and new waterproofing, which must be carefully managed by an experienced installer.</p>
-<p><strong>Repair work (no tile removal):</strong> Non-invasive repairs such as <a href="/services/shower-repairs">epoxy grout replacement</a> don't typically disturb the existing membrane, so full compliance with AS 3740 isn't triggered. However, the repair should still follow best practices and improve the overall waterproofing performance of the shower.</p>
+<p><strong>Repair work (no tile removal):</strong> Non-invasive repairs such as <a href="/services/shower-repairs">epoxy grout replacement</a> don't typically disturb the existing membrane, so full compliance isn't triggered. However, the repair should still follow best practices and improve the overall waterproofing performance of the shower.</p>
 <p><strong>Strata renovations:</strong> <a href="/strata">Strata buildings</a> often have additional requirements — many by-laws require lot owners to submit waterproofing plans and compliance certificates to the owners corporation before commencing bathroom renovations. This protects the common property and adjacent lots from potential water damage.</p>`
       },
       {
@@ -876,19 +874,19 @@ export const blogPostsData: BlogPostContent[] = [
         content: `<p>Whether you're renovating, building new, or repairing an existing bathroom, follow these guidelines:</p>
 <ol>
 <li><strong>Engage a licensed waterproofer</strong> — in NSW, this is a legal requirement. Verify their licence through NSW Fair Trading before work begins</li>
-<li><strong>Insist on a waterproofing certificate</strong> — this document confirms the work complies with AS 3740 and the NCC. Keep it with your property records</li>
+<li><strong>Insist on a waterproofing certificate</strong> — this document confirms the work complies with current standards and the NCC. Keep it with your property records</li>
 <li><strong>Request photographic documentation</strong> — have the waterproofer photograph the membrane installation before tiling. This provides invaluable evidence if issues arise later</li>
 <li><strong>Allow adequate curing time</strong> — don't let tradespeople rush the waterproofing process. Proper curing is essential for membrane performance</li>
 <li><strong>Use compatible products</strong> — ensure all waterproofing products (primer, membrane, sealants) are from a compatible system</li>
 <li><strong>Consider upgrading grout</strong> — if you're renovating, specify <a href="/blog/epoxy-grout-vs-cement-grout">epoxy grout</a> for your shower. It provides a superior secondary waterproofing barrier compared to cement grout</li>
 <li><strong>Arrange independent inspection</strong> — for major renovations, consider an independent waterproofing inspection before tiling begins</li>
 </ol>
-<p>Homeowners across Sydney, from <a href="/services/castle-hill">Castle Hill</a> to <a href="/services/cronulla">Cronulla</a>, <a href="/services/hornsby">Hornsby</a> to <a href="/services/hurstville">Hurstville</a>, benefit from understanding these requirements and holding their tradespeople accountable to the standard.</p>`
+<p>Homeowners across Sydney benefit from understanding these requirements and holding their tradespeople accountable to professional standards.</p>`
       },
       {
         heading: "The Bottom Line: Standards Protect Your Investment",
         headingLevel: "h2",
-        content: `<p>Australian waterproofing standards exist for good reason — they protect your home, your health, and your investment. When waterproofing is done properly and in compliance with AS 3740-2021, it provides decades of reliable protection against water damage.</p>
+        content: `<p>Waterproofing standards exist for good reason — they protect your home, your health, and your investment. When waterproofing is done properly and to professional standards, it provides decades of reliable protection against water damage.</p>
 <p>When it's done poorly — or not at all — the consequences can be devastating: <a href="/blog/concrete-degradation-prevention">structural concrete degradation</a>, widespread mould, damaged finishes, and repair costs that dwarf the original investment.</p>
 <p>If you have concerns about your bathroom's waterproofing, or if you're seeing <a href="/blog/signs-of-shower-leak">signs of a shower leak</a>, don't hesitate to seek professional advice. At <a href="/contact">Sydney Leak Repairs Pro</a>, we provide free inspections and honest assessments across all Sydney suburbs. We'll tell you exactly what's happening, what your options are, and what it will cost — no surprises, no pressure.</p>
 <p>Ready to protect your bathroom with proper waterproofing? <a href="/contact">Contact us today</a> for a free consultation.</p>`
@@ -1018,7 +1016,7 @@ export const blogPostsData: BlogPostContent[] = [
 <ul>
 <li><strong>Specific balcony repair experience</strong> — general tilers may not understand waterproofing systems and leak diagnostics</li>
 <li><strong>Diagnostic capability</strong> — the contractor should be able to identify the leak source, not just quote on tile replacement</li>
-<li><strong>Knowledge of Australian Standards</strong> — repairs should comply with AS 4654.2 for external waterproofing</li>
+<li><strong>Knowledge of waterproofing standards</strong> — repairs should comply with professional standards for external waterproofing</li>
 <li><strong>Written warranty</strong> — insist on a minimum 10-year warranty covering materials and workmanship</li>
 <li><strong>Insurance</strong> — comprehensive public liability insurance is essential, especially for work at height</li>
 <li><strong>Transparent quoting</strong> — a detailed, itemised quote should be provided after inspection, with no hidden costs</li>
@@ -1061,13 +1059,9 @@ export const blogPostsData: BlogPostContent[] = [
         heading: "What Does a Waterproof Membrane Do?",
         headingLevel: "h2",
         content: `<p>A waterproof membrane creates a continuous, impermeable barrier between the tiled surface of your wet area and the building structure beneath. In showers, it prevents water from reaching timber framing, plasterboard, and the building's structural elements. On balconies, it stops water from penetrating the concrete slab and causing corrosion of steel reinforcement.</p>
-<p>Australian Standards require waterproof membranes in all wet areas:</p>
-<ul>
-<li><strong>AS 3740-2021</strong> — covers internal wet areas including showers, bathrooms, and laundries</li>
-<li><strong>AS 4654.2</strong> — covers external wet areas including balconies, terraces, and podium decks</li>
-</ul>
-<p>The membrane must form a continuous, unbroken barrier across all surfaces that may be exposed to water — including walls (to a minimum height specified in the Standards), floors, corners, junctions, and around all penetrations such as taps, drains, and pipes. Any gap, tear, or weakness in this barrier allows water to escape into the building structure.</p>
-<p>For detailed information on these standards, read our guide on <a href="/blog/bathroom-waterproofing-standards">Australian bathroom waterproofing standards</a>.</p>`
+<p>Professional standards require waterproof membranes in all wet areas — both internal (showers, bathrooms, laundries) and external (balconies, terraces, podium decks).</p>
+<p>The membrane must form a continuous, unbroken barrier across all surfaces that may be exposed to water — including walls (to minimum specified heights), floors, corners, junctions, and around all penetrations such as taps, drains, and pipes. Any gap, tear, or weakness in this barrier allows water to escape into the building structure.</p>
+<p>For detailed information on these requirements, read our guide on <a href="/blog/bathroom-waterproofing-standards">bathroom waterproofing standards</a>.</p>`
       },
       {
         heading: "Types of Waterproof Membranes Used in Australian Homes",
@@ -1176,7 +1170,7 @@ export const blogPostsData: BlogPostContent[] = [
       { question: "How much does balcony waterproofing cost in Sydney?", answer: "Balcony waterproofing costs in Sydney typically range from $80–$150 per square metre for the membrane system alone. A complete job including tile removal, surface preparation, membrane application, protection layer, and re-tiling ranges from $2,000–$8,000 depending on balcony size, system chosen, and extent of any concrete repairs needed." },
       { question: "Can you waterproof a balcony without removing tiles?", answer: "In some cases, yes. Topical liquid membrane systems can be applied over existing tiles, provided the tiles are firmly bonded, the surface is properly prepared, and drainage falls are adequate. However, this approach may not be suitable if the existing membrane has failed extensively or if concrete repairs are needed beneath the tiles." },
       { question: "How long does balcony waterproofing last in Sydney?", answer: "Lifespan depends on the system type and exposure conditions. Liquid polyurethane membranes typically last 10–15 years on exposed Sydney balconies. Torch-on bituminous membranes can last 15–20+ years. Sheet membranes fall somewhere in between. Regular maintenance, including tile sealing and grout inspection, extends the effective lifespan of any system." },
-      { question: "What Australian Standards apply to balcony waterproofing?", answer: "Balcony waterproofing must comply with AS 4654.1 and AS 4654.2 (Waterproofing membranes for external above-ground use) and relevant sections of the National Construction Code (NCC). These standards specify membrane performance requirements, installation methods, drainage provisions, and quality assurance testing. All professional waterproofing work should include compliance documentation." }
+      { question: "What standards apply to balcony waterproofing?", answer: "Balcony waterproofing must comply with professional standards for external waterproofing membranes and relevant sections of the National Construction Code (NCC). These specify membrane performance requirements, installation methods, drainage provisions, and quality assurance testing. All professional waterproofing work should include compliance documentation." }
     ],
     sections: [
       {
@@ -1248,9 +1242,9 @@ export const blogPostsData: BlogPostContent[] = [
         heading: "Drainage: The Often-Overlooked Component",
         headingLevel: "h2",
         content: `<p>No waterproofing system can compensate for poor drainage. Proper drainage design is essential for every balcony:</p>
-<p><strong>Falls:</strong> Australian Standards require a minimum fall of 1:60 (approximately 17mm per metre) directing water toward drainage outlets. Insufficient falls cause ponding, which dramatically increases hydrostatic pressure on the membrane and accelerates deterioration.</p>
+<p><strong>Falls:</strong> Industry standards require a minimum fall of 1:60 (approximately 17mm per metre) directing water toward drainage outlets. Insufficient falls cause ponding, which dramatically increases hydrostatic pressure on the membrane and accelerates deterioration.</p>
 <p><strong>Drainage outlets:</strong> Every balcony must have adequate drainage outlets sized and positioned to handle peak rainfall. In Sydney, where intense storm events are common, undersized drains can cause temporary flooding that overwhelms waterproofing.</p>
-<p><strong>Overflow provisions:</strong> AS 4654.2 requires overflow provisions (such as scuppers or secondary drains) in case primary drains become blocked. This prevents water from building up to dangerous levels during heavy rain.</p>
+<p><strong>Overflow provisions:</strong> Standards require overflow provisions (such as scuppers or secondary drains) in case primary drains become blocked. This prevents water from building up to dangerous levels during heavy rain.</p>
 <p><strong>Under-tile drainage:</strong> Some systems incorporate a drainage mat between the membrane and screed/tile layer. This provides a secondary drainage path for any water that penetrates the tile surface, reducing hydrostatic pressure on the membrane.</p>
 <p>When assessing your balcony's waterproofing needs, drainage should be evaluated alongside the membrane system. A new membrane over inadequate drainage will still fail.</p>`
       },
@@ -1424,7 +1418,7 @@ export const blogPostsData: BlogPostContent[] = [
       { question: "How much does shower waterproofing cost in Sydney?", answer: "Shower waterproofing costs in Sydney range from $500–$900 for epoxy regrouting (non-invasive repair), $1,500–$4,000 for targeted membrane repair, and $5,000–$15,000+ for full strip-out and re-waterproofing. The cost depends on the extent of existing damage, the repair method required, and the size of the shower. A free inspection provides an accurate, no-obligation quote." },
       { question: "Does shower waterproofing come with a warranty?", answer: "Yes. Professional shower waterproofing repairs should always come with a written warranty. At Sydney Leak Repairs Pro, we provide a 10-year warranty on all shower leak repairs, covering both materials and workmanship. This gives you confidence that the repair will last and protects your investment." },
       { question: "How long does shower waterproofing take?", answer: "Epoxy regrouting is typically completed in one day, with the shower usable within 24–48 hours. Membrane repairs take 2–3 days. Full re-waterproofing (strip-out, membrane, and re-tile) takes 5–10 working days depending on bathroom size and complexity." },
-      { question: "Can I waterproof my shower myself?", answer: "While DIY waterproofing products are available, professional application is strongly recommended for showers. Waterproofing must comply with AS 3740-2021, and defective waterproofing can cause thousands of dollars in structural damage. In NSW, waterproofing work requires a licensed contractor. The cost difference between DIY and professional is minimal compared to the risk of failure." },
+      { question: "Can I waterproof my shower myself?", answer: "While DIY waterproofing products are available, professional application is strongly recommended for showers. Waterproofing must comply with current standards, and defective waterproofing can cause thousands of dollars in structural damage. In NSW, waterproofing work requires a licensed contractor. The cost difference between DIY and professional is minimal compared to the risk of failure." },
       { question: "How do I know if my shower needs re-waterproofing?", answer: "Signs that your shower needs waterproofing attention include persistent musty odours, water stains on ceilings or walls below, peeling paint near the bathroom, loose or hollow-sounding tiles, visible mould that keeps returning, and grout that crumbles when touched. A professional inspection can determine whether regrouting, membrane repair, or full re-waterproofing is needed." }
     ],
     sections: [
@@ -1433,12 +1427,12 @@ export const blogPostsData: BlogPostContent[] = [
         headingLevel: "h2",
         content: `<p><strong>Shower waterproofing</strong> is one of the most critical yet overlooked aspects of home maintenance in Sydney. Every time you shower, water impacts tiles, grout, and seals at high pressure. Without effective waterproofing, this water penetrates into your home's structure, causing damage that ranges from cosmetic staining to serious structural compromise.</p>
 <p>Sydney's climate — with high humidity, temperature variations, and in coastal areas, salt-laden air — places additional demands on bathroom waterproofing systems. Properties across all Sydney regions, from <a href="/services/bondi">Bondi</a> to <a href="/services/blacktown">Blacktown</a>, <a href="/services/manly">Manly</a> to <a href="/services/miranda">Miranda</a>, face these challenges.</p>
-<p>In this comprehensive guide, we cover everything Sydney homeowners need to know about shower waterproofing — from understanding Australian Standards to choosing the right repair method and specialist for your situation.</p>`
+<p>In this comprehensive guide, we cover everything Sydney homeowners need to know about shower waterproofing — from understanding the standards to choosing the right repair method and specialist for your situation.</p>`
       },
       {
-        heading: "Australian Standards for Shower Waterproofing",
+        heading: "Standards for Shower Waterproofing",
         headingLevel: "h2",
-        content: `<p>All shower waterproofing in Australia must comply with <strong>AS 3740-2021</strong> (Waterproofing of domestic wet areas). This Standard specifies:</p>
+        content: `<p>All shower waterproofing in Australia must comply with current standards for waterproofing of domestic wet areas. Key requirements include:</p>
 <ul>
 <li>Minimum membrane height on shower walls (1800mm from the finished floor level, or to ceiling height if lower)</li>
 <li>Membrane requirements for shower floors (entire floor area must be waterproofed)</li>
@@ -1446,7 +1440,7 @@ export const blogPostsData: BlogPostContent[] = [
 <li>Waterproofing around penetrations (taps, showerheads, drains)</li>
 <li>Membrane testing requirements</li>
 </ul>
-<p>Non-compliant waterproofing is not just a quality issue — it's a regulatory issue. In NSW, waterproofing work must be carried out by licensed contractors, and non-compliant work can void insurance and create legal liability. Read our detailed guide on <a href="/blog/bathroom-waterproofing-standards">Australian bathroom waterproofing standards</a> for comprehensive information.</p>`
+<p>Non-compliant waterproofing is not just a quality issue — it's a regulatory issue. In NSW, waterproofing work must be carried out by licensed contractors, and non-compliant work can void insurance and create legal liability. Read our detailed guide on <a href="/blog/bathroom-waterproofing-standards">bathroom waterproofing standards</a> for comprehensive information.</p>`
       },
       {
         heading: "How Shower Waterproofing Systems Work",
@@ -1639,7 +1633,7 @@ export const blogPostsData: BlogPostContent[] = [
       { question: "How do I know if my shower membrane needs repair?", answer: "Your shower membrane likely needs repair if you see water stains on the ceiling below, persistent dampness or musty odours, loose or hollow-sounding tiles (especially at floor level), visible mould that keeps returning, or if a flood test confirms water is penetrating through the shower base. A professional inspection can confirm membrane condition." },
       { question: "Can shower membrane be repaired or does the whole bathroom need renovation?", answer: "In most cases, targeted membrane repair is possible without a full renovation. If the failure is localised, only the affected area needs tile removal and membrane repair. For grout-level leaks, epoxy regrouting may resolve the issue without any membrane work. Full renovation is only necessary when the membrane has failed extensively across the entire shower." },
       { question: "How long does shower membrane repair take?", answer: "Targeted membrane repair typically takes 2–3 working days: day one for tile removal and surface preparation, day two for membrane application and curing, and day three for re-tiling and grouting. The shower is usually usable within 48 hours of completion." },
-      { question: "What membrane products are used for shower repairs?", answer: "We use premium Australian-made membrane products that comply with AS 3740-2021, including Ardex WPM 300/310, Davco K10 Plus, and Sika Sikalastic-560. These liquid-applied membranes provide excellent adhesion, flexibility, and durability. The specific product is selected based on the substrate type, application area, and repair requirements." },
+      { question: "What membrane products are used for shower repairs?", answer: "We use premium Australian-made membrane products that comply with current waterproofing standards, including Ardex WPM 300/310, Davco K10 Plus, and Sika Sikalastic-560. These liquid-applied membranes provide excellent adhesion, flexibility, and durability. The specific product is selected based on the substrate type, application area, and repair requirements." },
       { question: "Will the repaired area match the rest of my bathroom?", answer: "When tiles need to be replaced as part of membrane repair, we make every effort to match existing tiles. In some cases, an exact match isn't possible if the original tiles are discontinued. We'll discuss options with you before work begins, including sourcing matching tiles, using complementary tiles as a feature, or other creative solutions." }
     ],
     sections: [
@@ -1661,7 +1655,7 @@ export const blogPostsData: BlogPostContent[] = [
 <li><strong>Sheet membranes</strong> — pre-formed sheets adhered to the substrate. Less common in residential showers but used in some commercial applications.</li>
 <li><strong>Combined systems</strong> — some newer systems combine a liquid membrane with reinforcement fabric at corners, junctions, and penetrations for added strength.</li>
 </ul>
-<p>The membrane must comply with <a href="/blog/bathroom-waterproofing-standards">AS 3740-2021</a>, which specifies minimum thickness, coverage areas, junction treatment, and testing requirements. Understanding your membrane type helps inform the repair approach.</p>`
+<p>The membrane must comply with <a href="/blog/bathroom-waterproofing-standards">current waterproofing standards</a>, which specify minimum thickness, coverage areas, junction treatment, and testing requirements. Understanding your membrane type helps inform the repair approach.</p>`
       },
       {
         heading: "The Membrane Repair Process",
@@ -1676,7 +1670,7 @@ export const blogPostsData: BlogPostContent[] = [
 <li><strong>Curing and testing</strong> — allowing the membrane to cure fully and testing before re-tiling</li>
 <li><strong>Re-tiling</strong> — replacing tiles with flexible adhesive and <a href="/blog/epoxy-grout-vs-cement-grout">epoxy grout</a></li>
 </ol>
-<p>The process complies with <a href="/blog/bathroom-waterproofing-standards">AS 3740-2021</a> requirements and includes a 10-year warranty.</p>`
+<p>The process complies with <a href="/blog/bathroom-waterproofing-standards">current waterproofing standards</a> and includes a 10-year warranty.</p>`
       },
       {
         heading: "Membrane Repair vs Epoxy Regrouting: Which Do You Need?",
@@ -2102,7 +2096,7 @@ export const blogPostsData: BlogPostContent[] = [
 <li><strong>Leak detection capability</strong> — the contractor should diagnose before prescribing</li>
 <li><strong>Knowledge of membrane systems</strong> — understanding different systems and their suitability for your situation</li>
 <li><strong>Concrete repair experience</strong> — many membrane repairs also require concrete restoration</li>
-<li><strong>AS 4654.2 compliance</strong> — external waterproofing must comply with Australian Standards</li>
+<li><strong>Standards compliance</strong> — external waterproofing must meet professional industry standards</li>
 <li><strong>Written 10-year warranty</strong> — covering materials and workmanship</li>
 <li><strong>Current insurance</strong> — public liability is essential for external work, especially at height</li>
 </ul>

@@ -108,7 +108,7 @@ const whyChooseUs = [
   {
     icon: Award,
     title: "Licensed Waterproofing Specialists",
-    description: "Our technicians hold current waterproofing licences and are trained in balcony-specific repair techniques, compliant with Australian Standards AS 4654.2 for external waterproofing.",
+    description: "Our technicians hold current waterproofing licences and are trained in balcony-specific repair techniques using professional-grade external waterproofing methods.",
   },
   {
     icon: Users,
@@ -151,7 +151,7 @@ const balconyFAQs = [
   },
   {
     question: "How long does balcony waterproofing last?",
-    answer: "When professionally installed using quality materials, a balcony waterproofing membrane should last 15–25 years. We use premium-grade membranes and epoxy grouts that meet Australian Standards and back all our work with a 10-year written warranty for your peace of mind.",
+    answer: "When professionally installed using quality materials, a balcony waterproofing membrane should last 15–25 years. We use premium-grade membranes and epoxy grouts and back all our work with a 10-year written warranty for your peace of mind.",
   },
   {
     question: "How much does a leaking balcony repair cost in Sydney?",
@@ -475,7 +475,7 @@ export default function BalconyRepairs() {
               Our balcony sealing service is designed to be <strong className="text-foreground">minimally invasive</strong>. 
               Where possible, we repair leaking balconies without removing tiles — using epoxy regrouting and 
               perimeter sealing to restore waterproof integrity. For cases where the membrane has completely failed, 
-              we offer full membrane restoration to Australian Standards.
+              we offer full membrane restoration to professional standards.
             </motion.p>
           </div>
         </section>
@@ -495,7 +495,7 @@ export default function BalconyRepairs() {
                 </h2>
                 <p className="text-muted-foreground mb-8">
                   Professional balcony leak repair is faster, more affordable, and far more effective than 
-                  DIY attempts. Our methods meet Australian Standards and are approved for use in strata 
+                  DIY attempts. Our methods are approved for use in strata 
                   complexes, apartments, and residential properties across Sydney.
                 </p>
 
@@ -552,8 +552,8 @@ export default function BalconyRepairs() {
                     Strata Approved
                   </h3>
                   <p className="text-sm text-muted-foreground">
-                    All work complies with Australian Standards and comes with 
-                    documentation for strata records and levy fund claims
+                    All work comes with full documentation for strata records 
+                    and levy fund claims
                   </p>
                 </div>
               </motion.div>
