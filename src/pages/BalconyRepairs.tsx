@@ -108,7 +108,7 @@ const whyChooseUs = [
   {
     icon: Award,
     title: "Licensed Waterproofing Specialists",
-    description: "Our technicians hold current waterproofing licences and are trained in balcony-specific repair techniques, compliant with Australian Standards AS 4654.2 for external waterproofing.",
+    description: "Our technicians hold current waterproofing licences and are trained in balcony-specific repair techniques using professional-grade external waterproofing methods.",
   },
   {
     icon: Users,
