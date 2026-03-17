@@ -104,7 +104,7 @@ const whyChooseUs = [
   {
     icon: Award,
     title: "Licensed Waterproofing Specialists",
-    description: "Our technicians are fully licensed and trained in wet area waterproofing, complying with Australian Standards AS 3740 for waterproofing of domestic wet areas.",
+    description: "Our technicians are fully licensed and trained in wet area waterproofing, using professional-grade materials and methods for domestic wet areas.",
   },
   {
     icon: Layers,
