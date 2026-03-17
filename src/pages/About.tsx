@@ -102,19 +102,12 @@ export default function About() {
               <WarrantyBadge size="lg" className="mb-6 mx-auto" />
 
               <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                We're Not Your Average{" "}
-                <span className="gradient-text">Leak Repair Company.</span>
+                A Better Standard of{" "}
+                <span className="gradient-text">Leak Repair</span> for Sydney Homes
               </h1>
 
-              <p className="text-lg lg:text-xl text-muted-foreground mb-4 leading-relaxed">
-                Most waterproofing companies will rip out your tiles, charge you a fortune, 
-                and disappear. We do the opposite.
-              </p>
-
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                We fix leaks <span className="text-secondary font-semibold">permanently</span> — 
-                without removing a single tile — using premium epoxy grout technology 
-                backed by a <span className="text-accent font-semibold">10-year written warranty</span>.
+              <p className="text-lg lg:text-xl text-muted-foreground mb-8 leading-relaxed">
+                At Sydney Leak Repairs Pro, we believe leak repairs should be done properly the first time.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -156,7 +149,7 @@ export default function About() {
 
         <AboutPillars />
 
-        {/* The Problem — Agitate Pain Point */}
+        {/* Our Story */}
         <section className="py-16 lg:py-24">
           <div className="section-container">
             <div className="max-w-3xl mx-auto">
@@ -165,48 +158,30 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground mb-6">
-                  Here's What Most Companies Won't Tell You
-                </h2>
-
                 <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                   <p>
-                    The leak repair industry has a dirty secret: <span className="text-foreground font-medium">most fixes don't last</span>.
+                    Too often, homeowners are left with short-term fixes that look fine at first, but fail far too soon. Cheap materials, rushed workmanship and surface-level repairs can lead to bigger problems over time — including damage to subfloors, framing and surrounding areas.
+                  </p>
+                  <p className="text-foreground font-medium text-xl">
+                    That is exactly why we started Sydney Leak Repairs Pro.
                   </p>
                   <p>
-                    Standard cement grout breaks down within 2–5 years. Cheap silicone peels off in months.
-                    And the "quick fix" that costs $200? It'll cost you $5,000 when the water damage spreads
-                    to your subfloor, framing, and the apartment below.
+                    After years working alongside tilers, plumbers and waterproofing contractors across Sydney, we saw the same issues again and again. Repairs being carried out with low-grade materials. Leaks being treated at surface level without identifying the real cause. Homeowners paying for work that should have lasted, only to face the same problem again months or years later.
+                  </p>
+                  <p className="text-foreground font-medium text-xl">
+                    We built our business to offer a better solution.
                   </p>
                   <p>
-                    We started Sydney Leak Repairs Pro because we were tired of seeing homeowners get burned 
-                    by sloppy work and Band-Aid solutions. We believed there was a better way — 
-                    and we built our entire business around it.
+                    By investing in advanced epoxy grout systems, professional-grade waterproofing materials and specialist training, we developed a repair approach focused on long-term performance — not quick patch jobs. Our process is designed to identify the source of the leak, recommend the right repair method, and deliver a tailored solution suited to the condition of the property.
                   </p>
                   <p>
-                    Our founder spent years working alongside tilers, plumbers, and waterproofing contractors across Sydney — 
-                    and saw the same problems repeated on every job site. Contractors using the cheapest materials to maximise 
-                    their margins. Repairs that looked fine on the surface but failed within months. Homeowners left footing 
-                    the bill for damage that should never have happened.
+                    Whether it is an older home with long-term water ingress issues or a modern apartment affected by construction defects, we approach every job with the same focus on quality workmanship, reliable service and lasting results.
                   </p>
                   <p>
-                    That experience shaped everything about how we operate today. We invested in training our team on the 
-                    latest epoxy grout systems and waterproofing technologies used in commercial construction — not the 
-                    hardware-store products most residential contractors rely on. We developed a diagnostic process that 
-                    identifies the <span className="text-foreground font-medium">root cause</span> of every leak, not just 
-                    the visible symptoms. And we committed to using only professional-grade materials — because your home 
-                    deserves the same quality as a hospital or a high-rise.
+                    That is why we stand behind our work with a <span className="text-accent font-semibold">10-year written warranty</span>. It is not a marketing line. It is a reflection of the confidence we have in our materials, our methods and our team.
                   </p>
-                  <p>
-                    The result? A repair method that genuinely lasts. We don't just patch the problem — we engineer a 
-                    long-term waterproofing solution tailored to your property's specific conditions. Whether it's a 
-                    heritage terrace in the Inner West dealing with decades-old plumbing, or a modern apartment on the 
-                    North Shore with construction defects, we approach every job with the same level of care and precision.
-                  </p>
-                  <p>
-                    That's why we're confident enough to back every repair with a <span className="text-accent font-semibold">10-year written warranty</span>. 
-                    It's not a marketing gimmick — it's a reflection of how much we trust our materials, our methods, and 
-                    our people. When we say your leak is fixed, we mean it.
+                  <p className="text-foreground font-semibold text-xl">
+                    When we say the leak has been repaired, we mean it.
                   </p>
                 </div>
               </motion.div>
