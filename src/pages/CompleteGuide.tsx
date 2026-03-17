@@ -219,7 +219,7 @@ export default function CompleteGuide() {
                 <p>Effective waterproofing is a system, not a single product. Understanding the components helps you make informed decisions about repairs and maintenance.</p>
 
                 <h3 className="font-heading text-xl font-semibold mt-6 mb-3">Shower Waterproofing Systems</h3>
-                <p>A compliant shower waterproofing system under <strong>AS 3740-2021</strong> includes:</p>
+                <p>A compliant shower waterproofing system includes:</p>
                 <ul className="space-y-2">
                   <li><strong>Substrate preparation</strong> — the wall and floor surfaces must be clean, dry, and structurally sound</li>
                   <li><strong>Primer</strong> — applied to improve membrane adhesion to the substrate</li>
