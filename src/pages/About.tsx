@@ -194,8 +194,8 @@ export default function About() {
                     latest epoxy grout systems and waterproofing technologies used in commercial construction — not the 
                     hardware-store products most residential contractors rely on. We developed a diagnostic process that 
                     identifies the <span className="text-foreground font-medium">root cause</span> of every leak, not just 
-                    the visible symptoms. And we committed to using only materials that meet or exceed Australian Standards 
-                    AS 3740 and AS 4654.2 — because your home deserves the same quality as a hospital or a high-rise.
+                    the visible symptoms. And we committed to using only professional-grade materials — because your home 
+                    deserves the same quality as a hospital or a high-rise.
                   </p>
                   <p>
                     The result? A repair method that genuinely lasts. We don't just patch the problem — we engineer a 
