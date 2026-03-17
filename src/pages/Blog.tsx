@@ -161,7 +161,7 @@ export default function Blog() {
                 to="/contact"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground rounded-lg font-medium hover:bg-secondary/90 transition-colors"
               >
-                Get Free Quote
+                Get a Free Quote
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </motion.div>
