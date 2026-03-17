@@ -82,8 +82,8 @@ const pillarFaqs = [
     answer: "Professional balcony leak testing involves several methods: a flood test (blocking drains and flooding the surface with water for 24 hours while checking below for moisture), electronic leak detection using impedance testing equipment, moisture mapping with calibrated moisture meters, and thermal imaging to identify wet areas behind surfaces. These methods pinpoint the exact location and source of leaks."
   },
   {
-    question: "What Australian Standards apply to bathroom waterproofing?",
-    answer: "The primary standard is AS 3740-2021 (Waterproofing of domestic wet areas), which specifies minimum requirements for waterproof membranes, shower recesses, and bathroom floors. AS 4654.2 applies to external wet areas like balconies. The National Construction Code (NCC/BCA) references these standards as deemed-to-satisfy provisions. All waterproofing work should be carried out by licensed professionals in compliance with these standards."
+    question: "What standards apply to bathroom waterproofing?",
+    answer: "Current waterproofing standards specify minimum requirements for waterproof membranes, shower recesses, and bathroom floors. Separate standards apply to external wet areas like balconies. The National Construction Code (NCC/BCA) references these standards as deemed-to-satisfy provisions. All waterproofing work should be carried out by licensed professionals in compliance with current requirements."
   },
   {
     question: "Is shower regrouting worth it?",
