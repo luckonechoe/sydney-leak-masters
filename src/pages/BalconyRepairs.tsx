@@ -151,7 +151,7 @@ const balconyFAQs = [
   },
   {
     question: "How long does balcony waterproofing last?",
-    answer: "When professionally installed using quality materials, a balcony waterproofing membrane should last 15–25 years. We use premium-grade membranes and epoxy grouts that meet Australian Standards and back all our work with a 10-year written warranty for your peace of mind.",
+    answer: "When professionally installed using quality materials, a balcony waterproofing membrane should last 15–25 years. We use premium-grade membranes and epoxy grouts and back all our work with a 10-year written warranty for your peace of mind.",
   },
   {
     question: "How much does a leaking balcony repair cost in Sydney?",
