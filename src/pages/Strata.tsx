@@ -83,8 +83,8 @@ const strataFAQs = [
     answer: "Yes, we provide competitive volume pricing for complexes with multiple units requiring repair. The more units in a single engagement, the more cost-effective each repair becomes. Contact us for a portfolio quote tailored to your complex.",
   },
   {
-    question: "Are your methods compliant with Australian Standards?",
-    answer: "All our waterproofing work complies with AS 4654.2 (waterproofing of wet areas) and relevant NCC/BCA requirements. We use materials and methods that meet or exceed these standards, and our compliance documentation supports levy fund claims and insurance requirements.",
+    question: "Are your methods professionally compliant?",
+    answer: "All our waterproofing work uses professional-grade materials and industry-recognised methods. We provide full compliance documentation that supports levy fund claims and insurance requirements.",
   },
 ];
 

@@ -160,7 +160,7 @@ export default function SuburbPage({ serviceType = "shower" }: SuburbPageProps) 
                     suburbData.region.includes("Eastern") || suburbData.region.includes("Beaches") || suburbData.region.includes("Northern Beaches")
                       ? `Coastal salt spray and humidity in the ${suburbData.region} accelerate grout deterioration and membrane failure. Our technicians understand these local conditions and use UV-resistant, salt-tolerant materials.`
                       : suburbData.region.includes("Inner")
-                        ? `Heritage terraces and older apartments in the ${suburbData.region} often have outdated waterproofing that no longer meets current Australian Standards. We specialise in non-invasive repairs that preserve character while providing modern protection.`
+                        ? `Heritage terraces and older apartments in the ${suburbData.region} often have outdated waterproofing. We specialise in non-invasive repairs that preserve character while providing modern protection.`
                         : suburbData.region.includes("Hills") || suburbData.region.includes("Western")
                           ? `Clay-rich soils in the ${suburbData.region} cause significant building movement, leading to cracked grout and stressed membranes. We use flexible waterproofing systems designed to accommodate this movement.`
                           : `Properties throughout the ${suburbData.region} area require expert waterproofing solutions tailored to local building styles and environmental conditions. Our team has extensive experience in ${suburbData.name} and surrounding suburbs.`

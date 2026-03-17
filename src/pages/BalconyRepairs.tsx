@@ -552,8 +552,8 @@ export default function BalconyRepairs() {
                     Strata Approved
                   </h3>
                   <p className="text-sm text-muted-foreground">
-                    All work complies with Australian Standards and comes with 
-                    documentation for strata records and levy fund claims
+                    All work comes with full documentation for strata records 
+                    and levy fund claims
                   </p>
                 </div>
               </motion.div>
