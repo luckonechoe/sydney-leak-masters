@@ -102,8 +102,8 @@ export default function About() {
               <WarrantyBadge size="lg" className="mb-6 mx-auto" />
 
               <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                A Better Standard of{" "}
-                <span className="gradient-text">Leak Repair</span> for Sydney Homes
+                We're Not Your Average{" "}
+                <span className="gradient-text">Leak Repair Company.</span>
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8 leading-relaxed">
