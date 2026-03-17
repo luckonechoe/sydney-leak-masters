@@ -76,7 +76,7 @@ const strataFAQs = [
   },
   {
     question: "What documentation do you provide for strata records?",
-    answer: "We provide comprehensive documentation including detailed inspection reports, before/after photo records, scope of works, work completion certificates, 10-year warranty documentation, compliance statements referencing relevant Australian Standards, and maintenance recommendations for your capital works plan.",
+    answer: "We provide comprehensive documentation including detailed inspection reports, before/after photo records, scope of works, work completion certificates, 10-year warranty documentation, and maintenance recommendations for your capital works plan.",
   },
   {
     question: "Do you offer volume pricing for strata complexes?",
