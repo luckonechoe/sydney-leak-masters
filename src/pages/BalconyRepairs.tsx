@@ -495,7 +495,7 @@ export default function BalconyRepairs() {
                 </h2>
                 <p className="text-muted-foreground mb-8">
                   Professional balcony leak repair is faster, more affordable, and far more effective than 
-                  DIY attempts. Our methods meet Australian Standards and are approved for use in strata 
+                  DIY attempts. Our methods are approved for use in strata 
                   complexes, apartments, and residential properties across Sydney.
                 </p>
 
