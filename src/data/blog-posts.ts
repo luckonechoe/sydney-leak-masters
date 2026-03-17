@@ -1670,7 +1670,7 @@ export const blogPostsData: BlogPostContent[] = [
 <li><strong>Curing and testing</strong> — allowing the membrane to cure fully and testing before re-tiling</li>
 <li><strong>Re-tiling</strong> — replacing tiles with flexible adhesive and <a href="/blog/epoxy-grout-vs-cement-grout">epoxy grout</a></li>
 </ol>
-<p>The process complies with <a href="/blog/bathroom-waterproofing-standards">AS 3740-2021</a> requirements and includes a 10-year warranty.</p>`
+<p>The process complies with <a href="/blog/bathroom-waterproofing-standards">current waterproofing standards</a> and includes a 10-year warranty.</p>`
       },
       {
         heading: "Membrane Repair vs Epoxy Regrouting: Which Do You Need?",
