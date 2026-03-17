@@ -1655,7 +1655,7 @@ export const blogPostsData: BlogPostContent[] = [
 <li><strong>Sheet membranes</strong> — pre-formed sheets adhered to the substrate. Less common in residential showers but used in some commercial applications.</li>
 <li><strong>Combined systems</strong> — some newer systems combine a liquid membrane with reinforcement fabric at corners, junctions, and penetrations for added strength.</li>
 </ul>
-<p>The membrane must comply with <a href="/blog/bathroom-waterproofing-standards">AS 3740-2021</a>, which specifies minimum thickness, coverage areas, junction treatment, and testing requirements. Understanding your membrane type helps inform the repair approach.</p>`
+<p>The membrane must comply with <a href="/blog/bathroom-waterproofing-standards">current waterproofing standards</a>, which specify minimum thickness, coverage areas, junction treatment, and testing requirements. Understanding your membrane type helps inform the repair approach.</p>`
       },
       {
         heading: "The Membrane Repair Process",
