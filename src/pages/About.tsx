@@ -102,19 +102,12 @@ export default function About() {
               <WarrantyBadge size="lg" className="mb-6 mx-auto" />
 
               <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                We're Not Your Average{" "}
-                <span className="gradient-text">Leak Repair Company.</span>
+                A Better Standard of{" "}
+                <span className="gradient-text">Leak Repair</span> for Sydney Homes
               </h1>
 
-              <p className="text-lg lg:text-xl text-muted-foreground mb-4 leading-relaxed">
-                Most waterproofing companies will rip out your tiles, charge you a fortune, 
-                and disappear. We do the opposite.
-              </p>
-
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                We fix leaks <span className="text-secondary font-semibold">permanently</span> — 
-                without removing a single tile — using premium epoxy grout technology 
-                backed by a <span className="text-accent font-semibold">10-year written warranty</span>.
+              <p className="text-lg lg:text-xl text-muted-foreground mb-8 leading-relaxed">
+                At Sydney Leak Repairs Pro, we believe leak repairs should be done properly the first time.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
