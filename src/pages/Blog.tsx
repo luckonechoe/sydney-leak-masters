@@ -152,10 +152,10 @@ export default function Blog() {
               viewport={{ once: true }}
             >
               <h2 className="font-heading text-2xl lg:text-3xl font-bold text-foreground mb-4">
-                Have a Leak Problem?
+                Need a Professional Opinion?
               </h2>
               <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-                Don't wait for water damage to get worse. Get a free quote today.
+                If you've noticed signs of a leak, we're happy to take a look. Free inspections, honest advice, no obligation.
               </p>
               <Link
                 to="/contact"
