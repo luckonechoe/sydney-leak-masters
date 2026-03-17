@@ -1242,9 +1242,9 @@ export const blogPostsData: BlogPostContent[] = [
         heading: "Drainage: The Often-Overlooked Component",
         headingLevel: "h2",
         content: `<p>No waterproofing system can compensate for poor drainage. Proper drainage design is essential for every balcony:</p>
-<p><strong>Falls:</strong> Australian Standards require a minimum fall of 1:60 (approximately 17mm per metre) directing water toward drainage outlets. Insufficient falls cause ponding, which dramatically increases hydrostatic pressure on the membrane and accelerates deterioration.</p>
+<p><strong>Falls:</strong> Industry standards require a minimum fall of 1:60 (approximately 17mm per metre) directing water toward drainage outlets. Insufficient falls cause ponding, which dramatically increases hydrostatic pressure on the membrane and accelerates deterioration.</p>
 <p><strong>Drainage outlets:</strong> Every balcony must have adequate drainage outlets sized and positioned to handle peak rainfall. In Sydney, where intense storm events are common, undersized drains can cause temporary flooding that overwhelms waterproofing.</p>
-<p><strong>Overflow provisions:</strong> AS 4654.2 requires overflow provisions (such as scuppers or secondary drains) in case primary drains become blocked. This prevents water from building up to dangerous levels during heavy rain.</p>
+<p><strong>Overflow provisions:</strong> Standards require overflow provisions (such as scuppers or secondary drains) in case primary drains become blocked. This prevents water from building up to dangerous levels during heavy rain.</p>
 <p><strong>Under-tile drainage:</strong> Some systems incorporate a drainage mat between the membrane and screed/tile layer. This provides a secondary drainage path for any water that penetrates the tile surface, reducing hydrostatic pressure on the membrane.</p>
 <p>When assessing your balcony's waterproofing needs, drainage should be evaluated alongside the membrane system. A new membrane over inadequate drainage will still fail.</p>`
       },
