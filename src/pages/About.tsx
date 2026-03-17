@@ -154,6 +154,8 @@ export default function About() {
           </div>
         </section>
 
+        <TrustPillars />
+
         {/* The Problem — Agitate Pain Point */}
         <section className="py-16 lg:py-24">
           <div className="section-container">
