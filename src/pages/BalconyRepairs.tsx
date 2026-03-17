@@ -475,7 +475,7 @@ export default function BalconyRepairs() {
               Our balcony sealing service is designed to be <strong className="text-foreground">minimally invasive</strong>. 
               Where possible, we repair leaking balconies without removing tiles — using epoxy regrouting and 
               perimeter sealing to restore waterproof integrity. For cases where the membrane has completely failed, 
-              we offer full membrane restoration to Australian Standards.
+              we offer full membrane restoration to professional standards.
             </motion.p>
           </div>
         </section>
