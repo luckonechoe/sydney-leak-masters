@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Shield, Award, Users, CheckCircle2, Clock, Droplets, Heart, Target, Zap, ThumbsUp } from "lucide-react";
 import { Header } from "@/components/Header";
-import { TrustPillars } from "@/components/TrustPillars";
+import { AboutPillars } from "@/components/AboutPillars";
 import { Footer } from "@/components/Footer";
 import { CTAButton } from "@/components/CTAButton";
 import { WarrantyBadge } from "@/components/WarrantyBadge";
@@ -154,7 +154,7 @@ export default function About() {
           </div>
         </section>
 
-        <TrustPillars />
+        <AboutPillars />
 
         {/* The Problem — Agitate Pain Point */}
         <section className="py-16 lg:py-24">
