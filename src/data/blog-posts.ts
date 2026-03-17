@@ -514,8 +514,8 @@ export const blogPostsData: BlogPostContent[] = [
         answer: "Yes. Waterproofing repairs to common property can be funded from the strata capital works fund (formerly the sinking fund). Planned waterproofing maintenance should be included in the 10-year capital works plan with appropriate funding provisions. Emergency waterproofing repairs can also be funded from the administrative fund if urgent action is required. For major remediation works, a special levy may be necessary if the capital works fund is insufficient."
       },
       {
-        question: "What Australian Standards apply to waterproofing in strata buildings?",
-        answer: "The primary standards are AS 3740-2021 (Waterproofing of domestic wet areas), AS 4654.1 and AS 4654.2 (Waterproofing membranes for external above-ground use), and the National Construction Code (NCC/BCA) which references these standards. All waterproofing work in strata buildings should comply with these standards and be carried out by licensed practitioners. Documentation of compliance is important for both regulatory purposes and potential insurance claims."
+        question: "What standards apply to waterproofing in strata buildings?",
+        answer: "All waterproofing work in strata buildings should comply with industry-recognised standards and the National Construction Code (NCC/BCA). Work should be carried out by licensed practitioners, and documentation of compliance is important for both regulatory purposes and potential insurance claims."
       },
       {
         question: "How do you handle leak disputes between strata lot owners?",
