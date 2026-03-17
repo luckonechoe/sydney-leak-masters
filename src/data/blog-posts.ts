@@ -178,7 +178,7 @@ export const blogPostsData: BlogPostContent[] = [
 <li><strong>Deteriorated grout</strong> — standard cement grout breaks down within 5–10 years, allowing water to penetrate behind tiles</li>
 <li><strong>Failed waterproof membrane</strong> — the membrane beneath your tiles is your primary water barrier. Age, movement, and poor initial installation can cause it to fail</li>
 <li><strong>Cracked tiles</strong> — even small cracks provide a pathway for water</li>
-<li><strong>Poor original installation</strong> — bathrooms that weren't waterproofed to <a href="/blog/bathroom-waterproofing-standards">Australian Standards (AS 3740-2010)</a> are prone to early failure</li>
+<li><strong>Poor original installation</strong> — bathrooms that weren't properly waterproofed are prone to early failure</li>
 <li><strong>Building movement</strong> — natural settling and thermal expansion create stress points in grout and membranes</li>
 </ul>
 <p>In many Sydney properties — particularly those built before 2000 — waterproofing standards were less rigorous than today's requirements. If your home is more than 15–20 years old and has the original bathroom, it's worth arranging a preventative inspection.</p>`
