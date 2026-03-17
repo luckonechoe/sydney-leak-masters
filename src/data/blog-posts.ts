@@ -568,14 +568,13 @@ export const blogPostsData: BlogPostContent[] = [
 </ul>`
       },
       {
-        heading: "Compliance Requirements: Australian Standards and the NCC",
+        heading: "Compliance Requirements: Industry Standards and the NCC",
         headingLevel: "h2",
-        content: `<p>All waterproofing work in strata buildings must comply with relevant Australian Standards and the National Construction Code (NCC). Key standards include:</p>
-<p><strong>AS 3740-2021 — Waterproofing of domestic wet areas:</strong> This standard specifies requirements for waterproofing in bathrooms, showers, laundries, and other wet areas. It covers membrane selection, application methods, termination heights, and testing requirements. Any <a href="/services/shower-repairs">shower waterproofing repair</a> must comply with this standard.</p>
-<p><strong>AS 4654.1 & AS 4654.2 — Waterproofing membranes for external above-ground use:</strong> These standards apply to <a href="/services/balcony-repairs">balcony waterproofing</a>, roof decks, and podium levels. They specify membrane types, installation requirements, drainage provisions, and quality assurance testing.</p>
-<p><strong>National Construction Code (NCC):</strong> The NCC references these Australian Standards and sets performance requirements for waterproofing in all building classes. Compliance with the NCC is a legal requirement for all building work, including repair and maintenance.</p>
-<p>For strata managers, ensuring compliance serves multiple purposes: it protects the building and its occupants, satisfies regulatory requirements, supports insurance claims, and provides documentation for future reference. We always provide compliance documentation with our <a href="/strata">strata waterproofing services</a>.</p>
-<p>Read more about the specific requirements in our detailed guide to <a href="/blog/bathroom-waterproofing-standards">Australian bathroom waterproofing standards</a>.</p>`
+        content: `<p>All waterproofing work in strata buildings must comply with relevant industry standards and the National Construction Code (NCC). Key areas of compliance include:</p>
+<p><strong>Domestic wet area waterproofing:</strong> Standards specify requirements for waterproofing in bathrooms, showers, laundries, and other wet areas. This covers membrane selection, application methods, termination heights, and testing requirements. Any <a href="/services/shower-repairs">shower waterproofing repair</a> must meet these professional standards.</p>
+<p><strong>External waterproofing membranes:</strong> Standards for <a href="/services/balcony-repairs">balcony waterproofing</a>, roof decks, and podium levels specify membrane types, installation requirements, drainage provisions, and quality assurance testing.</p>
+<p><strong>National Construction Code (NCC):</strong> The NCC sets performance requirements for waterproofing in all building classes. Compliance with the NCC is a legal requirement for all building work, including repair and maintenance.</p>
+<p>For strata managers, ensuring compliance serves multiple purposes: it protects the building and its occupants, satisfies regulatory requirements, supports insurance claims, and provides documentation for future reference. We always provide compliance documentation with our <a href="/strata">strata waterproofing services</a>.</p>`
       },
       {
         heading: "Cost-Effective Repair Strategies for Strata Buildings",
