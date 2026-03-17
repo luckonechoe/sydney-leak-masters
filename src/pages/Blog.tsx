@@ -53,17 +53,17 @@ export default function Blog() {
             <Link to="/guides/complete-guide-leak-repairs-sydney" className="group block">
               <div className="bg-card border-2 border-secondary/30 rounded-lg overflow-hidden hover:border-secondary/60 transition-colors p-6 lg:p-8">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="px-3 py-1 bg-secondary text-secondary-foreground text-xs font-bold rounded">FEATURED GUIDE</span>
+                  <span className="px-3 py-1 bg-secondary text-secondary-foreground text-xs font-bold rounded">COMPREHENSIVE GUIDE</span>
                   <span className="text-xs text-muted-foreground">25 min read</span>
                 </div>
                 <h2 className="font-heading font-bold text-xl lg:text-2xl text-foreground mb-2 group-hover:text-secondary transition-colors">
-                  Complete Guide to Leaking Shower and Balcony Repairs in Sydney
+                  The Complete Guide to Shower &amp; Balcony Leak Repairs in Sydney
                 </h2>
                 <p className="text-muted-foreground mb-4">
-                  Everything you need to know about identifying, repairing, and preventing shower and balcony leaks. Covers causes, warning signs, repair methods, waterproofing systems, costs, and preventative maintenance.
+                  What causes leaks, how to spot the warning signs early, and which repair methods actually deliver long-term results. A practical resource for Sydney homeowners and property managers.
                 </p>
                 <span className="inline-flex items-center gap-1 text-sm text-secondary group-hover:gap-2 transition-all font-medium">
-                  Read the complete guide
+                  Read the full guide
                   <ArrowRight className="w-4 h-4" />
                 </span>
               </div>
