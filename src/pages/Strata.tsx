@@ -389,10 +389,10 @@ export default function Strata() {
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-4">
                   <p className="text-muted-foreground">
-                    All our waterproofing work for strata properties complies with{" "}
-                    <strong className="text-foreground">AS 4654.2</strong> — the Australian Standard 
-                    for waterproofing of wet areas in residential buildings. This ensures every 
-                    repair meets the required standard for materials, application, and testing.
+                    All our waterproofing work for strata properties meets professional 
+                    industry standards for waterproofing of wet areas in residential buildings. 
+                    This ensures every repair meets the required standard for materials, 
+                    application, and testing.
                   </p>
                   <p className="text-muted-foreground">
                     We also adhere to relevant sections of the{" "}

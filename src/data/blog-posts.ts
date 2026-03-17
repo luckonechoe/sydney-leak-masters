@@ -1059,13 +1059,9 @@ export const blogPostsData: BlogPostContent[] = [
         heading: "What Does a Waterproof Membrane Do?",
         headingLevel: "h2",
         content: `<p>A waterproof membrane creates a continuous, impermeable barrier between the tiled surface of your wet area and the building structure beneath. In showers, it prevents water from reaching timber framing, plasterboard, and the building's structural elements. On balconies, it stops water from penetrating the concrete slab and causing corrosion of steel reinforcement.</p>
-<p>Australian Standards require waterproof membranes in all wet areas:</p>
-<ul>
-<li><strong>AS 3740-2021</strong> — covers internal wet areas including showers, bathrooms, and laundries</li>
-<li><strong>AS 4654.2</strong> — covers external wet areas including balconies, terraces, and podium decks</li>
-</ul>
-<p>The membrane must form a continuous, unbroken barrier across all surfaces that may be exposed to water — including walls (to a minimum height specified in the Standards), floors, corners, junctions, and around all penetrations such as taps, drains, and pipes. Any gap, tear, or weakness in this barrier allows water to escape into the building structure.</p>
-<p>For detailed information on these standards, read our guide on <a href="/blog/bathroom-waterproofing-standards">Australian bathroom waterproofing standards</a>.</p>`
+<p>Professional standards require waterproof membranes in all wet areas — both internal (showers, bathrooms, laundries) and external (balconies, terraces, podium decks).</p>
+<p>The membrane must form a continuous, unbroken barrier across all surfaces that may be exposed to water — including walls (to minimum specified heights), floors, corners, junctions, and around all penetrations such as taps, drains, and pipes. Any gap, tear, or weakness in this barrier allows water to escape into the building structure.</p>
+<p>For detailed information on these requirements, read our guide on <a href="/blog/bathroom-waterproofing-standards">bathroom waterproofing standards</a>.</p>`
       },
       {
         heading: "Types of Waterproof Membranes Used in Australian Homes",

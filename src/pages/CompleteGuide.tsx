@@ -231,7 +231,7 @@ export default function CompleteGuide() {
                 </ul>
 
                 <h3 className="font-heading text-xl font-semibold mt-6 mb-3">Balcony Waterproofing Systems</h3>
-                <p>External balcony waterproofing under <strong>AS 4654.2</strong> requires more robust systems to withstand weather exposure:</p>
+                <p>External balcony waterproofing requires more robust systems to withstand weather exposure:</p>
                 <ul className="space-y-2">
                   <li><strong>Structural substrate</strong> — concrete slab with correct falls (minimum 1:60 to drainage)</li>
                   <li><strong>Surface preparation</strong> — grinding, cleaning, and crack repair</li>
