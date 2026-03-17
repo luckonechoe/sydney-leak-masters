@@ -75,7 +75,7 @@ const pillarFaqs = [
   },
   {
     question: "What is a waterproof membrane?",
-    answer: "A waterproof membrane is a thin layer of material applied beneath tiles in wet areas (showers, bathrooms, balconies) to prevent water from penetrating into the building structure. In Australia, membranes must comply with AS 3740 for internal wet areas and AS 4654.2 for external areas. Common types include liquid-applied membranes (painted on) and sheet membranes (rolled or torched on)."
+    answer: "A waterproof membrane is a thin layer of material applied beneath tiles in wet areas (showers, bathrooms, balconies) to prevent water from penetrating into the building structure. Membranes must meet professional standards for both internal and external wet areas. Common types include liquid-applied membranes (painted on) and sheet membranes (rolled or torched on)."
   },
   {
     question: "How do you test for a balcony leak?",
