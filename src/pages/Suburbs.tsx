@@ -122,9 +122,8 @@ export default function Suburbs() {
                 Whether you need a{" "}
                 <Link to="/services/shower-repairs" className="text-secondary hover:underline">leaking shower repair</Link> in Bondi, a{" "}
                 <Link to="/services/balcony-repairs" className="text-secondary hover:underline">balcony waterproofing</Link> job in Parramatta, or{" "}
-                <Link to="/strata" className="text-secondary hover:underline">strata waterproofing</Link> in Chatswood — our team delivers fast, code-compliant repairs
-                built to Australian Standards{" "}
-                <Link to="/blog/bathroom-waterproofing-standards" className="text-secondary hover:underline">AS 3740</Link> and AS 4654.2.
+                <Link to="/strata" className="text-secondary hover:underline">strata waterproofing</Link> in Chatswood — our team delivers fast, professional repairs
+                built to the highest industry standards.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">

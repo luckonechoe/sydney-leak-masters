@@ -2096,7 +2096,7 @@ export const blogPostsData: BlogPostContent[] = [
 <li><strong>Leak detection capability</strong> — the contractor should diagnose before prescribing</li>
 <li><strong>Knowledge of membrane systems</strong> — understanding different systems and their suitability for your situation</li>
 <li><strong>Concrete repair experience</strong> — many membrane repairs also require concrete restoration</li>
-<li><strong>AS 4654.2 compliance</strong> — external waterproofing must comply with Australian Standards</li>
+<li><strong>Standards compliance</strong> — external waterproofing must meet professional industry standards</li>
 <li><strong>Written 10-year warranty</strong> — covering materials and workmanship</li>
 <li><strong>Current insurance</strong> — public liability is essential for external work, especially at height</li>
 </ul>
