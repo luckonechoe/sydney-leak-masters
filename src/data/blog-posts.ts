@@ -1427,12 +1427,12 @@ export const blogPostsData: BlogPostContent[] = [
         headingLevel: "h2",
         content: `<p><strong>Shower waterproofing</strong> is one of the most critical yet overlooked aspects of home maintenance in Sydney. Every time you shower, water impacts tiles, grout, and seals at high pressure. Without effective waterproofing, this water penetrates into your home's structure, causing damage that ranges from cosmetic staining to serious structural compromise.</p>
 <p>Sydney's climate — with high humidity, temperature variations, and in coastal areas, salt-laden air — places additional demands on bathroom waterproofing systems. Properties across all Sydney regions, from <a href="/services/bondi">Bondi</a> to <a href="/services/blacktown">Blacktown</a>, <a href="/services/manly">Manly</a> to <a href="/services/miranda">Miranda</a>, face these challenges.</p>
-<p>In this comprehensive guide, we cover everything Sydney homeowners need to know about shower waterproofing — from understanding Australian Standards to choosing the right repair method and specialist for your situation.</p>`
+<p>In this comprehensive guide, we cover everything Sydney homeowners need to know about shower waterproofing — from understanding the standards to choosing the right repair method and specialist for your situation.</p>`
       },
       {
-        heading: "Australian Standards for Shower Waterproofing",
+        heading: "Standards for Shower Waterproofing",
         headingLevel: "h2",
-        content: `<p>All shower waterproofing in Australia must comply with <strong>AS 3740-2021</strong> (Waterproofing of domestic wet areas). This Standard specifies:</p>
+        content: `<p>All shower waterproofing in Australia must comply with current standards for waterproofing of domestic wet areas. Key requirements include:</p>
 <ul>
 <li>Minimum membrane height on shower walls (1800mm from the finished floor level, or to ceiling height if lower)</li>
 <li>Membrane requirements for shower floors (entire floor area must be waterproofed)</li>
@@ -1440,7 +1440,7 @@ export const blogPostsData: BlogPostContent[] = [
 <li>Waterproofing around penetrations (taps, showerheads, drains)</li>
 <li>Membrane testing requirements</li>
 </ul>
-<p>Non-compliant waterproofing is not just a quality issue — it's a regulatory issue. In NSW, waterproofing work must be carried out by licensed contractors, and non-compliant work can void insurance and create legal liability. Read our detailed guide on <a href="/blog/bathroom-waterproofing-standards">Australian bathroom waterproofing standards</a> for comprehensive information.</p>`
+<p>Non-compliant waterproofing is not just a quality issue — it's a regulatory issue. In NSW, waterproofing work must be carried out by licensed contractors, and non-compliant work can void insurance and create legal liability. Read our detailed guide on <a href="/blog/bathroom-waterproofing-standards">bathroom waterproofing standards</a> for comprehensive information.</p>`
       },
       {
         heading: "How Shower Waterproofing Systems Work",
