@@ -15,8 +15,8 @@ export default function Blog() {
   return (
     <>
       <SEOHead
-        title="Blog | Leak Repair Tips & Guides"
-        description="Expert advice on shower leaks, balcony waterproofing, epoxy regrouting, tile sealing, and concrete degradation prevention. Stay informed with Sydney Leak Repairs Pro."
+        title="Blog | Practical Leak Repair Guides for Sydney Homeowners"
+        description="Straightforward advice on shower leaks, balcony waterproofing, regrouting and long-term property care from Sydney's trusted leak repair specialists."
       />
 
       <div className="min-h-screen bg-background">
@@ -36,12 +36,12 @@ export default function Blog() {
               className="max-w-3xl"
             >
               <h1 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-6">
-                Leak Repair{" "}
-                <span className="gradient-text">Blog</span>
+                Practical Advice for{" "}
+                <span className="gradient-text">Sydney Homeowners</span>
               </h1>
               <p className="text-lg text-muted-foreground">
-                Expert advice, tips, and guides on shower repairs, balcony 
-                waterproofing, and protecting your property from water damage.
+                Straightforward guides on shower leaks, balcony repairs, waterproofing 
+                and long-term property care — written by the team that fixes them every day.
               </p>
             </motion.div>
           </div>
@@ -53,17 +53,17 @@ export default function Blog() {
             <Link to="/guides/complete-guide-leak-repairs-sydney" className="group block">
               <div className="bg-card border-2 border-secondary/30 rounded-lg overflow-hidden hover:border-secondary/60 transition-colors p-6 lg:p-8">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="px-3 py-1 bg-secondary text-secondary-foreground text-xs font-bold rounded">FEATURED GUIDE</span>
+                  <span className="px-3 py-1 bg-secondary text-secondary-foreground text-xs font-bold rounded">COMPREHENSIVE GUIDE</span>
                   <span className="text-xs text-muted-foreground">25 min read</span>
                 </div>
                 <h2 className="font-heading font-bold text-xl lg:text-2xl text-foreground mb-2 group-hover:text-secondary transition-colors">
-                  Complete Guide to Leaking Shower and Balcony Repairs in Sydney
+                  The Complete Guide to Shower &amp; Balcony Leak Repairs in Sydney
                 </h2>
                 <p className="text-muted-foreground mb-4">
-                  Everything you need to know about identifying, repairing, and preventing shower and balcony leaks. Covers causes, warning signs, repair methods, waterproofing systems, costs, and preventative maintenance.
+                  What causes leaks, how to spot the warning signs early, and which repair methods actually deliver long-term results. A practical resource for Sydney homeowners and property managers.
                 </p>
                 <span className="inline-flex items-center gap-1 text-sm text-secondary group-hover:gap-2 transition-all font-medium">
-                  Read the complete guide
+                  Read the full guide
                   <ArrowRight className="w-4 h-4" />
                 </span>
               </div>
@@ -152,16 +152,16 @@ export default function Blog() {
               viewport={{ once: true }}
             >
               <h2 className="font-heading text-2xl lg:text-3xl font-bold text-foreground mb-4">
-                Have a Leak Problem?
+                Need a Professional Opinion?
               </h2>
               <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-                Don't wait for water damage to get worse. Get a free quote today.
+                If you've noticed signs of a leak, we're happy to take a look. Free inspections, honest advice, no obligation.
               </p>
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground rounded-lg font-medium hover:bg-secondary/90 transition-colors"
               >
-                Get Free Quote
+                Get a Free Quote
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </motion.div>

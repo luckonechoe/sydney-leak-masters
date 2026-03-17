@@ -241,18 +241,17 @@ export default function BlogPost() {
               viewport={{ once: true }}
             >
               <h2 className="font-heading text-2xl lg:text-3xl font-bold text-foreground mb-4">
-                Need Professional Help With a Leak?
+                Dealing With a Leak? We Can Help.
               </h2>
               <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-                Our experienced team provides free inspections and honest advice
-                across all Sydney suburbs. No obligation, no pressure.
+                Our team provides free inspections and straightforward advice for homeowners across Sydney. No pressure, no obligation — just honest guidance on the best way forward.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground rounded-lg font-medium hover:bg-secondary/90 transition-colors"
                 >
-                  Get Free Inspection
+                  Book a Free Inspection
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
