@@ -24,15 +24,15 @@ const showerOptions = {
 const balconyOptions = {
   sizes: [
     { label: "Small Balcony", description: "Juliet or compact (up to 4m²)", multiplier: 1 },
-    { label: "Medium Balcony", description: "Standard balcony (4m² – 10m²)", multiplier: 1.4 },
-    { label: "Large Balcony", description: "Wraparound or terrace (10m²+)", multiplier: 2.1 },
+    { label: "Medium Balcony", description: "Standard balcony (4m² – 10m²)", multiplier: 1.5 },
+    { label: "Large Balcony", description: "Wraparound or terrace (10m²+)", multiplier: 2 },
   ],
   conditions: [
     { label: "Minor", description: "Surface grout cracking, no visible leaks", multiplier: 0.9 },
     { label: "Moderate", description: "Active leaks, water stains below", multiplier: 1 },
     { label: "Severe", description: "Spalling, loose tiles, structural concern", multiplier: 1.25 },
   ],
-  basePrice: 1690,
+  basePrice: 1200,
 };
 
 export function PricingCalculator({ type }: PricingCalculatorProps) {
