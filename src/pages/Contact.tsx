@@ -191,8 +191,8 @@ export default function Contact() {
   return (
     <>
       <SEOHead
-        title="Contact Us | Get a Free Quote"
-        description="Contact Sydney Sealed for a free quote. Call us or fill out our contact form. Sydney-wide service with 24-hour response."
+        title="Get a Free Quote · Sydney Leak Repair Specialists"
+        description="Request a free, no-obligation quote from Sydney Sealed. We respond within 24 hours. Call us or fill out the form — we service all of Greater Sydney."
         canonical="https://sydneysealed.com.au/contact"
       />
 

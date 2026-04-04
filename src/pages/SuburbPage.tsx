@@ -61,8 +61,8 @@ export default function SuburbPage({ serviceType = "shower" }: SuburbPageProps) 
   ];
 
   // Keyword-rich meta
-  const seoTitle = `${serviceLabel} ${suburbData.name} ${suburbData.postcode} | Expert ${isShower ? 'Shower Sealing' : 'Balcony Waterproofing'} ${suburbData.region}`;
-  const seoDescription = `Professional ${serviceLabel.toLowerCase()} in ${suburbData.name}, ${suburbData.region}. No tile removal, 10-year warranty, free quotes. Expert ${isShower ? 'epoxy grout shower sealing' : 'balcony membrane waterproofing'} for ${suburbData.name} ${suburbData.postcode} homes & strata. Call today.`;
+  const seoTitle = `${serviceLabel} ${suburbData.name} ${suburbData.postcode} · Sydney Sealed`;
+  const seoDescription = `Fix ${isShower ? 'shower' : 'balcony'} leaks in ${suburbData.name} (${suburbData.postcode}). No tile removal, 10-year warranty, free quotes. Trusted by ${suburbData.region} homeowners and strata managers.`;
   const seoKeywords = `${serviceLabel.toLowerCase()} ${suburbData.name}, ${isShower ? 'shower' : 'balcony'} leak repair ${suburbData.name}, ${isShower ? 'shower sealing' : 'balcony waterproofing'} ${suburbData.name} ${suburbData.postcode}, waterproofing ${suburbData.name}, epoxy grout ${suburbData.name}, leak detection ${suburbData.region}`;
 
   return (
