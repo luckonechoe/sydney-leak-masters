@@ -56,7 +56,7 @@ export function Footer() {
               <img src={logoImg} alt="Sydney Sealed Logo" className="w-10 h-10 object-contain" />
               <div>
                 <span className="font-heading font-bold text-lg text-foreground">
-                  Sydney Leak Repairs
+                  Sydney Sealed
                 </span>
                 <span className="font-heading font-bold text-lg text-accent ml-1">
                   Pro
