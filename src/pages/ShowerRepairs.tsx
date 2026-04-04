@@ -18,7 +18,7 @@ import {
 
 const benefits = [
   "No tile removal required",
-  "Same-day service available",
+  "Fast response times",
   "Premium epoxy grout technology",
   "10-year written warranty",
   "Minimal disruption to your home",
