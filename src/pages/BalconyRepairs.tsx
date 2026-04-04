@@ -169,8 +169,8 @@ export default function BalconyRepairs() {
   return (
     <>
       <SEOHead
-        title="Leaking Balcony Repairs Sydney | Balcony Waterproofing & Sealing"
-        description="Professional leaking balcony repair and waterproofing across Sydney. Expert balcony sealing without tile removal. Prevent spalling and structural damage. 10-year warranty. Strata approved. Free inspection."
+        title="Leaking Balcony Repairs Sydney · Waterproofing & Sealing Specialists"
+        description="Expert leaking balcony repairs and waterproofing across Sydney. Stop water damage, prevent spalling, and protect your property. Strata approved. 10-year warranty. Free quotes."
         canonical="https://sydneysealed.com.au/services/balcony-repairs"
       />
       <ServiceSchema

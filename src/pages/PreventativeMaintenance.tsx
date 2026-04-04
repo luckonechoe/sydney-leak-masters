@@ -148,8 +148,8 @@ export default function PreventativeMaintenance() {
   return (
     <>
       <SEOHead
-        title="Preventative Maintenance Plan $249/yr | Sydney Sealed"
-        description="Protect your waterproofing investment with our $249/year preventative maintenance plan. Annual inspections, grout touch-ups, and warranty coverage for Sydney showers and balconies."
+        title="Preventative Maintenance Plans · Protect Your Waterproofing Investment"
+        description="Keep your waterproofing in top shape with our $249/year maintenance plan. Annual inspections, grout touch-ups, and extended warranty coverage for Sydney homes and strata."
         canonical="https://sydneysealed.com.au/preventative-maintenance"
       />
       <FAQSchema faqs={faqs} />

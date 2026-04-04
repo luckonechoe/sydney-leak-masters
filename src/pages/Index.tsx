@@ -32,8 +32,8 @@ export default function Index() {
   return (
     <>
       <SEOHead
-        title="Shower & Balcony Leak Repairs Sydney"
-        description="Sydney's trusted leak repair specialists. Stop shower and balcony leaks permanently with premium epoxy grout solutions. 10-year warranty. Free quotes."
+        title="Leaking Shower & Balcony Repairs Sydney · 10-Year Warranty"
+        description="Stop shower and balcony leaks for good. Sydney Sealed uses premium epoxy grout to fix leaks without removing tiles. 10-year warranty. Free quotes across Sydney."
         canonical="https://sydneysealed.com.au/"
       />
       <LocalBusinessSchema />

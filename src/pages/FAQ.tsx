@@ -92,8 +92,8 @@ export default function FAQ() {
   return (
     <>
       <SEOHead
-        title="FAQ | Frequently Asked Questions"
-        description="Find answers to common questions about shower repairs, balcony waterproofing, pricing, warranties, and our service process."
+        title="Shower & Balcony Leak Repair FAQ · Sydney Sealed"
+        description="Answers to common questions about leaking shower repairs, balcony waterproofing, pricing, warranties, and how our repair process works across Sydney."
         canonical="https://sydneysealed.com.au/faq"
       />
 

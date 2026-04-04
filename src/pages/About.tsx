@@ -72,8 +72,8 @@ export default function About() {
   return (
     <>
       <SEOHead
-        title="About Us – Sydney's Trusted Leak Repair Specialists"
-        description="We're not your average leak repair company. Sydney Sealed uses premium epoxy grout solutions with a 10-year warranty. No tile removal. No shortcuts."
+        title="About Sydney Sealed · Leak Repair Specialists You Can Trust"
+        description="Meet the team behind Sydney Sealed. We fix leaking showers and balconies properly the first time — quality workmanship, honest advice, and a 10-year warranty on every job."
         canonical="https://sydneysealed.com.au/about"
       />
 
