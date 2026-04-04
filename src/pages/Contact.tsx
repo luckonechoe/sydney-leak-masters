@@ -129,23 +129,19 @@ export default function Contact() {
     const uploadedUrls: string[] = [];
     
     for (const { file } of uploadedFiles) {
-      const fileExt = file.name.split(".").pop();
-      const fileName = `${Date.now()}-${Math.random().toString(36).substring(7)}.${fileExt}`;
-      
-      const { error } = await supabase.storage
-        .from("contact-uploads")
-        .upload(fileName, file);
+      const formData = new FormData();
+      formData.append("file", file);
+
+      const { data, error } = await supabase.functions.invoke("upload-contact-media", {
+        body: formData,
+      });
 
       if (error) {
         console.error("Upload error:", error);
         throw error;
       }
 
-      const { data: { publicUrl } } = supabase.storage
-        .from("contact-uploads")
-        .getPublicUrl(fileName);
-      
-      uploadedUrls.push(publicUrl);
+      uploadedUrls.push(data.publicUrl);
     }
     
     return uploadedUrls;
