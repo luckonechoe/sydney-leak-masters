@@ -166,7 +166,7 @@ export default function ShowerRepairs() {
     <>
       <SEOHead
         title="Leaking Shower Repairs Sydney | Fix Shower Leaks Without Removing Tiles"
-        description="Professional leaking shower repairs in Sydney. Expert shower sealing and waterproofing using premium epoxy grout — no tile removal required. Same-day service, 10-year warranty. Book your free inspection today."
+        description="Professional leaking shower repairs in Sydney. Expert shower sealing and waterproofing using premium epoxy grout — no tile removal required. Fast response, 10-year warranty. Book your free inspection today."
       />
       <ServiceSchema
         name="Leaking Shower Repair Service Sydney"
