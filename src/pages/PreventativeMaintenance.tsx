@@ -151,6 +151,7 @@ export default function PreventativeMaintenance() {
         title="Preventative Maintenance Plans · Protect Your Waterproofing Investment"
         description="Keep your waterproofing in top shape with our $249/year maintenance plan. Annual inspections, grout touch-ups, and extended warranty coverage for Sydney homes and strata."
         canonical="https://sydneysealed.com.au/preventative-maintenance"
+        keywords="waterproofing maintenance plan sydney, shower maintenance, grout maintenance, preventative waterproofing, epoxy grout maintenance, waterproofing warranty"
       />
       <FAQSchema faqs={faqs} />
 
@@ -424,12 +425,12 @@ export default function PreventativeMaintenance() {
                 {
                   icon: Star,
                   title: "Homeowners",
-                  desc: "Protect your bathroom and balcony investment. Avoid nasty surprises and keep your home leak-free year after year.",
+                  desc: <>Protect your <Link to="/services/shower-repairs" className="text-secondary hover:underline">shower</Link> and <Link to="/services/balcony-repairs" className="text-secondary hover:underline">balcony</Link> investment. Avoid nasty surprises and keep your home leak-free year after year.</>,
                 },
                 {
                   icon: Shield,
                   title: "Strata Managers",
-                  desc: "Stay compliant with building maintenance obligations. Receive annual reports perfect for strata records and AGM documentation.",
+                  desc: <>Stay compliant with building maintenance obligations. Receive annual reports perfect for <Link to="/strata" className="text-secondary hover:underline">strata records</Link> and AGM documentation.</>,
                 },
                 {
                   icon: Clock,
@@ -492,6 +493,36 @@ export default function PreventativeMaintenance() {
                   </AccordionItem>
                 ))}
               </Accordion>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Guides & Service Link */}
+        <section className="py-12 lg:py-16 bg-muted/30">
+          <div className="section-container">
+            <div className="max-w-4xl mx-auto space-y-6">
+              <h2 className="font-heading text-2xl font-bold text-foreground">
+                Related Guides
+              </h2>
+              <div className="grid sm:grid-cols-3 gap-4">
+                <Link to="/blog/epoxy-regrouting-guide" className="p-4 bg-card rounded-lg border border-border hover:border-secondary/50 transition-colors group">
+                  <h3 className="font-heading font-bold text-foreground group-hover:text-secondary transition-colors mb-2 text-sm">Epoxy Regrouting Guide</h3>
+                  <p className="text-xs text-muted-foreground">How epoxy regrouting works and why it lasts longer than cement grout.</p>
+                </Link>
+                <Link to="/blog/causes-of-cracked-grout" className="p-4 bg-card rounded-lg border border-border hover:border-secondary/50 transition-colors group">
+                  <h3 className="font-heading font-bold text-foreground group-hover:text-secondary transition-colors mb-2 text-sm">Causes of Cracked Grout</h3>
+                  <p className="text-xs text-muted-foreground">Why grout fails and what you can do to prevent it.</p>
+                </Link>
+                <Link to="/blog/signs-of-shower-leak" className="p-4 bg-card rounded-lg border border-border hover:border-secondary/50 transition-colors group">
+                  <h3 className="font-heading font-bold text-foreground group-hover:text-secondary transition-colors mb-2 text-sm">5 Signs Your Shower Is Leaking</h3>
+                  <p className="text-xs text-muted-foreground">Spot early warning signs before they become expensive problems.</p>
+                </Link>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                We service homeowners across all Sydney suburbs. Browse our{" "}
+                <Link to="/suburbs" className="text-secondary hover:underline">service areas</Link>{" "}
+                to find your local suburb page.
+              </p>
             </div>
           </div>
         </section>
