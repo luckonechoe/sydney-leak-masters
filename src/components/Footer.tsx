@@ -38,11 +38,6 @@ const footerLinks = {
   ],
 };
 
-const socialLinks = [
-  { name: "Facebook", icon: Facebook, href: "#" },
-  { name: "Instagram", icon: Instagram, href: "#" },
-  { name: "LinkedIn", icon: Linkedin, href: "#" },
-];
 
 export function Footer() {
   return (
