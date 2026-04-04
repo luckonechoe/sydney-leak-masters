@@ -1,96 +1,93 @@
 
 
-## Technical SEO Clean-Up Plan
+## On-Page SEO Metadata Rewrite
 
-### Issues Found
+### What's Changing
 
-1. **Canonical tags**: 9 pages lack explicit `canonical` props (Index, ShowerRepairs, BalconyRepairs, Blog, FAQ, Contact, Strata, PreventativeMaintenance, TermsOfService). They fall back to `window.location.pathname` which works client-side but is fragile and could produce wrong canonicals if query params or trailing slashes appear.
+Rewriting title tags and meta descriptions across all major pages to improve keyword targeting, differentiation, CTR, and local search intent. No layout or content changes — metadata only.
 
-2. **index.html has a hardcoded canonical** pointing to homepage (`https://sydneysealed.com.au/`). Since react-helmet-async replaces tags, this should be fine for inner pages, but the hardcoded `<link rel="canonical">` in index.html could cause issues if Helmet doesn't override it properly on some crawlers (especially those that don't execute JS).
+### Current Issues
 
-3. **Sitemap is incomplete**:
-   - Missing: `/preventative-maintenance`, `/about` is present but `/terms-of-service` should be excluded (noindex), `/contact` is present
-   - Missing many balcony suburb pages (only 10 of 50+ suburbs have balcony entries)
-   - Missing: `/preventative-maintenance`
-
-4. **robots.txt**: Generally fine but has unnecessary `Crawl-delay` directives and `Host` directive (not standard). Otherwise clean.
-
-5. **NotFound page**: Missing SEOHead with `noindex` — crawlers could index 404 pages.
-
-6. **OG image in index.html**: Uses a temporary Google Storage signed URL that will expire. Should use a permanent URL.
-
-7. **SearchAction schema** in index.html references `?q=` search on `/blog` but the blog page doesn't actually support search — misleading structured data.
-
-8. **`alt` text on images**: Blog listing images use `post.title` as alt (acceptable). Header/Footer logos have proper alt. Blog post content images would need checking but are inline in blog data.
-
-9. **Duplicate meta tags**: index.html has hardcoded OG/Twitter title and description that duplicate what Helmet injects. These should be removed to avoid double tags.
+- Some titles are generic (e.g. "Contact Us | Get a Free Quote", "FAQ | Frequently Asked Questions") — they waste the title tag by not including service/location keywords.
+- Several descriptions are solid but could be tighter and more CTR-focused.
+- Blog post meta is already well-structured and unique — only minor improvements needed.
+- Suburb pages use a template that's decent but produces overly long titles.
 
 ---
 
-### Implementation Plan
+### Updated Title Tags
 
-**1. Add explicit canonical to all pages (~9 files)**
+| Page | Current Title | New Title |
+|------|--------------|-----------|
+| Homepage | Shower & Balcony Leak Repairs Sydney | Leaking Shower & Balcony Repairs Sydney · 10-Year Warranty |
+| About | About Us – Sydney's Trusted Leak Repair Specialists | About Sydney Sealed · Leak Repair Specialists You Can Trust |
+| Contact | Contact Us \| Get a Free Quote | Get a Free Quote · Sydney Leak Repair Specialists |
+| FAQ | FAQ \| Frequently Asked Questions | Shower & Balcony Leak Repair FAQ · Sydney Sealed |
+| Blog | Blog \| Practical Leak Repair Guides for Sydney Homeowners | Leak Repair Tips & Guides · Sydney Sealed Blog |
+| Shower Repairs | Leaking Shower Repairs Sydney \| Fix Shower Leaks Without Removing Tiles | Leaking Shower Repairs Sydney · No Tile Removal, 10-Year Warranty |
+| Balcony Repairs | Leaking Balcony Repairs Sydney \| Balcony Waterproofing & Sealing | Leaking Balcony Repairs Sydney · Waterproofing & Sealing Specialists |
+| Strata | Strata Leak Repair Services Sydney \| Property Manager Waterproofing Solutions | Strata Leak Repairs Sydney · Waterproofing for Property Managers |
+| Preventative Maintenance | Preventative Maintenance Plan $249/yr \| Sydney Sealed | Preventative Maintenance Plans · Protect Your Waterproofing Investment |
+| Suburbs | Leak Repair Service Areas Sydney \| 50+ Suburbs \| Shower & Balcony Specialists | Leak Repair Service Areas · 50+ Sydney Suburbs Covered |
+| Complete Guide | Complete Guide to Leaking Shower and Balcony Repairs in Sydney | Complete Guide to Shower & Balcony Leak Repairs in Sydney |
+| Terms of Service | Terms of Service \| Sydney Sealed | *(no change — noindex page)* |
 
-Add `canonical="https://sydneysealed.com.au/..."` prop to every `<SEOHead>` call that's missing it:
-- `Index.tsx` → `canonical="https://sydneysealed.com.au/"`
-- `ShowerRepairs.tsx` → `canonical="https://sydneysealed.com.au/services/shower-repairs"`
-- `BalconyRepairs.tsx` → `canonical="https://sydneysealed.com.au/services/balcony-repairs"`
-- `Blog.tsx` → `canonical="https://sydneysealed.com.au/blog"`
-- `FAQ.tsx` → `canonical="https://sydneysealed.com.au/faq"`
-- `Contact.tsx` → `canonical="https://sydneysealed.com.au/contact"`
-- `Strata.tsx` → `canonical="https://sydneysealed.com.au/strata"`
-- `PreventativeMaintenance.tsx` → `canonical="https://sydneysealed.com.au/preventative-maintenance"`
-- `TermsOfService.tsx` → `canonical="https://sydneysealed.com.au/terms-of-service"`
-
-**2. Clean up index.html**
-
-- Remove hardcoded `<link rel="canonical">`, `<link rel="alternate" hreflang>`, duplicate OG/Twitter title/description tags (lines 20-22, 97-100). Let Helmet handle these per-page.
-- Remove the SearchAction schema (no actual search exists on the site).
-- Replace the expiring Google Storage OG image URL with `/og-image.jpg` (relative, resolved by browser).
-
-**3. Add SEOHead to NotFound page**
-
-Add `<SEOHead title="Page Not Found" description="..." noindex={true} />` to prevent indexing of 404 pages.
-
-**4. Rebuild sitemap.xml**
-
-- Add missing page: `/preventative-maintenance`
-- Add all 50+ suburb balcony repair pages (currently only 10 are listed; shower pages look complete)
-- Keep `/terms-of-service` out (noindex page)
-- Verify all URLs match the actual route paths
-
-**5. Clean up robots.txt**
-
-- Remove `Crawl-delay` directives (Google ignores them; Bing handles them but they're unnecessary)
-- Remove non-standard `Host` directive
-- Keep the rest as-is
-
-**6. Replace expiring OG image URL**
-
-In `index.html`, swap the long signed Google Storage URL for `https://sydneysealed.com.au/og-image.jpg` in both og:image and twitter:image tags.
+**Suburb pages template** — shortened to avoid truncation:
+- Current: `{Service} {Suburb} {Postcode} | Expert {Sealing/Waterproofing} {Region}`
+- New: `{Service} {Suburb} {Postcode} · Sydney Sealed`
 
 ---
 
-### Files Changed
+### Updated Meta Descriptions
 
-- `src/pages/Index.tsx` — add canonical
-- `src/pages/ShowerRepairs.tsx` — add canonical
-- `src/pages/BalconyRepairs.tsx` — add canonical
-- `src/pages/Blog.tsx` — add canonical
-- `src/pages/FAQ.tsx` — add canonical
-- `src/pages/Contact.tsx` — add canonical
-- `src/pages/Strata.tsx` — add canonical
-- `src/pages/PreventativeMaintenance.tsx` — add canonical
-- `src/pages/TermsOfService.tsx` — add canonical
-- `src/pages/NotFound.tsx` — add SEOHead with noindex
-- `index.html` — remove duplicates, fix OG image, remove SearchAction
-- `public/sitemap.xml` — add missing pages and all suburb balcony URLs
-- `public/robots.txt` — simplify
+| Page | New Description |
+|------|----------------|
+| Homepage | Stop shower and balcony leaks for good. Sydney Sealed uses premium epoxy grout to fix leaks without removing tiles. 10-year warranty. Free quotes across Sydney. |
+| About | Meet the team behind Sydney Sealed. We fix leaking showers and balconies properly the first time — quality workmanship, honest advice, and a 10-year warranty on every job. |
+| Contact | Request a free, no-obligation quote from Sydney Sealed. We respond within 24 hours. Call us or fill out the form — we service all of Greater Sydney. |
+| FAQ | Answers to common questions about leaking shower repairs, balcony waterproofing, pricing, warranties, and how our repair process works across Sydney. |
+| Blog | Practical guides on shower leak repairs, balcony waterproofing, epoxy regrouting, and long-term property maintenance from Sydney's trusted leak repair specialists. |
+| Shower Repairs | Professional leaking shower repairs across Sydney. We fix shower leaks using premium epoxy grout — no tile removal required. Fast response, free inspections, 10-year warranty. |
+| Balcony Repairs | Expert leaking balcony repairs and waterproofing across Sydney. Stop water damage, prevent spalling, and protect your property. Strata approved. 10-year warranty. Free quotes. |
+| Strata | Specialist leak repair and waterproofing for Sydney strata buildings. Priority scheduling, transparent reporting, and volume pricing for property managers and body corporates. |
+| Preventative Maintenance | Keep your waterproofing in top shape with our $249/year maintenance plan. Annual inspections, grout touch-ups, and extended warranty coverage for Sydney homes and strata. |
+| Suburbs | We service 50+ suburbs across Greater Sydney — Eastern Suburbs, North Shore, Inner West, Western Sydney and more. No travel fees. Free quotes. 10-year warranty on all repairs. |
+| Complete Guide | Everything you need to know about fixing leaking showers and balconies in Sydney. Causes, warning signs, repair methods, costs, and how to choose the right specialist. |
 
-### What Will Still Need Your Input
+**Suburb pages template** — tightened:
+- New: `Fix {service type} leaks in {Suburb} ({Postcode}). No tile removal, 10-year warranty, free quotes. Trusted by {Region} homeowners and strata managers.`
 
-- **OG image**: You should upload a permanent `og-image.jpg` to the `public/` folder if one doesn't already exist. The current one references a signed URL that will expire.
-- **Phone number**: `+61400000000` is a placeholder across the site (schema, CTAButton). Replace with your real number.
-- **Social media URLs**: The schema references facebook/instagram/linkedin URLs — confirm these are correct or update them.
-- **ABN**: The Terms of Service page has "ABN XX XXX XXX XXX" as a placeholder.
+---
+
+### Blog Posts
+
+The 20 blog posts already have unique, well-targeted metaTitle and metaDescription values. No changes needed — they are differentiated and keyword-rich.
+
+---
+
+### Files to Edit
+
+1. `src/pages/Index.tsx` — title + description
+2. `src/pages/About.tsx` — title + description
+3. `src/pages/Contact.tsx` — title + description
+4. `src/pages/FAQ.tsx` — title + description
+5. `src/pages/Blog.tsx` — title + description
+6. `src/pages/ShowerRepairs.tsx` — title + description
+7. `src/pages/BalconyRepairs.tsx` — title + description
+8. `src/pages/Strata.tsx` — title + description
+9. `src/pages/PreventativeMaintenance.tsx` — title + description
+10. `src/pages/Suburbs.tsx` — title + description
+11. `src/pages/CompleteGuide.tsx` — title + description
+12. `src/pages/SuburbPage.tsx` — title + description template
+
+All existing canonical URLs, keywords props, and schema markup will be preserved exactly as they are.
+
+---
+
+### Pages That Still Need Custom Copy to Rank Better
+
+- **About page**: Could benefit from more unique body content (currently reads well but is thin for SEO).
+- **Strata page**: Adding case studies or testimonials from strata managers would strengthen ranking potential.
+- **Blog posts**: Consider adding internal links between related posts and to service pages to improve crawl depth.
+- **Suburb pages**: The body content is template-driven — adding 1–2 unique sentences per suburb (local landmarks, common property types) would help differentiate them from each other in Google's eyes.
 
