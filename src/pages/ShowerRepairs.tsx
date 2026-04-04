@@ -168,6 +168,7 @@ export default function ShowerRepairs() {
         title="Leaking Shower Repairs Sydney · No Tile Removal, 10-Year Warranty"
         description="Professional leaking shower repairs across Sydney. We fix shower leaks using premium epoxy grout — no tile removal required. Fast response, free inspections, 10-year warranty."
         canonical="https://sydneysealed.com.au/services/shower-repairs"
+        keywords="leaking shower repairs sydney, shower leak repair, epoxy regrouting sydney, shower waterproofing, fix leaking shower without removing tiles, bathroom leak repair sydney"
       />
       <ServiceSchema
         name="Leaking Shower Repair Service Sydney"
