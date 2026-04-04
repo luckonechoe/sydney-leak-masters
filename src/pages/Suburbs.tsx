@@ -47,7 +47,7 @@ const serviceAreaFAQs = [
   },
   {
     question: "How quickly can you attend my property for a leak inspection?",
-    answer: "Most inspections are booked within 24–48 hours, with same-day emergency availability for active leaks causing immediate damage.",
+    answer: "Most inspections are booked within 24–48 hours, with priority availability for active leaks causing immediate damage.",
   },
   {
     question: "Is my suburb covered if it's not listed on this page?",

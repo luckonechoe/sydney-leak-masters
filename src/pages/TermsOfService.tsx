@@ -98,7 +98,7 @@ export default function TermsOfService() {
                 Descriptions of services, processes, materials, timelines, or results are indicative only unless expressly confirmed by us in writing for your specific job.
               </p>
               <p>
-                Suburb pages, service area pages, and local landing pages are published for marketing and informational purposes. They do not guarantee that we maintain a physical office in that suburb, that we are continuously available in that location, or that same-day attendance is available.
+                Suburb pages, service area pages, and local landing pages are published for marketing and informational purposes. They do not guarantee that we maintain a physical office in that suburb, that we are continuously available in that location, or that next-day attendance is available.
               </p>
               <p>
                 Any references to "fast", "permanent", "lasting", "effective", "premium", "best practice", "specialist", or similar language are general promotional descriptions unless expressly incorporated into a written contract.

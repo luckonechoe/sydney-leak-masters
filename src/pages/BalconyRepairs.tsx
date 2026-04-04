@@ -675,7 +675,7 @@ export default function BalconyRepairs() {
                   Hills District, and Western Sydney. Whether you're a homeowner, property manager, builder, or{" "}
                   <Link to="/strata" className="text-secondary hover:underline">
                     strata manager
-                  </Link>, we offer fast, reliable balcony sealing with same-day availability. Browse our{" "}
+                  </Link>, we offer fast, reliable balcony sealing with prompt availability. Browse our{" "}
                   <Link to="/suburbs" className="text-secondary hover:underline">
                     service areas
                   </Link>{" "}

@@ -18,7 +18,7 @@ const serviceData = {
     href: "/services/shower-repairs",
     features: [
       "No tile removal required",
-      "Same-day service available",
+      "Fast response times",
       "Waterproof guarantee",
     ],
   },

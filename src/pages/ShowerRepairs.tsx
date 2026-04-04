@@ -741,7 +741,7 @@ export default function ShowerRepairs() {
                   We provide professional leaking shower repair and shower sealing services across all Sydney suburbs — from the 
                   Eastern Suburbs to the Hills District, Inner West, North Shore, Western Sydney, and the Northern Beaches. 
                   Whether you're a homeowner, property manager, or real estate agent, we offer fast, reliable bathroom leak repair 
-                  with same-day availability. Browse our{" "}
+                  with fast availability. Browse our{" "}
                   <Link to="/suburbs" className="text-secondary hover:underline">
                     service areas
                   </Link>{" "}
