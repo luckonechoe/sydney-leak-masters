@@ -1,121 +1,96 @@
 
 
-# Add SEO-Optimized Copy to Service Pages
+## Technical SEO Clean-Up Plan
 
-## Summary
-Expand the content on all three service pages (Shower Repairs, Balcony Repairs, Strata) with additional informative sections, keyword-rich copy, and SEO best practices including FAQ schema, improved meta descriptions, internal linking, and semantic HTML improvements.
+### Issues Found
 
-## SEO Strategy
+1. **Canonical tags**: 9 pages lack explicit `canonical` props (Index, ShowerRepairs, BalconyRepairs, Blog, FAQ, Contact, Strata, PreventativeMaintenance, TermsOfService). They fall back to `window.location.pathname` which works client-side but is fragile and could produce wrong canonicals if query params or trailing slashes appear.
 
-**Target Keywords:**
-- Shower page: "shower leak repair Sydney", "leaking shower fix", "epoxy grout shower", "shower waterproofing Sydney", "fix shower leak without removing tiles"
-- Balcony page: "balcony leak repair Sydney", "balcony waterproofing", "balcony membrane repair", "spalling repair Sydney", "concrete degradation repair"
-- Strata page: "strata leak repairs Sydney", "strata waterproofing services", "property manager leak repair", "strata building maintenance Sydney"
+2. **index.html has a hardcoded canonical** pointing to homepage (`https://sydneysealed.com.au/`). Since react-helmet-async replaces tags, this should be fine for inner pages, but the hardcoded `<link rel="canonical">` in index.html could cause issues if Helmet doesn't override it properly on some crawlers (especially those that don't execute JS).
 
-**SEO Best Practices Applied:**
-- Longer, keyword-rich meta descriptions (150-160 chars)
-- FAQ schema markup (JSON-LD) on each service page for rich snippets in Google
-- Internal cross-links between service pages
-- Semantic heading hierarchy (H2/H3 properly nested)
-- Natural keyword density in new copy sections
-- Descriptive anchor text on internal links
+3. **Sitemap is incomplete**:
+   - Missing: `/preventative-maintenance`, `/about` is present but `/terms-of-service` should be excluded (noindex), `/contact` is present
+   - Missing many balcony suburb pages (only 10 of 50+ suburbs have balcony entries)
+   - Missing: `/preventative-maintenance`
 
----
+4. **robots.txt**: Generally fine but has unnecessary `Crawl-delay` directives and `Host` directive (not standard). Otherwise clean.
 
-## Changes by File
+5. **NotFound page**: Missing SEOHead with `noindex` — crawlers could index 404 pages.
 
-### 1. `src/pages/ShowerRepairs.tsx`
+6. **OG image in index.html**: Uses a temporary Google Storage signed URL that will expire. Should use a permanent URL.
 
-**Enhanced SEO meta:**
-- Title: "Shower Leak Repairs Sydney | Fix Leaking Shower Without Removing Tiles"
-- Description: "Professional shower leak repair in Sydney using premium epoxy grout. Fix your leaking shower without tile removal. Same-day service, 10-year warranty. Free inspection."
+7. **SearchAction schema** in index.html references `?q=` search on `/blog` but the blog page doesn't actually support search — misleading structured data.
 
-**New section: "Common Causes of Shower Leaks" (after Benefits)**
-An educational H2 section with 4-5 common causes (failed grout, cracked waterproof membrane, poor original installation, movement cracks, degraded silicone seals) presented as a grid of cards. Naturally incorporates keywords like "leaking shower", "shower waterproofing failure", "grout deterioration".
+8. **`alt` text on images**: Blog listing images use `post.title` as alt (acceptable). Header/Footer logos have proper alt. Blog post content images would need checking but are inline in blog data.
 
-**New section: "Epoxy Grout vs Cement Grout" (after Process)**
-A comparison section with two columns explaining why epoxy grout outperforms traditional cement grout. Covers waterproof properties, lifespan, stain resistance, and flexibility. Targets "epoxy grout vs cement grout" search queries.
-
-**New section: "Shower Repair FAQ" (before Quote Form)**
-3-4 inline FAQs specific to shower repairs, rendered as an accordion. Also output as FAQ schema JSON-LD for rich snippets. Questions:
-- "Can you fix a leaking shower without removing tiles?"
-- "How long does epoxy grout last in a shower?"
-- "Is epoxy grout safe for bathrooms?"
-- "How soon can I use my shower after repair?"
-
-**New section: "Areas We Service" (brief)**
-A short paragraph mentioning Sydney-wide coverage with a link to the suburb pages. Targets local SEO queries.
-
-**Internal links added:**
-- Link to Balcony Repairs page from a contextual mention
-- Link to FAQ page
-- Link to Contact page
+9. **Duplicate meta tags**: index.html has hardcoded OG/Twitter title and description that duplicate what Helmet injects. These should be removed to avoid double tags.
 
 ---
 
-### 2. `src/pages/BalconyRepairs.tsx`
+### Implementation Plan
 
-**Enhanced SEO meta:**
-- Title: "Balcony Leak Repairs Sydney | Waterproofing & Spalling Prevention"
-- Description: "Expert balcony waterproofing and leak repair across Sydney. Prevent spalling and concrete degradation with professional membrane restoration. 10-year warranty. Strata approved."
+**1. Add explicit canonical to all pages (~9 files)**
 
-**New section: "How Balcony Waterproofing Works" (after Warning Signs)**
-Detailed explanation of the membrane restoration process: surface preparation, primer application, liquid membrane application, curing, and protective screed. Targets "balcony waterproofing process" and "membrane restoration".
+Add `canonical="https://sydneysealed.com.au/..."` prop to every `<SEOHead>` call that's missing it:
+- `Index.tsx` → `canonical="https://sydneysealed.com.au/"`
+- `ShowerRepairs.tsx` → `canonical="https://sydneysealed.com.au/services/shower-repairs"`
+- `BalconyRepairs.tsx` → `canonical="https://sydneysealed.com.au/services/balcony-repairs"`
+- `Blog.tsx` → `canonical="https://sydneysealed.com.au/blog"`
+- `FAQ.tsx` → `canonical="https://sydneysealed.com.au/faq"`
+- `Contact.tsx` → `canonical="https://sydneysealed.com.au/contact"`
+- `Strata.tsx` → `canonical="https://sydneysealed.com.au/strata"`
+- `PreventativeMaintenance.tsx` → `canonical="https://sydneysealed.com.au/preventative-maintenance"`
+- `TermsOfService.tsx` → `canonical="https://sydneysealed.com.au/terms-of-service"`
 
-**New section: "Balcony Repair FAQ" (before Quote Form)**
-3-4 inline FAQs with schema markup:
-- "How do I know if my balcony membrane has failed?"
-- "Can balcony leaks cause structural damage?"
-- "Do you need strata approval for balcony repairs?"
-- "How long does balcony waterproofing last?"
+**2. Clean up index.html**
 
-**Expand "What is Spalling?" card:**
-Add 2-3 more sentences explaining the stages of concrete degradation, why Sydney's coastal climate accelerates it, and the importance of early intervention. Targets "spalling repair Sydney".
+- Remove hardcoded `<link rel="canonical">`, `<link rel="alternate" hreflang>`, duplicate OG/Twitter title/description tags (lines 20-22, 97-100). Let Helmet handle these per-page.
+- Remove the SearchAction schema (no actual search exists on the site).
+- Replace the expiring Google Storage OG image URL with `/og-image.jpg` (relative, resolved by browser).
 
-**Internal links added:**
-- Link to Strata page from strata-related mentions
-- Link to Shower Repairs page
-- Link to FAQ page
+**3. Add SEOHead to NotFound page**
 
----
+Add `<SEOHead title="Page Not Found" description="..." noindex={true} />` to prevent indexing of 404 pages.
 
-### 3. `src/pages/Strata.tsx`
+**4. Rebuild sitemap.xml**
 
-**Enhanced SEO meta:**
-- Title: "Strata Leak Repair Services Sydney | Property Manager Waterproofing Solutions"
-- Description: "Dedicated leak repair and waterproofing for strata managers across Sydney. Priority scheduling, volume pricing, compliant documentation. Shower and balcony specialists."
+- Add missing page: `/preventative-maintenance`
+- Add all 50+ suburb balcony repair pages (currently only 10 are listed; shower pages look complete)
+- Keep `/terms-of-service` out (noindex page)
+- Verify all URLs match the actual route paths
 
-**New section: "Common Strata Leak Issues" (after Benefits)**
-A section covering the most common leak problems in strata buildings: shared bathroom walls, aging balcony membranes, common area water ingress, planter box leaks. Each with a brief description and how we address it.
+**5. Clean up robots.txt**
 
-**New section: "Strata Compliance & Australian Standards" (after Process)**
-A brief section explaining compliance with AS 4654.2 (waterproofing of wet areas), relevant NCC/BCA requirements, and how documentation supports levy fund claims and insurance. Targets "strata waterproofing compliance" and "Australian Standards waterproofing".
+- Remove `Crawl-delay` directives (Google ignores them; Bing handles them but they're unnecessary)
+- Remove non-standard `Host` directive
+- Keep the rest as-is
 
-**Internal links added:**
-- Links to Shower Repairs and Balcony Repairs pages from relevant mentions
-- Link to FAQ page
+**6. Replace expiring OG image URL**
 
----
-
-### 4. New Component: `src/components/seo/FAQSchema.tsx`
-
-A reusable component that accepts an array of `{question, answer}` objects and renders:
-- A `<script type="application/ld+json">` block with FAQPage schema
-- Used on each service page to generate rich snippet markup
+In `index.html`, swap the long signed Google Storage URL for `https://sydneysealed.com.au/og-image.jpg` in both og:image and twitter:image tags.
 
 ---
 
-### 5. `src/components/seo/index.ts`
+### Files Changed
 
-Add export for the new `FAQSchema` component.
+- `src/pages/Index.tsx` — add canonical
+- `src/pages/ShowerRepairs.tsx` — add canonical
+- `src/pages/BalconyRepairs.tsx` — add canonical
+- `src/pages/Blog.tsx` — add canonical
+- `src/pages/FAQ.tsx` — add canonical
+- `src/pages/Contact.tsx` — add canonical
+- `src/pages/Strata.tsx` — add canonical
+- `src/pages/PreventativeMaintenance.tsx` — add canonical
+- `src/pages/TermsOfService.tsx` — add canonical
+- `src/pages/NotFound.tsx` — add SEOHead with noindex
+- `index.html` — remove duplicates, fix OG image, remove SearchAction
+- `public/sitemap.xml` — add missing pages and all suburb balcony URLs
+- `public/robots.txt` — simplify
 
----
+### What Will Still Need Your Input
 
-## Technical Notes
-
-- All new sections follow the existing pattern: `motion.div` with `whileInView` animations, `section-container` wrapper, consistent heading/text styling
-- FAQ schema follows Google's structured data guidelines for FAQPage type
-- New copy uses natural keyword placement (not keyword stuffing) -- primary keyword in H2, secondary keywords in body text
-- Internal links use `<Link>` from react-router-dom with descriptive anchor text
-- The terminology rule is maintained: "spalling" for short labels, "concrete degradation" for descriptive contexts
+- **OG image**: You should upload a permanent `og-image.jpg` to the `public/` folder if one doesn't already exist. The current one references a signed URL that will expire.
+- **Phone number**: `+61400000000` is a placeholder across the site (schema, CTAButton). Replace with your real number.
+- **Social media URLs**: The schema references facebook/instagram/linkedin URLs — confirm these are correct or update them.
+- **ABN**: The Terms of Service page has "ABN XX XXX XXX XXX" as a placeholder.
 
