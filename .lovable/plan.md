@@ -1,129 +1,79 @@
 
 
-## Homepage SEO, GEO, Trust & Conversion Improvements
+## Service Pages SEO & Conversion Improvement Plan
 
-### What's Changing
+### Current Assessment
 
-Rewriting and restructuring the homepage content to be stronger for target keywords, local SEO, LLM/GEO discoverability, trust, and conversions — while preserving the existing design system, canonical tags, schema markup, and page structure.
+The **Shower Repairs** and **Balcony Repairs** pages are already strong — 800+ and 760+ lines respectively, with symptoms, causes, process, FAQ w/ schema, pricing calculator, epoxy comparison (shower), and service area links. These need targeted improvements, not rewrites.
+
+The **Strata** page is the weakest — it has unverifiable stats (50+ complexes, 500+ units), a poor H1 ("Strata Manager Portal"), no internal links to blog posts or suburb pages, and no service area section.
+
+The **Preventative Maintenance** page is solid but lacks internal links to blog content and suburb pages.
 
 ---
 
-### 1. Hero Section Copy Rewrite
+### Changes by Page
 
-**Current**: "Stop Leaks Permanently. Without Re-Tiling." + generic subheading
+#### 1. Shower Repairs (`ShowerRepairs.tsx`)
 
-**New**:
-- H1: `Leaking Shower & Balcony Repairs Sydney — Fixed Properly, Without Removing Tiles`
-- Subheading: `Sydney Sealed specialises in permanent leak repairs using premium epoxy grout systems. No tile removal. No unnecessary demolition. Just expert workmanship backed by a 10-year written warranty.`
+**Minor improvements only — this page is already strong.**
 
-This naturally includes the top target keywords (leaking shower repairs sydney, balcony leak repairs, epoxy) while remaining readable and non-spammy.
+- Add `keywords` prop to SEOHead with target terms
+- Add internal links to 2-3 relevant blog posts in a new "Related Guides" callout after the FAQ section (e.g. epoxy vs cement blog, signs of a leaking shower blog)
+- Add suburb quick-links section (6-8 key suburbs like Bondi, Parramatta, Manly) similar to what was done on the homepage — linking to `/leaking-shower-repairs/:suburb`
+- Add a "When Epoxy Regrouting Isn't Enough" short section after the process section — explaining when tile removal or full renovation may be needed (honesty = trust signal, also targets related queries)
+- Cross-link to the Complete Guide page
 
-### 2. Strengthen Trust Points in Hero
+#### 2. Balcony Repairs (`BalconyRepairs.tsx`)
 
-Replace generic trust points with more specific, credible ones:
-- `10-Year Written Warranty` (was just "10 Year Warranty")
-- `No Tile Removal Required` (was "No Tile Removal")
-- `Free On-Site Inspections` (was "Fast Response Times" — more actionable)
-- `Premium Epoxy Grout Systems` (unchanged intent, clearer language)
+**Minor improvements only.**
 
-### 3. Benefits List Rewrite
+- Add `keywords` prop to SEOHead
+- Add internal links to relevant blog posts (balcony spalling blog, strata waterproofing blog)
+- Add suburb quick-links section for balcony-specific suburb pages
+- Add a "When Sealing Isn't Enough" section — explaining when full membrane replacement is needed (same trust/honesty pattern)
+- Cross-link to strata page and Complete Guide
 
-Replace generic benefits with keyword-rich, trust-building points:
-- "Permanent shower leak repairs — no re-tiling needed"
-- "Balcony waterproofing and spalling prevention"
-- "Premium epoxy regrouting across Greater Sydney"
-- "Transparent pricing with no hidden costs"
-- "Strata-approved methods for property managers"
-- "Backed by a 10-year written warranty on every job"
+#### 3. Strata (`Strata.tsx`)
 
-### 4. Service Section Copy Improvement
+**Most significant improvements — this is the weakest page.**
 
-Update the services section heading and descriptions:
-- H2: `Sydney's Shower & Balcony Leak Repair Specialists`
-- Subheading: `We fix leaking showers and balconies across Sydney using proven epoxy grout and waterproofing systems — without removing your tiles.`
+- Rewrite H1 from "Strata Manager Portal" to "Strata Leak Repairs & Waterproofing Sydney"
+- Replace unverifiable hero stats (50+ complexes, 500+ units) with credible non-numeric trust points (e.g. "Priority Scheduling", "Volume Pricing", "Full Documentation", "10-Year Warranty")
+- Add `keywords` prop to SEOHead
+- Add a "Common Strata Leak Scenarios" section with practical, experience-based descriptions of real situations (e.g. "Unit above leaking into unit below", "Multiple balconies in one complex", "Common area corridor water ingress")
+- Add internal links to blog posts relevant to strata (strata waterproofing blog, balcony spalling blog)
+- Add service areas section with suburb links
+- Add 2 more FAQs: "How quickly can you attend an urgent strata leak?" and "Can you coordinate repairs across multiple buildings?"
+- Cross-link to both service pages and preventative maintenance
 
-### 5. Add Homepage FAQ Section (New)
+#### 4. Preventative Maintenance (`PreventativeMaintenance.tsx`)
 
-Add a dedicated FAQ section with `FAQSchema` structured data. 6 questions targeting high-intent search queries and LLM/GEO discoverability:
+**Minor improvements.**
 
-1. **How do you fix a leaking shower without removing tiles?** — explains epoxy grout process
-2. **How much does a leaking shower repair cost in Sydney?** — price range from calculator
-3. **What areas in Sydney do you service?** — mentions key suburbs/regions with internal links
-4. **Do you offer a warranty on leak repairs?** — 10-year written warranty details
-5. **Can you repair a leaking balcony without replacing the membrane?** — balcony service explanation
-6. **How long does a shower or balcony leak repair take?** — 3-6 hours typical timeframe
-
-Each answer will be 2-3 sentences — factual, helpful, concise. This section uses the existing `Accordion` component and `FAQSchema` for structured data.
-
-### 6. Add Internal Linking Section (New)
-
-Add a "Service Areas" section before the final CTA with links to:
-- 6-8 key suburb pages (Bondi, Parramatta, Manly, Chatswood, etc.)
-- Both service pages
-- The complete guide
-- The suburbs index page
-
-This improves crawl depth, distributes link equity, and signals geographic relevance.
-
-### 7. Section Heading Improvements
-
-| Section | Current H2 | New H2 |
-|---------|-----------|--------|
-| Services | Our Repair Services | Sydney's Shower & Balcony Leak Repair Specialists |
-| Trust Pillars | Why Sydney Trusts Us | *(no change — already strong)* |
-| Process | How It Works | How We Fix Your Leak |
-| Benefits | Why Choose Sydney Sealed? | *(no change)* |
-| Testimonials | What Our Clients Say | What Sydney Homeowners Say |
-| Quote Form | Get Your Free Quote | Request Your Free Leak Inspection |
-| Final CTA | Ready to Stop Your Leak? | Stop Your Leak — Get a Free Quote Today |
-
-### 8. Remove "100% Success Rate" Stat
-
-The "Performance Metrics" section claims "100% Success Rate" which sounds like a fake stat. Replace with more credible metrics:
-- `3–6 hrs` / Average Repair Time
-- `48 hrs` / Full Cure Time  
-- `10 yrs` / Written Warranty
-- `50+` / Sydney Suburbs Serviced
-
-### 9. Remove "500+" Floating Badge
-
-The floating hero badge saying "500+ Repairs Completed" is an unverifiable claim. Replace with "Sydney-Wide Service" or remove it.
-
-### 10. Update SEOHead Keywords
-
-Add a `keywords` prop to the homepage SEOHead with target terms:
-`leaking shower repairs sydney, shower leak repair, balcony leak repairs sydney, epoxy regrouting sydney, waterproof sealing sydney, shower waterproofing, balcony waterproofing sydney`
+- Add `keywords` prop to SEOHead
+- Add internal links to related blog posts after the FAQ (e.g. maintenance tips blog, epoxy grout longevity blog)
+- Add a brief service areas note with link to `/suburbs`
+- Cross-link to shower and balcony service pages in the "Who Is This Plan For?" section descriptions
 
 ---
 
 ### Files to Edit
 
-1. **`src/pages/Index.tsx`** — hero copy, benefits, section headings, new FAQ section, new service areas section, updated stats, SEOHead keywords
-2. **`src/components/ServiceCard.tsx`** — no changes (content is already solid)
-3. **`src/components/TrustPillars.tsx`** — no changes (already strong)
-4. **`src/components/ProcessTimeline.tsx`** — no changes
+1. `src/pages/ShowerRepairs.tsx` — keywords, related guides section, suburb links, "when regrouting isn't enough" section
+2. `src/pages/BalconyRepairs.tsx` — keywords, related guides section, suburb links, "when sealing isn't enough" section
+3. `src/pages/Strata.tsx` — H1 rewrite, remove fake stats, keywords, more FAQs, blog links, suburb links, scenario section
+4. `src/pages/PreventativeMaintenance.tsx` — keywords, blog links, suburb link, cross-links
 
 ### What's Preserved
-- All canonical URLs, schema markup, and existing SEOHead props
-- Design system, layout structure, animations
-- TrustPillars, ProcessTimeline, Testimonials, QuoteForm components
-- Footer, Header, WarrantyBadge components
 
----
+- All existing canonical URLs, meta titles, meta descriptions, schema markup, FAQSchema
+- All existing section content, layout, animations, components
+- Design system, color scheme, component structure
 
-### Summary of SEO/GEO Improvements
+### Post-Implementation Summary
 
-- **Keyword targeting**: H1 and key headings now naturally include "leaking shower repairs sydney," "balcony leak repairs," and "epoxy grout"
-- **FAQ schema**: 6 high-intent questions feed Google featured snippets and LLM answer engines
-- **Internal linking**: New service areas section distributes authority to suburb and service pages
-- **Trust signals**: Removed unverifiable claims (100% success rate, 500+ repairs), replaced with credible specifics
-- **GEO/LLM**: FAQ answers are written as clear, factual statements that LLMs can extract and cite
-- **Local SEO**: Suburb names, "Sydney" mentions, and geographic context woven naturally throughout
-
-### What You Should Add Later
-- **Real hero image**: Replace the placeholder with an actual before/after or job-in-progress photo
-- **Real phone number**: Replace `0400 000 000` placeholder
-- **Google review count**: Once you have real Google reviews, add the count and rating
-- **Real job stats**: Replace generic stats with your actual numbers when available
-- **Before/after gallery**: Would significantly boost trust and conversions
+- **Strongest page**: Shower Repairs (most detailed, best keyword coverage, epoxy comparison section is unique differentiator)
+- **Most improved**: Strata (from weak portal page to proper local SEO landing page)
+- **Supporting content to add next**: Case study / before-after gallery page, real Google review integration, suburb-specific unique content
 
