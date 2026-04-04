@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Shield, Droplets, Clock, Award, CheckCircle2, ArrowRight } from "lucide-react";
+import { Shield, Droplets, Clock, Award, CheckCircle2, ArrowRight, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -11,21 +11,61 @@ import { TrustPillars } from "@/components/TrustPillars";
 import { QuoteForm } from "@/components/QuoteForm";
 import { Testimonials } from "@/components/Testimonials";
 import { SEOHead, LocalBusinessSchema } from "@/components/seo";
+import { FAQSchema } from "@/components/seo/FAQSchema";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const trustPoints = [
-  { icon: Shield, text: "10 Year Warranty" },
-  { icon: Droplets, text: "No Tile Removal" },
-  { icon: Clock, text: "Fast Response Times" },
-  { icon: Award, text: "Premium Epoxy Grouts" },
+  { icon: Shield, text: "10-Year Written Warranty" },
+  { icon: Droplets, text: "No Tile Removal Required" },
+  { icon: Clock, text: "Free On-Site Inspections" },
+  { icon: Award, text: "Premium Epoxy Grout Systems" },
 ];
 
 const benefits = [
-  "Stop leaks without costly re-tiling",
-  "Expert epoxy grout application",
-  "Sydney-wide service coverage",
-  "Transparent, upfront quotes",
-  "Licensed and insured technicians",
-  "Strata and property manager friendly",
+  "Permanent shower leak repairs — no re-tiling needed",
+  "Balcony waterproofing and spalling prevention",
+  "Premium epoxy regrouting across Greater Sydney",
+  "Transparent pricing with no hidden costs",
+  "Strata-approved methods for property managers",
+  "Backed by a 10-year written warranty on every job",
+];
+
+const homepageFaqs = [
+  {
+    question: "How do you fix a leaking shower without removing tiles?",
+    answer: "We remove the existing grout and silicone, then apply a premium two-part epoxy grout system that creates a fully waterproof seal between your tiles. The entire process is completed without removing a single tile, so there is no mess, no demolition, and no re-tiling costs.",
+  },
+  {
+    question: "How much does a leaking shower repair cost in Sydney?",
+    answer: "A standard shower leak repair in Sydney typically ranges from $800 to $1,500 depending on the size of the shower and the severity of the issue. We provide free, no-obligation quotes so you know exactly what to expect before any work begins.",
+  },
+  {
+    question: "What areas in Sydney do you service?",
+    answer: "We service over 50 suburbs across Greater Sydney, including the Eastern Suburbs, North Shore, Inner West, Western Sydney, and the Sutherland Shire. There are no travel fees regardless of your location.",
+  },
+  {
+    question: "Do you offer a warranty on leak repairs?",
+    answer: "Yes. Every shower and balcony leak repair comes with a 10-year written warranty. This covers the materials and workmanship, giving you complete peace of mind that the repair will last.",
+  },
+  {
+    question: "Can you repair a leaking balcony without replacing the membrane?",
+    answer: "In many cases, yes. We use professional-grade epoxy grout and waterproof sealant systems to seal balcony leaks at the surface level. If deeper membrane work is required, we will let you know upfront after our inspection.",
+  },
+  {
+    question: "How long does a shower or balcony leak repair take?",
+    answer: "Most shower repairs are completed in 3 to 6 hours. Balcony repairs may take slightly longer depending on the area. The epoxy grout requires approximately 48 hours to fully cure before the area can be used again.",
+  },
+];
+
+const serviceAreas = [
+  { name: "Bondi", slug: "bondi" },
+  { name: "Parramatta", slug: "parramatta" },
+  { name: "Manly", slug: "manly" },
+  { name: "Chatswood", slug: "chatswood" },
+  { name: "Cronulla", slug: "cronulla" },
+  { name: "Marrickville", slug: "marrickville" },
+  { name: "Randwick", slug: "randwick" },
+  { name: "Mosman", slug: "mosman" },
 ];
 
 export default function Index() {
@@ -35,8 +75,10 @@ export default function Index() {
         title="Leaking Shower & Balcony Repairs Sydney · 10-Year Warranty"
         description="Stop shower and balcony leaks for good. Sydney Sealed uses premium epoxy grout to fix leaks without removing tiles. 10-year warranty. Free quotes across Sydney."
         canonical="https://sydneysealed.com.au/"
+        keywords="leaking shower repairs sydney, shower leak repair, balcony leak repairs sydney, epoxy regrouting sydney, waterproof sealing sydney, shower waterproofing, balcony waterproofing sydney"
       />
       <LocalBusinessSchema />
+      <FAQSchema faqs={homepageFaqs} />
       
       <div className="min-h-screen bg-background">
         <Header />
@@ -60,14 +102,13 @@ export default function Index() {
                 <WarrantyBadge size="lg" className="mb-6" />
                 
                 <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                  Stop Leaks Permanently.{" "}
-                  <span className="gradient-text">Without Re-Tiling.</span>
+                  Leaking Shower & Balcony Repairs Sydney —{" "}
+                  <span className="gradient-text">Fixed Properly, Without Removing Tiles</span>
                 </h1>
                 
                 <p className="text-lg text-muted-foreground mb-8 max-w-xl leading-relaxed">
-                  Sydney's trusted specialists in shower and balcony leak repairs. 
-                  Our premium epoxy grout solutions fix leaks for good — guaranteed 
-                  with a 10-year warranty.
+                  Sydney Sealed specialises in permanent leak repairs using premium epoxy grout systems. 
+                  No tile removal. No unnecessary demolition. Just expert workmanship backed by a 10-year written warranty.
                 </p>
                 
                 {/* Trust Points */}
@@ -130,11 +171,11 @@ export default function Index() {
                 >
                   <div className="flex items-center gap-3">
                     <div className="p-2 rounded-full bg-accent/10">
-                      <Shield className="w-6 h-6 text-accent" />
+                      <MapPin className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <p className="font-heading font-bold text-foreground">500+</p>
-                      <p className="text-xs text-muted-foreground">Repairs Completed</p>
+                      <p className="font-heading font-bold text-foreground">Sydney-Wide</p>
+                      <p className="text-xs text-muted-foreground">Service Coverage</p>
                     </div>
                   </div>
                 </motion.div>
@@ -152,14 +193,15 @@ export default function Index() {
               viewport={{ once: true }}
               className="rounded-xl bg-primary/10 border border-primary/20 p-8 lg:p-12"
             >
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 {[
-                  { value: "500+", label: "Happy Customers" },
-                  { value: "24hr", label: "Response Time" },
-                  { value: "10yr", label: "Warranty" },
+                  { value: "3–6 hrs", label: "Average Repair Time" },
+                  { value: "48 hrs", label: "Full Cure Time" },
+                  { value: "10 yrs", label: "Written Warranty" },
+                  { value: "50+", label: "Sydney Suburbs Serviced" },
                 ].map((stat) => (
                   <div key={stat.label}>
-                    <p className="font-heading text-4xl lg:text-5xl font-bold text-primary mb-2">
+                    <p className="font-heading text-3xl lg:text-4xl font-bold text-primary mb-2">
                       {stat.value}
                     </p>
                     <p className="text-muted-foreground text-sm uppercase tracking-wider">
@@ -182,11 +224,10 @@ export default function Index() {
               className="text-center mb-12"
             >
               <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                Our Repair Services
+                Sydney's Shower & Balcony Leak Repair Specialists
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Specialised leak repair solutions for showers and balconies. 
-                Premium epoxy grouts that stop leaks without removing tiles.
+                We fix leaking showers and balconies across Sydney using proven epoxy grout and waterproofing systems — without removing your tiles.
               </p>
             </motion.div>
             
@@ -247,7 +288,7 @@ export default function Index() {
               className="text-center mb-12"
             >
               <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                How It Works
+                How We Fix Your Leak
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 A simple 4-step process from inspection to completion. 
@@ -329,10 +370,10 @@ export default function Index() {
             >
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 {[
-                  { value: "100%", label: "Success Rate" },
-                  { value: "3-6hrs", label: "Average Job Time" },
-                  { value: "48hr", label: "Full Cure Time" },
-                  { value: "Lifetime", label: "Mould Protection" },
+                  { value: "3–6 hrs", label: "Average Repair Time" },
+                  { value: "48 hrs", label: "Full Cure Time" },
+                  { value: "10 yrs", label: "Written Warranty" },
+                  { value: "50+", label: "Suburbs Serviced" },
                 ].map((stat) => (
                   <div key={stat.label}>
                     <p className="font-heading text-3xl lg:text-4xl font-bold text-primary mb-2">
@@ -358,7 +399,7 @@ export default function Index() {
               className="text-center mb-12"
             >
               <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                What Our Clients Say
+                What Sydney Homeowners Say
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Real reviews from homeowners and property managers across Sydney.
@@ -366,6 +407,109 @@ export default function Index() {
             </motion.div>
             
             <Testimonials />
+          </div>
+        </section>
+
+        {/* Homepage FAQ Section */}
+        <section className="py-16 lg:py-24 bg-muted/30">
+          <div className="section-container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground mb-4">
+                Common Questions About Leak Repairs
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Straight answers to the questions Sydney homeowners ask most.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-3xl mx-auto"
+            >
+              <Accordion type="single" collapsible className="w-full">
+                {homepageFaqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`faq-${index}`}>
+                    <AccordionTrigger className="text-left text-base font-semibold text-foreground">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground leading-relaxed">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Service Areas Section */}
+        <section className="py-16 lg:py-24">
+          <div className="section-container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground mb-4">
+                Leak Repairs Across Greater Sydney
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                We service over 50 suburbs from the Eastern Suburbs to Western Sydney. No travel fees, no matter where you are.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto mb-8"
+            >
+              {serviceAreas.map((area) => (
+                <Link
+                  key={area.slug}
+                  to={`/leaking-shower-repairs/${area.slug}`}
+                  className="flex items-center gap-2 p-3 rounded-lg border border-border bg-card hover:border-secondary/50 hover:bg-secondary/5 transition-colors text-sm font-medium text-foreground"
+                >
+                  <MapPin className="w-4 h-4 text-secondary flex-shrink-0" />
+                  {area.name}
+                </Link>
+              ))}
+            </motion.div>
+
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                to="/suburbs"
+                className="inline-flex items-center gap-2 text-secondary hover:gap-3 transition-all font-medium"
+              >
+                View all service areas <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                to="/services/shower-repairs"
+                className="inline-flex items-center gap-2 text-secondary hover:gap-3 transition-all font-medium"
+              >
+                Shower repairs <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                to="/services/balcony-repairs"
+                className="inline-flex items-center gap-2 text-secondary hover:gap-3 transition-all font-medium"
+              >
+                Balcony repairs <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                to="/guides/complete-guide-leak-repairs-sydney"
+                className="inline-flex items-center gap-2 text-secondary hover:gap-3 transition-all font-medium"
+              >
+                Complete repair guide <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </section>
 
@@ -379,7 +523,7 @@ export default function Index() {
                 viewport={{ once: true }}
               >
                 <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground mb-6">
-                  Get Your Free Quote
+                  Request Your Free Leak Inspection
                 </h2>
                 <p className="text-muted-foreground mb-8">
                   Upload photos of your leak and we'll provide a detailed quote within 24 hours. 
@@ -431,7 +575,7 @@ export default function Index() {
               viewport={{ once: true }}
             >
               <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                Ready to Stop Your Leak?
+                Stop Your Leak — Get a Free Quote Today
               </h2>
               <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
                 Call now for a free consultation or book an inspection online.
