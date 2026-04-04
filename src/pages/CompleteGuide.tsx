@@ -115,7 +115,7 @@ export default function CompleteGuide() {
         description="Professional leaking shower repairs and balcony waterproofing across Sydney. Epoxy regrouting, membrane restoration, tile sealing. 10-year warranty."
       />
       <ReviewSchema
-        ratingValue={4.9}
+        ratingValue={4.8}
         reviewCount={247}
         reviews={[
           { author: "Sarah M.", rating: 5, body: "Fixed our shower leak without removing tiles. Incredible service and clean work.", datePublished: "2024-08-15" },

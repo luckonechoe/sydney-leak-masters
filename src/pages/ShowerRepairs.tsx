@@ -215,7 +215,7 @@ export default function ShowerRepairs() {
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-accent fill-accent" />
                     ))}
-                    <span className="ml-2 text-sm text-muted-foreground">5.0 rating from verified customers</span>
+                    <span className="ml-2 text-sm text-muted-foreground">4.8 rating from verified customers</span>
                   </div>
                 </div>
 
