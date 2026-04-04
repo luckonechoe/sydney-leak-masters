@@ -478,6 +478,112 @@ export default function Strata() {
           </div>
         </section>
 
+        {/* Common Strata Leak Scenarios */}
+        <section className="py-16 lg:py-24">
+          <div className="section-container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground mb-4">
+                Real Strata Leak Scenarios We Handle
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                These are the situations strata managers bring to us most often. Every scenario below is one we've diagnosed and resolved across Sydney.
+              </p>
+            </motion.div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { title: "Unit Above Leaking Into Unit Below", desc: "A shower leak in one unit causes water stains, mould, or paint damage on the ceiling of the unit below. We inspect both units, identify the source, and repair with minimal disruption to both residents." },
+                { title: "Multiple Balconies in One Complex", desc: "Several balconies in the same building showing signs of grout failure, efflorescence, or water ingress. We assess all balconies, prioritise by severity, and schedule staged repairs with volume pricing." },
+                { title: "Common Area Corridor Water Ingress", desc: "Water tracking through corridor floors, stairwell walls, or lift lobbies from adjacent wet areas or roof waterproofing failures. We trace the source and seal the entry point." },
+                { title: "Post-Defect Period Remediation", desc: "Builder's warranty has expired and waterproofing defects are emerging across the complex. We provide independent assessment and remediation without the original builder's involvement." },
+                { title: "Planter Box & Podium Leaks", desc: "Built-in planter boxes on podium levels are a common source of chronic water ingress. Root damage, constant moisture, and failed membranes require specialist repair." },
+                { title: "Pre-Sale Leak Rectification", desc: "An owner needs a leak resolved and documented before settlement. We provide fast-turnaround repairs with full compliance documentation for conveyancing requirements." },
+              ].map((scenario, index) => (
+                <motion.div
+                  key={scenario.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.08 }}
+                  className="p-6 bg-card rounded-lg border border-border"
+                >
+                  <h3 className="font-heading font-bold text-foreground mb-2">{scenario.title}</h3>
+                  <p className="text-sm text-muted-foreground">{scenario.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Related Guides & Suburb Links */}
+        <section className="py-12 lg:py-16 bg-muted/30">
+          <div className="section-container">
+            <div className="max-w-4xl mx-auto space-y-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="font-heading text-2xl font-bold text-foreground mb-6">
+                  Related Guides for Strata Managers
+                </h2>
+                <div className="grid sm:grid-cols-3 gap-4">
+                  <Link to="/blog/strata-waterproofing-guide" className="p-4 bg-card rounded-lg border border-border hover:border-secondary/50 transition-colors group">
+                    <h3 className="font-heading font-bold text-foreground group-hover:text-secondary transition-colors mb-2 text-sm">Strata Waterproofing Guide</h3>
+                    <p className="text-xs text-muted-foreground">Essential waterproofing knowledge for strata managers and committees.</p>
+                  </Link>
+                  <Link to="/blog/concrete-degradation-prevention" className="p-4 bg-card rounded-lg border border-border hover:border-secondary/50 transition-colors group">
+                    <h3 className="font-heading font-bold text-foreground group-hover:text-secondary transition-colors mb-2 text-sm">Concrete Degradation Prevention</h3>
+                    <p className="text-xs text-muted-foreground">How to prevent spalling and protect your building's structural integrity.</p>
+                  </Link>
+                  <Link to="/preventative-maintenance" className="p-4 bg-card rounded-lg border border-border hover:border-secondary/50 transition-colors group">
+                    <h3 className="font-heading font-bold text-foreground group-hover:text-secondary transition-colors mb-2 text-sm">Preventative Maintenance Plans</h3>
+                    <p className="text-xs text-muted-foreground">Annual maintenance programs to protect your complex's waterproofing investment.</p>
+                  </Link>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="flex items-start gap-4 p-6 bg-card rounded-xl border border-border"
+              >
+                <MapPin className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-heading font-bold text-lg text-foreground mb-2">
+                    Strata Services Across Sydney
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    We service strata complexes across all Sydney regions. Our team handles both{" "}
+                    <Link to="/services/shower-repairs" className="text-secondary hover:underline">shower leak repairs</Link> and{" "}
+                    <Link to="/services/balcony-repairs" className="text-secondary hover:underline">balcony waterproofing</Link> for strata properties.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {["bondi", "parramatta", "manly", "chatswood", "newtown", "randwick", "cronulla", "castle-hill"].map((suburb) => (
+                      <Link
+                        key={suburb}
+                        to={`/leaking-shower-repairs/${suburb}`}
+                        className="text-xs px-3 py-1.5 bg-secondary/10 text-secondary rounded-full hover:bg-secondary/20 transition-colors capitalize"
+                      >
+                        {suburb.replace("-", " ")}
+                      </Link>
+                    ))}
+                    <Link to="/suburbs" className="text-xs px-3 py-1.5 bg-muted text-muted-foreground rounded-full hover:bg-muted/80 transition-colors">
+                      View All Suburbs →
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Contact Form Section */}
         <section id="contact-form" className="py-16 lg:py-24">
           <div className="section-container">
