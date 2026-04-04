@@ -108,6 +108,7 @@ export default function Strata() {
         title="Strata Leak Repairs Sydney · Waterproofing for Property Managers"
         description="Specialist leak repair and waterproofing for Sydney strata buildings. Priority scheduling, transparent reporting, and volume pricing for property managers and body corporates."
         canonical="https://sydneysealed.com.au/strata"
+        keywords="strata leak repairs sydney, strata waterproofing, strata building maintenance, body corporate waterproofing, strata plumbing repairs sydney, property manager leak repair"
       />
       <FAQSchema faqs={strataFAQs} />
 
