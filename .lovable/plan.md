@@ -1,89 +1,85 @@
 
 
-## About, Contact & Trust Architecture Improvements
+## Blog & Content Architecture Improvements
 
-### Issues Found
+### Current State
 
-**About page:**
-- "2,500+ Leaks Fixed" and "98% Customer Satisfaction" are unverifiable stats — look fake
-- Testimonials use first-initial surnames (Sarah M., James T.) which feel fabricated
-- Story section is strong but the stats bar undermines credibility
+The blog system is already strong: 20 long-form posts (2,587 lines of content data), each with FAQSchema, Article schema, related posts, internal links to suburb and service pages, and keyword-rich metadata. The BlogPost template renders FAQ accordions, related articles, breadcrumbs, and CTAs. The pillar Complete Guide page (521 lines) anchors the hub.
 
-**Contact page:**
-- H1 is generic ("Contact Us") — wastes keyword opportunity
-- No explanation of what happens after submitting the form
-- No trust reinforcement near the form (warranty, no-obligation)
-- Missing a "What to expect" section explaining the quote process
-
-**Footer / Site-wide:**
-- "ABN: XX XXX XXX XXX" is an obvious placeholder — damages trust immediately
-- Social links point to "#" — looks unfinished
-- Phone number "0400 000 000" is placeholder throughout
+The main gaps are structural — the blog index page itself, category filtering, and cross-linking patterns that would make the content hub more useful for both search engines and LLMs.
 
 ---
 
 ### Changes
 
-#### 1. About Page (`About.tsx`)
+#### 1. Blog Index Page (`Blog.tsx`) — Structural Upgrade
 
-- **Remove stats bar entirely** — the "2,500+ Leaks Fixed" and "98% Customer Satisfaction" numbers are unverifiable and undermine the honest tone. Replace with a simple tagline bar: "Shower & Balcony Leak Repairs · Premium Epoxy Grout · 10-Year Written Warranty · All Sydney Suburbs"
-- **Replace testimonials section** with a "What Our Clients Tell Us" section using the same quotes but reframed as paraphrased feedback (e.g. "Clients regularly tell us...") rather than fake-looking attributed quotes with first-initial names. This is more honest if you don't yet have verified reviews.
-- **Add a "Who We Work With" section** after the values — listing homeowners, strata managers, property managers, and landlords with a brief line for each. Adds relevance and helps LLMs understand the audience.
-- **Add internal links** at the bottom — link to service pages, the complete guide, and the contact page
+- **Add `keywords` prop** to SEOHead: `leaking shower repairs sydney, balcony waterproofing, epoxy grout, shower leak repair guide`
+- **Improve H1** from "Practical Advice for Sydney Homeowners" to "Shower & Balcony Leak Repair Guides — Sydney Sealed" (keyword-richer, still natural)
+- **Add category filter tabs** at the top of the post grid — allow filtering by category (Shower Repairs, Balcony Repairs, Education, Strata, Tips). Uses existing `category` field from blog data. Static tabs, no routing change — just client-side filter.
+- **Add a short intro paragraph** below the hero that summarises what the blog covers and links to the Complete Guide — gives LLMs a clear entity summary to extract
+- **Add a "Topics We Cover" section** after the grid — a brief keyword-rich section listing the core topic areas with links to the best post for each (e.g. "Epoxy Grout" → epoxy-grout-vs-cement-grout, "Balcony Costs" → balcony-waterproofing-cost). Improves crawl depth and GEO entity mapping.
 
-#### 2. Contact Page (`Contact.tsx`)
+#### 2. Blog Post Template (`BlogPost.tsx`) — Minor Enhancements
 
-- **Improve H1** from "Contact Us" to "Request a Free Leak Inspection" — more actionable, includes keyword
-- **Add "What Happens Next" section** below the hero explaining the 3-step process: 1) Submit your details, 2) We review and call you within 24 hours, 3) We arrange a free on-site inspection at a time that suits you
-- **Add trust bar** near the form — "No obligation · No pressure · 10-year warranty on all repairs"
-- **Add a brief "Tips for your enquiry"** note above the form explaining that photos help speed up the quote
-- **Improve submit button text** from "Send Message" to "Request My Free Quote"
+- **Add a "Key Takeaways" summary box** at the top of each article (generated from the first FAQ answers or a new `keyTakeaways` field). This gives LLMs a clear extractable summary and improves user scanning. Rendered as a styled callout box before the first section.
+- **Add a Table of Contents** (auto-generated from section headings) as a sidebar or top box on desktop. Improves scannability, creates anchor links, and gives Google sitelinks potential.
+- **Add `dateModified` to Article schema** using a new optional field (default to `date` if not set)
+- **Improve CTA at bottom** — add a contextual line referencing the article topic (e.g. "Noticed signs of a shower leak?" for shower-related posts) using the post's `category` to select the right CTA copy.
 
-#### 3. Footer (`Footer.tsx`)
+#### 3. Blog Data (`blog-posts.ts`) — Add `keyTakeaways` Field
 
-- **Remove placeholder ABN** — replace with just "© 2026 Sydney Sealed. All rights reserved." until the real ABN is provided
-- **Remove social media links** that point to "#" — they look unfinished and damage trust. Can be re-added when real profiles exist
-- **Make the phone number a real tel: link** (it currently links to /contact instead of the phone number)
+- Add an optional `keyTakeaways: string[]` field to `BlogPostContent` interface
+- Add 3-4 key takeaways to each of the 20 posts — concise, factual statements that LLMs can extract and cite. Example for "Signs of Shower Leak":
+  - "Musty smells, peeling paint, and ceiling stains are early indicators of a hidden shower leak"
+  - "Most shower leaks can be repaired without removing tiles using epoxy regrouting"
+  - "Untreated shower leaks can cause structural damage costing $5,000–$20,000+"
+  - "Professional epoxy grout repairs start from $500–$900 with a 10-year warranty"
 
-#### 4. LocalBusinessSchema (`LocalBusinessSchema.tsx`)
+#### 4. Internal Link Improvements in Blog Content
 
-- **Remove the sameAs array** with fake social URLs until real ones exist
+- **Add cross-links between related posts** within article body content where natural (e.g. the "causes of cracked grout" post should link to "epoxy grout vs cement grout" and "shower membrane repair")
+- **Ensure every post links to at least one service page** and the Complete Guide
+- **Ensure suburb links use the correct SEO routes** (`/leaking-shower-repairs/:suburb` or `/leaking-balcony-repairs/:suburb`)
 
 ---
 
 ### Files to Edit
 
-1. `src/pages/About.tsx` — remove stats bar, reframe testimonials, add "Who We Work With", add internal links
-2. `src/pages/Contact.tsx` — improve H1, add "What Happens Next", add trust bar, improve button text
-3. `src/components/Footer.tsx` — remove placeholder ABN, remove dead social links, fix phone link
-4. `src/components/seo/LocalBusinessSchema.tsx` — remove placeholder sameAs URLs
+1. `src/pages/Blog.tsx` — keywords, H1, category filters, intro paragraph, topics section
+2. `src/pages/BlogPost.tsx` — key takeaways box, table of contents, contextual CTA
+3. `src/data/blog-posts.ts` — add `keyTakeaways` field to interface + all 20 posts, audit internal links
 
 ### What's Preserved
 
-- All SEOHead metadata (titles, descriptions, canonicals, keywords)
-- All schema markup (FAQ, Service, Review, Breadcrumb)
-- AboutPillars component (already strong)
-- Full contact form functionality and validation
+- All existing SEOHead metadata (titles, descriptions, canonicals)
+- All FAQSchema and Article schema markup
+- All existing blog content, sections, FAQs
+- Related posts system
 - Design system, animations, layout
 
 ---
 
 ### Summary
 
-**Trust issues improved:**
-- Removed unverifiable stats (2,500+, 98%)
-- Removed fake-looking testimonial attributions
-- Removed placeholder ABN from footer
-- Removed dead social media links
-- Removed placeholder social URLs from schema
+**What's improved:**
+- Blog index becomes a proper content hub with category filtering and topic mapping
+- Every article gets a scannable key takeaways box (LLM/GEO gold)
+- Table of contents improves time-on-page and sitelinks potential
+- Category-aware CTAs improve conversion relevance
+- Topics section on blog index improves internal linking and entity signals
 
-**Still needs real business info from you:**
-- Real phone number (replacing 0400 000 000)
-- Real ABN
-- Real social media profile URLs (when created)
-- Real Google review data (when available)
-- Real before/after project photos
+**Top 5 pages/posts for strongest SEO impact:**
+1. **Blog index** (`/blog`) — hub page, distributes authority to all posts
+2. **Signs of Shower Leak** — targets highest-volume query cluster
+3. **Epoxy Grout vs Cement Grout** — unique comparison content, high GEO value
+4. **Balcony Waterproofing Cost** — high commercial intent keyword
+5. **Complete Guide** (`/guides/complete-guide-leak-repairs-sydney`) — pillar authority page
 
-**Weakest page after this round:**
-- **About page** — even after improvements, it would benefit from a team photo, real case studies, and verifiable review data. It reads well but still lacks the kind of proof that comes from real business history.
+**New content opportunities to add next:**
+- "Leaking Shower Repair Cost Sydney" dedicated post (highest commercial intent query not yet fully covered as standalone)
+- "Can a Leaking Shower Be Fixed Without Removing Tiles?" (question-format post for featured snippets)
+- "Shower Waterproofing Standards NSW" (regulatory/education post for authority)
+- "Balcony Leak Diagnosis: Step-by-Step" (practical how-to for GEO)
+- Case study / before-after gallery page (visual trust + unique content)
 
