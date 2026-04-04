@@ -54,11 +54,6 @@ export function LocalBusinessSchema({
         closes: "13:00",
       },
     ],
-    sameAs: [
-      "https://www.facebook.com/sydneysealed",
-      "https://www.instagram.com/sydneysealed",
-      "https://www.linkedin.com/company/sydneysealed",
-    ],
   };
 
   return (

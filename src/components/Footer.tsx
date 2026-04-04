@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import logoImg from "@/assets/logo.png";
 import { WarrantyBadge } from "./WarrantyBadge";
 import { PHONE_NUMBER, PHONE_HREF } from "./CTAButton";
@@ -38,11 +38,6 @@ const footerLinks = {
   ],
 };
 
-const socialLinks = [
-  { name: "Facebook", icon: Facebook, href: "#" },
-  { name: "Instagram", icon: Instagram, href: "#" },
-  { name: "LinkedIn", icon: Linkedin, href: "#" },
-];
 
 export function Footer() {
   return (
@@ -72,13 +67,13 @@ export function Footer() {
             
             {/* Contact Info */}
             <div className="space-y-3">
-              <Link 
-                to="/contact"
+              <a 
+                href={PHONE_HREF}
                 className="flex items-center gap-3 text-foreground hover:text-secondary transition-colors"
               >
                 <Phone className="w-4 h-4 text-secondary" />
                 {PHONE_NUMBER}
-              </Link>
+              </a>
               <a 
                 href="mailto:info@sydneysealed.com.au"
                 className="flex items-center gap-3 text-foreground hover:text-secondary transition-colors"
@@ -151,26 +146,8 @@ export function Footer() {
         <div className="section-container py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-muted-foreground text-sm">
-              © {new Date().getFullYear()} Sydney Sealed. All rights reserved. ABN: XX XXX XXX XXX.
+              © {new Date().getFullYear()} Sydney Sealed. All rights reserved.
             </p>
-            
-            {/* Social Links */}
-            <div className="flex items-center gap-4">
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    aria-label={`Follow Sydney Sealed on ${social.name}`}
-                    className="p-2 rounded-lg text-muted-foreground hover:text-secondary hover:bg-secondary/10 transition-colors"
-                    rel="noopener noreferrer"
-                  >
-                    <Icon className="w-5 h-5" />
-                  </a>
-                );
-              })}
-            </div>
           </div>
         </div>
       </div>
