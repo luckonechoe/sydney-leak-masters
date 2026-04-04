@@ -1,93 +1,129 @@
 
 
-## On-Page SEO Metadata Rewrite
+## Homepage SEO, GEO, Trust & Conversion Improvements
 
 ### What's Changing
 
-Rewriting title tags and meta descriptions across all major pages to improve keyword targeting, differentiation, CTR, and local search intent. No layout or content changes — metadata only.
-
-### Current Issues
-
-- Some titles are generic (e.g. "Contact Us | Get a Free Quote", "FAQ | Frequently Asked Questions") — they waste the title tag by not including service/location keywords.
-- Several descriptions are solid but could be tighter and more CTR-focused.
-- Blog post meta is already well-structured and unique — only minor improvements needed.
-- Suburb pages use a template that's decent but produces overly long titles.
+Rewriting and restructuring the homepage content to be stronger for target keywords, local SEO, LLM/GEO discoverability, trust, and conversions — while preserving the existing design system, canonical tags, schema markup, and page structure.
 
 ---
 
-### Updated Title Tags
+### 1. Hero Section Copy Rewrite
 
-| Page | Current Title | New Title |
-|------|--------------|-----------|
-| Homepage | Shower & Balcony Leak Repairs Sydney | Leaking Shower & Balcony Repairs Sydney · 10-Year Warranty |
-| About | About Us – Sydney's Trusted Leak Repair Specialists | About Sydney Sealed · Leak Repair Specialists You Can Trust |
-| Contact | Contact Us \| Get a Free Quote | Get a Free Quote · Sydney Leak Repair Specialists |
-| FAQ | FAQ \| Frequently Asked Questions | Shower & Balcony Leak Repair FAQ · Sydney Sealed |
-| Blog | Blog \| Practical Leak Repair Guides for Sydney Homeowners | Leak Repair Tips & Guides · Sydney Sealed Blog |
-| Shower Repairs | Leaking Shower Repairs Sydney \| Fix Shower Leaks Without Removing Tiles | Leaking Shower Repairs Sydney · No Tile Removal, 10-Year Warranty |
-| Balcony Repairs | Leaking Balcony Repairs Sydney \| Balcony Waterproofing & Sealing | Leaking Balcony Repairs Sydney · Waterproofing & Sealing Specialists |
-| Strata | Strata Leak Repair Services Sydney \| Property Manager Waterproofing Solutions | Strata Leak Repairs Sydney · Waterproofing for Property Managers |
-| Preventative Maintenance | Preventative Maintenance Plan $249/yr \| Sydney Sealed | Preventative Maintenance Plans · Protect Your Waterproofing Investment |
-| Suburbs | Leak Repair Service Areas Sydney \| 50+ Suburbs \| Shower & Balcony Specialists | Leak Repair Service Areas · 50+ Sydney Suburbs Covered |
-| Complete Guide | Complete Guide to Leaking Shower and Balcony Repairs in Sydney | Complete Guide to Shower & Balcony Leak Repairs in Sydney |
-| Terms of Service | Terms of Service \| Sydney Sealed | *(no change — noindex page)* |
+**Current**: "Stop Leaks Permanently. Without Re-Tiling." + generic subheading
 
-**Suburb pages template** — shortened to avoid truncation:
-- Current: `{Service} {Suburb} {Postcode} | Expert {Sealing/Waterproofing} {Region}`
-- New: `{Service} {Suburb} {Postcode} · Sydney Sealed`
+**New**:
+- H1: `Leaking Shower & Balcony Repairs Sydney — Fixed Properly, Without Removing Tiles`
+- Subheading: `Sydney Sealed specialises in permanent leak repairs using premium epoxy grout systems. No tile removal. No unnecessary demolition. Just expert workmanship backed by a 10-year written warranty.`
 
----
+This naturally includes the top target keywords (leaking shower repairs sydney, balcony leak repairs, epoxy) while remaining readable and non-spammy.
 
-### Updated Meta Descriptions
+### 2. Strengthen Trust Points in Hero
 
-| Page | New Description |
-|------|----------------|
-| Homepage | Stop shower and balcony leaks for good. Sydney Sealed uses premium epoxy grout to fix leaks without removing tiles. 10-year warranty. Free quotes across Sydney. |
-| About | Meet the team behind Sydney Sealed. We fix leaking showers and balconies properly the first time — quality workmanship, honest advice, and a 10-year warranty on every job. |
-| Contact | Request a free, no-obligation quote from Sydney Sealed. We respond within 24 hours. Call us or fill out the form — we service all of Greater Sydney. |
-| FAQ | Answers to common questions about leaking shower repairs, balcony waterproofing, pricing, warranties, and how our repair process works across Sydney. |
-| Blog | Practical guides on shower leak repairs, balcony waterproofing, epoxy regrouting, and long-term property maintenance from Sydney's trusted leak repair specialists. |
-| Shower Repairs | Professional leaking shower repairs across Sydney. We fix shower leaks using premium epoxy grout — no tile removal required. Fast response, free inspections, 10-year warranty. |
-| Balcony Repairs | Expert leaking balcony repairs and waterproofing across Sydney. Stop water damage, prevent spalling, and protect your property. Strata approved. 10-year warranty. Free quotes. |
-| Strata | Specialist leak repair and waterproofing for Sydney strata buildings. Priority scheduling, transparent reporting, and volume pricing for property managers and body corporates. |
-| Preventative Maintenance | Keep your waterproofing in top shape with our $249/year maintenance plan. Annual inspections, grout touch-ups, and extended warranty coverage for Sydney homes and strata. |
-| Suburbs | We service 50+ suburbs across Greater Sydney — Eastern Suburbs, North Shore, Inner West, Western Sydney and more. No travel fees. Free quotes. 10-year warranty on all repairs. |
-| Complete Guide | Everything you need to know about fixing leaking showers and balconies in Sydney. Causes, warning signs, repair methods, costs, and how to choose the right specialist. |
+Replace generic trust points with more specific, credible ones:
+- `10-Year Written Warranty` (was just "10 Year Warranty")
+- `No Tile Removal Required` (was "No Tile Removal")
+- `Free On-Site Inspections` (was "Fast Response Times" — more actionable)
+- `Premium Epoxy Grout Systems` (unchanged intent, clearer language)
 
-**Suburb pages template** — tightened:
-- New: `Fix {service type} leaks in {Suburb} ({Postcode}). No tile removal, 10-year warranty, free quotes. Trusted by {Region} homeowners and strata managers.`
+### 3. Benefits List Rewrite
 
----
+Replace generic benefits with keyword-rich, trust-building points:
+- "Permanent shower leak repairs — no re-tiling needed"
+- "Balcony waterproofing and spalling prevention"
+- "Premium epoxy regrouting across Greater Sydney"
+- "Transparent pricing with no hidden costs"
+- "Strata-approved methods for property managers"
+- "Backed by a 10-year written warranty on every job"
 
-### Blog Posts
+### 4. Service Section Copy Improvement
 
-The 20 blog posts already have unique, well-targeted metaTitle and metaDescription values. No changes needed — they are differentiated and keyword-rich.
+Update the services section heading and descriptions:
+- H2: `Sydney's Shower & Balcony Leak Repair Specialists`
+- Subheading: `We fix leaking showers and balconies across Sydney using proven epoxy grout and waterproofing systems — without removing your tiles.`
+
+### 5. Add Homepage FAQ Section (New)
+
+Add a dedicated FAQ section with `FAQSchema` structured data. 6 questions targeting high-intent search queries and LLM/GEO discoverability:
+
+1. **How do you fix a leaking shower without removing tiles?** — explains epoxy grout process
+2. **How much does a leaking shower repair cost in Sydney?** — price range from calculator
+3. **What areas in Sydney do you service?** — mentions key suburbs/regions with internal links
+4. **Do you offer a warranty on leak repairs?** — 10-year written warranty details
+5. **Can you repair a leaking balcony without replacing the membrane?** — balcony service explanation
+6. **How long does a shower or balcony leak repair take?** — 3-6 hours typical timeframe
+
+Each answer will be 2-3 sentences — factual, helpful, concise. This section uses the existing `Accordion` component and `FAQSchema` for structured data.
+
+### 6. Add Internal Linking Section (New)
+
+Add a "Service Areas" section before the final CTA with links to:
+- 6-8 key suburb pages (Bondi, Parramatta, Manly, Chatswood, etc.)
+- Both service pages
+- The complete guide
+- The suburbs index page
+
+This improves crawl depth, distributes link equity, and signals geographic relevance.
+
+### 7. Section Heading Improvements
+
+| Section | Current H2 | New H2 |
+|---------|-----------|--------|
+| Services | Our Repair Services | Sydney's Shower & Balcony Leak Repair Specialists |
+| Trust Pillars | Why Sydney Trusts Us | *(no change — already strong)* |
+| Process | How It Works | How We Fix Your Leak |
+| Benefits | Why Choose Sydney Sealed? | *(no change)* |
+| Testimonials | What Our Clients Say | What Sydney Homeowners Say |
+| Quote Form | Get Your Free Quote | Request Your Free Leak Inspection |
+| Final CTA | Ready to Stop Your Leak? | Stop Your Leak — Get a Free Quote Today |
+
+### 8. Remove "100% Success Rate" Stat
+
+The "Performance Metrics" section claims "100% Success Rate" which sounds like a fake stat. Replace with more credible metrics:
+- `3–6 hrs` / Average Repair Time
+- `48 hrs` / Full Cure Time  
+- `10 yrs` / Written Warranty
+- `50+` / Sydney Suburbs Serviced
+
+### 9. Remove "500+" Floating Badge
+
+The floating hero badge saying "500+ Repairs Completed" is an unverifiable claim. Replace with "Sydney-Wide Service" or remove it.
+
+### 10. Update SEOHead Keywords
+
+Add a `keywords` prop to the homepage SEOHead with target terms:
+`leaking shower repairs sydney, shower leak repair, balcony leak repairs sydney, epoxy regrouting sydney, waterproof sealing sydney, shower waterproofing, balcony waterproofing sydney`
 
 ---
 
 ### Files to Edit
 
-1. `src/pages/Index.tsx` — title + description
-2. `src/pages/About.tsx` — title + description
-3. `src/pages/Contact.tsx` — title + description
-4. `src/pages/FAQ.tsx` — title + description
-5. `src/pages/Blog.tsx` — title + description
-6. `src/pages/ShowerRepairs.tsx` — title + description
-7. `src/pages/BalconyRepairs.tsx` — title + description
-8. `src/pages/Strata.tsx` — title + description
-9. `src/pages/PreventativeMaintenance.tsx` — title + description
-10. `src/pages/Suburbs.tsx` — title + description
-11. `src/pages/CompleteGuide.tsx` — title + description
-12. `src/pages/SuburbPage.tsx` — title + description template
+1. **`src/pages/Index.tsx`** — hero copy, benefits, section headings, new FAQ section, new service areas section, updated stats, SEOHead keywords
+2. **`src/components/ServiceCard.tsx`** — no changes (content is already solid)
+3. **`src/components/TrustPillars.tsx`** — no changes (already strong)
+4. **`src/components/ProcessTimeline.tsx`** — no changes
 
-All existing canonical URLs, keywords props, and schema markup will be preserved exactly as they are.
+### What's Preserved
+- All canonical URLs, schema markup, and existing SEOHead props
+- Design system, layout structure, animations
+- TrustPillars, ProcessTimeline, Testimonials, QuoteForm components
+- Footer, Header, WarrantyBadge components
 
 ---
 
-### Pages That Still Need Custom Copy to Rank Better
+### Summary of SEO/GEO Improvements
 
-- **About page**: Could benefit from more unique body content (currently reads well but is thin for SEO).
-- **Strata page**: Adding case studies or testimonials from strata managers would strengthen ranking potential.
-- **Blog posts**: Consider adding internal links between related posts and to service pages to improve crawl depth.
-- **Suburb pages**: The body content is template-driven — adding 1–2 unique sentences per suburb (local landmarks, common property types) would help differentiate them from each other in Google's eyes.
+- **Keyword targeting**: H1 and key headings now naturally include "leaking shower repairs sydney," "balcony leak repairs," and "epoxy grout"
+- **FAQ schema**: 6 high-intent questions feed Google featured snippets and LLM answer engines
+- **Internal linking**: New service areas section distributes authority to suburb and service pages
+- **Trust signals**: Removed unverifiable claims (100% success rate, 500+ repairs), replaced with credible specifics
+- **GEO/LLM**: FAQ answers are written as clear, factual statements that LLMs can extract and cite
+- **Local SEO**: Suburb names, "Sydney" mentions, and geographic context woven naturally throughout
+
+### What You Should Add Later
+- **Real hero image**: Replace the placeholder with an actual before/after or job-in-progress photo
+- **Real phone number**: Replace `0400 000 000` placeholder
+- **Google review count**: Once you have real Google reviews, add the count and rating
+- **Real job stats**: Replace generic stats with your actual numbers when available
+- **Before/after gallery**: Would significantly boost trust and conversions
 
