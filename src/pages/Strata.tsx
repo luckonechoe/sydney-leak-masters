@@ -177,7 +177,7 @@ export default function Strata() {
                 </div>
               </motion.div>
 
-              {/* Stats */}
+              {/* Trust Points */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -185,20 +185,24 @@ export default function Strata() {
                 className="grid grid-cols-2 gap-4"
               >
                 <div className="p-6 bg-card rounded-lg border border-border">
-                  <div className="text-4xl font-heading font-bold text-secondary mb-2">50+</div>
-                  <p className="text-sm text-muted-foreground">Strata complexes serviced</p>
+                  <Clock className="w-8 h-8 text-secondary mb-3" />
+                  <h3 className="font-heading font-bold text-foreground mb-1">Priority Scheduling</h3>
+                  <p className="text-sm text-muted-foreground">Fast-tracked inspections for strata properties</p>
                 </div>
                 <div className="p-6 bg-card rounded-lg border border-border">
-                  <div className="text-4xl font-heading font-bold text-secondary mb-2">500+</div>
-                  <p className="text-sm text-muted-foreground">Units repaired</p>
+                  <Users className="w-8 h-8 text-secondary mb-3" />
+                  <h3 className="font-heading font-bold text-foreground mb-1">Volume Pricing</h3>
+                  <p className="text-sm text-muted-foreground">Competitive rates for multi-unit complexes</p>
                 </div>
                 <div className="p-6 bg-card rounded-lg border border-border">
-                  <div className="text-4xl font-heading font-bold text-accent mb-2">24hr</div>
-                  <p className="text-sm text-muted-foreground">Quote turnaround</p>
+                  <FileCheck className="w-8 h-8 text-accent mb-3" />
+                  <h3 className="font-heading font-bold text-foreground mb-1">Full Documentation</h3>
+                  <p className="text-sm text-muted-foreground">Reports, photos, and compliance records</p>
                 </div>
                 <div className="p-6 bg-card rounded-lg border border-border">
-                  <div className="text-4xl font-heading font-bold text-accent mb-2">10yr</div>
-                  <p className="text-sm text-muted-foreground">Warranty standard</p>
+                  <Shield className="w-8 h-8 text-accent mb-3" />
+                  <h3 className="font-heading font-bold text-foreground mb-1">10-Year Warranty</h3>
+                  <p className="text-sm text-muted-foreground">Written warranty on every unit repaired</p>
                 </div>
               </motion.div>
             </div>
