@@ -15,7 +15,7 @@ import { SEOHead, LocalBusinessSchema } from "@/components/seo";
 const trustPoints = [
   { icon: Shield, text: "10 Year Warranty" },
   { icon: Droplets, text: "No Tile Removal" },
-  { icon: Clock, text: "Same-Day Service" },
+  { icon: Clock, text: "Fast Response Times" },
   { icon: Award, text: "Premium Epoxy Grouts" },
 ];
 

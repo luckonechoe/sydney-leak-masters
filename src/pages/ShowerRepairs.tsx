@@ -18,7 +18,7 @@ import {
 
 const benefits = [
   "No tile removal required",
-  "Same-day service available",
+  "Fast response times",
   "Premium epoxy grout technology",
   "10-year written warranty",
   "Minimal disruption to your home",
@@ -166,7 +166,7 @@ export default function ShowerRepairs() {
     <>
       <SEOHead
         title="Leaking Shower Repairs Sydney | Fix Shower Leaks Without Removing Tiles"
-        description="Professional leaking shower repairs in Sydney. Expert shower sealing and waterproofing using premium epoxy grout — no tile removal required. Same-day service, 10-year warranty. Book your free inspection today."
+        description="Professional leaking shower repairs in Sydney. Expert shower sealing and waterproofing using premium epoxy grout — no tile removal required. Fast response, 10-year warranty. Book your free inspection today."
       />
       <ServiceSchema
         name="Leaking Shower Repair Service Sydney"
@@ -741,7 +741,7 @@ export default function ShowerRepairs() {
                   We provide professional leaking shower repair and shower sealing services across all Sydney suburbs — from the 
                   Eastern Suburbs to the Hills District, Inner West, North Shore, Western Sydney, and the Northern Beaches. 
                   Whether you're a homeowner, property manager, or real estate agent, we offer fast, reliable bathroom leak repair 
-                  with same-day availability. Browse our{" "}
+                  with fast availability. Browse our{" "}
                   <Link to="/suburbs" className="text-secondary hover:underline">
                     service areas
                   </Link>{" "}

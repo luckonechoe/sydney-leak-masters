@@ -46,7 +46,7 @@ export default function SuburbPage({ serviceType = "shower" }: SuburbPageProps) 
     },
     {
       question: `How quickly can you attend a leak in ${suburbData.name}?`,
-      answer: `We typically schedule inspections in ${suburbData.name} within 24–48 hours. Emergency same-day service is available for active leaks that are causing immediate water damage.`,
+      answer: `We typically schedule inspections in ${suburbData.name} within 24–48 hours. Priority service is available for active leaks that are causing immediate water damage.`,
     },
     {
       question: `Can you fix a leaking ${isShower ? 'shower' : 'balcony'} in ${suburbData.name} without removing tiles?`,
