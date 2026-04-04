@@ -1,79 +1,89 @@
 
 
-## Service Pages SEO & Conversion Improvement Plan
+## About, Contact & Trust Architecture Improvements
 
-### Current Assessment
+### Issues Found
 
-The **Shower Repairs** and **Balcony Repairs** pages are already strong — 800+ and 760+ lines respectively, with symptoms, causes, process, FAQ w/ schema, pricing calculator, epoxy comparison (shower), and service area links. These need targeted improvements, not rewrites.
+**About page:**
+- "2,500+ Leaks Fixed" and "98% Customer Satisfaction" are unverifiable stats — look fake
+- Testimonials use first-initial surnames (Sarah M., James T.) which feel fabricated
+- Story section is strong but the stats bar undermines credibility
 
-The **Strata** page is the weakest — it has unverifiable stats (50+ complexes, 500+ units), a poor H1 ("Strata Manager Portal"), no internal links to blog posts or suburb pages, and no service area section.
+**Contact page:**
+- H1 is generic ("Contact Us") — wastes keyword opportunity
+- No explanation of what happens after submitting the form
+- No trust reinforcement near the form (warranty, no-obligation)
+- Missing a "What to expect" section explaining the quote process
 
-The **Preventative Maintenance** page is solid but lacks internal links to blog content and suburb pages.
+**Footer / Site-wide:**
+- "ABN: XX XXX XXX XXX" is an obvious placeholder — damages trust immediately
+- Social links point to "#" — looks unfinished
+- Phone number "0400 000 000" is placeholder throughout
 
 ---
 
-### Changes by Page
+### Changes
 
-#### 1. Shower Repairs (`ShowerRepairs.tsx`)
+#### 1. About Page (`About.tsx`)
 
-**Minor improvements only — this page is already strong.**
+- **Remove stats bar entirely** — the "2,500+ Leaks Fixed" and "98% Customer Satisfaction" numbers are unverifiable and undermine the honest tone. Replace with a simple tagline bar: "Shower & Balcony Leak Repairs · Premium Epoxy Grout · 10-Year Written Warranty · All Sydney Suburbs"
+- **Replace testimonials section** with a "What Our Clients Tell Us" section using the same quotes but reframed as paraphrased feedback (e.g. "Clients regularly tell us...") rather than fake-looking attributed quotes with first-initial names. This is more honest if you don't yet have verified reviews.
+- **Add a "Who We Work With" section** after the values — listing homeowners, strata managers, property managers, and landlords with a brief line for each. Adds relevance and helps LLMs understand the audience.
+- **Add internal links** at the bottom — link to service pages, the complete guide, and the contact page
 
-- Add `keywords` prop to SEOHead with target terms
-- Add internal links to 2-3 relevant blog posts in a new "Related Guides" callout after the FAQ section (e.g. epoxy vs cement blog, signs of a leaking shower blog)
-- Add suburb quick-links section (6-8 key suburbs like Bondi, Parramatta, Manly) similar to what was done on the homepage — linking to `/leaking-shower-repairs/:suburb`
-- Add a "When Epoxy Regrouting Isn't Enough" short section after the process section — explaining when tile removal or full renovation may be needed (honesty = trust signal, also targets related queries)
-- Cross-link to the Complete Guide page
+#### 2. Contact Page (`Contact.tsx`)
 
-#### 2. Balcony Repairs (`BalconyRepairs.tsx`)
+- **Improve H1** from "Contact Us" to "Request a Free Leak Inspection" — more actionable, includes keyword
+- **Add "What Happens Next" section** below the hero explaining the 3-step process: 1) Submit your details, 2) We review and call you within 24 hours, 3) We arrange a free on-site inspection at a time that suits you
+- **Add trust bar** near the form — "No obligation · No pressure · 10-year warranty on all repairs"
+- **Add a brief "Tips for your enquiry"** note above the form explaining that photos help speed up the quote
+- **Improve submit button text** from "Send Message" to "Request My Free Quote"
 
-**Minor improvements only.**
+#### 3. Footer (`Footer.tsx`)
 
-- Add `keywords` prop to SEOHead
-- Add internal links to relevant blog posts (balcony spalling blog, strata waterproofing blog)
-- Add suburb quick-links section for balcony-specific suburb pages
-- Add a "When Sealing Isn't Enough" section — explaining when full membrane replacement is needed (same trust/honesty pattern)
-- Cross-link to strata page and Complete Guide
+- **Remove placeholder ABN** — replace with just "© 2026 Sydney Sealed. All rights reserved." until the real ABN is provided
+- **Remove social media links** that point to "#" — they look unfinished and damage trust. Can be re-added when real profiles exist
+- **Make the phone number a real tel: link** (it currently links to /contact instead of the phone number)
 
-#### 3. Strata (`Strata.tsx`)
+#### 4. LocalBusinessSchema (`LocalBusinessSchema.tsx`)
 
-**Most significant improvements — this is the weakest page.**
-
-- Rewrite H1 from "Strata Manager Portal" to "Strata Leak Repairs & Waterproofing Sydney"
-- Replace unverifiable hero stats (50+ complexes, 500+ units) with credible non-numeric trust points (e.g. "Priority Scheduling", "Volume Pricing", "Full Documentation", "10-Year Warranty")
-- Add `keywords` prop to SEOHead
-- Add a "Common Strata Leak Scenarios" section with practical, experience-based descriptions of real situations (e.g. "Unit above leaking into unit below", "Multiple balconies in one complex", "Common area corridor water ingress")
-- Add internal links to blog posts relevant to strata (strata waterproofing blog, balcony spalling blog)
-- Add service areas section with suburb links
-- Add 2 more FAQs: "How quickly can you attend an urgent strata leak?" and "Can you coordinate repairs across multiple buildings?"
-- Cross-link to both service pages and preventative maintenance
-
-#### 4. Preventative Maintenance (`PreventativeMaintenance.tsx`)
-
-**Minor improvements.**
-
-- Add `keywords` prop to SEOHead
-- Add internal links to related blog posts after the FAQ (e.g. maintenance tips blog, epoxy grout longevity blog)
-- Add a brief service areas note with link to `/suburbs`
-- Cross-link to shower and balcony service pages in the "Who Is This Plan For?" section descriptions
+- **Remove the sameAs array** with fake social URLs until real ones exist
 
 ---
 
 ### Files to Edit
 
-1. `src/pages/ShowerRepairs.tsx` — keywords, related guides section, suburb links, "when regrouting isn't enough" section
-2. `src/pages/BalconyRepairs.tsx` — keywords, related guides section, suburb links, "when sealing isn't enough" section
-3. `src/pages/Strata.tsx` — H1 rewrite, remove fake stats, keywords, more FAQs, blog links, suburb links, scenario section
-4. `src/pages/PreventativeMaintenance.tsx` — keywords, blog links, suburb link, cross-links
+1. `src/pages/About.tsx` — remove stats bar, reframe testimonials, add "Who We Work With", add internal links
+2. `src/pages/Contact.tsx` — improve H1, add "What Happens Next", add trust bar, improve button text
+3. `src/components/Footer.tsx` — remove placeholder ABN, remove dead social links, fix phone link
+4. `src/components/seo/LocalBusinessSchema.tsx` — remove placeholder sameAs URLs
 
 ### What's Preserved
 
-- All existing canonical URLs, meta titles, meta descriptions, schema markup, FAQSchema
-- All existing section content, layout, animations, components
-- Design system, color scheme, component structure
+- All SEOHead metadata (titles, descriptions, canonicals, keywords)
+- All schema markup (FAQ, Service, Review, Breadcrumb)
+- AboutPillars component (already strong)
+- Full contact form functionality and validation
+- Design system, animations, layout
 
-### Post-Implementation Summary
+---
 
-- **Strongest page**: Shower Repairs (most detailed, best keyword coverage, epoxy comparison section is unique differentiator)
-- **Most improved**: Strata (from weak portal page to proper local SEO landing page)
-- **Supporting content to add next**: Case study / before-after gallery page, real Google review integration, suburb-specific unique content
+### Summary
+
+**Trust issues improved:**
+- Removed unverifiable stats (2,500+, 98%)
+- Removed fake-looking testimonial attributions
+- Removed placeholder ABN from footer
+- Removed dead social media links
+- Removed placeholder social URLs from schema
+
+**Still needs real business info from you:**
+- Real phone number (replacing 0400 000 000)
+- Real ABN
+- Real social media profile URLs (when created)
+- Real Google review data (when available)
+- Real before/after project photos
+
+**Weakest page after this round:**
+- **About page** — even after improvements, it would benefit from a team photo, real case studies, and verifiable review data. It reads well but still lacks the kind of proof that comes from real business history.
 
