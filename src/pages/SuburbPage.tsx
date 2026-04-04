@@ -28,7 +28,7 @@ export default function SuburbPage({ serviceType = "shower" }: SuburbPageProps) 
   const altServiceSlug = isShower ? "leaking-balcony-repairs" : "leaking-shower-repairs";
   const altServiceLabel = isShower ? "Balcony Repairs" : "Shower Repairs";
   const ServiceIcon = isShower ? Droplets : Building2;
-  const canonicalUrl = `https://sydneyleakrepairspro.com.au/${serviceSlug}/${suburbData.slug}`;
+  const canonicalUrl = `https://sydneysealed.com.au/${serviceSlug}/${suburbData.slug}`;
 
   // Get nearby suburbs for internal linking (same region, max 4)
   const nearbySuburbs = sydneySuburbs
@@ -72,7 +72,7 @@ export default function SuburbPage({ serviceType = "shower" }: SuburbPageProps) 
         description={seoDescription}
         canonical={canonicalUrl}
         keywords={seoKeywords}
-        imageAlt={`${serviceLabel} in ${suburbData.name} ${suburbData.postcode} - Sydney Leak Repairs Pro`}
+        imageAlt={`${serviceLabel} in ${suburbData.name} ${suburbData.postcode} - Sydney Sealed`}
       />
       <ServiceSchema
         name={`${serviceLabel} - ${suburbData.name} ${suburbData.postcode}`}

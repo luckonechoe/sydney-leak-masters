@@ -13,7 +13,7 @@ interface SEOHeadProps {
   noindex?: boolean;
 }
 
-const SITE_URL = "https://sydneyleakrepairspro.com.au";
+const SITE_URL = "https://sydneysealed.com.au";
 
 export function SEOHead({ 
   title, 
@@ -21,13 +21,13 @@ export function SEOHead({
   canonical,
   type = "website",
   image = "/og-image.jpg",
-  imageAlt = "Sydney Leak Repairs Pro - Professional shower and balcony leak repair specialists",
+  imageAlt = "Sydney Sealed - Professional shower and balcony leak repair specialists",
   publishedDate,
   modifiedDate,
   keywords,
   noindex = false,
 }: SEOHeadProps) {
-  const siteName = "Sydney Leak Repairs Pro";
+  const siteName = "Sydney Sealed";
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullImage = image.startsWith("http") ? image : `${SITE_URL}${image}`;
   const canonicalUrl = canonical || (typeof window !== "undefined" ? `${SITE_URL}${window.location.pathname}` : undefined);
@@ -62,7 +62,7 @@ export function SEOHead({
       {/* Article specific */}
       {publishedDate && <meta property="article:published_time" content={publishedDate} />}
       {modifiedDate && <meta property="article:modified_time" content={modifiedDate} />}
-      {type === "article" && <meta property="article:author" content="Sydney Leak Repairs Pro" />}
+      {type === "article" && <meta property="article:author" content="Sydney Sealed" />}
       {type === "article" && <meta property="article:section" content="Home Improvement" />}
       
       {/* Twitter */}

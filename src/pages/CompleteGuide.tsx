@@ -107,7 +107,7 @@ export default function CompleteGuide() {
       <SEOHead
         title="Complete Guide to Leaking Shower and Balcony Repairs in Sydney"
         description="Expert guide to shower leak repair, balcony waterproofing, epoxy regrouting, and tile sealing in Sydney. Learn causes, warning signs, repair methods, and prevention. 10-year warranty."
-        canonical="https://sydneyleakrepairspro.com.au/guides/complete-guide-leak-repairs-sydney"
+        canonical="https://sydneysealed.com.au/guides/complete-guide-leak-repairs-sydney"
       />
       <FAQSchema faqs={pillarFaqs} />
       <ServiceSchema

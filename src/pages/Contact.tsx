@@ -196,7 +196,7 @@ export default function Contact() {
     <>
       <SEOHead
         title="Contact Us | Get a Free Quote"
-        description="Contact Sydney Leak Repairs Pro for a free quote. Call us or fill out our contact form. Sydney-wide service with 24-hour response."
+        description="Contact Sydney Sealed for a free quote. Call us or fill out our contact form. Sydney-wide service with 24-hour response."
       />
 
       <div className="min-h-screen bg-background">
@@ -260,7 +260,7 @@ export default function Contact() {
                   </a>
 
                   <a
-                    href="mailto:info@sydneyleakrepairspro.com.au"
+                    href="mailto:info@sydneysealed.com.au"
                     className="flex items-start gap-4 p-4 bg-card rounded-lg border border-border hover:border-secondary/50 transition-colors"
                   >
                     <div className="p-3 rounded-lg bg-secondary/10">
@@ -270,7 +270,7 @@ export default function Contact() {
                       <h3 className="font-heading font-bold text-foreground mb-1">
                         Email
                       </h3>
-                      <p className="text-secondary font-medium">info@sydneyleakrepairspro.com.au</p>
+                      <p className="text-secondary font-medium">info@sydneysealed.com.au</p>
                       <p className="text-sm text-muted-foreground">We respond within 24 hours</p>
                     </div>
                   </a>

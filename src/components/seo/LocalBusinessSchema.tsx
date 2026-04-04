@@ -8,17 +8,17 @@ interface LocalBusinessSchemaProps {
 }
 
 export function LocalBusinessSchema({
-  name = "Sydney Leak Repairs Pro",
+  name = "Sydney Sealed",
   description = "Sydney's trusted specialists in shower and balcony leak repairs. Premium epoxy grout solutions with a 10-year warranty.",
   telephone = "+61400000000",
-  email = "info@sydneyleakrepairspro.com.au",
+  email = "info@sydneysealed.com.au",
   areaServed = "Sydney, NSW, Australia",
   priceRange = "$$",
 }: LocalBusinessSchemaProps) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://sydneyleakrepairspro.com.au",
+    "@id": "https://sydneysealed.com.au",
     name,
     description,
     telephone,
@@ -28,7 +28,7 @@ export function LocalBusinessSchema({
       name: areaServed,
     },
     priceRange,
-    image: "https://sydneyleakrepairspro.com.au/og-image.jpg",
+    image: "https://sydneysealed.com.au/og-image.jpg",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Sydney",
@@ -55,9 +55,9 @@ export function LocalBusinessSchema({
       },
     ],
     sameAs: [
-      "https://www.facebook.com/sydneyleakrepairspro",
-      "https://www.instagram.com/sydneyleakrepairspro",
-      "https://www.linkedin.com/company/sydneyleakrepairspro",
+      "https://www.facebook.com/sydneysealed",
+      "https://www.instagram.com/sydneysealed",
+      "https://www.linkedin.com/company/sydneysealed",
     ],
   };
 

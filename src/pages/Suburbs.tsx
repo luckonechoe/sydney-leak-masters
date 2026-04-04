@@ -73,7 +73,7 @@ export default function Suburbs() {
       <SEOHead
         title="Leak Repair Service Areas Sydney | 50+ Suburbs | Shower & Balcony Specialists"
         description="Professional leaking shower repairs and balcony waterproofing across 50+ Sydney suburbs. Eastern Suburbs, North Shore, Inner West, Western Sydney & more. 10-year warranty, free quotes, no travel fees."
-        canonical="https://sydneyleakrepairspro.com.au/suburbs"
+        canonical="https://sydneysealed.com.au/suburbs"
         keywords="leak repair Sydney suburbs, shower repairs near me, balcony repairs Sydney, waterproofing Sydney, epoxy grout Sydney suburbs, local leak repair specialist"
       />
       <FAQSchema faqs={serviceAreaFAQs} />
@@ -256,7 +256,7 @@ export default function Suburbs() {
                 and local environmental conditions. That's why{" "}
                 <Link to="/strata" className="text-secondary hover:underline">strata managers</Link>{" "}
                 across the North Shore, Hills District, and Inner West
-                consistently choose Sydney Leak Repairs Pro for their buildings.
+                consistently choose Sydney Sealed for their buildings.
               </p>
 
               <h3 className="font-heading text-xl font-bold text-foreground mt-8 mb-4">
