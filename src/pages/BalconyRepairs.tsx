@@ -657,32 +657,114 @@ export default function BalconyRepairs() {
           </div>
         </section>
 
-        {/* Service Areas */}
+        {/* When Sealing Isn't Enough */}
+        <section className="py-16 lg:py-24">
+          <div className="section-container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-3xl mx-auto"
+            >
+              <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground mb-6 text-center">
+                When Sealing Isn't Enough
+              </h2>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Epoxy regrouting and perimeter sealing resolve the majority of balcony leaks — but some situations require more extensive work. We'll always tell you upfront:
+              </p>
+              <ul className="space-y-4 mb-8">
+                {[
+                  { title: "Complete membrane failure", desc: "If the membrane beneath tiles has fully delaminated or degraded, tile removal and full re-waterproofing is necessary for a lasting repair." },
+                  { title: "Active concrete spalling", desc: "When steel reinforcement is already corroding and concrete is cracking away, structural concrete remediation must be completed before any waterproofing." },
+                  { title: "Inadequate falls or drainage", desc: "If water pools due to incorrect slope, the surface may need to be re-levelled — regrouting alone won't fix a drainage problem." },
+                  { title: "Extensive tile damage", desc: "Badly cracked, broken, or displaced tiles can't be sealed effectively. Replacement is needed before waterproofing can be restored." },
+                ].map((item) => (
+                  <li key={item.title} className="flex items-start gap-3">
+                    <AlertTriangle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                    <div>
+                      <strong className="text-foreground">{item.title}:</strong>{" "}
+                      <span className="text-muted-foreground">{item.desc}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-muted-foreground leading-relaxed">
+                Our inspection identifies exactly what's needed. We'd rather recommend the right repair than apply a fix that won't last. For more detail, read our{" "}
+                <Link to="/complete-guide" className="text-secondary hover:underline">
+                  complete guide to leak repairs
+                </Link>{" "}
+                or learn about our{" "}
+                <Link to="/strata" className="text-secondary hover:underline">
+                  strata services
+                </Link>.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Related Guides */}
+        <section className="py-12 lg:py-16 bg-muted/30">
+          <div className="section-container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="font-heading text-2xl font-bold text-foreground mb-6">
+                Related Guides & Resources
+              </h2>
+              <div className="grid sm:grid-cols-3 gap-4">
+                <Link to="/blog/how-to-fix-leaking-balcony-tiles" className="p-4 bg-card rounded-lg border border-border hover:border-secondary/50 transition-colors group">
+                  <h3 className="font-heading font-bold text-foreground group-hover:text-secondary transition-colors mb-2 text-sm">How to Fix Leaking Balcony Tiles</h3>
+                  <p className="text-xs text-muted-foreground">Professional methods for repairing balcony tile leaks without demolition.</p>
+                </Link>
+                <Link to="/blog/concrete-degradation-prevention" className="p-4 bg-card rounded-lg border border-border hover:border-secondary/50 transition-colors group">
+                  <h3 className="font-heading font-bold text-foreground group-hover:text-secondary transition-colors mb-2 text-sm">Concrete Degradation & Spalling Prevention</h3>
+                  <p className="text-xs text-muted-foreground">How waterproofing prevents costly concrete damage in Sydney buildings.</p>
+                </Link>
+                <Link to="/blog/strata-waterproofing-guide" className="p-4 bg-card rounded-lg border border-border hover:border-secondary/50 transition-colors group">
+                  <h3 className="font-heading font-bold text-foreground group-hover:text-secondary transition-colors mb-2 text-sm">Strata Waterproofing Guide</h3>
+                  <p className="text-xs text-muted-foreground">What strata managers need to know about balcony and common area waterproofing.</p>
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Suburb Quick Links */}
         <section className="py-12 lg:py-16">
           <div className="section-container">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="flex items-start gap-4 p-6 bg-card rounded-xl border border-border"
             >
-              <MapPin className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
-              <div>
-                <h2 className="font-heading font-bold text-lg text-foreground mb-2">
-                  Leaking Balcony Repairs Across Sydney
-                </h2>
-                <p className="text-sm text-muted-foreground">
-                  We provide professional leaking balcony repair and balcony waterproofing services across 
-                  all Sydney suburbs — from the Eastern Suburbs and Northern Beaches to the Inner West, North Shore, 
-                  Hills District, and Western Sydney. Whether you're a homeowner, property manager, builder, or{" "}
-                  <Link to="/strata" className="text-secondary hover:underline">
-                    strata manager
-                  </Link>, we offer fast, reliable balcony sealing with prompt availability. Browse our{" "}
-                  <Link to="/suburbs" className="text-secondary hover:underline">
-                    service areas
-                  </Link>{" "}
-                  or call us directly for a free inspection.
-                </p>
+              <div className="flex items-start gap-4 p-6 bg-card rounded-xl border border-border">
+                <MapPin className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
+                <div>
+                  <h2 className="font-heading font-bold text-lg text-foreground mb-2">
+                    Leaking Balcony Repairs Across Sydney
+                  </h2>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    We provide professional leaking balcony repair and balcony waterproofing services across all Sydney suburbs. Whether you're a homeowner, builder, or{" "}
+                    <Link to="/strata" className="text-secondary hover:underline">strata manager</Link>, we offer prompt, reliable balcony sealing.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {["bondi", "parramatta", "manly", "chatswood", "newtown", "randwick", "cronulla", "castle-hill"].map((suburb) => (
+                      <Link
+                        key={suburb}
+                        to={`/leaking-balcony-repairs/${suburb}`}
+                        className="text-xs px-3 py-1.5 bg-secondary/10 text-secondary rounded-full hover:bg-secondary/20 transition-colors capitalize"
+                      >
+                        {suburb.replace("-", " ")}
+                      </Link>
+                    ))}
+                    <Link to="/suburbs" className="text-xs px-3 py-1.5 bg-muted text-muted-foreground rounded-full hover:bg-muted/80 transition-colors">
+                      View All Suburbs →
+                    </Link>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>

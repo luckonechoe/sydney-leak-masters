@@ -725,30 +725,110 @@ export default function ShowerRepairs() {
           </div>
         </section>
 
-        {/* Areas We Service */}
+        {/* When Epoxy Regrouting Isn't Enough */}
+        <section className="py-16 lg:py-24">
+          <div className="section-container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-3xl mx-auto"
+            >
+              <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground mb-6 text-center">
+                When Epoxy Regrouting Isn't Enough
+              </h2>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                We believe in honest assessments. Epoxy regrouting is a highly effective solution for most leaking showers — but it's not the right fix for every situation. Here's when a more extensive repair may be needed:
+              </p>
+              <ul className="space-y-4 mb-8">
+                {[
+                  { title: "Severely cracked or drummy tiles", desc: "If multiple tiles are cracked, loose, or hollow-sounding, the substrate beneath may be water-damaged. Regrouting alone won't address the underlying problem." },
+                  { title: "Complete membrane failure", desc: "When water has been leaking for an extended period, the original waterproof membrane may have completely failed. In these cases, tile removal and full re-waterproofing is the only lasting solution." },
+                  { title: "Structural timber rot", desc: "If water has reached the timber framing and caused rot, the structural damage needs to be addressed before any waterproofing work can begin." },
+                  { title: "Shower hob or tray damage", desc: "A cracked shower base or damaged hob can't be fixed with regrouting. These require replacement to ensure a proper waterproof seal." },
+                ].map((item) => (
+                  <li key={item.title} className="flex items-start gap-3">
+                    <AlertTriangle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                    <div>
+                      <strong className="text-foreground">{item.title}:</strong>{" "}
+                      <span className="text-muted-foreground">{item.desc}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-muted-foreground leading-relaxed">
+                During every inspection, we'll tell you honestly whether epoxy regrouting will solve your problem or whether more extensive work is required. We'd rather recommend the right solution upfront than have you pay for a repair that won't last. Read our{" "}
+                <Link to="/complete-guide" className="text-secondary hover:underline">
+                  complete guide to shower and balcony leak repairs
+                </Link>{" "}
+                for more detail on repair options.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Related Guides */}
+        <section className="py-12 lg:py-16 bg-muted/30">
+          <div className="section-container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="font-heading text-2xl font-bold text-foreground mb-6">
+                Related Guides & Resources
+              </h2>
+              <div className="grid sm:grid-cols-3 gap-4">
+                <Link to="/blog/signs-of-shower-leak" className="p-4 bg-card rounded-lg border border-border hover:border-secondary/50 transition-colors group">
+                  <h3 className="font-heading font-bold text-foreground group-hover:text-secondary transition-colors mb-2 text-sm">5 Warning Signs Your Shower Is Leaking</h3>
+                  <p className="text-xs text-muted-foreground">How to spot early leak symptoms before they cause serious damage.</p>
+                </Link>
+                <Link to="/blog/epoxy-grout-vs-cement-grout" className="p-4 bg-card rounded-lg border border-border hover:border-secondary/50 transition-colors group">
+                  <h3 className="font-heading font-bold text-foreground group-hover:text-secondary transition-colors mb-2 text-sm">Epoxy Grout vs Cement Grout</h3>
+                  <p className="text-xs text-muted-foreground">Why epoxy grout outperforms traditional cement grout in wet areas.</p>
+                </Link>
+                <Link to="/blog/shower-waterproofing-sydney" className="p-4 bg-card rounded-lg border border-border hover:border-secondary/50 transition-colors group">
+                  <h3 className="font-heading font-bold text-foreground group-hover:text-secondary transition-colors mb-2 text-sm">Shower Waterproofing in Sydney</h3>
+                  <p className="text-xs text-muted-foreground">Everything Sydney homeowners need to know about shower waterproofing.</p>
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Suburb Quick Links */}
         <section className="py-12 lg:py-16">
           <div className="section-container">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="flex items-start gap-4 p-6 bg-card rounded-xl border border-border"
             >
-              <MapPin className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
-              <div>
-                <h2 className="font-heading font-bold text-lg text-foreground mb-2">
-                  Leaking Shower Repairs Across Sydney
-                </h2>
-                <p className="text-sm text-muted-foreground">
-                  We provide professional leaking shower repair and shower sealing services across all Sydney suburbs — from the 
-                  Eastern Suburbs to the Hills District, Inner West, North Shore, Western Sydney, and the Northern Beaches. 
-                  Whether you're a homeowner, property manager, or real estate agent, we offer fast, reliable bathroom leak repair 
-                  with fast availability. Browse our{" "}
-                  <Link to="/suburbs" className="text-secondary hover:underline">
-                    service areas
-                  </Link>{" "}
-                  to find your local suburb page, or call us directly for a free inspection.
-                </p>
+              <div className="flex items-start gap-4 p-6 bg-card rounded-xl border border-border mb-6">
+                <MapPin className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
+                <div>
+                  <h2 className="font-heading font-bold text-lg text-foreground mb-2">
+                    Leaking Shower Repairs Across Sydney
+                  </h2>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    We provide professional leaking shower repair and shower sealing services across all Sydney suburbs. Whether you're a homeowner, property manager, or real estate agent, we offer fast, reliable bathroom leak repair with prompt availability.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {["bondi", "parramatta", "manly", "chatswood", "newtown", "randwick", "cronulla", "castle-hill"].map((suburb) => (
+                      <Link
+                        key={suburb}
+                        to={`/leaking-shower-repairs/${suburb}`}
+                        className="text-xs px-3 py-1.5 bg-secondary/10 text-secondary rounded-full hover:bg-secondary/20 transition-colors capitalize"
+                      >
+                        {suburb.replace("-", " ")}
+                      </Link>
+                    ))}
+                    <Link to="/suburbs" className="text-xs px-3 py-1.5 bg-muted text-muted-foreground rounded-full hover:bg-muted/80 transition-colors">
+                      View All Suburbs →
+                    </Link>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>

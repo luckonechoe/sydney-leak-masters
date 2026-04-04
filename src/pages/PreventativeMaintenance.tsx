@@ -497,6 +497,36 @@ export default function PreventativeMaintenance() {
           </div>
         </section>
 
+        {/* Related Guides & Service Link */}
+        <section className="py-12 lg:py-16 bg-muted/30">
+          <div className="section-container">
+            <div className="max-w-4xl mx-auto space-y-6">
+              <h2 className="font-heading text-2xl font-bold text-foreground">
+                Related Guides
+              </h2>
+              <div className="grid sm:grid-cols-3 gap-4">
+                <Link to="/blog/epoxy-regrouting-guide" className="p-4 bg-card rounded-lg border border-border hover:border-secondary/50 transition-colors group">
+                  <h3 className="font-heading font-bold text-foreground group-hover:text-secondary transition-colors mb-2 text-sm">Epoxy Regrouting Guide</h3>
+                  <p className="text-xs text-muted-foreground">How epoxy regrouting works and why it lasts longer than cement grout.</p>
+                </Link>
+                <Link to="/blog/causes-of-cracked-grout" className="p-4 bg-card rounded-lg border border-border hover:border-secondary/50 transition-colors group">
+                  <h3 className="font-heading font-bold text-foreground group-hover:text-secondary transition-colors mb-2 text-sm">Causes of Cracked Grout</h3>
+                  <p className="text-xs text-muted-foreground">Why grout fails and what you can do to prevent it.</p>
+                </Link>
+                <Link to="/blog/signs-of-shower-leak" className="p-4 bg-card rounded-lg border border-border hover:border-secondary/50 transition-colors group">
+                  <h3 className="font-heading font-bold text-foreground group-hover:text-secondary transition-colors mb-2 text-sm">5 Signs Your Shower Is Leaking</h3>
+                  <p className="text-xs text-muted-foreground">Spot early warning signs before they become expensive problems.</p>
+                </Link>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                We service homeowners across all Sydney suburbs. Browse our{" "}
+                <Link to="/suburbs" className="text-secondary hover:underline">service areas</Link>{" "}
+                to find your local suburb page.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Enrol CTA / Quote Form */}
         <section id="enrol" className="py-16 lg:py-24 bg-muted/30">
           <div className="section-container">

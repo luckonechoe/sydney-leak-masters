@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Building, Users, FileCheck, Clock, Shield, Phone, Mail, Check, Droplets, AlertTriangle, Scale } from "lucide-react";
+import { Building, Users, FileCheck, Clock, Shield, Phone, Mail, Check, Droplets, AlertTriangle, Scale, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
