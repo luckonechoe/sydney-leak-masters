@@ -151,7 +151,7 @@ export function Footer() {
         <div className="section-container py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-muted-foreground text-sm">
-              © {new Date().getFullYear()} Sydney Sealed. All rights reserved. ABN: XX XXX XXX XXX. Licensed waterproofing contractor.
+              © {new Date().getFullYear()} Sydney Sealed. All rights reserved. ABN: XX XXX XXX XXX.
             </p>
             
             {/* Social Links */}

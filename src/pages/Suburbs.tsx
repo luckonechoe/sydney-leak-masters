@@ -113,7 +113,7 @@ export default function Suburbs() {
                 Greater Sydney, from the harbour to the Blue Mountains
                 foothills. Every job comes with our{" "}
                 <strong className="text-foreground">10-year warranty</strong> and
-                is completed by licensed waterproofing specialists who
+                is completed by experienced waterproofing specialists who
                 understand your local area.
               </p>
 
