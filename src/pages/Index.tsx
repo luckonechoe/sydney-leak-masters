@@ -34,6 +34,7 @@ export default function Index() {
       <SEOHead
         title="Shower & Balcony Leak Repairs Sydney"
         description="Sydney's trusted leak repair specialists. Stop shower and balcony leaks permanently with premium epoxy grout solutions. 10-year warranty. Free quotes."
+        canonical="https://sydneysealed.com.au/"
       />
       <LocalBusinessSchema />
       

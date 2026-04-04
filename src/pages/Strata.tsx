@@ -99,6 +99,7 @@ export default function Strata() {
       <SEOHead
         title="Strata Leak Repair Services Sydney | Property Manager Waterproofing Solutions"
         description="Dedicated leak repair and waterproofing for strata managers across Sydney. Priority scheduling, volume pricing, compliant documentation. Shower and balcony specialists."
+        canonical="https://sydneysealed.com.au/strata"
       />
       <FAQSchema faqs={strataFAQs} />
 
