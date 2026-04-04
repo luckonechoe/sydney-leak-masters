@@ -67,13 +67,13 @@ export function Footer() {
             
             {/* Contact Info */}
             <div className="space-y-3">
-              <Link 
-                to="/contact"
+              <a 
+                href={PHONE_HREF}
                 className="flex items-center gap-3 text-foreground hover:text-secondary transition-colors"
               >
                 <Phone className="w-4 h-4 text-secondary" />
                 {PHONE_NUMBER}
-              </Link>
+              </a>
               <a 
                 href="mailto:info@sydneysealed.com.au"
                 className="flex items-center gap-3 text-foreground hover:text-secondary transition-colors"
