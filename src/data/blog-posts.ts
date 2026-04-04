@@ -233,6 +233,12 @@ export const blogPostsData: BlogPostContent[] = [
     date: "2024-01-10",
     readTime: "14 min read",
     keywords: ["epoxy grout vs cement grout", "best grout for showers", "shower waterproofing grout", "epoxy grout benefits"],
+    keyTakeaways: [
+      "Epoxy grout is 100% waterproof while cement grout is porous and absorbs water",
+      "Cement grout lasts 5–10 years in showers; epoxy grout lasts 20+ years",
+      "Epoxy grout costs $500–$900 per shower but eliminates repeat regrouting costs",
+      "Professional application is essential — DIY epoxy grouting risks poor adhesion and failed waterproofing"
+    ],
     relatedPosts: ["signs-of-shower-leak", "bathroom-waterproofing-standards", "diy-leak-detection"],
     faqs: [
       {
