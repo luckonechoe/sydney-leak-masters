@@ -109,8 +109,7 @@ export default function Suburbs() {
               </h1>
 
               <p className="text-lg text-muted-foreground mb-4 max-w-2xl">
-                Water damage doesn't wait — and neither do we. Sydney Leak
-                Repairs Pro services <strong className="text-foreground">50+ suburbs</strong> across
+                Water damage doesn't wait — and neither do we. Sydney Sealed services <strong className="text-foreground">50+ suburbs</strong> across
                 Greater Sydney, from the harbour to the Blue Mountains
                 foothills. Every job comes with our{" "}
                 <strong className="text-foreground">10-year warranty</strong> and
