@@ -162,7 +162,7 @@ export default function Strata() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Mail className="w-4 h-4 text-secondary" />
-                    <span className="text-muted-foreground">strata@sydneyleakrepairspro.com.au</span>
+                    <span className="text-muted-foreground">strata@sydneysealed.com.au</span>
                   </div>
                 </div>
               </motion.div>
@@ -494,11 +494,11 @@ export default function Strata() {
                       Strata Priority Line: 0400 000 000
                     </a>
                     <a 
-                      href="mailto:strata@sydneyleakrepairspro.com.au"
+                      href="mailto:strata@sydneysealed.com.au"
                       className="flex items-center gap-3 text-foreground hover:text-secondary transition-colors"
                     >
                       <Mail className="w-5 h-5 text-secondary" />
-                      strata@sydneyleakrepairspro.com.au
+                      strata@sydneysealed.com.au
                     </a>
                   </div>
                 </div>

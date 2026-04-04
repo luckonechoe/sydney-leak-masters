@@ -53,10 +53,10 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <img src={logoImg} alt="Sydney Leak Repairs Pro Logo" className="w-10 h-10 object-contain" />
+              <img src={logoImg} alt="Sydney Sealed Logo" className="w-10 h-10 object-contain" />
               <div>
                 <span className="font-heading font-bold text-lg text-foreground">
-                  Sydney Leak Repairs
+                  Sydney Sealed
                 </span>
                 <span className="font-heading font-bold text-lg text-accent ml-1">
                   Pro
@@ -83,11 +83,11 @@ export function Footer() {
                 {PHONE_NUMBER}
               </Link>
               <a 
-                href="mailto:info@sydneyleakrepairspro.com.au"
+                href="mailto:info@sydneysealed.com.au"
                 className="flex items-center gap-3 text-foreground hover:text-secondary transition-colors"
               >
                 <Mail className="w-4 h-4 text-secondary" />
-                info@sydneyleakrepairspro.com.au
+                info@sydneysealed.com.au
               </a>
               <div className="flex items-center gap-3 text-muted-foreground">
                 <MapPin className="w-4 h-4 text-secondary" />
@@ -154,7 +154,7 @@ export function Footer() {
         <div className="section-container py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-muted-foreground text-sm">
-              © {new Date().getFullYear()} Sydney Leak Repairs Pro. All rights reserved. ABN: XX XXX XXX XXX. Licensed waterproofing contractor.
+              © {new Date().getFullYear()} Sydney Sealed. All rights reserved. ABN: XX XXX XXX XXX. Licensed waterproofing contractor.
             </p>
             
             {/* Social Links */}
@@ -165,7 +165,7 @@ export function Footer() {
                   <a
                     key={social.name}
                     href={social.href}
-                    aria-label={`Follow Sydney Leak Repairs Pro on ${social.name}`}
+                    aria-label={`Follow Sydney Sealed on ${social.name}`}
                     className="p-2 rounded-lg text-muted-foreground hover:text-secondary hover:bg-secondary/10 transition-colors"
                     rel="noopener noreferrer"
                   >

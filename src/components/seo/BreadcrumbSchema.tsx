@@ -10,7 +10,7 @@ interface BreadcrumbSchemaProps {
 }
 
 export function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
-  const baseUrl = "https://sydneyleakrepairspro.com.au";
+  const baseUrl = "https://sydneysealed.com.au";
   
   const schema = {
     "@context": "https://schema.org",

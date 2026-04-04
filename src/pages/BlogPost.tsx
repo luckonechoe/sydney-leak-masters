@@ -36,18 +36,18 @@ export default function BlogPost() {
     author: {
       "@type": "Organization",
       name: post.author,
-      url: "https://sydneyleakrepairspro.com.au",
+      url: "https://sydneysealed.com.au",
     },
     publisher: {
       "@type": "Organization",
-      name: "Sydney Leak Repairs Pro",
-      url: "https://sydneyleakrepairspro.com.au",
+      name: "Sydney Sealed",
+      url: "https://sydneysealed.com.au",
     },
     datePublished: post.date,
     dateModified: post.date,
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://sydneyleakrepairspro.com.au/blog/${post.slug}`,
+      "@id": `https://sydneysealed.com.au/blog/${post.slug}`,
     },
     keywords: post.keywords.join(", "),
   };
@@ -55,10 +55,10 @@ export default function BlogPost() {
   return (
     <>
       <SEOHead
-        title={post.metaTitle.replace(" | Sydney Leak Repairs Pro", "")}
+        title={post.metaTitle.replace(" | Sydney Sealed", "")}
         description={post.metaDescription}
         type="article"
-        canonical={`https://sydneyleakrepairspro.com.au/blog/${post.slug}`}
+        canonical={`https://sydneysealed.com.au/blog/${post.slug}`}
       />
       <FAQSchema faqs={post.faqs} />
       <script

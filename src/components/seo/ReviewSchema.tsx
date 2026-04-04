@@ -15,7 +15,7 @@ interface ReviewSchemaProps {
 }
 
 export function ReviewSchema({
-  businessName = "Sydney Leak Repairs Pro",
+  businessName = "Sydney Sealed",
   ratingValue,
   reviewCount,
   reviews = [],

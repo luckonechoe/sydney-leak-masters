@@ -17,7 +17,7 @@ const testimonials: Testimonial[] = [
     name: "Sarah M.",
     location: "Bondi",
     rating: 5,
-    text: "After years of dealing with shower leaks and being told I'd need to retile, Sydney Leak Repairs Pro fixed it in one day. The epoxy grout solution is incredible - no mess, no drama, just results.",
+    text: "After years of dealing with shower leaks and being told I'd need to retile, Sydney Sealed fixed it in one day. The epoxy grout solution is incredible - no mess, no drama, just results.",
     service: "Shower Repair",
   },
   {

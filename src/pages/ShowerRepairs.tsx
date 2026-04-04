@@ -639,7 +639,7 @@ export default function ShowerRepairs() {
               className="text-center mb-12"
             >
               <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                Why Choose Sydney Leak Repairs Pro
+                Why Choose Sydney Sealed
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 When it comes to leaking shower repairs in Sydney, experience and quality materials make all the difference. 

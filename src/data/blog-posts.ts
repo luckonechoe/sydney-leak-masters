@@ -72,11 +72,11 @@ export const blogPostsData: BlogPostContent[] = [
     slug: "signs-of-shower-leak",
     image: BLOG_IMAGES.signsOfShowerLeak,
     title: "5 Warning Signs Your Shower Is Leaking (And What to Do About It)",
-    metaTitle: "5 Warning Signs Your Shower Is Leaking | Sydney Leak Repairs Pro",
+    metaTitle: "5 Warning Signs Your Shower Is Leaking | Sydney Sealed",
     metaDescription: "Learn how to spot a leaking shower early. Musty smells, peeling paint, and damp walls are red flags. Expert advice from Sydney's shower leak repair specialists.",
     excerpt: "Learn how to identify early signs of shower leaks before they cause serious damage to your home. From musty odors to peeling paint, here's what to look for.",
     category: "Shower Repairs",
-    author: "Sydney Leak Repairs Pro",
+    author: "Sydney Sealed",
     date: "2024-01-15",
     readTime: "12 min read",
     keywords: ["leaking shower signs", "shower leak detection", "shower waterproofing Sydney", "how to tell if shower is leaking"],
@@ -108,7 +108,7 @@ export const blogPostsData: BlogPostContent[] = [
         heading: "Why Early Shower Leak Detection Matters",
         headingLevel: "h2",
         content: `<p>A leaking shower is one of the most common — and most underestimated — plumbing problems in Australian homes. According to industry data, <strong>shower leaks account for more than 60% of all internal waterproofing failures</strong> in residential properties across Sydney. The challenge is that many shower leaks are hidden, slowly causing damage behind walls and under floors long before any visible signs appear.</p>
-<p>The good news is that most shower leaks give off early warning signs. If you know what to look for, you can catch the problem early, avoid thousands of dollars in unnecessary repairs, and protect your home's structural integrity. In this guide, our experienced team at <a href="/services/shower-repairs">Sydney Leak Repairs Pro</a> shares the five most common warning signs that your shower is leaking — and exactly what you should do about each one.</p>
+<p>The good news is that most shower leaks give off early warning signs. If you know what to look for, you can catch the problem early, avoid thousands of dollars in unnecessary repairs, and protect your home's structural integrity. In this guide, our experienced team at <a href="/services/shower-repairs">Sydney Sealed</a> shares the five most common warning signs that your shower is leaking — and exactly what you should do about each one.</p>
 <p>Whether you own a home in <a href="/services/bondi">Bondi</a>, a unit in <a href="/services/parramatta">Parramatta</a>, or a townhouse in <a href="/services/chatswood">Chatswood</a>, understanding these signs could save you from a costly renovation down the track.</p>`
       },
       {
@@ -189,7 +189,7 @@ export const blogPostsData: BlogPostContent[] = [
         content: `<p>If you've identified one or more of the warning signs above, here's what we recommend:</p>
 <ol>
 <li><strong>Don't ignore it</strong> — shower leaks never fix themselves. They only get worse and more expensive over time.</li>
-<li><strong>Arrange a professional inspection</strong> — a qualified specialist can determine the source, severity, and best repair method. At Sydney Leak Repairs Pro, we offer <a href="/contact">free inspections</a> across all Sydney metro areas.</li>
+<li><strong>Arrange a professional inspection</strong> — a qualified specialist can determine the source, severity, and best repair method. At Sydney Sealed, we offer <a href="/contact">free inspections</a> across all Sydney metro areas.</li>
 <li><strong>Get a clear, written quote</strong> — understand exactly what work is needed and what it will cost before any work begins.</li>
 <li><strong>Choose the right repair method</strong> — in many cases, <a href="/services/shower-repairs">epoxy grout repair</a> can fix the leak without removing tiles. For more severe membrane failures, a targeted re-waterproofing may be required.</li>
 <li><strong>Insist on a warranty</strong> — professional repairs should come with a written warranty. We provide a 10-year warranty on all shower leak repairs.</li>
@@ -221,7 +221,7 @@ export const blogPostsData: BlogPostContent[] = [
     metaDescription: "Compare epoxy grout vs cement grout for shower waterproofing. Learn which lasts longer, prevents leaks, and offers the best value. Expert guide from Sydney specialists.",
     excerpt: "A comprehensive comparison of epoxy and cement grouts for bathroom waterproofing. Discover why epoxy grout is the preferred choice for lasting leak repairs.",
     category: "Education",
-    author: "Sydney Leak Repairs Pro",
+    author: "Sydney Sealed",
     date: "2024-01-10",
     readTime: "14 min read",
     keywords: ["epoxy grout vs cement grout", "best grout for showers", "shower waterproofing grout", "epoxy grout benefits"],
@@ -253,7 +253,7 @@ export const blogPostsData: BlogPostContent[] = [
         heading: "Understanding the Grout Debate: Why It Matters for Your Bathroom",
         headingLevel: "h2",
         content: `<p>When it comes to keeping your shower watertight, grout plays a far more important role than most homeowners realise. The grout lines between your tiles aren't just cosmetic — they're a critical part of your bathroom's waterproofing system. Choose the wrong grout, and you could be facing a <a href="/blog/signs-of-shower-leak">leaking shower</a> within just a few years.</p>
-<p>At <a href="/services/shower-repairs">Sydney Leak Repairs Pro</a>, we've repaired thousands of leaking showers across Sydney — from <a href="/services/bondi">Bondi</a> to <a href="/services/blacktown">Blacktown</a> — and the overwhelming majority trace back to one root cause: <strong>failed cement grout</strong>. In this comprehensive guide, we'll break down the differences between epoxy grout and cement grout, explain why the distinction matters, and help you make an informed decision for your bathroom.</p>`
+<p>At <a href="/services/shower-repairs">Sydney Sealed</a>, we've repaired thousands of leaking showers across Sydney — from <a href="/services/bondi">Bondi</a> to <a href="/services/blacktown">Blacktown</a> — and the overwhelming majority trace back to one root cause: <strong>failed cement grout</strong>. In this comprehensive guide, we'll break down the differences between epoxy grout and cement grout, explain why the distinction matters, and help you make an informed decision for your bathroom.</p>`
       },
       {
         heading: "What Is Cement Grout?",
@@ -354,7 +354,7 @@ export const blogPostsData: BlogPostContent[] = [
         heading: "Making the Right Choice for Your Bathroom",
         headingLevel: "h2",
         content: `<p>For any application where waterproofing matters — and in a shower, it always matters — epoxy grout is the clear winner. Its superior water resistance, longevity, mould resistance, and long-term value make it the professional's choice for shower leak repairs and bathroom waterproofing throughout Sydney.</p>
-<p>If your shower grout is showing signs of deterioration, or if you're noticing any of the <a href="/blog/signs-of-shower-leak">warning signs of a shower leak</a>, don't wait for the problem to worsen. Contact <a href="/contact">Sydney Leak Repairs Pro</a> for a free inspection and expert advice on the best grout solution for your bathroom. We service all Sydney suburbs and provide honest, transparent quotes with no obligation.</p>
+<p>If your shower grout is showing signs of deterioration, or if you're noticing any of the <a href="/blog/signs-of-shower-leak">warning signs of a shower leak</a>, don't wait for the problem to worsen. Contact <a href="/contact">Sydney Sealed</a> for a free inspection and expert advice on the best grout solution for your bathroom. We service all Sydney suburbs and provide honest, transparent quotes with no obligation.</p>
 <p>Ready to upgrade your shower waterproofing? <a href="/contact">Book your free inspection today</a> and discover why thousands of Sydney homeowners have made the switch to epoxy grout.</p>`
       }
     ]
@@ -369,7 +369,7 @@ export const blogPostsData: BlogPostContent[] = [
     metaDescription: "Learn how to prevent concrete degradation and spalling in Sydney buildings. Expert guide on causes, warning signs, and professional repair solutions. Protect your property.",
     excerpt: "Concrete degradation (spalling) can cause serious structural damage. Learn the causes, warning signs, and prevention strategies to protect your property.",
     category: "Balcony Repairs",
-    author: "Sydney Leak Repairs Pro",
+    author: "Sydney Sealed",
     date: "2024-01-05",
     readTime: "13 min read",
     keywords: ["concrete degradation prevention", "spalling repair Sydney", "concrete spalling causes", "balcony concrete repair", "prevent spalling"],
@@ -481,7 +481,7 @@ export const blogPostsData: BlogPostContent[] = [
 <li><strong>Year 7+ (severe degradation):</strong> Major structural repair or element replacement — $50,000–$200,000+</li>
 </ul>
 <p>The numbers speak for themselves. A $3,000 waterproofing repair in year one can prevent a $100,000+ structural remediation in year seven. For <a href="/strata">strata buildings</a>, these costs are shared among lot owners through special levies — making early intervention not just structurally sensible but financially responsible.</p>
-<p>If you've noticed any signs of concrete degradation in your building — whether it's rust staining on a balcony in <a href="/services/castle-hill">Castle Hill</a> or cracking concrete in <a href="/services/hornsby">Hornsby</a> — arrange a professional assessment as soon as possible. <a href="/contact">Contact Sydney Leak Repairs Pro</a> for expert advice and a comprehensive repair quote.</p>`
+<p>If you've noticed any signs of concrete degradation in your building — whether it's rust staining on a balcony in <a href="/services/castle-hill">Castle Hill</a> or cracking concrete in <a href="/services/hornsby">Hornsby</a> — arrange a professional assessment as soon as possible. <a href="/contact">Contact Sydney Sealed</a> for expert advice and a comprehensive repair quote.</p>`
       }
     ]
   },
@@ -495,7 +495,7 @@ export const blogPostsData: BlogPostContent[] = [
     metaDescription: "Essential waterproofing guide for Sydney strata managers. Learn maintenance schedules, compliance requirements, common leak issues, and cost-effective repair strategies.",
     excerpt: "Everything strata managers need to know about maintaining waterproofing in multi-unit buildings. From inspections to compliance requirements.",
     category: "Strata",
-    author: "Sydney Leak Repairs Pro",
+    author: "Sydney Sealed",
     date: "2023-12-28",
     readTime: "15 min read",
     keywords: ["strata waterproofing guide", "strata leak repairs Sydney", "property manager waterproofing", "strata building maintenance"],
@@ -527,7 +527,7 @@ export const blogPostsData: BlogPostContent[] = [
         heading: "Why Waterproofing Is a Critical Priority for Strata Managers",
         headingLevel: "h2",
         content: `<p>Waterproofing failures are consistently ranked among the top three maintenance issues in Australian strata buildings. For property managers and strata committees across Sydney — from high-density towers in <a href="/services/chatswood">Chatswood</a> and <a href="/services/parramatta">Parramatta</a> to walk-up units in <a href="/services/marrickville">Marrickville</a> and <a href="/services/randwick">Randwick</a> — managing waterproofing effectively is essential to protecting building value, maintaining livability, and avoiding costly disputes.</p>
-<p>At <a href="/strata">Sydney Leak Repairs Pro</a>, we work with strata managers and committees throughout Sydney, providing specialist leak repair and waterproofing services tailored to the unique needs of multi-unit buildings. In this comprehensive guide, we share our practical insights on waterproofing maintenance, common problems, compliance requirements, and cost-effective repair strategies.</p>`
+<p>At <a href="/strata">Sydney Sealed</a>, we work with strata managers and committees throughout Sydney, providing specialist leak repair and waterproofing services tailored to the unique needs of multi-unit buildings. In this comprehensive guide, we share our practical insights on waterproofing maintenance, common problems, compliance requirements, and cost-effective repair strategies.</p>`
       },
       {
         heading: "The Most Common Waterproofing Problems in Strata Buildings",
@@ -609,7 +609,7 @@ export const blogPostsData: BlogPostContent[] = [
 <li><strong>Reference projects</strong> — ask for references from other strata buildings where the contractor has completed similar work</li>
 <li><strong>Clear communication</strong> — strata work requires coordination with building managers, residents, and committees. Choose a contractor who communicates clearly and professionally</li>
 </ul>
-<p>At Sydney Leak Repairs Pro, we specialise in <a href="/strata">strata waterproofing services</a> across Sydney. From shower leak repairs in individual units to comprehensive balcony waterproofing programs for entire buildings, we provide the expertise, documentation, and professionalism that strata managers and committees require. Servicing buildings in <a href="/services/bankstown">Bankstown</a>, <a href="/services/liverpool">Liverpool</a>, <a href="/services/penrith">Penrith</a>, <a href="/services/blacktown">Blacktown</a>, and all Sydney suburbs.</p>`
+<p>At Sydney Sealed, we specialise in <a href="/strata">strata waterproofing services</a> across Sydney. From shower leak repairs in individual units to comprehensive balcony waterproofing programs for entire buildings, we provide the expertise, documentation, and professionalism that strata managers and committees require. Servicing buildings in <a href="/services/bankstown">Bankstown</a>, <a href="/services/liverpool">Liverpool</a>, <a href="/services/penrith">Penrith</a>, <a href="/services/blacktown">Blacktown</a>, and all Sydney suburbs.</p>`
       }
     ]
   },
@@ -623,7 +623,7 @@ export const blogPostsData: BlogPostContent[] = [
     metaDescription: "Learn simple DIY leak detection methods for showers and balconies. Know when to call a professional. Expert guide from Sydney's leak repair specialists.",
     excerpt: "Some leaks can be identified at home, but others require professional expertise. Here's how to know when it's time to call in the experts.",
     category: "Tips",
-    author: "Sydney Leak Repairs Pro",
+    author: "Sydney Sealed",
     date: "2023-12-20",
     readTime: "11 min read",
     keywords: ["DIY leak detection", "how to find a water leak", "shower leak test", "balcony leak detection", "water leak detection Sydney"],
@@ -643,7 +643,7 @@ export const blogPostsData: BlogPostContent[] = [
       },
       {
         question: "How much does professional leak detection cost in Sydney?",
-        answer: "Professional leak detection in Sydney typically costs between $200 and $500, depending on the complexity and the methods required. Many specialist companies, including Sydney Leak Repairs Pro, offer free initial inspections for shower and balcony leaks. If advanced detection methods (thermal imaging, moisture mapping, etc.) are required, these may incur an additional charge. The cost of professional detection is always worthwhile — it prevents unnecessary exploratory demolition and ensures repairs target the actual source."
+        answer: "Professional leak detection in Sydney typically costs between $200 and $500, depending on the complexity and the methods required. Many specialist companies, including Sydney Sealed, offer free initial inspections for shower and balcony leaks. If advanced detection methods (thermal imaging, moisture mapping, etc.) are required, these may incur an additional charge. The cost of professional detection is always worthwhile — it prevents unnecessary exploratory demolition and ensures repairs target the actual source."
       },
       {
         question: "Should I attempt to repair a leak myself?",
@@ -655,7 +655,7 @@ export const blogPostsData: BlogPostContent[] = [
         heading: "When You Can Detect Leaks Yourself — And When You Need Help",
         headingLevel: "h2",
         content: `<p>Not every leak requires an expensive professional investigation. Many homeowners can identify potential leak problems using simple observation and basic testing methods. However, it's equally important to know when a problem exceeds DIY capabilities and professional help is needed.</p>
-<p>At <a href="/services/shower-repairs">Sydney Leak Repairs Pro</a>, we believe in empowering homeowners with knowledge. In this guide, we'll walk you through practical DIY leak detection methods for showers and balconies, explain what the results mean, and help you understand when it's time to call in a specialist. Whether you're in <a href="/services/bondi">Bondi</a> or <a href="/services/blacktown">Blacktown</a>, these methods work for any Sydney home.</p>`
+<p>At <a href="/services/shower-repairs">Sydney Sealed</a>, we believe in empowering homeowners with knowledge. In this guide, we'll walk you through practical DIY leak detection methods for showers and balconies, explain what the results mean, and help you understand when it's time to call in a specialist. Whether you're in <a href="/services/bondi">Bondi</a> or <a href="/services/blacktown">Blacktown</a>, these methods work for any Sydney home.</p>`
       },
       {
         heading: "DIY Shower Leak Detection Methods",
@@ -757,7 +757,7 @@ export const blogPostsData: BlogPostContent[] = [
 <li><strong>Documentation</strong> — professional reports support insurance claims, strata disputes, and building sale disclosures</li>
 <li><strong>Repair recommendations</strong> — a professional can advise on the most cost-effective repair method for your specific situation</li>
 </ul>
-<p>At Sydney Leak Repairs Pro, we offer <a href="/contact">free initial inspections</a> for shower and balcony leaks across all Sydney suburbs, from <a href="/services/mosman">Mosman</a> and <a href="/services/manly">Manly</a> to <a href="/services/liverpool">Liverpool</a> and <a href="/services/penrith">Penrith</a>. Our experienced technicians can quickly determine whether your leak requires professional repair and provide a clear, honest quote with no obligation.</p>
+<p>At Sydney Sealed, we offer <a href="/contact">free initial inspections</a> for shower and balcony leaks across all Sydney suburbs, from <a href="/services/mosman">Mosman</a> and <a href="/services/manly">Manly</a> to <a href="/services/liverpool">Liverpool</a> and <a href="/services/penrith">Penrith</a>. Our experienced technicians can quickly determine whether your leak requires professional repair and provide a clear, honest quote with no obligation.</p>
 <p>Don't let a small leak become a big problem. Whether you've identified signs through your own testing or you just want peace of mind, <a href="/contact">contact us today</a> for expert advice.</p>`
       }
     ]
@@ -772,7 +772,7 @@ export const blogPostsData: BlogPostContent[] = [
     metaDescription: "Understand bathroom waterproofing standards and what they require. Why they matter and how they affect your bathroom repair or renovation project in Sydney.",
     excerpt: "Understanding waterproofing standards and what they mean for your bathroom renovation or repair project. A guide to compliance requirements.",
     category: "Education",
-    author: "Sydney Leak Repairs Pro",
+    author: "Sydney Sealed",
     date: "2023-12-15",
     readTime: "13 min read",
     keywords: ["waterproofing standards", "bathroom waterproofing requirements", "waterproofing compliance", "NCC waterproofing"],
@@ -888,7 +888,7 @@ export const blogPostsData: BlogPostContent[] = [
         headingLevel: "h2",
         content: `<p>Waterproofing standards exist for good reason — they protect your home, your health, and your investment. When waterproofing is done properly and to professional standards, it provides decades of reliable protection against water damage.</p>
 <p>When it's done poorly — or not at all — the consequences can be devastating: <a href="/blog/concrete-degradation-prevention">structural concrete degradation</a>, widespread mould, damaged finishes, and repair costs that dwarf the original investment.</p>
-<p>If you have concerns about your bathroom's waterproofing, or if you're seeing <a href="/blog/signs-of-shower-leak">signs of a shower leak</a>, don't hesitate to seek professional advice. At <a href="/contact">Sydney Leak Repairs Pro</a>, we provide free inspections and honest assessments across all Sydney suburbs. We'll tell you exactly what's happening, what your options are, and what it will cost — no surprises, no pressure.</p>
+<p>If you have concerns about your bathroom's waterproofing, or if you're seeing <a href="/blog/signs-of-shower-leak">signs of a shower leak</a>, don't hesitate to seek professional advice. At <a href="/contact">Sydney Sealed</a>, we provide free inspections and honest assessments across all Sydney suburbs. We'll tell you exactly what's happening, what your options are, and what it will cost — no surprises, no pressure.</p>
 <p>Ready to protect your bathroom with proper waterproofing? <a href="/contact">Contact us today</a> for a free consultation.</p>`
       }
     ]
@@ -904,7 +904,7 @@ export const blogPostsData: BlogPostContent[] = [
     metaDescription: "Learn how to fix leaking balcony tiles in Sydney. Expert guide covering causes, repair methods, waterproofing options, and when to call a professional. 10-year warranty available.",
     excerpt: "Leaking balcony tiles can cause serious structural damage if left untreated. Learn how to identify the problem and the best repair options available.",
     category: "Balcony Repairs",
-    author: "Sydney Leak Repairs Pro",
+    author: "Sydney Sealed",
     date: "2024-02-05",
     readTime: "14 min read",
     keywords: ["leaking balcony tiles repair", "fix balcony tile leak", "balcony tile waterproofing", "balcony grout repair Sydney"],
@@ -1021,7 +1021,7 @@ export const blogPostsData: BlogPostContent[] = [
 <li><strong>Insurance</strong> — comprehensive public liability insurance is essential, especially for work at height</li>
 <li><strong>Transparent quoting</strong> — a detailed, itemised quote should be provided after inspection, with no hidden costs</li>
 </ul>
-<p>At Sydney Leak Repairs Pro, we specialise in <a href="/services/balcony-repairs">balcony leak diagnosis and repair</a>. Our free inspection identifies the exact leak source and the most cost-effective repair method for your situation. We service all Sydney suburbs and provide honest, no-obligation quotes.</p>`
+<p>At Sydney Sealed, we specialise in <a href="/services/balcony-repairs">balcony leak diagnosis and repair</a>. Our free inspection identifies the exact leak source and the most cost-effective repair method for your situation. We service all Sydney suburbs and provide honest, no-obligation quotes.</p>`
       }
     ]
   },
@@ -1035,7 +1035,7 @@ export const blogPostsData: BlogPostContent[] = [
     metaDescription: "Identify waterproof membrane failure in showers and balconies. Learn the causes, warning signs, and professional repair options. Sydney specialists with 10-year warranty.",
     excerpt: "A failed waterproof membrane is the root cause of many serious leaks. Learn how to identify membrane failure and understand your repair options.",
     category: "Education",
-    author: "Sydney Leak Repairs Pro",
+    author: "Sydney Sealed",
     date: "2024-02-10",
     readTime: "14 min read",
     keywords: ["waterproof membrane failure", "membrane failure signs", "shower membrane repair", "balcony membrane failure", "waterproofing repair Sydney"],
@@ -1052,7 +1052,7 @@ export const blogPostsData: BlogPostContent[] = [
         heading: "Understanding Waterproof Membrane Failure",
         headingLevel: "h2",
         content: `<p>The waterproof membrane is arguably the most critical — yet completely invisible — component of any wet area in your home. Sitting beneath your tiles, this thin layer of specialised material is your property's primary defence against water penetration. When it fails, the consequences can be extensive and expensive.</p>
-<p>At <a href="/services/shower-repairs">Sydney Leak Repairs Pro</a>, membrane failure is one of the most common issues we diagnose across Sydney properties. From ageing apartments in <a href="/services/surry-hills">Surry Hills</a> to family homes in <a href="/services/ryde">Ryde</a>, understanding membrane failure helps you act quickly and choose the right repair approach.</p>
+<p>At <a href="/services/shower-repairs">Sydney Sealed</a>, membrane failure is one of the most common issues we diagnose across Sydney properties. From ageing apartments in <a href="/services/surry-hills">Surry Hills</a> to family homes in <a href="/services/ryde">Ryde</a>, understanding membrane failure helps you act quickly and choose the right repair approach.</p>
 <p>In this comprehensive guide, we explain what membranes do, how to spot failure, why they fail, and what your professional repair options are — helping you make informed decisions that protect your property and your wallet.</p>`
       },
       {
@@ -1160,7 +1160,7 @@ export const blogPostsData: BlogPostContent[] = [
     metaDescription: "Compare balcony waterproofing systems for Sydney properties. Liquid membranes, torch-on, sheet systems explained. Expert advice on choosing the right solution.",
     excerpt: "Not all balcony waterproofing systems are created equal. Understand the different options and which is best suited to your property and budget.",
     category: "Balcony Repairs",
-    author: "Sydney Leak Repairs Pro",
+    author: "Sydney Sealed",
     date: "2024-02-15",
     readTime: "14 min read",
     keywords: ["balcony waterproofing systems", "balcony waterproofing Sydney", "balcony membrane types", "waterproofing system comparison"],
@@ -1288,7 +1288,7 @@ export const blogPostsData: BlogPostContent[] = [
     metaDescription: "Discover why shower grout cracks and deteriorates. Learn the common causes of grout failure and how to prevent costly water damage with professional repair solutions.",
     excerpt: "Cracked grout is more than a cosmetic issue — it's the leading cause of shower leaks. Understand why grout fails and how to prevent expensive water damage.",
     category: "Education",
-    author: "Sydney Leak Repairs Pro",
+    author: "Sydney Sealed",
     date: "2024-02-20",
     readTime: "13 min read",
     keywords: ["what causes grout to crack", "cracked grout shower", "grout deterioration", "shower grout repair Sydney", "cracked grout water damage"],
@@ -1305,7 +1305,7 @@ export const blogPostsData: BlogPostContent[] = [
         heading: "Why Grout Cracks: The Root Causes",
         headingLevel: "h2",
         content: `<p>Grout cracking in showers and bathrooms is one of the most common maintenance issues in Australian homes. More importantly, cracked grout is the leading cause of <a href="/blog/signs-of-shower-leak">shower leaks</a> — a problem that, if ignored, can cause thousands of dollars in structural damage. Understanding why grout cracks helps you prevent problems and choose better materials for lasting protection.</p>
-<p>At Sydney Leak Repairs Pro, we repair hundreds of showers across Sydney every year. In the vast majority of cases, the root cause is failed grout. This article explores the science behind grout failure and equips you with the knowledge to protect your bathroom investment.</p>`
+<p>At Sydney Sealed, we repair hundreds of showers across Sydney every year. In the vast majority of cases, the root cause is failed grout. This article explores the science behind grout failure and equips you with the knowledge to protect your bathroom investment.</p>`
       },
       {
         heading: "Cause 1: Water Absorption and Erosion",
@@ -1395,7 +1395,7 @@ export const blogPostsData: BlogPostContent[] = [
 <li>✅ <strong>Don't ignore early signs</strong> — small cracks become big problems. Address them promptly.</li>
 <li>✅ <strong>Consider upgrading to epoxy grout</strong> — the best prevention is eliminating cement grout entirely</li>
 </ul>
-<p>If your grout is already cracked or deteriorating, don't delay. Contact <a href="/contact">Sydney Leak Repairs Pro</a> for a free inspection. We service all Sydney suburbs and provide honest, transparent advice — whether you need a simple repair or a comprehensive solution.</p>`
+<p>If your grout is already cracked or deteriorating, don't delay. Contact <a href="/contact">Sydney Sealed</a> for a free inspection. We service all Sydney suburbs and provide honest, transparent advice — whether you need a simple repair or a comprehensive solution.</p>`
       }
     ]
   },
@@ -1409,14 +1409,14 @@ export const blogPostsData: BlogPostContent[] = [
     metaDescription: "Complete guide to shower waterproofing in Sydney. Covers Australian Standards, membrane systems, repair options, and costs. Expert advice from local specialists.",
     excerpt: "Everything Sydney homeowners need to know about shower waterproofing — from Australian Standards compliance to repair options and cost guidance.",
     category: "Shower Repairs",
-    author: "Sydney Leak Repairs Pro",
+    author: "Sydney Sealed",
     date: "2024-02-25",
     readTime: "14 min read",
     keywords: ["shower waterproofing Sydney", "shower waterproofing cost", "shower waterproofing standards", "bathroom waterproofing Sydney"],
     relatedPosts: ["bathroom-waterproofing-standards", "signs-of-shower-leak", "waterproof-membrane-failure"],
     faqs: [
       { question: "How much does shower waterproofing cost in Sydney?", answer: "Shower waterproofing costs in Sydney range from $500–$900 for epoxy regrouting (non-invasive repair), $1,500–$4,000 for targeted membrane repair, and $5,000–$15,000+ for full strip-out and re-waterproofing. The cost depends on the extent of existing damage, the repair method required, and the size of the shower. A free inspection provides an accurate, no-obligation quote." },
-      { question: "Does shower waterproofing come with a warranty?", answer: "Yes. Professional shower waterproofing repairs should always come with a written warranty. At Sydney Leak Repairs Pro, we provide a 10-year warranty on all shower leak repairs, covering both materials and workmanship. This gives you confidence that the repair will last and protects your investment." },
+      { question: "Does shower waterproofing come with a warranty?", answer: "Yes. Professional shower waterproofing repairs should always come with a written warranty. At Sydney Sealed, we provide a 10-year warranty on all shower leak repairs, covering both materials and workmanship. This gives you confidence that the repair will last and protects your investment." },
       { question: "How long does shower waterproofing take?", answer: "Epoxy regrouting is typically completed in one day, with the shower usable within 24–48 hours. Membrane repairs take 2–3 days. Full re-waterproofing (strip-out, membrane, and re-tile) takes 5–10 working days depending on bathroom size and complexity." },
       { question: "Can I waterproof my shower myself?", answer: "While DIY waterproofing products are available, professional application is strongly recommended for showers. Waterproofing must comply with current standards, and defective waterproofing can cause thousands of dollars in structural damage. In NSW, waterproofing work requires a licensed contractor. The cost difference between DIY and professional is minimal compared to the risk of failure." },
       { question: "How do I know if my shower needs re-waterproofing?", answer: "Signs that your shower needs waterproofing attention include persistent musty odours, water stains on ceilings or walls below, peeling paint near the bathroom, loose or hollow-sounding tiles, visible mould that keeps returning, and grout that crumbles when touched. A professional inspection can determine whether regrouting, membrane repair, or full re-waterproofing is needed." }
@@ -1489,7 +1489,7 @@ export const blogPostsData: BlogPostContent[] = [
 <li><strong>Transparent pricing</strong> — get a detailed, written quote before work begins. Beware of contractors who offer vague or verbal-only pricing</li>
 <li><strong>Insurance</strong> — verify the contractor has current public liability and professional indemnity insurance</li>
 </ul>
-<p>At Sydney Leak Repairs Pro, we meet all of these criteria. We provide <a href="/contact">free inspections</a>, honest advice, transparent pricing, and a 10-year warranty on all shower waterproofing repairs.</p>`
+<p>At Sydney Sealed, we meet all of these criteria. We provide <a href="/contact">free inspections</a>, honest advice, transparent pricing, and a 10-year warranty on all shower waterproofing repairs.</p>`
       },
       {
         heading: "Strata Shower Waterproofing Considerations",
@@ -1528,7 +1528,7 @@ export const blogPostsData: BlogPostContent[] = [
     metaDescription: "Expert guide to balcony leak detection in Sydney. Learn professional detection methods, DIY tests, and why accurate diagnosis saves thousands on repairs.",
     excerpt: "Accurate leak detection is the critical first step in any balcony repair. Learn how professionals find the exact source of balcony leaks.",
     category: "Tips",
-    author: "Sydney Leak Repairs Pro",
+    author: "Sydney Sealed",
     date: "2024-03-01",
     readTime: "13 min read",
     keywords: ["balcony leak detection", "how to find balcony leak", "balcony flood test", "leak detection Sydney", "balcony moisture testing"],
@@ -1545,7 +1545,7 @@ export const blogPostsData: BlogPostContent[] = [
         heading: "Why Accurate Leak Detection Matters",
         headingLevel: "h2",
         content: `<p>Fixing a balcony leak without first identifying its exact source is like treating symptoms without diagnosing the disease — it wastes money and rarely solves the problem. Accurate <strong>balcony leak detection</strong> ensures repairs target the actual failure point, avoiding unnecessary work and expense.</p>
-<p>At <a href="/services/balcony-repairs">Sydney Leak Repairs Pro</a>, we've seen too many cases where property owners have spent thousands on repairs that missed the actual leak source because detection wasn't done properly. Whether you're in <a href="/services/neutral-bay">Neutral Bay</a>, <a href="/services/randwick">Randwick</a>, or <a href="/services/penrith">Penrith</a>, professional detection is the first step to an effective, lasting repair.</p>
+<p>At <a href="/services/balcony-repairs">Sydney Sealed</a>, we've seen too many cases where property owners have spent thousands on repairs that missed the actual leak source because detection wasn't done properly. Whether you're in <a href="/services/neutral-bay">Neutral Bay</a>, <a href="/services/randwick">Randwick</a>, or <a href="/services/penrith">Penrith</a>, professional detection is the first step to an effective, lasting repair.</p>
 <p>Consider this: a typical balcony membrane repair costs $3,000–$8,000. If the detection was inaccurate and the repair misses the actual leak source, that entire investment is wasted — and you still have a leak. Professional detection costs a fraction of the repair but ensures every dollar of the repair budget is well spent.</p>`
       },
       {
@@ -1624,7 +1624,7 @@ export const blogPostsData: BlogPostContent[] = [
     metaDescription: "Expert guide to shower membrane repair in Sydney. Learn when membrane repair is needed, what the process involves, costs, and alternatives. Free inspections available.",
     excerpt: "When a shower's waterproof membrane fails, targeted repair can restore protection without a full bathroom renovation. Here's what you need to know.",
     category: "Shower Repairs",
-    author: "Sydney Leak Repairs Pro",
+    author: "Sydney Sealed",
     date: "2024-03-05",
     readTime: "14 min read",
     keywords: ["shower membrane repair", "shower membrane replacement", "shower waterproofing repair", "membrane repair cost Sydney"],
@@ -1769,7 +1769,7 @@ export const blogPostsData: BlogPostContent[] = [
     metaDescription: "Expert guide to tiled shower sealing in Sydney. Learn how tile sealing protects your bathroom, extends grout life, and complements waterproofing. Professional service available.",
     excerpt: "Tile sealing adds an extra layer of protection to your shower, reducing water absorption and extending the life of your grout and waterproofing system.",
     category: "Education",
-    author: "Sydney Leak Repairs Pro",
+    author: "Sydney Sealed",
     date: "2024-03-10",
     readTime: "13 min read",
     keywords: ["tiled shower sealing", "shower tile sealing Sydney", "tile sealing services", "bathroom tile sealer", "shower tile protection"],
@@ -1894,7 +1894,7 @@ export const blogPostsData: BlogPostContent[] = [
     metaDescription: "Professional tiled balcony sealing services in Sydney. Learn how sealing protects your balcony tiles, extends waterproofing life, and prevents costly repairs.",
     excerpt: "Balcony tile sealing is an affordable maintenance step that can significantly extend the life of your waterproofing and protect against Sydney's harsh weather.",
     category: "Balcony Repairs",
-    author: "Sydney Leak Repairs Pro",
+    author: "Sydney Sealed",
     date: "2024-03-15",
     readTime: "13 min read",
     keywords: ["tiled balcony sealing", "balcony tile sealer", "balcony sealing Sydney", "external tile sealing", "balcony tile protection"],
@@ -1996,7 +1996,7 @@ export const blogPostsData: BlogPostContent[] = [
     metaDescription: "Expert guide to balcony membrane repair in Sydney. Learn when repair vs replacement is needed, costs, methods, and how to choose the right specialist. Strata approved.",
     excerpt: "When your balcony membrane fails, professional repair restores waterproofing protection and prevents costly structural damage. Here's your complete guide.",
     category: "Balcony Repairs",
-    author: "Sydney Leak Repairs Pro",
+    author: "Sydney Sealed",
     date: "2024-03-20",
     readTime: "14 min read",
     keywords: ["balcony membrane repair Sydney", "balcony membrane replacement", "balcony waterproofing repair", "membrane restoration Sydney"],
@@ -2114,7 +2114,7 @@ export const blogPostsData: BlogPostContent[] = [
     metaDescription: "Everything you need to know about epoxy regrouting in Sydney. Process, costs, benefits, and what to expect from professional shower leak repair. 10-year warranty.",
     excerpt: "Epoxy regrouting is the most popular and effective method for repairing leaking showers without removing tiles. Here's everything you need to know.",
     category: "Shower Repairs",
-    author: "Sydney Leak Repairs Pro",
+    author: "Sydney Sealed",
     date: "2024-03-25",
     readTime: "14 min read",
     keywords: ["epoxy regrouting Sydney", "epoxy regrouting cost", "epoxy grout shower repair", "professional regrouting Sydney"],
@@ -2229,7 +2229,7 @@ export const blogPostsData: BlogPostContent[] = [
     metaDescription: "Complete guide to grout replacement in Sydney. Compare cement vs epoxy grout costs, learn when replacement is needed, and find professional grout specialists near you.",
     excerpt: "Is it time to replace your shower grout? Compare your options, understand costs, and learn why choosing the right grout type matters for lasting waterproofing.",
     category: "Education",
-    author: "Sydney Leak Repairs Pro",
+    author: "Sydney Sealed",
     date: "2024-04-01",
     readTime: "13 min read",
     keywords: ["grout replacement Sydney", "grout replacement cost", "shower grout replacement", "regrouting cost Sydney"],
@@ -2337,7 +2337,7 @@ export const blogPostsData: BlogPostContent[] = [
     metaDescription: "Professional tile sealing services across Sydney. Protect tiles from stains, water damage, and wear. Interior and exterior tile sealing for homes and strata buildings.",
     excerpt: "Professional tile sealing protects your investment in tiled surfaces. Learn about sealing options for showers, bathrooms, balconies, and common areas.",
     category: "Education",
-    author: "Sydney Leak Repairs Pro",
+    author: "Sydney Sealed",
     date: "2024-04-05",
     readTime: "13 min read",
     keywords: ["tile sealing services Sydney", "professional tile sealing", "tile protection Sydney", "tile sealer application"],
@@ -2353,7 +2353,7 @@ export const blogPostsData: BlogPostContent[] = [
         heading: "What Are Tile Sealing Services?",
         headingLevel: "h2",
         content: `<p><strong>Tile sealing services</strong> involve the professional application of protective sealers to tiled surfaces — both internal (showers, bathrooms, kitchens) and external (balconies, courtyards, pool surrounds). Professional application ensures correct product selection, proper surface preparation, and even coverage for maximum protection.</p>
-<p>At Sydney Leak Repairs Pro, we offer tile sealing as a standalone service and as a complement to our <a href="/services/shower-repairs">shower repair</a> and <a href="/services/balcony-repairs">balcony waterproofing</a> services across all Sydney suburbs.</p>
+<p>At Sydney Sealed, we offer tile sealing as a standalone service and as a complement to our <a href="/services/shower-repairs">shower repair</a> and <a href="/services/balcony-repairs">balcony waterproofing</a> services across all Sydney suburbs.</p>
 <p>Think of tile sealing as an insurance policy for your tiled surfaces — a modest investment that protects against staining, water damage, and premature deterioration, potentially saving thousands in tile replacement costs.</p>`
       },
       {
@@ -2468,7 +2468,7 @@ export const blogPostsData: BlogPostContent[] = [
     metaDescription: "Understand balcony waterproofing costs in Sydney. Detailed pricing for membrane systems, tile removal, concrete repairs, and re-tiling. Free quotes from local specialists.",
     excerpt: "How much does balcony waterproofing cost in Sydney? Get a clear breakdown of costs for different repair methods, membrane systems, and additional work.",
     category: "Balcony Repairs",
-    author: "Sydney Leak Repairs Pro",
+    author: "Sydney Sealed",
     date: "2024-04-10",
     readTime: "14 min read",
     keywords: ["balcony waterproofing cost Sydney", "balcony waterproofing price", "balcony repair cost", "waterproofing cost per square metre"],

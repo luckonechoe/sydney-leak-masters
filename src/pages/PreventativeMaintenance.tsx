@@ -148,7 +148,7 @@ export default function PreventativeMaintenance() {
   return (
     <>
       <SEOHead
-        title="Preventative Maintenance Plan $249/yr | Sydney Leak Repairs Pro"
+        title="Preventative Maintenance Plan $249/yr | Sydney Sealed"
         description="Protect your waterproofing investment with our $249/year preventative maintenance plan. Annual inspections, grout touch-ups, and warranty coverage for Sydney showers and balconies."
       />
       <FAQSchema faqs={faqs} />

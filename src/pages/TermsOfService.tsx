@@ -7,8 +7,8 @@ export default function TermsOfService() {
   return (
     <>
       <SEOHead
-        title="Terms of Service | Sydney Leak Repairs Pro"
-        description="Read the Terms of Service for Sydney Leak Repairs Pro. Understand our policies on services, warranties, liability, and more."
+        title="Terms of Service | Sydney Sealed"
+        description="Read the Terms of Service for Sydney Sealed. Understand our policies on services, warranties, liability, and more."
         noindex={true}
       />
       <Header />
@@ -22,7 +22,7 @@ export default function TermsOfService() {
             Last updated: {new Date().toLocaleDateString("en-AU", { day: "numeric", month: "long", year: "numeric" })}
           </p>
           <p className="text-foreground/90 mb-10">
-            These Terms of Service ("Terms") govern your access to and use of the website operated by Sydney Leak Repairs Pro ABN XX XXX XXX XXX ("we", "us", "our"). By accessing or using this website, you agree to these Terms. If you do not agree, do not use this website.
+            These Terms of Service ("Terms") govern your access to and use of the website operated by Sydney Sealed ABN XX XXX XXX XXX ("we", "us", "our"). By accessing or using this website, you agree to these Terms. If you do not agree, do not use this website.
           </p>
 
           <div className="prose prose-sm md:prose-base max-w-none space-y-8 text-foreground/90">
@@ -362,7 +362,7 @@ export default function TermsOfService() {
                 <li><strong>Workmanship Warranty:</strong> Up to 10 years on qualifying repair and waterproofing work, as specified in your project documentation.</li>
                 <li><strong>Materials Warranty:</strong> Manufacturer warranties apply to all materials used. We will assist with any warranty claims on materials where applicable.</li>
                 <li><strong>Exclusions:</strong> Warranties do not cover damage caused by misuse, negligence, structural movement, natural disasters, or unauthorised modifications to the repaired area.</li>
-                <li><strong>Warranty Claims:</strong> To make a claim, contact us at info@sydneyleakrepairspro.com.au with a description of the issue. We will inspect and rectify any valid claim at no additional cost.</li>
+                <li><strong>Warranty Claims:</strong> To make a claim, contact us at info@sydneysealed.com.au with a description of the issue. We will inspect and rectify any valid claim at no additional cost.</li>
               </ul>
             </section>
 
@@ -526,11 +526,11 @@ export default function TermsOfService() {
               <h2 className="font-heading text-xl font-bold text-foreground">29. Contact Us</h2>
               <p>For questions about these Terms, contact:</p>
               <ul className="list-none pl-0 space-y-1">
-                <li><strong>Business:</strong> Sydney Leak Repairs Pro</li>
+                <li><strong>Business:</strong> Sydney Sealed</li>
                 <li><strong>ABN:</strong> XX XXX XXX XXX</li>
-                <li><strong>Email:</strong> <a href="mailto:info@sydneyleakrepairspro.com.au" className="text-secondary hover:underline">info@sydneyleakrepairspro.com.au</a></li>
+                <li><strong>Email:</strong> <a href="mailto:info@sydneysealed.com.au" className="text-secondary hover:underline">info@sydneysealed.com.au</a></li>
                 <li><strong>Phone:</strong> <a href={PHONE_HREF} className="text-secondary hover:underline">{PHONE_NUMBER}</a></li>
-                <li><strong>Website:</strong> <a href="https://sydneyleakrepairspro.com.au" className="text-secondary hover:underline">sydneyleakrepairspro.com.au</a></li>
+                <li><strong>Website:</strong> <a href="https://sydneysealed.com.au" className="text-secondary hover:underline">sydneysealed.com.au</a></li>
               </ul>
             </section>
           </div>

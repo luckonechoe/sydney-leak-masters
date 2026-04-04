@@ -1,5 +1,5 @@
-# robots.txt for Sydney Leak Repairs Pro
-# https://sydneyleakrepairspro.com.au
+# robots.txt for Sydney Sealed
+# https://sydneysealed.com.au
 
 # Google
 User-agent: Googlebot
@@ -39,7 +39,7 @@ Disallow: /*.json$
 Disallow: /404
 
 # Sitemap
-Sitemap: https://sydneyleakrepairspro.com.au/sitemap.xml
+Sitemap: https://sydneysealed.com.au/sitemap.xml
 
 # Host
-Host: https://sydneyleakrepairspro.com.au
+Host: https://sydneysealed.com.au

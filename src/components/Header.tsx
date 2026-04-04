@@ -43,10 +43,10 @@ export function Header() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <img src={logoImg} alt="Sydney Leak Repairs Pro Logo" className="w-10 h-10 object-contain" />
+            <img src={logoImg} alt="Sydney Sealed Logo" className="w-10 h-10 object-contain" />
             <div className="hidden sm:block">
               <span className="font-heading font-bold text-lg text-foreground">
-                Sydney Leak Repairs
+                Sydney Sealed
               </span>
               <span className="font-heading font-bold text-lg text-accent ml-1">
                 Pro

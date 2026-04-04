@@ -73,8 +73,8 @@ export default function About() {
     <>
       <SEOHead
         title="About Us – Sydney's Trusted Leak Repair Specialists"
-        description="We're not your average leak repair company. Sydney Leak Repairs Pro uses premium epoxy grout solutions with a 10-year warranty. No tile removal. No shortcuts."
-        canonical="https://sydneyleakrepairspro.com.au/about"
+        description="We're not your average leak repair company. Sydney Sealed uses premium epoxy grout solutions with a 10-year warranty. No tile removal. No shortcuts."
+        canonical="https://sydneysealed.com.au/about"
       />
 
       <div className="min-h-screen bg-background">
@@ -107,7 +107,7 @@ export default function About() {
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8 leading-relaxed">
-                At Sydney Leak Repairs Pro, we believe leak repairs should be done properly the first time.
+                At Sydney Sealed, we believe leak repairs should be done properly the first time.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -163,7 +163,7 @@ export default function About() {
                     Too often, homeowners are left with short-term fixes that look fine at first, but fail far too soon. Cheap materials, rushed workmanship and surface-level repairs can lead to bigger problems over time — including damage to subfloors, framing and surrounding areas.
                   </p>
                   <p className="text-foreground font-medium text-xl">
-                    That is exactly why we started Sydney Leak Repairs Pro.
+                    That is exactly why we started Sydney Sealed.
                   </p>
                   <p>
                     After years working alongside tilers, plumbers and waterproofing contractors across Sydney, we saw the same issues again and again. Repairs being carried out with low-grade materials. Leaks being treated at surface level without identifying the real cause. Homeowners paying for work that should have lasted, only to face the same problem again months or years later.

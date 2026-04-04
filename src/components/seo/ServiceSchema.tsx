@@ -10,7 +10,7 @@ interface ServiceSchemaProps {
 export function ServiceSchema({
   name,
   description,
-  provider = "Sydney Leak Repairs Pro",
+  provider = "Sydney Sealed",
   areaServed = "Sydney, NSW, Australia",
   price,
   priceCurrency = "AUD",

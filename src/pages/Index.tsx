@@ -269,7 +269,7 @@ export default function Index() {
               >
                 <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground mb-6">
                   Why Choose{" "}
-                  <span className="text-secondary">Sydney Leak Repairs Pro?</span>
+                  <span className="text-secondary">Sydney Sealed?</span>
                 </h2>
                 
                 <ul className="space-y-4 mb-8">
