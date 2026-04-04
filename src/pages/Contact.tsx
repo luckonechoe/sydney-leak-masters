@@ -333,6 +333,12 @@ export default function Contact() {
                 viewport={{ once: true }}
               >
                 <div className="p-6 bg-card rounded-lg border border-border">
+                  {/* Trust bar */}
+                  <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted-foreground mb-4 pb-4 border-b border-border/50">
+                    <span>✓ No obligation</span>
+                    <span>✓ No pressure</span>
+                    <span>✓ 10-year warranty on all repairs</span>
+                  </div>
                   <h2 className="font-heading text-xl font-bold text-foreground mb-6">
                     Send Us a Message
                   </h2>
