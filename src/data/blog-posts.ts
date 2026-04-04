@@ -82,6 +82,12 @@ export const blogPostsData: BlogPostContent[] = [
     date: "2024-01-15",
     readTime: "12 min read",
     keywords: ["leaking shower signs", "shower leak detection", "shower waterproofing Sydney", "how to tell if shower is leaking"],
+    keyTakeaways: [
+      "Musty smells, peeling paint, and ceiling stains are early indicators of a hidden shower leak",
+      "Most shower leaks can be repaired without removing tiles using epoxy regrouting",
+      "Untreated shower leaks can cause structural damage costing $5,000–$20,000+",
+      "Professional epoxy grout repairs start from $500–$900 with a 10-year warranty"
+    ],
     relatedPosts: ["epoxy-grout-vs-cement-grout", "diy-leak-detection", "bathroom-waterproofing-standards"],
     faqs: [
       {
