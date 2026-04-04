@@ -387,6 +387,12 @@ export const blogPostsData: BlogPostContent[] = [
     date: "2024-01-05",
     readTime: "13 min read",
     keywords: ["concrete degradation prevention", "spalling repair Sydney", "concrete spalling causes", "balcony concrete repair", "prevent spalling"],
+    keyTakeaways: [
+      "Spalling is caused by corroding steel reinforcement expanding inside the concrete",
+      "Early waterproofing maintenance prevents costly spalling repairs ($5,000–$50,000+)",
+      "Sydney's coastal salt air accelerates concrete degradation in balconies and facades",
+      "Regular inspections and protective coatings are the most cost-effective prevention strategy"
+    ],
     relatedPosts: ["strata-waterproofing-guide", "diy-leak-detection", "signs-of-shower-leak"],
     faqs: [
       {
