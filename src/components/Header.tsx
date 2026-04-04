@@ -48,9 +48,6 @@ export function Header() {
               <span className="font-heading font-bold text-lg text-foreground">
                 Sydney Sealed
               </span>
-              <span className="font-heading font-bold text-lg text-accent ml-1">
-                Pro
-              </span>
             </div>
           </Link>
 
