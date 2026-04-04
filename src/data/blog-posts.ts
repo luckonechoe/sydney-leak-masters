@@ -52,8 +52,10 @@ export interface BlogPostContent {
   category: string;
   author: string;
   date: string;
+  dateModified?: string;
   readTime: string;
   keywords: string[];
+  keyTakeaways?: string[];
   sections: BlogSection[];
   faqs: { question: string; answer: string }[];
   image?: string;
