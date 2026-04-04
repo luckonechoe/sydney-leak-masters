@@ -425,12 +425,12 @@ export default function PreventativeMaintenance() {
                 {
                   icon: Star,
                   title: "Homeowners",
-                  desc: "Protect your bathroom and balcony investment. Avoid nasty surprises and keep your home leak-free year after year.",
+                  desc: <>Protect your <Link to="/services/shower-repairs" className="text-secondary hover:underline">shower</Link> and <Link to="/services/balcony-repairs" className="text-secondary hover:underline">balcony</Link> investment. Avoid nasty surprises and keep your home leak-free year after year.</>,
                 },
                 {
                   icon: Shield,
                   title: "Strata Managers",
-                  desc: "Stay compliant with building maintenance obligations. Receive annual reports perfect for strata records and AGM documentation.",
+                  desc: <>Stay compliant with building maintenance obligations. Receive annual reports perfect for <Link to="/strata" className="text-secondary hover:underline">strata records</Link> and AGM documentation.</>,
                 },
                 {
                   icon: Clock,
