@@ -172,6 +172,7 @@ export default function BalconyRepairs() {
         title="Leaking Balcony Repairs Sydney · Waterproofing & Sealing Specialists"
         description="Expert leaking balcony repairs and waterproofing across Sydney. Stop water damage, prevent spalling, and protect your property. Strata approved. 10-year warranty. Free quotes."
         canonical="https://sydneysealed.com.au/services/balcony-repairs"
+        keywords="leaking balcony repairs sydney, balcony waterproofing, balcony leak repair, balcony sealing sydney, spalling prevention, strata balcony repairs sydney"
       />
       <ServiceSchema
         name="Leaking Balcony Repair Service Sydney"
