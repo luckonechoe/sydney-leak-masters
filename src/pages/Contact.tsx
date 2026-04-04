@@ -213,13 +213,31 @@ export default function Contact() {
               className="max-w-3xl"
             >
               <h1 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-6">
-                Contact{" "}
-                <span className="gradient-text">Us</span>
+                Request a Free{" "}
+                <span className="gradient-text">Leak Inspection</span>
               </h1>
-              <p className="text-lg text-muted-foreground">
-                Ready to stop your leak? Get in touch for a free quote. 
-                We respond within 24 hours.
+              <p className="text-lg text-muted-foreground mb-6">
+                Tell us about your leak and we'll get back to you within 24 hours with honest advice and a clear quote — no obligation, no pressure.
               </p>
+
+              {/* What Happens Next */}
+              <div className="grid sm:grid-cols-3 gap-4 mt-8">
+                <div className="p-4 rounded-lg bg-card border border-border/50 text-center">
+                  <div className="w-8 h-8 rounded-full bg-secondary/10 text-secondary font-bold flex items-center justify-center mx-auto mb-2">1</div>
+                  <p className="text-sm font-medium text-foreground">Submit your details</p>
+                  <p className="text-xs text-muted-foreground mt-1">Photos help us give a more accurate quote</p>
+                </div>
+                <div className="p-4 rounded-lg bg-card border border-border/50 text-center">
+                  <div className="w-8 h-8 rounded-full bg-secondary/10 text-secondary font-bold flex items-center justify-center mx-auto mb-2">2</div>
+                  <p className="text-sm font-medium text-foreground">We review & call you</p>
+                  <p className="text-xs text-muted-foreground mt-1">Within 24 hours, usually sooner</p>
+                </div>
+                <div className="p-4 rounded-lg bg-card border border-border/50 text-center">
+                  <div className="w-8 h-8 rounded-full bg-secondary/10 text-secondary font-bold flex items-center justify-center mx-auto mb-2">3</div>
+                  <p className="text-sm font-medium text-foreground">Free on-site inspection</p>
+                  <p className="text-xs text-muted-foreground mt-1">At a time that suits you</p>
+                </div>
+              </div>
             </motion.div>
           </div>
         </section>
