@@ -1,12 +1,35 @@
+import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Calendar, Clock } from "lucide-react";
+import { ArrowRight, Calendar, Clock, BookOpen } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEOHead, Breadcrumbs } from "@/components/seo";
 import { blogPostsData } from "@/data/blog-posts";
 
+const ALL_CATEGORIES = ["All", "Shower Repairs", "Balcony Repairs", "Education", "Strata", "Tips"] as const;
+
+const TOPIC_LINKS = [
+  { label: "Signs of a Shower Leak", slug: "/blog/signs-of-shower-leak" },
+  { label: "Epoxy Grout vs Cement Grout", slug: "/blog/epoxy-grout-vs-cement-grout" },
+  { label: "Balcony Waterproofing Cost", slug: "/blog/balcony-waterproofing-cost" },
+  { label: "Waterproof Membrane Failure", slug: "/blog/waterproof-membrane-failure" },
+  { label: "Bathroom Waterproofing Standards", slug: "/blog/bathroom-waterproofing-standards" },
+  { label: "Strata Waterproofing", slug: "/blog/strata-waterproofing-guide" },
+  { label: "DIY Leak Detection", slug: "/blog/diy-leak-detection" },
+  { label: "Epoxy Regrouting Guide", slug: "/blog/epoxy-regrouting-guide" },
+  { label: "Balcony Leak Detection", slug: "/blog/balcony-leak-detection" },
+  { label: "Shower Membrane Repair", slug: "/blog/shower-membrane-repair" },
+];
+
 export default function Blog() {
+  const [activeCategory, setActiveCategory] = useState<string>("All");
+
+  const filteredPosts = useMemo(() => {
+    if (activeCategory === "All") return blogPostsData;
+    return blogPostsData.filter((post) => post.category === activeCategory);
+  }, [activeCategory]);
+
   const breadcrumbItems = [
     { name: "Home", href: "/" },
     { name: "Blog", href: "/blog" },
@@ -15,9 +38,10 @@ export default function Blog() {
   return (
     <>
       <SEOHead
-        title="Leak Repair Tips & Guides · Sydney Sealed Blog"
+        title="Shower & Balcony Leak Repair Guides — Sydney Sealed"
         description="Practical guides on shower leak repairs, balcony waterproofing, epoxy regrouting, and long-term property maintenance from Sydney's trusted leak repair specialists."
         canonical="https://sydneysealed.com.au/blog"
+        keywords="leaking shower repairs sydney, balcony waterproofing, epoxy grout, shower leak repair guide, waterproof membrane, strata waterproofing"
       />
 
       <div className="min-h-screen bg-background">
@@ -37,12 +61,20 @@ export default function Blog() {
               className="max-w-3xl"
             >
               <h1 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-6">
-                Practical Advice for{" "}
-                <span className="gradient-text">Sydney Homeowners</span>
+                Shower & Balcony Leak Repair{" "}
+                <span className="gradient-text">Guides</span>
               </h1>
-              <p className="text-lg text-muted-foreground">
-                Straightforward guides on shower leaks, balcony repairs, waterproofing 
+              <p className="text-lg text-muted-foreground mb-4">
+                Straightforward guides on shower leaks, balcony repairs, waterproofing
                 and long-term property care — written by the team that fixes them every day.
+              </p>
+              <p className="text-muted-foreground">
+                Our guides cover everything from{" "}
+                <Link to="/blog/signs-of-shower-leak" className="text-secondary hover:underline">spotting early leak warning signs</Link>{" "}
+                to{" "}
+                <Link to="/blog/epoxy-grout-vs-cement-grout" className="text-secondary hover:underline">choosing the right grout for your shower</Link>.
+                For a comprehensive overview, start with our{" "}
+                <Link to="/guides/complete-guide-leak-repairs-sydney" className="text-secondary hover:underline font-medium">Complete Guide to Leak Repairs in Sydney</Link>.
               </p>
             </motion.div>
           </div>
@@ -72,11 +104,32 @@ export default function Blog() {
           </div>
         </section>
 
+        {/* Category Filter Tabs */}
+        <section className="pb-4">
+          <div className="section-container">
+            <div className="flex flex-wrap gap-2">
+              {ALL_CATEGORIES.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                    activeCategory === cat
+                      ? "bg-secondary text-secondary-foreground"
+                      : "bg-muted text-muted-foreground hover:bg-muted/80"
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Blog Posts Grid */}
         <section className="py-12 lg:py-16">
           <div className="section-container">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {blogPostsData.map((post, index) => (
+              {filteredPosts.map((post, index) => (
                 <motion.article
                   key={post.slug}
                   initial={{ opacity: 0, y: 20 }}
@@ -144,8 +197,40 @@ export default function Blog() {
           </div>
         </section>
 
+        {/* Topics We Cover */}
+        <section className="py-12 lg:py-16 bg-muted/30">
+          <div className="section-container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="font-heading text-2xl lg:text-3xl font-bold text-foreground mb-4">
+                Topics We Cover
+              </h2>
+              <p className="text-muted-foreground mb-8 max-w-2xl">
+                Our knowledge hub covers the key topics Sydney homeowners, strata managers, and property investors need to understand about leak repairs and waterproofing.
+              </p>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3">
+                {TOPIC_LINKS.map((topic) => (
+                  <Link
+                    key={topic.slug}
+                    to={topic.slug}
+                    className="flex items-center gap-2 px-4 py-3 bg-card border border-border rounded-lg hover:border-secondary/50 transition-colors group"
+                  >
+                    <BookOpen className="w-4 h-4 text-secondary shrink-0" />
+                    <span className="text-sm text-foreground group-hover:text-secondary transition-colors">
+                      {topic.label}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* CTA Section */}
-        <section className="py-16 lg:py-20 bg-muted/30">
+        <section className="py-16 lg:py-20">
           <div className="section-container text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
