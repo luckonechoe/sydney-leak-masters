@@ -139,8 +139,8 @@ export default function Strata() {
                 </div>
 
                 <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                  Strata Manager{" "}
-                  <span className="gradient-text">Portal</span>
+                  Strata Leak Repairs &{" "}
+                  <span className="gradient-text">Waterproofing Sydney</span>
                 </h1>
 
                 <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
