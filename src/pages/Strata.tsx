@@ -86,6 +86,14 @@ const strataFAQs = [
     question: "Are your methods professionally compliant?",
     answer: "All our waterproofing work uses professional-grade materials and industry-recognised methods. We provide full compliance documentation that supports levy fund claims and insurance requirements.",
   },
+  {
+    question: "How quickly can you attend an urgent strata leak?",
+    answer: "For urgent strata leak situations — such as active water ingress affecting multiple units — we prioritise scheduling and can typically attend within 24–48 hours. Contact our strata priority line to arrange an urgent inspection.",
+  },
+  {
+    question: "Can you coordinate repairs across multiple buildings in a portfolio?",
+    answer: "Yes. We regularly work with strata management companies overseeing multiple complexes. We can schedule inspections and repairs across your entire portfolio, provide consolidated reporting, and offer volume pricing across all buildings.",
+  },
 ];
 
 export default function Strata() {
