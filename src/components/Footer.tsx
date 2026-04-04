@@ -146,26 +146,8 @@ export function Footer() {
         <div className="section-container py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-muted-foreground text-sm">
-              © {new Date().getFullYear()} Sydney Sealed. All rights reserved. ABN: XX XXX XXX XXX.
+              © {new Date().getFullYear()} Sydney Sealed. All rights reserved.
             </p>
-            
-            {/* Social Links */}
-            <div className="flex items-center gap-4">
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    aria-label={`Follow Sydney Sealed on ${social.name}`}
-                    className="p-2 rounded-lg text-muted-foreground hover:text-secondary hover:bg-secondary/10 transition-colors"
-                    rel="noopener noreferrer"
-                  >
-                    <Icon className="w-5 h-5" />
-                  </a>
-                );
-              })}
-            </div>
           </div>
         </div>
       </div>

@@ -567,9 +567,9 @@ export default function Contact() {
                       {isSubmitting || isUploading ? (
                         "Sending..."
                       ) : (
-                        <>
+                      <>
                           <Send className="w-4 h-4 mr-2" />
-                          Send Message
+                          Request My Free Quote
                         </>
                       )}
                     </Button>

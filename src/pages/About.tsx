@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Shield, Award, Users, CheckCircle2, Clock, Droplets, Heart, Target, Zap, ThumbsUp } from "lucide-react";
+import { Shield, Users, CheckCircle2, Heart, Target, Zap, ThumbsUp, Home, Building2, Key, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { AboutPillars } from "@/components/AboutPillars";
 import { Footer } from "@/components/Footer";
@@ -34,13 +35,6 @@ const values = [
   },
 ];
 
-const stats = [
-  { value: "2,500+", label: "Leaks Fixed" },
-  { value: "10 Year", label: "Warranty" },
-  { value: "98%", label: "Customer Satisfaction" },
-  { value: "0", label: "Tiles Removed" },
-];
-
 const whyDifferent = [
   "We don't remove tiles — saving you thousands in renovation costs",
   "We use premium epoxy grout that outperforms cement grout by 10x",
@@ -50,21 +44,27 @@ const whyDifferent = [
   "We never pressure you into a decision",
 ];
 
-const socialProof = [
+const clientFeedback = [
+  "Clients regularly tell us we're the first company that actually found the source of the leak — rather than just patching over the surface.",
+  "Homeowners consistently mention how much they appreciate the no-tile-removal approach. Less mess, less disruption, and a fraction of the cost of a full renovation.",
+  "The 10-year written warranty is one of the most common reasons people choose us. It gives genuine peace of mind that the repair will last.",
+];
+
+const whoWeWorkWith = [
   {
-    quote: "They found the leak source in 15 minutes that another company couldn't find in 2 visits.",
-    name: "Sarah M.",
-    location: "Bondi, Sydney",
+    icon: Home,
+    title: "Homeowners",
+    description: "Whether you've noticed a small leak or significant water damage, we help you fix it properly — without the cost and disruption of a full renovation.",
   },
   {
-    quote: "No mess, no drama, no tiles ripped out. Just a fixed shower that hasn't leaked since.",
-    name: "James T.",
-    location: "Parramatta, Sydney",
+    icon: Building2,
+    title: "Strata Managers",
+    description: "We understand the complexities of common property repairs, documentation requirements, and coordinating access across multiple units.",
   },
   {
-    quote: "The 10-year warranty gave us peace of mind. That's confidence in your own work.",
-    name: "Linda & Robert K.",
-    location: "Chatswood, Sydney",
+    icon: Key,
+    title: "Property Managers & Landlords",
+    description: "We provide clear reporting, fixed-price quotes, and efficient scheduling to minimise tenant disruption and protect your investment.",
   },
 ];
 
@@ -122,27 +122,17 @@ export default function About() {
           </div>
         </section>
 
-        {/* Stats Bar — Social Proof Trigger */}
-        <section className="py-12 border-y border-border/50 bg-muted/30">
+        {/* Tagline Bar */}
+        <section className="py-8 border-y border-border/50 bg-muted/30">
           <div className="section-container">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="font-heading text-3xl lg:text-4xl font-bold text-secondary mb-1">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-muted-foreground font-medium uppercase tracking-wider">
-                    {stat.label}
-                  </div>
-                </motion.div>
-              ))}
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-medium text-muted-foreground">
+              <span>Shower & Balcony Leak Repairs</span>
+              <span className="hidden sm:inline text-border">·</span>
+              <span>Premium Epoxy Grout</span>
+              <span className="hidden sm:inline text-border">·</span>
+              <span>10-Year Written Warranty</span>
+              <span className="hidden sm:inline text-border">·</span>
+              <span>All Sydney Suburbs</span>
             </div>
           </div>
         </section>
@@ -189,7 +179,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* Why We're Different — Authority + Differentiation */}
+        {/* Why We're Different */}
         <section className="py-16 lg:py-24 bg-muted/20">
           <div className="section-container">
             <motion.div
@@ -226,7 +216,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* Our Values — Emotional Connection */}
+        {/* Our Values */}
         <section className="py-16 lg:py-24">
           <div className="section-container">
             <motion.div
@@ -271,7 +261,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* Mini Testimonials — Social Proof */}
+        {/* Who We Work With */}
         <section className="py-16 lg:py-24 bg-muted/20">
           <div className="section-container">
             <motion.div
@@ -281,15 +271,60 @@ export default function About() {
               className="text-center mb-12"
             >
               <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                Don't Take Our Word For It
+                Who We Work With
               </h2>
-              <p className="text-muted-foreground text-lg">
-                Hear from real Sydney homeowners.
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                We tailor our service to suit homeowners, strata managers, and property professionals across Sydney.
               </p>
             </motion.div>
 
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {socialProof.map((item, index) => (
+              {whoWeWorkWith.map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <motion.div
+                    key={item.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="p-6 rounded-xl bg-card border border-border/50 text-center"
+                  >
+                    <div className="p-3 rounded-lg bg-secondary/10 w-fit mx-auto mb-4">
+                      <Icon className="w-6 h-6 text-secondary" />
+                    </div>
+                    <h3 className="font-heading text-lg font-bold text-foreground mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {item.description}
+                    </p>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* What Our Clients Tell Us */}
+        <section className="py-16 lg:py-24">
+          <div className="section-container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground mb-4">
+                What Our Clients Tell Us
+              </h2>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                We don't have verified online reviews to share yet — but here's the feedback we consistently hear from our clients.
+              </p>
+            </motion.div>
+
+            <div className="max-w-3xl mx-auto space-y-6">
+              {clientFeedback.map((feedback, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -298,27 +333,46 @@ export default function About() {
                   transition={{ delay: index * 0.1 }}
                   className="p-6 rounded-xl bg-card border border-border/50"
                 >
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Award key={i} className="w-4 h-4 text-accent fill-accent" />
-                    ))}
-                  </div>
-                  <p className="text-foreground italic mb-4 leading-relaxed">
-                    "{item.quote}"
+                  <p className="text-foreground leading-relaxed">
+                    {feedback}
                   </p>
-                  <div>
-                    <div className="font-heading font-semibold text-foreground text-sm">
-                      {item.name}
-                    </div>
-                    <div className="text-muted-foreground text-xs">{item.location}</div>
-                  </div>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Final CTA — Urgency + Scarcity */}
+        {/* Internal Links */}
+        <section className="py-12 lg:py-16 bg-muted/20">
+          <div className="section-container">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="font-heading text-2xl font-bold text-foreground mb-6 text-center">
+                Learn More About Our Services
+              </h2>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {[
+                  { label: "Leaking Shower Repairs", href: "/services/shower-repairs" },
+                  { label: "Leaking Balcony Repairs", href: "/services/balcony-repairs" },
+                  { label: "Strata Leak Repairs", href: "/strata" },
+                  { label: "Complete Guide to Leak Repairs", href: "/guides/complete-guide-leak-repairs-sydney" },
+                  { label: "Preventative Maintenance", href: "/preventative-maintenance" },
+                  { label: "Request a Free Quote", href: "/contact" },
+                ].map((link) => (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    className="flex items-center gap-2 p-4 rounded-lg bg-card border border-border/50 hover:border-secondary/50 transition-colors group"
+                  >
+                    <ArrowRight className="w-4 h-4 text-secondary flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+                    <span className="text-foreground font-medium text-sm">{link.label}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA */}
         <section className="py-16 lg:py-24">
           <div className="section-container">
             <motion.div
