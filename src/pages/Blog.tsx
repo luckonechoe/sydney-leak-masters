@@ -17,6 +17,7 @@ export default function Blog() {
       <SEOHead
         title="Blog | Practical Leak Repair Guides for Sydney Homeowners"
         description="Straightforward advice on shower leaks, balcony waterproofing, regrouting and long-term property care from Sydney's trusted leak repair specialists."
+        canonical="https://sydneysealed.com.au/blog"
       />
 
       <div className="min-h-screen bg-background">

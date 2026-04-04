@@ -193,6 +193,7 @@ export default function Contact() {
       <SEOHead
         title="Contact Us | Get a Free Quote"
         description="Contact Sydney Sealed for a free quote. Call us or fill out our contact form. Sydney-wide service with 24-hour response."
+        canonical="https://sydneysealed.com.au/contact"
       />
 
       <div className="min-h-screen bg-background">

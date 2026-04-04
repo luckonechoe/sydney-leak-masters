@@ -94,6 +94,7 @@ export default function FAQ() {
       <SEOHead
         title="FAQ | Frequently Asked Questions"
         description="Find answers to common questions about shower repairs, balcony waterproofing, pricing, warranties, and our service process."
+        canonical="https://sydneysealed.com.au/faq"
       />
 
       <div className="min-h-screen bg-background">
