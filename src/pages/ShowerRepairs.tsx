@@ -103,8 +103,8 @@ const warningSigns = [
 const whyChooseUs = [
   {
     icon: Award,
-    title: "Licensed Waterproofing Specialists",
-    description: "Our technicians are fully licensed and trained in wet area waterproofing, using professional-grade materials and methods for domestic wet areas.",
+    title: "Experienced Waterproofing Specialists",
+    description: "Our technicians are trained in wet area waterproofing, using professional-grade materials and methods for domestic wet areas.",
   },
   {
     icon: Layers,

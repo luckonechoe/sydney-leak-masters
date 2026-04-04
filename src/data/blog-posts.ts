@@ -796,7 +796,7 @@ export const blogPostsData: BlogPostContent[] = [
       },
       {
         question: "Can I waterproof my own bathroom in NSW?",
-        answer: "In NSW, waterproofing of wet areas is classified as specialist work that must be carried out by a licensed waterproofing contractor (holding an appropriate licence from NSW Fair Trading). Homeowners cannot legally carry out their own waterproofing for compliance purposes — even as owner-builder work, a licensed waterproofer must be engaged. This requirement exists because improper waterproofing can cause significant structural damage and health risks that may not become apparent for years."
+        answer: "In NSW, waterproofing of wet areas is classified as specialist work that should be carried out by a qualified waterproofing contractor. Homeowners should not attempt their own waterproofing for compliance purposes — engaging a professional waterproofer is strongly recommended. This is because improper waterproofing can cause significant structural damage and health risks that may not become apparent for years."
       }
     ],
     sections: [

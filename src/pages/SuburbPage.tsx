@@ -109,7 +109,7 @@ export default function SuburbPage({ serviceType = "shower" }: SuburbPageProps) 
               <p className="text-muted-foreground mb-6">
                 {isShower 
                   ? `Our expert technicians provide professional shower leak repairs throughout ${suburbData.name} and the ${suburbData.region} area. Using premium epoxy grout technology, we fix leaking showers without removing tiles — saving you thousands compared to a full bathroom renovation. All work is backed by our 10-year warranty.`
-                  : `Our licensed waterproofing specialists repair leaking balconies across ${suburbData.name} and the ${suburbData.region} area. We use commercial-grade epoxy grout and flexible membrane systems to permanently seal your balcony — without demolition. All repairs include a 10-year written warranty.`
+                  : `Our experienced waterproofing specialists repair leaking balconies across ${suburbData.name} and the ${suburbData.region} area. We use commercial-grade epoxy grout and flexible membrane systems to permanently seal your balcony — without demolition. All repairs include a 10-year written warranty.`
                 }
               </p>
 

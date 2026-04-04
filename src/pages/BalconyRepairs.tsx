@@ -107,8 +107,8 @@ const waterproofingSteps = [
 const whyChooseUs = [
   {
     icon: Award,
-    title: "Licensed Waterproofing Specialists",
-    description: "Our technicians hold current waterproofing licences and are trained in balcony-specific repair techniques using professional-grade external waterproofing methods.",
+    title: "Experienced Waterproofing Specialists",
+    description: "Our technicians are trained in balcony-specific repair techniques using professional-grade external waterproofing methods.",
   },
   {
     icon: Users,
