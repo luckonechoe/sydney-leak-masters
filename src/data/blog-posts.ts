@@ -519,6 +519,12 @@ export const blogPostsData: BlogPostContent[] = [
     date: "2023-12-28",
     readTime: "15 min read",
     keywords: ["strata waterproofing guide", "strata leak repairs Sydney", "property manager waterproofing", "strata building maintenance"],
+    keyTakeaways: [
+      "Strata committees are responsible for waterproofing common property including shared balconies and roof areas",
+      "A planned waterproofing maintenance program prevents emergency special levies",
+      "Shower leaks in individual units can cause damage to common property and neighbouring lots",
+      "Professional strata waterproofing documentation protects committees from liability",
+    ],
     relatedPosts: ["concrete-degradation-prevention", "bathroom-waterproofing-standards", "signs-of-shower-leak"],
     faqs: [
       {
@@ -647,6 +653,12 @@ export const blogPostsData: BlogPostContent[] = [
     date: "2023-12-20",
     readTime: "11 min read",
     keywords: ["DIY leak detection", "how to find a water leak", "shower leak test", "balcony leak detection", "water leak detection Sydney"],
+    keyTakeaways: [
+      "Simple visual inspections and the 'flood test' can help identify shower and balcony leaks early",
+      "DIY detection is a useful first step but professional equipment provides pinpoint accuracy",
+      "Moisture meters and thermal cameras detect hidden leaks behind walls without demolition",
+      "Early detection saves thousands — a $500 repair can prevent $10,000+ in structural damage",
+    ],
     relatedPosts: ["signs-of-shower-leak", "epoxy-grout-vs-cement-grout", "concrete-degradation-prevention"],
     faqs: [
       {
@@ -796,6 +808,12 @@ export const blogPostsData: BlogPostContent[] = [
     date: "2023-12-15",
     readTime: "13 min read",
     keywords: ["waterproofing standards", "bathroom waterproofing requirements", "waterproofing compliance", "NCC waterproofing"],
+    keyTakeaways: [
+      "All wet areas in NSW must be waterproofed by a licensed contractor to meet building regulations",
+      "Waterproof membranes must extend at least 1800mm above the shower floor on all shower walls",
+      "Failure to meet waterproofing standards can void home insurance and create legal liability",
+      "Pre-2000 Sydney bathrooms were often built to lower waterproofing standards than current requirements",
+    ],
     relatedPosts: ["strata-waterproofing-guide", "epoxy-grout-vs-cement-grout", "signs-of-shower-leak"],
     faqs: [
       {
@@ -928,6 +946,12 @@ export const blogPostsData: BlogPostContent[] = [
     date: "2024-02-05",
     readTime: "14 min read",
     keywords: ["leaking balcony tiles repair", "fix balcony tile leak", "balcony tile waterproofing", "balcony grout repair Sydney"],
+    keyTakeaways: [
+      "Balcony tile leaks are most commonly caused by failed grout, cracked tiles, or compromised membranes",
+      "Epoxy regrouting can seal balcony tiles without removing them in many cases",
+      "Untreated balcony leaks cause concrete spalling and structural damage to the building below",
+      "Professional balcony leak repairs in Sydney typically cost $1,500–$5,000 depending on severity",
+    ],
     relatedPosts: ["concrete-degradation-prevention", "epoxy-grout-vs-cement-grout", "signs-of-shower-leak"],
     faqs: [
       { question: "Can leaking balcony tiles be repaired without removing them?", answer: "In some cases, yes. If the leak is caused by failed grout between tiles, regrouting with a waterproof flexible grout can resolve the issue without tile removal. However, if the waterproof membrane beneath the tiles has failed, tile removal is usually necessary to access and repair or replace the membrane. A professional inspection can determine the appropriate repair method for your specific situation." },
@@ -1059,6 +1083,12 @@ export const blogPostsData: BlogPostContent[] = [
     date: "2024-02-10",
     readTime: "14 min read",
     keywords: ["waterproof membrane failure", "membrane failure signs", "shower membrane repair", "balcony membrane failure", "waterproofing repair Sydney"],
+    keyTakeaways: [
+      "Waterproof membranes fail due to age, building movement, poor installation, or chemical exposure",
+      "Membrane failure is the most serious type of shower or balcony leak — it means the primary water barrier is compromised",
+      "Signs of membrane failure include water appearing far from the shower or on lower levels",
+      "Membrane repairs require professional assessment to determine whether patching or full replacement is needed",
+    ],
     relatedPosts: ["signs-of-shower-leak", "bathroom-waterproofing-standards", "concrete-degradation-prevention"],
     faqs: [
       { question: "How do I know if my waterproof membrane has failed?", answer: "Signs of membrane failure include persistent water stains on ceilings below wet areas, musty odours that won't go away, efflorescence on concrete surfaces, loose or hollow-sounding tiles, and visible dampness on walls adjacent to showers or balconies. A professional flood test — blocking the drain and filling the area with water while monitoring below — is the definitive way to confirm membrane failure." },
@@ -1184,6 +1214,12 @@ export const blogPostsData: BlogPostContent[] = [
     date: "2024-02-15",
     readTime: "14 min read",
     keywords: ["balcony waterproofing systems", "balcony waterproofing Sydney", "balcony membrane types", "waterproofing system comparison"],
+    keyTakeaways: [
+      "Liquid-applied membranes, sheet membranes, and cementitious coatings are the three main balcony waterproofing systems",
+      "The best system depends on your balcony's substrate, exposure, and structural movement",
+      "All balcony waterproofing systems require proper drainage falls of at least 1:100",
+      "Professional installation with quality materials provides 15–25 years of waterproof protection",
+    ],
     relatedPosts: ["how-to-fix-leaking-balcony-tiles", "waterproof-membrane-failure", "concrete-degradation-prevention"],
     faqs: [
       { question: "What is the best waterproofing system for a balcony?", answer: "The best system depends on your specific situation. For residential balconies in Sydney, liquid-applied polyurethane membranes offer excellent flexibility, UV resistance, and ease of application. For larger commercial or strata balconies, torch-on modified bitumen provides maximum durability. Consult a waterproofing specialist to assess your balcony's requirements." },
@@ -1312,6 +1348,12 @@ export const blogPostsData: BlogPostContent[] = [
     date: "2024-02-20",
     readTime: "13 min read",
     keywords: ["what causes grout to crack", "cracked grout shower", "grout deterioration", "shower grout repair Sydney", "cracked grout water damage"],
+    keyTakeaways: [
+      "Grout cracking is caused by building movement, thermal expansion, poor mixing, or inadequate curing",
+      "Cracked grout is the number one cause of shower leaks in Sydney homes",
+      "Cement grout is rigid and prone to cracking; epoxy grout flexes with building movement",
+      "Regrouting with epoxy grout eliminates recurring cracking and provides permanent waterproofing",
+    ],
     relatedPosts: ["epoxy-grout-vs-cement-grout", "signs-of-shower-leak", "waterproof-membrane-failure"],
     faqs: [
       { question: "Is cracked grout a sign of a bigger problem?", answer: "Often, yes. While grout naturally deteriorates over time, widespread or premature cracking can indicate underlying issues such as building movement, substrate failure, or moisture problems. Cracked grout allows water to penetrate behind tiles, which can damage the waterproof membrane and structural elements. Even if the cracking seems minor, it's worth having a professional assess the situation." },
@@ -1433,6 +1475,12 @@ export const blogPostsData: BlogPostContent[] = [
     date: "2024-02-25",
     readTime: "14 min read",
     keywords: ["shower waterproofing Sydney", "shower waterproofing cost", "shower waterproofing standards", "bathroom waterproofing Sydney"],
+    keyTakeaways: [
+      "Sydney's humid subtropical climate accelerates grout deterioration and mould growth in showers",
+      "Professional shower waterproofing involves membrane application, epoxy grouting, and silicone sealing",
+      "A properly waterproofed shower should last 15–20+ years before requiring maintenance",
+      "Free inspections from qualified specialists are the safest way to assess your shower's waterproofing condition",
+    ],
     relatedPosts: ["bathroom-waterproofing-standards", "signs-of-shower-leak", "waterproof-membrane-failure"],
     faqs: [
       { question: "How much does shower waterproofing cost in Sydney?", answer: "Shower waterproofing costs in Sydney range from $500–$900 for epoxy regrouting (non-invasive repair), $1,500–$4,000 for targeted membrane repair, and $5,000–$15,000+ for full strip-out and re-waterproofing. The cost depends on the extent of existing damage, the repair method required, and the size of the shower. A free inspection provides an accurate, no-obligation quote." },
@@ -1552,6 +1600,12 @@ export const blogPostsData: BlogPostContent[] = [
     date: "2024-03-01",
     readTime: "13 min read",
     keywords: ["balcony leak detection", "how to find balcony leak", "balcony flood test", "leak detection Sydney", "balcony moisture testing"],
+    keyTakeaways: [
+      "Ponding water, rust stains, and efflorescence (white salt deposits) are early signs of balcony leaks",
+      "The flood test is the most reliable DIY method for confirming a balcony membrane leak",
+      "Balcony leaks often present as ceiling stains or damp walls in the room directly below",
+      "Early professional detection prevents concrete spalling and costly structural repairs",
+    ],
     relatedPosts: ["how-to-fix-leaking-balcony-tiles", "diy-leak-detection", "concrete-degradation-prevention"],
     faqs: [
       { question: "How do professionals detect balcony leaks?", answer: "Professional leak detection for balconies involves several techniques: flood testing (blocking drains and flooding the surface to observe water migration below), electronic impedance testing to locate moisture beneath tiles, calibrated moisture meters to map wet areas, thermal imaging cameras to identify temperature differences caused by moisture, and visual inspection of the underside for staining, efflorescence, or active dripping." },
@@ -1648,6 +1702,12 @@ export const blogPostsData: BlogPostContent[] = [
     date: "2024-03-05",
     readTime: "14 min read",
     keywords: ["shower membrane repair", "shower membrane replacement", "shower waterproofing repair", "membrane repair cost Sydney"],
+    keyTakeaways: [
+      "Shower membrane repair is needed when water bypasses the grout and tile layer entirely",
+      "Partial membrane repairs are possible when damage is localised to specific areas",
+      "Full membrane replacement requires tile removal and typically costs $2,500–$5,000+",
+      "Epoxy regrouting can sometimes resolve leaks without membrane work if the membrane is still intact",
+    ],
     relatedPosts: ["waterproof-membrane-failure", "signs-of-shower-leak", "shower-waterproofing-sydney"],
     faqs: [
       { question: "How do I know if my shower membrane needs repair?", answer: "Your shower membrane likely needs repair if you see water stains on the ceiling below, persistent dampness or musty odours, loose or hollow-sounding tiles (especially at floor level), visible mould that keeps returning, or if a flood test confirms water is penetrating through the shower base. A professional inspection can confirm membrane condition." },
@@ -1793,6 +1853,12 @@ export const blogPostsData: BlogPostContent[] = [
     date: "2024-03-10",
     readTime: "13 min read",
     keywords: ["tiled shower sealing", "shower tile sealing Sydney", "tile sealing services", "bathroom tile sealer", "shower tile protection"],
+    keyTakeaways: [
+      "Shower sealing combines epoxy regrouting, silicone replacement, and waterproof coatings for complete protection",
+      "Properly sealed showers prevent water damage to framing, plasterboard, and adjacent rooms",
+      "Silicone joints should be inspected annually and replaced every 3–5 years as preventative maintenance",
+      "Professional shower sealing with epoxy grout provides a 10-year warranty against leaks",
+    ],
     relatedPosts: ["epoxy-grout-vs-cement-grout", "causes-of-cracked-grout", "shower-waterproofing-sydney"],
     faqs: [
       { question: "Does shower tile sealing prevent leaks?", answer: "Tile sealing provides an additional layer of moisture resistance at the surface level, but it is not a substitute for proper waterproofing. Sealed tiles absorb less water, reducing moisture load on grout and the membrane beneath. When combined with epoxy grout and a sound waterproof membrane, tile sealing adds valuable protection — but it cannot fix an existing leak." },
@@ -1918,6 +1984,12 @@ export const blogPostsData: BlogPostContent[] = [
     date: "2024-03-15",
     readTime: "13 min read",
     keywords: ["tiled balcony sealing", "balcony tile sealer", "balcony sealing Sydney", "external tile sealing", "balcony tile protection"],
+    keyTakeaways: [
+      "Balcony tile sealing protects against water ingress through grout lines, cracks, and expansion joints",
+      "UV exposure and thermal cycling make balcony grout deteriorate faster than indoor shower grout",
+      "Penetrating sealers and epoxy grout provide the most durable protection for outdoor tiled surfaces",
+      "Regular maintenance sealing extends balcony waterproofing life by 5–10 years",
+    ],
     relatedPosts: ["balcony-waterproofing-systems", "how-to-fix-leaking-balcony-tiles", "concrete-degradation-prevention"],
     faqs: [
       { question: "How often should balcony tiles be sealed?", answer: "External balcony tiles should be sealed every 1–2 years, more frequently than internal tiles because they're exposed to UV radiation, rain, and temperature extremes that degrade sealers faster. High-traffic balconies may need annual reapplication. A simple water droplet test — if water no longer beads on the surface — indicates the sealer needs reapplication." },
@@ -2020,6 +2092,12 @@ export const blogPostsData: BlogPostContent[] = [
     date: "2024-03-20",
     readTime: "14 min read",
     keywords: ["balcony membrane repair Sydney", "balcony membrane replacement", "balcony waterproofing repair", "membrane restoration Sydney"],
+    keyTakeaways: [
+      "Balcony membrane repairs address the waterproof barrier beneath tiles that prevents water entering the structure",
+      "Localised membrane patches can fix small areas without full tile removal",
+      "Extensive membrane failure requires full strip-and-replace, typically costing $5,000–$15,000+",
+      "Preventative maintenance and proper drainage are the best ways to extend membrane life",
+    ],
     relatedPosts: ["waterproof-membrane-failure", "balcony-waterproofing-systems", "how-to-fix-leaking-balcony-tiles"],
     faqs: [
       { question: "How much does balcony membrane repair cost in Sydney?", answer: "Balcony membrane repair in Sydney typically costs $2,000–$8,000 depending on balcony size, extent of damage, membrane system chosen, and whether concrete repairs are needed. Small localised repairs may cost less; large balconies with extensive damage and spalling repairs can cost significantly more. A free inspection provides an accurate, itemised quote." },
@@ -2138,6 +2216,12 @@ export const blogPostsData: BlogPostContent[] = [
     date: "2024-03-25",
     readTime: "14 min read",
     keywords: ["epoxy regrouting Sydney", "epoxy regrouting cost", "epoxy grout shower repair", "professional regrouting Sydney"],
+    keyTakeaways: [
+      "Epoxy regrouting replaces failed cement grout with 100% waterproof epoxy grout without removing tiles",
+      "The process takes 1–2 days for a standard shower with minimal disruption to your home",
+      "All existing cement grout must be completely removed before epoxy application for proper bonding",
+      "Professional epoxy regrouting comes with a 10-year warranty and lasts 20+ years",
+    ],
     relatedPosts: ["epoxy-grout-vs-cement-grout", "causes-of-cracked-grout", "signs-of-shower-leak"],
     faqs: [
       { question: "How much does epoxy regrouting cost in Sydney?", answer: "Epoxy regrouting in Sydney typically costs $500–$900 for a standard shower recess. Larger showers, bathrooms with extensive tiling, or complex layouts may cost more. This includes complete removal of existing grout, surface preparation, application of premium epoxy grout, silicone replacement, and a 10-year warranty. Most jobs are completed in a single day." },
@@ -2253,6 +2337,12 @@ export const blogPostsData: BlogPostContent[] = [
     date: "2024-04-01",
     readTime: "13 min read",
     keywords: ["grout replacement Sydney", "grout replacement cost", "shower grout replacement", "regrouting cost Sydney"],
+    keyTakeaways: [
+      "Grout replacement is the most common and cost-effective repair for leaking showers in Sydney",
+      "Signs you need grout replacement include crumbling, discolouration, gaps, and persistent mould",
+      "Upgrading from cement to epoxy grout during replacement provides permanent waterproofing",
+      "Professional grout replacement for a standard shower typically costs $500–$900 in Sydney",
+    ],
     relatedPosts: ["epoxy-regrouting-guide", "epoxy-grout-vs-cement-grout", "causes-of-cracked-grout"],
     faqs: [
       { question: "How much does grout replacement cost in Sydney?", answer: "Grout replacement costs in Sydney depend on the grout type and area size. Cement grout replacement for a standard shower costs $300–$500 but needs repeating every 5–10 years. Epoxy grout replacement costs $500–$900 but lasts 20+ years. Full bathroom regrouting ranges from $800–$2,000 depending on size and grout type. Epoxy grout offers significantly better value over time." },
@@ -2361,6 +2451,12 @@ export const blogPostsData: BlogPostContent[] = [
     date: "2024-04-05",
     readTime: "13 min read",
     keywords: ["tile sealing services Sydney", "professional tile sealing", "tile protection Sydney", "tile sealer application"],
+    keyTakeaways: [
+      "Tile sealing protects both the tile surface and grout joints from water, stains, and wear",
+      "Different tile types require different sealers — natural stone, porcelain, and ceramic each have specific needs",
+      "Unsealed grout in wet areas absorbs water and accelerates deterioration and mould growth",
+      "Professional tile sealing combined with epoxy grouting provides the most comprehensive waterproofing",
+    ],
     relatedPosts: ["tiled-shower-sealing", "tiled-balcony-sealing", "epoxy-grout-vs-cement-grout"],
     faqs: [
       { question: "How much does professional tile sealing cost in Sydney?", answer: "Professional tile sealing in Sydney typically costs $8–$15 per square metre for internal tiles and $10–$20 per square metre for external tiles. A standard shower recess costs $150–$300 to seal, while a balcony might cost $200–$500. Costs vary based on tile type, sealer product, and area size. Many companies offer sealing as an add-on to grouting or waterproofing services." },
@@ -2492,6 +2588,12 @@ export const blogPostsData: BlogPostContent[] = [
     date: "2024-04-10",
     readTime: "14 min read",
     keywords: ["balcony waterproofing cost Sydney", "balcony waterproofing price", "balcony repair cost", "waterproofing cost per square metre"],
+    keyTakeaways: [
+      "Balcony waterproofing in Sydney costs $150–$300 per square metre depending on the system and conditions",
+      "A standard 10–15sqm balcony typically costs $2,000–$5,000 for professional waterproofing",
+      "Delaying waterproofing can lead to concrete spalling repairs costing $20,000–$100,000+",
+      "Getting multiple quotes and checking contractor licensing ensures fair pricing and quality work",
+    ],
     relatedPosts: ["balcony-waterproofing-systems", "balcony-membrane-repair", "how-to-fix-leaking-balcony-tiles"],
     faqs: [
       { question: "How much does balcony waterproofing cost per square metre?", answer: "Balcony waterproofing in Sydney typically costs $80–$150 per square metre for the membrane system alone. Including tile removal, surface preparation, membrane, protection layer, and re-tiling, the all-inclusive cost ranges from $200–$500 per square metre depending on the membrane system chosen, extent of concrete repairs, and tile specification." },
