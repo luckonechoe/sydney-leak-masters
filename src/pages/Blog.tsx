@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Clock, BookOpen } from "lucide-react";
+import blogHeroImage from "@/assets/blog-hero.avif";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEOHead, Breadcrumbs } from "@/components/seo";
@@ -48,9 +49,13 @@ export default function Blog() {
         <Header />
 
         {/* Hero Section */}
-        <section className="pt-24 lg:pt-32 pb-12 lg:pb-16 relative">
-          <div className="absolute inset-0 grid-pattern" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
+        <section className="pt-24 lg:pt-32 pb-12 lg:pb-16 relative overflow-hidden">
+          <img
+            src={blogHeroImage}
+            alt="Professional shower and balcony leak repair work in Sydney"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
 
           <div className="section-container relative">
             <Breadcrumbs items={breadcrumbItems} />
