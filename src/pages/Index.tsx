@@ -98,8 +98,8 @@ export default function Index() {
                 <WarrantyBadge size="lg" className="mb-6" />
                 
                 <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                  Leaking Shower & Balcony Repairs Sydney —{" "}
-                  <span className="gradient-text">Fixed Properly, Without Removing Tiles</span>
+                  Sydney's #1 Shower & Balcony Leak Repair —{" "}
+                  <span className="gradient-text">No Tile Removal, 10-Year Warranty</span>
                 </h1>
                 
                 <p className="text-lg text-muted-foreground mb-8 max-w-xl leading-relaxed">
