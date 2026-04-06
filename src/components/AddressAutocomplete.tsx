@@ -7,6 +7,29 @@ interface AddressAutocompleteProps {
   className?: string;
 }
 
+let mapsScriptPromise: Promise<void> | null = null;
+
+function loadGoogleMapsScript(): Promise<void> {
+  if (window.google?.maps?.places) return Promise.resolve();
+  if (mapsScriptPromise) return mapsScriptPromise;
+
+  mapsScriptPromise = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src =
+      "https://maps.googleapis.com/maps/api/js?key=AIzaSyBUkRDAOkJcR8EAz6DwnZJzUGc6_lvXpMY&libraries=places";
+    script.async = true;
+    script.defer = true;
+    script.onload = () => resolve();
+    script.onerror = () => {
+      mapsScriptPromise = null;
+      reject(new Error("Failed to load Google Maps script"));
+    };
+    document.head.appendChild(script);
+  });
+
+  return mapsScriptPromise;
+}
+
 export function AddressAutocomplete({ onAddressSelect, className }: AddressAutocompleteProps) {
   const inputRef = useRef<HTMLInputElement>(null);
   const autocompleteRef = useRef<google.maps.places.Autocomplete | null>(null);
@@ -16,8 +39,10 @@ export function AddressAutocomplete({ onAddressSelect, className }: AddressAutoc
   useEffect(() => {
     if (!inputRef.current) return;
 
-    const initAutocomplete = () => {
-      if (!window.google?.maps?.places || !inputRef.current) return;
+    let cancelled = false;
+
+    loadGoogleMapsScript().then(() => {
+      if (cancelled || !inputRef.current || !window.google?.maps?.places) return;
 
       autocompleteRef.current = new google.maps.places.Autocomplete(inputRef.current, {
         componentRestrictions: { country: "au" },
@@ -31,22 +56,10 @@ export function AddressAutocomplete({ onAddressSelect, className }: AddressAutoc
           stableCallback(place.formatted_address);
         }
       });
-    };
-
-    if (window.google?.maps?.places) {
-      initAutocomplete();
-    } else {
-      // Wait for script to load
-      const interval = setInterval(() => {
-        if (window.google?.maps?.places) {
-          clearInterval(interval);
-          initAutocomplete();
-        }
-      }, 200);
-      return () => clearInterval(interval);
-    }
+    });
 
     return () => {
+      cancelled = true;
       if (autocompleteRef.current) {
         google.maps.event.clearInstanceListeners(autocompleteRef.current);
       }
