@@ -139,7 +139,7 @@ export default function Index() {
                     Get Online Quote
                   </CTAButton>
                 </div>
-              </motion.div>
+              </div>
               
               {/* Right Side - Hero Image Placeholder */}
               <motion.div
