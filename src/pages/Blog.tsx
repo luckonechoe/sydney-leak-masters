@@ -66,8 +66,8 @@ export default function Blog() {
               className="max-w-3xl"
             >
               <h1 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-6">
-                Shower & Balcony Leak Repair{" "}
-                <span className="gradient-text">Guides</span>
+                Leak Repair Guides for{" "}
+                <span className="gradient-text">Sydney Properties</span>
               </h1>
               <p className="text-lg text-muted-foreground mb-4">
                 Straightforward guides on shower leaks, balcony repairs, waterproofing
