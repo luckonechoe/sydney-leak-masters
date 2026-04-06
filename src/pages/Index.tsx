@@ -94,11 +94,7 @@ export default function Index() {
           <div className="section-container relative">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               {/* Left Content */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
+              <div>
                 <WarrantyBadge size="lg" className="mb-6" />
                 
                 <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
@@ -143,7 +139,7 @@ export default function Index() {
                     Get Online Quote
                   </CTAButton>
                 </div>
-              </motion.div>
+              </div>
               
               {/* Right Side - Hero Image Placeholder */}
               <motion.div
