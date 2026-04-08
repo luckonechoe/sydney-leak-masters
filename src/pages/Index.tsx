@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import { Shield, Droplets, Clock, Award, CheckCircle2, ArrowRight, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -6,13 +7,15 @@ import { Footer } from "@/components/Footer";
 import { CTAButton } from "@/components/CTAButton";
 import { WarrantyBadge } from "@/components/WarrantyBadge";
 import { ServiceCard } from "@/components/ServiceCard";
-import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { TrustPillars } from "@/components/TrustPillars";
-import { QuoteForm } from "@/components/QuoteForm";
-import { Testimonials } from "@/components/Testimonials";
 import { SEOHead, LocalBusinessSchema } from "@/components/seo";
 import { FAQSchema } from "@/components/seo/FAQSchema";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+
+// Lazy-load below-fold components to reduce initial JS
+const ProcessTimeline = lazy(() => import("@/components/ProcessTimeline").then(m => ({ default: m.ProcessTimeline })));
+const QuoteForm = lazy(() => import("@/components/QuoteForm").then(m => ({ default: m.QuoteForm })));
+const Testimonials = lazy(() => import("@/components/Testimonials").then(m => ({ default: m.Testimonials })));
 
 const trustPoints = [
   { icon: Shield, text: "10-Year Warranty" },
@@ -292,7 +295,9 @@ export default function Index() {
               </p>
             </motion.div>
             
-            <ProcessTimeline />
+            <Suspense fallback={null}>
+              <ProcessTimeline />
+            </Suspense>
           </div>
         </section>
 
@@ -402,7 +407,9 @@ export default function Index() {
               </p>
             </motion.div>
             
-            <Testimonials />
+            <Suspense fallback={null}>
+              <Testimonials />
+            </Suspense>
           </div>
         </section>
 
@@ -556,7 +563,9 @@ export default function Index() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
               >
-                <QuoteForm />
+                <Suspense fallback={null}>
+                  <QuoteForm />
+                </Suspense>
               </motion.div>
             </div>
           </div>
