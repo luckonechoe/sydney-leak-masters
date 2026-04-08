@@ -15,7 +15,7 @@ import { FAQSchema } from "@/components/seo/FAQSchema";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const trustPoints = [
-  { icon: Shield, text: "10-Year Written Warranty" },
+  { icon: Shield, text: "10-Year Warranty" },
   { icon: Droplets, text: "No Tile Removal Required" },
   { icon: Clock, text: "Free On-Site Inspections" },
   { icon: Award, text: "Premium Epoxy Grout Systems" },
@@ -27,7 +27,7 @@ const benefits = [
   "Premium epoxy regrouting across Greater Sydney",
   "Transparent pricing with no hidden costs",
   "Strata-approved methods for property managers",
-  "Backed by a 10-year written warranty on every job",
+  "Backed by a 10-Year Warranty on every job",
 ];
 
 const homepageFaqs = [
@@ -45,7 +45,7 @@ const homepageFaqs = [
   },
   {
     question: "Do you offer a warranty on leak repairs?",
-    answer: "Yes. Every shower and balcony leak repair comes with a 10-year written warranty. This covers the materials and workmanship, giving you complete peace of mind that the repair will last.",
+    answer: "Yes. Every shower and balcony leak repair comes with a 10-Year Warranty. This covers the materials and workmanship, giving you complete peace of mind that the repair will last.",
   },
   {
     question: "Can you repair a leaking balcony without replacing the membrane?",
@@ -104,7 +104,7 @@ export default function Index() {
                 
                 <p className="text-lg text-muted-foreground mb-8 max-w-xl leading-relaxed">
                   Sydney Sealed specialises in permanent leak repairs using premium epoxy grout systems. 
-                  No tile removal. No unnecessary demolition. Just expert workmanship backed by a 10-year written warranty.
+                  No tile removal. No unnecessary demolition. Just expert workmanship backed by a 10-Year Warranty.
                 </p>
                 
                 {/* Trust Points */}
