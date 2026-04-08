@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import { LazyMotion, domAnimation } from "framer-motion";
 import { HelmetProvider } from "react-helmet-async";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -43,37 +44,39 @@ const App = () => (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider>
         <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <ScrollToTop />
-            <Suspense fallback={null}>
-              <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/services/shower-repairs" element={<ShowerRepairs />} />
-                <Route path="/services/balcony-repairs" element={<BalconyRepairs />} />
-                
-                {/* SEO-optimized keyword suburb routes */}
-                <Route path="/leaking-shower-repairs/:suburb" element={<SuburbPage serviceType="shower" />} />
-                <Route path="/leaking-balcony-repairs/:suburb" element={<SuburbPage serviceType="balcony" />} />
-                
-                {/* Legacy suburb route - redirects to new keyword URLs */}
-                <Route path="/services/:suburb" element={<SuburbRedirect />} />
-                
-                <Route path="/suburbs" element={<Suburbs />} />
-                <Route path="/strata" element={<Strata />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blog/:slug" element={<BlogPost />} />
-                <Route path="/guides/complete-guide-leak-repairs-sydney" element={<CompleteGuide />} />
-                <Route path="/faq" element={<FAQ />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/preventative-maintenance" element={<PreventativeMaintenance />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/terms-of-service" element={<TermsOfService />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </Suspense>
-          </BrowserRouter>
+          <LazyMotion features={domAnimation} strict>
+            <Toaster />
+            <Sonner />
+            <BrowserRouter>
+              <ScrollToTop />
+              <Suspense fallback={null}>
+                <Routes>
+                  <Route path="/" element={<Index />} />
+                  <Route path="/services/shower-repairs" element={<ShowerRepairs />} />
+                  <Route path="/services/balcony-repairs" element={<BalconyRepairs />} />
+                  
+                  {/* SEO-optimized keyword suburb routes */}
+                  <Route path="/leaking-shower-repairs/:suburb" element={<SuburbPage serviceType="shower" />} />
+                  <Route path="/leaking-balcony-repairs/:suburb" element={<SuburbPage serviceType="balcony" />} />
+                  
+                  {/* Legacy suburb route - redirects to new keyword URLs */}
+                  <Route path="/services/:suburb" element={<SuburbRedirect />} />
+                  
+                  <Route path="/suburbs" element={<Suburbs />} />
+                  <Route path="/strata" element={<Strata />} />
+                  <Route path="/blog" element={<Blog />} />
+                  <Route path="/blog/:slug" element={<BlogPost />} />
+                  <Route path="/guides/complete-guide-leak-repairs-sydney" element={<CompleteGuide />} />
+                  <Route path="/faq" element={<FAQ />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/preventative-maintenance" element={<PreventativeMaintenance />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/terms-of-service" element={<TermsOfService />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </Suspense>
+            </BrowserRouter>
+          </LazyMotion>
         </TooltipProvider>
       </ThemeProvider>
     </QueryClientProvider>

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { MapPin, Search, Shield, Volume2, MessageSquare, Award } from "lucide-react";
 
 const pillars = [
@@ -38,7 +38,7 @@ export function TrustPillars() {
   return (
     <section className="py-16 lg:py-24">
       <div className="section-container">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -50,13 +50,13 @@ export function TrustPillars() {
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             Built on honest work, premium materials, and a commitment to getting it right the first time.
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon;
             return (
-              <motion.div
+              <m.div
                 key={pillar.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -73,7 +73,7 @@ export function TrustPillars() {
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   {pillar.description}
                 </p>
-              </motion.div>
+              </m.div>
             );
           })}
         </div>
