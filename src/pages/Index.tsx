@@ -295,7 +295,9 @@ export default function Index() {
               </p>
             </motion.div>
             
-            <ProcessTimeline />
+            <Suspense fallback={null}>
+              <ProcessTimeline />
+            </Suspense>
           </div>
         </section>
 
@@ -405,7 +407,9 @@ export default function Index() {
               </p>
             </motion.div>
             
-            <Testimonials />
+            <Suspense fallback={null}>
+              <Testimonials />
+            </Suspense>
           </div>
         </section>
 
@@ -559,7 +563,9 @@ export default function Index() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
               >
-                <QuoteForm />
+                <Suspense fallback={null}>
+                  <QuoteForm />
+                </Suspense>
               </motion.div>
             </div>
           </div>
