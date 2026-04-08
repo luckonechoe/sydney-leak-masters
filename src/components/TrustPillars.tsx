@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { MapPin, Search, Shield, Volume2, MessageSquare, Award } from "lucide-react";
 
 const pillars = [

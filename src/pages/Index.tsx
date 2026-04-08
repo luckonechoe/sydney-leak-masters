@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Shield, Droplets, Clock, Award, CheckCircle2, ArrowRight, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";

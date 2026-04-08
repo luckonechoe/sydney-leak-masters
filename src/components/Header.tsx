@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, Sun, Moon } from "lucide-react";
 import logoImg from "@/assets/logo.png";
 import { cn } from "@/lib/utils";
