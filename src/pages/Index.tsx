@@ -112,14 +112,11 @@ export default function Index() {
                 
                 {/* Trust Points */}
                 <div className="grid grid-cols-2 gap-4 mb-8">
-                  {trustPoints.map((point, index) => {
+                {trustPoints.map((point) => {
                     const Icon = point.icon;
                     return (
-                      <m.div
+                      <div
                         key={point.text}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.3 + index * 0.1 }}
                         className="flex items-center gap-3"
                       >
                         <div className="p-2 rounded-lg bg-secondary/10">
@@ -128,7 +125,7 @@ export default function Index() {
                         <span className="text-sm font-medium text-foreground">
                           {point.text}
                         </span>
-                      </m.div>
+                      </div>
                     );
                   })}
                 </div>
