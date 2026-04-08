@@ -191,9 +191,10 @@ export default function Index() {
             >
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 {[
-                  { value: "3–6 hrs", label: "Average Repair Time" },
+                  { value: "100%", label: "Success Rate" },
+                  { value: "3–6 hrs", label: "Average Job Time" },
                   { value: "48 hrs", label: "Full Cure Time" },
-                  { value: "10 yrs", label: "Written Warranty" },
+                  { value: "Lifetime", label: "Mold Protection" },
                   { value: "50+", label: "Sydney Suburbs Serviced" },
                 ].map((stat) => (
                   <div key={stat.label}>
@@ -366,10 +367,10 @@ export default function Index() {
             >
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 {[
-                  { value: "3–6 hrs", label: "Average Repair Time" },
+                  { value: "100%", label: "Success Rate" },
+                  { value: "3–6 hrs", label: "Average Job Time" },
                   { value: "48 hrs", label: "Full Cure Time" },
-                  { value: "10 yrs", label: "Written Warranty" },
-                  { value: "50+", label: "Suburbs Serviced" },
+                  { value: "Lifetime", label: "Mold Protection" },
                 ].map((stat) => (
                   <div key={stat.label}>
                     <p className="font-heading text-3xl lg:text-4xl font-bold text-primary mb-2">
