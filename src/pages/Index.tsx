@@ -142,10 +142,7 @@ export default function Index() {
               </div>
               
               {/* Right Side - Hero Image Placeholder */}
-              <m.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+              <div
                 className="relative hidden lg:block"
               >
                 <div className="aspect-[4/3] rounded-xl bg-gradient-to-br from-card to-muted border border-border overflow-hidden">
@@ -159,10 +156,7 @@ export default function Index() {
                 </div>
                 
                 {/* Floating badge */}
-                <m.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6 }}
+                <div
                   className="absolute -bottom-4 -left-4 p-4 bg-card border border-border rounded-lg shadow-lg"
                 >
                   <div className="flex items-center gap-3">
@@ -174,8 +168,8 @@ export default function Index() {
                       <p className="text-xs text-muted-foreground">Service Coverage</p>
                     </div>
                   </div>
-                </m.div>
-              </m.div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
