@@ -20,7 +20,7 @@ const benefits = [
   "No tile removal required",
   "Fast response times",
   "Premium epoxy grout technology",
-  "10-year written warranty",
+  "10-Year Warranty",
   "Minimal disruption to your home",
   "Clean, professional workmanship",
 ];
@@ -118,8 +118,8 @@ const whyChooseUs = [
   },
   {
     icon: Shield,
-    title: "10-Year Written Warranty",
-    description: "Every shower leak repair comes with our comprehensive 10-year written warranty. If any issue arises, we come back and fix it at no additional cost to you.",
+    title: "10-Year Warranty",
+    description: "Every shower leak repair comes with our comprehensive 10-Year Warranty. If any issue arises, we come back and fix it at no additional cost to you.",
   },
   {
     icon: DollarSign,
@@ -135,7 +135,7 @@ const showerFAQs = [
   },
   {
     question: "How long does epoxy grout last in a shower?",
-    answer: "Premium epoxy grout is significantly more durable than traditional cement grout. When professionally applied, epoxy grout can last 20+ years without cracking, staining, or allowing water penetration. That's why we back our work with a 10-year written warranty.",
+    answer: "Premium epoxy grout is significantly more durable than traditional cement grout. When professionally applied, epoxy grout can last 20+ years without cracking, staining, or allowing water penetration. That's why we back our work with a 10-Year Warranty.",
   },
   {
     question: "Is epoxy grout safe for bathrooms?",
@@ -871,7 +871,7 @@ export default function ShowerRepairs() {
                     </li>
                     <li className="flex items-center gap-3 text-sm text-foreground">
                       <Check className="w-4 h-4 text-secondary" />
-                      10-year written warranty
+                      10-Year Warranty
                     </li>
                     <li className="flex items-center gap-3 text-sm text-foreground">
                       <Check className="w-4 h-4 text-secondary" />

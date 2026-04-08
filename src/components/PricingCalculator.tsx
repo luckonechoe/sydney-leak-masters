@@ -147,7 +147,7 @@ export function PricingCalculator({ type }: PricingCalculatorProps) {
               {[
                 "Free on-site inspection",
                 "Premium epoxy grout application",
-                "10-year written warranty",
+                "10-Year Warranty",
                 "Full clean-up on completion",
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2 text-sm text-muted-foreground">

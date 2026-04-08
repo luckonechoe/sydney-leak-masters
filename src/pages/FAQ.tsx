@@ -52,7 +52,7 @@ const faqs: FAQItem[] = [
   {
     category: "Warranty",
     question: "What warranty do you offer?",
-    answer: "All our repairs come with a 10-year written warranty covering materials and workmanship. This gives you peace of mind that if any issues arise, we'll fix them at no additional cost.",
+    answer: "All our repairs come with a 10-Year Warranty covering materials and workmanship. This gives you peace of mind that if any issues arise, we'll fix them at no additional cost.",
   },
   {
     category: "Warranty",

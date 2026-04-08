@@ -47,7 +47,7 @@ const whyDifferent = [
 const clientFeedback = [
   "Clients regularly tell us we're the first company that actually found the source of the leak — rather than just patching over the surface.",
   "Homeowners consistently mention how much they appreciate the no-tile-removal approach. Less mess, less disruption, and a fraction of the cost of a full renovation.",
-  "The 10-year written warranty is one of the most common reasons people choose us. It gives genuine peace of mind that the repair will last.",
+  "The 10-Year Warranty is one of the most common reasons people choose us. It gives genuine peace of mind that the repair will last.",
 ];
 
 const whoWeWorkWith = [
@@ -130,7 +130,7 @@ export default function About() {
               <span className="hidden sm:inline text-border">·</span>
               <span>Premium Epoxy Grout</span>
               <span className="hidden sm:inline text-border">·</span>
-              <span>10-Year Written Warranty</span>
+              <span>10-Year Warranty</span>
               <span className="hidden sm:inline text-border">·</span>
               <span>All Sydney Suburbs</span>
             </div>
@@ -168,7 +168,7 @@ export default function About() {
                     Whether it is an older home with long-term water ingress issues or a modern apartment affected by construction defects, we approach every job with the same focus on quality workmanship, reliable service and lasting results.
                   </p>
                   <p>
-                    That is why we stand behind our work with a <span className="text-accent font-semibold">10-year written warranty</span>. It is not a marketing line. It is a reflection of the confidence we have in our materials, our methods and our team.
+                    That is why we stand behind our work with a <span className="text-accent font-semibold">10-Year Warranty</span>. It is not a marketing line. It is a reflection of the confidence we have in our materials, our methods and our team.
                   </p>
                   <p className="text-foreground font-semibold text-xl">
                     When we say the leak has been repaired, we mean it.

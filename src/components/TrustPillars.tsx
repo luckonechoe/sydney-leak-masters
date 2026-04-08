@@ -30,7 +30,7 @@ const pillars = [
   {
     icon: Award,
     title: "Service-Backed Workmanship",
-    description: "Every job is backed by our 10-year written warranty — because we stand behind every repair we do.",
+    description: "Every job is backed by our 10-Year Warranty — because we stand behind every repair we do.",
   },
 ];
 
