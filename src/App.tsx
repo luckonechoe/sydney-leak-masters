@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import { LazyMotion, domAnimation } from "framer-motion";
 import { HelmetProvider } from "react-helmet-async";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
