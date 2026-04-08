@@ -90,7 +90,7 @@ export function Header() {
                   >
                     <AnimatePresence>
                       {servicesOpen && (
-                        <motion.div
+                        <m.div
                           initial={{ opacity: 0, y: -10 }}
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -10 }}
@@ -111,7 +111,7 @@ export function Header() {
                               {child.name}
                             </Link>
                           ))}
-                        </motion.div>
+                        </m.div>
                       )}
                     </AnimatePresence>
                   </div>
@@ -149,7 +149,7 @@ export function Header() {
         {/* Mobile Navigation */}
         <AnimatePresence>
           {mobileMenuOpen && (
-            <motion.div
+            <m.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
@@ -210,7 +210,7 @@ export function Header() {
                   </CTAButton>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           )}
         </AnimatePresence>
       </nav>

@@ -41,7 +41,7 @@ export function ServiceCard({ type, className }: ServiceCardProps) {
   const Icon = data.icon;
 
   return (
-    <motion.div
+    <m.div
       whileHover={{ y: -8 }}
       transition={{ duration: 0.3 }}
     >
@@ -82,6 +82,6 @@ export function ServiceCard({ type, className }: ServiceCardProps) {
           </CardContent>
         </Card>
       </Link>
-    </motion.div>
+    </m.div>
   );
 }

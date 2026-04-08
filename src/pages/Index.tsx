@@ -115,7 +115,7 @@ export default function Index() {
                   {trustPoints.map((point, index) => {
                     const Icon = point.icon;
                     return (
-                      <motion.div
+                      <m.div
                         key={point.text}
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -128,7 +128,7 @@ export default function Index() {
                         <span className="text-sm font-medium text-foreground">
                           {point.text}
                         </span>
-                      </motion.div>
+                      </m.div>
                     );
                   })}
                 </div>
@@ -145,7 +145,7 @@ export default function Index() {
               </div>
               
               {/* Right Side - Hero Image Placeholder */}
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -162,7 +162,7 @@ export default function Index() {
                 </div>
                 
                 {/* Floating badge */}
-                <motion.div
+                <m.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 }}
@@ -177,8 +177,8 @@ export default function Index() {
                       <p className="text-xs text-muted-foreground">Service Coverage</p>
                     </div>
                   </div>
-                </motion.div>
-              </motion.div>
+                </m.div>
+              </m.div>
             </div>
           </div>
         </section>
@@ -186,7 +186,7 @@ export default function Index() {
         {/* Trust Statistics */}
         <section className="py-12 lg:py-16">
           <div className="section-container">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -209,14 +209,14 @@ export default function Index() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </m.div>
           </div>
         </section>
 
         {/* Services Section */}
         <section className="py-16 lg:py-24 bg-muted/30">
           <div className="section-container">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -228,7 +228,7 @@ export default function Index() {
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 We fix leaking showers and balconies across Sydney using proven epoxy grout and waterproofing systems — without removing your tiles.
               </p>
-            </motion.div>
+            </m.div>
             
             <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
               <ServiceCard type="shower" />
@@ -243,7 +243,7 @@ export default function Index() {
         {/* Preventative Maintenance Banner */}
         <section className="py-12 lg:py-16">
           <div className="section-container">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -273,14 +273,14 @@ export default function Index() {
                   </Link>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           </div>
         </section>
 
         {/* Process Section */}
         <section className="py-16 lg:py-24">
           <div className="section-container">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -293,7 +293,7 @@ export default function Index() {
                 A simple 4-step process from inspection to completion. 
                 No hidden costs, no surprises.
               </p>
-            </motion.div>
+            </m.div>
             
             <Suspense fallback={null}>
               <ProcessTimeline />
@@ -305,7 +305,7 @@ export default function Index() {
         <section className="py-16 lg:py-24 bg-muted/30">
           <div className="section-container">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -317,7 +317,7 @@ export default function Index() {
                 
                 <ul className="space-y-4 mb-8">
                   {benefits.map((benefit, index) => (
-                    <motion.li
+                    <m.li
                       key={benefit}
                       initial={{ opacity: 0, x: -10 }}
                       whileInView={{ opacity: 1, x: 0 }}
@@ -327,7 +327,7 @@ export default function Index() {
                     >
                       <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
                       <span className="text-foreground">{benefit}</span>
-                    </motion.li>
+                    </m.li>
                   ))}
                 </ul>
                 
@@ -338,10 +338,10 @@ export default function Index() {
                   View FAQs
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-              </motion.div>
+              </m.div>
               
               {/* Image Placeholder */}
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -355,7 +355,7 @@ export default function Index() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </m.div>
             </div>
           </div>
         </section>
@@ -363,7 +363,7 @@ export default function Index() {
         {/* Performance Metrics */}
         <section className="py-12 lg:py-16">
           <div className="section-container">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -386,14 +386,14 @@ export default function Index() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </m.div>
           </div>
         </section>
 
         {/* Testimonials Section */}
         <section className="py-16 lg:py-24">
           <div className="section-container">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -405,7 +405,7 @@ export default function Index() {
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Real reviews from homeowners and property managers across Sydney.
               </p>
-            </motion.div>
+            </m.div>
             
             <Suspense fallback={null}>
               <Testimonials />
@@ -416,7 +416,7 @@ export default function Index() {
         {/* Homepage FAQ Section */}
         <section className="py-16 lg:py-24 bg-muted/30">
           <div className="section-container">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -428,9 +428,9 @@ export default function Index() {
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Straight answers to the questions Sydney homeowners ask most.
               </p>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -448,14 +448,14 @@ export default function Index() {
                   </AccordionItem>
                 ))}
               </Accordion>
-            </motion.div>
+            </m.div>
           </div>
         </section>
 
         {/* Service Areas Section */}
         <section className="py-16 lg:py-24">
           <div className="section-container">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -467,9 +467,9 @@ export default function Index() {
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 We service over 50 suburbs from the Eastern Suburbs to Western Sydney. No travel fees, no matter where you are.
               </p>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -485,7 +485,7 @@ export default function Index() {
                   {area.name}
                 </Link>
               ))}
-            </motion.div>
+            </m.div>
 
             <div className="flex flex-wrap justify-center gap-4">
               <Link
@@ -520,7 +520,7 @@ export default function Index() {
         <section id="quote-form" className="py-16 lg:py-24 bg-muted/30">
           <div className="section-container">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -555,9 +555,9 @@ export default function Index() {
                 </div>
                 
                 <WarrantyBadge size="md" animated={false} />
-              </motion.div>
+              </m.div>
               
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -566,7 +566,7 @@ export default function Index() {
                 <Suspense fallback={null}>
                   <QuoteForm />
                 </Suspense>
-              </motion.div>
+              </m.div>
             </div>
           </div>
         </section>
@@ -574,7 +574,7 @@ export default function Index() {
         {/* CTA Banner */}
         <section className="py-16 lg:py-20 bg-gradient-to-r from-primary/20 via-secondary/10 to-primary/20">
           <div className="section-container text-center">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -593,7 +593,7 @@ export default function Index() {
                   Book Inspection
                 </CTAButton>
               </div>
-            </motion.div>
+            </m.div>
           </div>
         </section>
 
