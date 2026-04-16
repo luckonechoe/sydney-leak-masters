@@ -138,7 +138,7 @@ export default function CompleteGuide() {
                 <span className="px-3 py-1 bg-secondary/10 text-secondary text-sm font-medium rounded">Complete Guide</span>
                 <span className="text-sm text-muted-foreground">25 min read</span>
               </div>
-              <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6" style={{ lineHeight: 1.1 }}>
                 Complete Guide to Leaking Shower and Balcony Repairs in Sydney
               </h1>
               <p className="text-lg text-muted-foreground mb-8">
