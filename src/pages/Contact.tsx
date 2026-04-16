@@ -212,9 +212,9 @@ export default function Contact() {
               animate={{ opacity: 1, y: 0 }}
               className="max-w-3xl"
             >
-              <h1 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-6">
+              <h1 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-6" style={{ lineHeight: 1.1 }}>
                 Request a Free{" "}
-                <span className="gradient-text">Leak Inspection</span>
+                <span className="gradient-text" style={{ lineHeight: 'inherit' }}>Leak Inspection</span>
               </h1>
               <p className="text-lg text-muted-foreground mb-6">
                 Tell us about your leak and we'll get back to you within 24 hours with honest advice and a clear quote — no obligation, no pressure.

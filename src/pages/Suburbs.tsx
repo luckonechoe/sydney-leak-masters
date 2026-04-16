@@ -103,9 +103,9 @@ export default function Suburbs() {
                 </span>
               </div>
 
-              <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+              <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6" style={{ lineHeight: 1.1 }}>
                 Leak Repairs Across{" "}
-                <span className="gradient-text">All of Sydney</span>
+                <span className="gradient-text" style={{ lineHeight: 'inherit' }}>All of Sydney</span>
               </h1>
 
               <p className="text-lg text-muted-foreground mb-4 max-w-2xl">

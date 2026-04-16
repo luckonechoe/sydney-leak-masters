@@ -65,9 +65,9 @@ export default function Blog() {
               animate={{ opacity: 1, y: 0 }}
               className="max-w-3xl"
             >
-              <h1 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-6">
+              <h1 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-6" style={{ lineHeight: 1.1 }}>
                 Leak Repair Guides for{" "}
-                <span className="gradient-text">Sydney Properties</span>
+                <span className="gradient-text" style={{ lineHeight: 'inherit' }}>Sydney Properties</span>
               </h1>
               <p className="text-lg text-muted-foreground mb-4">
                 Straightforward guides on shower leaks, balcony repairs, waterproofing
