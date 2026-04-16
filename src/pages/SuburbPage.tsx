@@ -100,8 +100,8 @@ export default function SuburbPage({ serviceType = "shower" }: SuburbPageProps) 
                 <span className="text-sm text-muted-foreground">{suburbData.region} • {suburbData.postcode}</span>
               </div>
 
-              <h1 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-6">
-                {serviceLabel} in <span className="gradient-text">{suburbData.name}</span>
+              <h1 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-6" style={{ lineHeight: 1.1 }}>
+                {serviceLabel} in <span className="gradient-text" style={{ lineHeight: 'inherit' }}>{suburbData.name}</span>
               </h1>
 
               <p className="text-lg text-muted-foreground mb-4">{suburbData.description}</p>

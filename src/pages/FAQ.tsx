@@ -119,9 +119,9 @@ export default function FAQ() {
                 </div>
               </div>
 
-              <h1 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-6">
+              <h1 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-6" style={{ lineHeight: 1.1 }}>
                 Frequently Asked{" "}
-                <span className="gradient-text">Questions</span>
+                <span className="gradient-text" style={{ lineHeight: 'inherit' }}>Questions</span>
               </h1>
               <p className="text-lg text-muted-foreground">
                 Find answers to common questions about our leak repair services, 

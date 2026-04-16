@@ -204,9 +204,9 @@ export default function BalconyRepairs() {
                   <WarrantyBadge size="md" />
                 </div>
 
-                <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+                <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6" style={{ lineHeight: 1.1 }}>
                   Leaking Balcony Repairs{" "}
-                  <span className="gradient-text">Sydney</span>
+                  <span className="gradient-text" style={{ lineHeight: 'inherit' }}>Sydney</span>
                 </h1>
 
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">

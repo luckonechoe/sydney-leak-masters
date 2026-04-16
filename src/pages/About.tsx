@@ -101,9 +101,9 @@ export default function About() {
             >
               <WarrantyBadge size="lg" className="mb-6 mx-auto" />
 
-              <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+              <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6" style={{ lineHeight: 1.1 }}>
                 We're Not Your Average{" "}
-                <span className="gradient-text">Leak Repair Company.</span>
+                <span className="gradient-text" style={{ lineHeight: 'inherit' }}>Leak Repair Company.</span>
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground mb-8 leading-relaxed">
