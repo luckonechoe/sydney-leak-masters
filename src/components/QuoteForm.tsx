@@ -36,12 +36,21 @@ const quoteFormSchema = z.object({
   propertyType: z.string().min(1, "Select property type"),
   address: z.string().min(3, "Please enter your address"),
   issueType: z.string().min(1, "Select issue type"),
+  otherServiceDescription: z.string().optional(),
   urgency: z.string().min(1, "Please select urgency level"),
   subject: z.string().min(2, "Subject is required").max(200),
   description: z.string().optional(),
   // Step 3: Files (handled separately)
   // Step 4: Contact time
   preferredTime: z.string().min(1, "Select preferred contact time"),
+}).refine((data) => {
+  if (data.issueType === "Other") {
+    return data.otherServiceDescription && data.otherServiceDescription.length >= 3;
+  }
+  return true;
+}, {
+  message: "Please describe the service you need (at least 3 characters)",
+  path: ["otherServiceDescription"],
 });
 
 type QuoteFormData = z.infer<typeof quoteFormSchema>;
@@ -106,6 +115,7 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
       propertyType: "",
       address: "",
       issueType: "",
+      otherServiceDescription: "",
       urgency: "",
       subject: "",
       description: "",
@@ -155,6 +165,9 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
       fieldsToValidate = ["name", "email", "phone", "callerType"];
     } else if (currentStep === 2) {
       fieldsToValidate = ["propertyType", "address", "issueType", "urgency", "subject"];
+      if (watch("issueType") === "Other") {
+        fieldsToValidate.push("otherServiceDescription");
+      }
     }
 
     const isValid = await form.trigger(fieldsToValidate);
@@ -365,6 +378,21 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
                     <p className="text-destructive text-sm mt-1">Please select a service type</p>
                   )}
                 </div>
+
+                {watch("issueType") === "Other" && (
+                  <div>
+                    <Label htmlFor="otherServiceDescription">Please specify the service you need *</Label>
+                    <Input
+                      id="otherServiceDescription"
+                      {...register("otherServiceDescription")}
+                      placeholder="e.g., Deck waterproofing, Pool area repair"
+                      className="mt-1"
+                    />
+                    {errors.otherServiceDescription && (
+                      <p className="text-destructive text-sm mt-1">{errors.otherServiceDescription.message}</p>
+                    )}
+                  </div>
+                )}
 
                 <div>
                   <Label>How Urgent? *</Label>
