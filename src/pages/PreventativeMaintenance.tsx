@@ -182,9 +182,9 @@ export default function PreventativeMaintenance() {
                 Annual Maintenance Plan
               </div>
 
-              <h1 className="font-heading text-4xl lg:text-6xl font-bold text-foreground mb-6">
+              <h1 className="font-heading text-4xl lg:text-6xl font-bold text-foreground mb-6" style={{ lineHeight: 1.1 }}>
                 Preventative Maintenance —{" "}
-                <span className="text-secondary">$249/year</span>
+                <span className="text-secondary" style={{ lineHeight: 'inherit' }}>$249/year</span>
               </h1>
 
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
