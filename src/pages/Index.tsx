@@ -11,6 +11,7 @@ import { TrustPillars } from "@/components/TrustPillars";
 import { SEOHead, LocalBusinessSchema } from "@/components/seo";
 import { FAQSchema } from "@/components/seo/FAQSchema";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import heroImage from "@/assets/hero-sydney-leak-repair.avif";
 
 // Lazy-load below-fold components to reduce initial JS
 const ProcessTimeline = lazy(() => import("@/components/ProcessTimeline").then(m => ({ default: m.ProcessTimeline })));
@@ -79,6 +80,8 @@ export default function Index() {
         description="Stop shower and balcony leaks for good. Sydney Sealed uses premium epoxy grout to fix leaks without removing tiles. 10-year warranty. Free quotes across Sydney."
         canonical="https://sydneysealed.com.au/"
         keywords="leaking shower repairs sydney, shower leak repair, balcony leak repairs sydney, epoxy regrouting sydney, waterproof sealing sydney, shower waterproofing, balcony waterproofing sydney"
+        image={heroImage}
+        imageAlt="Sydney apartment balcony and shower waterproofing — Sydney Sealed leak repair specialists"
       />
       <LocalBusinessSchema />
       <FAQSchema faqs={homepageFaqs} />
@@ -145,14 +148,16 @@ export default function Index() {
               <div
                 className="relative hidden lg:block"
               >
-                <div className="aspect-[4/3] rounded-xl bg-gradient-to-br from-card to-muted border border-border overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center p-8">
-                      <Droplets className="w-16 h-16 text-secondary/40 mx-auto mb-4" />
-                      <p className="text-muted-foreground">Hero Image</p>
-                      <p className="text-xs text-muted-foreground/60">Professional repair in action</p>
-                    </div>
-                  </div>
+                <div className="aspect-[4/3] rounded-xl bg-gradient-to-br from-card to-muted border border-border overflow-hidden shadow-lg">
+                  <img
+                    src={heroImage}
+                    alt="Modern Sydney apartment balcony with waterproofed tiled surface — professional leak repair and epoxy regrouting by Sydney Sealed"
+                    width={1600}
+                    height={1067}
+                    fetchPriority="high"
+                    decoding="async"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 
                 {/* Floating badge */}
