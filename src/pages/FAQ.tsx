@@ -308,7 +308,7 @@ export default function FAQ() {
     <>
       <SEOHead
         title="Shower & Balcony Leak Repair FAQ · Sydney Sealed"
-        description="40+ answers about leaking shower repairs, balcony waterproofing, epoxy regrouting, pricing, warranty, preparation, after-care, and strata services across Sydney."
+        description="Answers on shower & balcony leak repairs, epoxy regrouting, pricing, warranty, preparation, after-care, and strata services in Sydney."
         canonical="https://sydneysealed.com.au/faq"
       />
       <FAQSchema faqs={faqs.map(({ question, answer }) => ({ question, answer }))} />
