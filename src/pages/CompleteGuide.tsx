@@ -105,8 +105,8 @@ export default function CompleteGuide() {
   return (
     <>
       <SEOHead
-        title="Complete Guide to Shower & Balcony Leak Repairs in Sydney"
-        description="Everything you need to know about fixing leaking showers and balconies in Sydney. Causes, warning signs, repair methods, costs, and how to choose the right specialist."
+        title="Complete Guide to Sydney Leak Repairs | Sydney Sealed"
+        description="Causes, warning signs, repair methods, costs, and how to choose the right specialist for shower & balcony leaks in Sydney."
         canonical="https://sydneysealed.com.au/guides/complete-guide-leak-repairs-sydney"
       />
       <FAQSchema faqs={pillarFaqs} />

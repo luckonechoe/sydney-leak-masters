@@ -148,8 +148,8 @@ export default function PreventativeMaintenance() {
   return (
     <>
       <SEOHead
-        title="Preventative Maintenance Plans · Protect Your Waterproofing Investment"
-        description="Keep your waterproofing in top shape with our $249/year maintenance plan. Annual inspections, grout touch-ups, and extended warranty coverage for Sydney homes and strata."
+        title="Waterproofing Maintenance Plans Sydney | Sydney Sealed"
+        description="$249/year plan with two annual visits, grout touch-ups, and extended warranty. Protect your shower & balcony waterproofing year-round."
         canonical="https://sydneysealed.com.au/preventative-maintenance"
         keywords="waterproofing maintenance plan sydney, shower maintenance, grout maintenance, preventative waterproofing, epoxy grout maintenance, waterproofing warranty"
       />

@@ -72,8 +72,8 @@ export default function About() {
   return (
     <>
       <SEOHead
-        title="About Sydney Sealed · Leak Repair Specialists You Can Trust"
-        description="Meet the team behind Sydney Sealed. We fix leaking showers and balconies properly the first time — quality workmanship, honest advice, and a 10-year warranty on every job."
+        title="About Us · Sydney Leak Repair Specialists | Sydney Sealed"
+        description="Meet the Sydney Sealed team. Honest advice, quality workmanship, and a 10-year warranty on every shower and balcony leak repair."
         canonical="https://sydneysealed.com.au/about"
       />
 

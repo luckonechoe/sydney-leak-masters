@@ -40,7 +40,7 @@ export default function Blog() {
     <>
       <SEOHead
         title="Shower & Balcony Leak Repair Guides — Sydney Sealed"
-        description="Practical guides on shower leak repairs, balcony waterproofing, epoxy regrouting, and long-term property maintenance from Sydney's trusted leak repair specialists."
+        description="Expert guides on shower leak repairs, balcony waterproofing, epoxy regrouting, and long-term property maintenance in Sydney."
         canonical="https://sydneysealed.com.au/blog"
         keywords="leaking shower repairs sydney, balcony waterproofing, epoxy grout, shower leak repair guide, waterproof membrane, strata waterproofing"
       />
