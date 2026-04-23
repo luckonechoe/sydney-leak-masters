@@ -51,12 +51,12 @@ const faqs: FAQItem[] = [
   {
     category: "Pricing & Quotes",
     question: "How much does shower leak repair cost?",
-    answer: "Most shower epoxy regrouting repairs in Sydney sit in the $1,200–$2,800 range, depending on shower size, condition of the existing grout, and access. Use our pricing calculator on the Shower Repairs page for an estimate, or book a free on-site inspection for a firm written quote.",
+    answer: "Cost depends on shower size, condition of the existing grout, and access. For an instant ballpark, use the pricing calculator on our Shower Repairs page — or book a free on-site inspection for a firm written quote.",
   },
   {
     category: "Pricing & Quotes",
     question: "How much does balcony leak repair cost?",
-    answer: "Balcony repairs typically range from $1,500–$4,000 for sealing and regrouting work. Larger balconies or jobs requiring full re-waterproofing membrane replacement run $4,500–$12,000+. We provide a written quote after on-site inspection so there are no surprises.",
+    answer: "Cost depends on balcony size, condition, and whether the job is sealing/regrouting or a full re-waterproofing with membrane replacement. Use the pricing calculator on our Balcony Repairs page for an estimate, or book a free on-site inspection for a firm written quote.",
   },
   {
     category: "Pricing & Quotes",
