@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTAButton } from "@/components/CTAButton";
 import { SEOHead, Breadcrumbs } from "@/components/seo";
+import { FAQSchema } from "@/components/seo/FAQSchema";
 import {
   Accordion,
   AccordionContent,
@@ -19,69 +20,283 @@ interface FAQItem {
 }
 
 const faqs: FAQItem[] = [
+  // ============ GENERAL ============
   {
     category: "General",
     question: "How do I know if my shower is leaking?",
-    answer: "Common signs include: water stains or damp patches on walls or ceilings below the bathroom, musty odors, peeling paint or wallpaper, loose or hollow-sounding tiles, and visible mold or mildew growth. If you notice any of these, it's best to get a professional inspection.",
+    answer: "Common signs include water stains or damp patches on walls and ceilings below the bathroom, a musty smell, peeling paint or wallpaper, loose or hollow-sounding tiles, and visible mould or mildew. If you spot any of these, it's worth booking a free inspection before the damage spreads.",
+  },
+  {
+    category: "General",
+    question: "Is it the shower causing the damp ceiling below, or could it be the plumbing?",
+    answer: "Both are possible, and the symptoms can look identical. A shower leak usually shows up as a slow stain that grows when the shower is used and dries out between uses. A plumbing leak tends to be constant or get worse regardless of shower use. Our technicians inspect on-site to identify the source — and if it turns out to be plumbing, we'll tell you straight up so you can call a licensed plumber.",
+  },
+  {
+    category: "General",
+    question: "What causes leaking showers and balconies in the first place?",
+    answer: "The most common cause is failed grout and silicone in the tile joints — they break down over 8–15 years from constant water exposure and minor building movement. Less commonly, the waterproofing membrane underneath the tiles fails. Building movement, poor original installation, and age all play a part.",
+  },
+  {
+    category: "General",
+    question: "Can a leaking shower cause structural damage?",
+    answer: "Yes — and it's the main reason not to delay repairs. Long-term leaks rot timber framing and floor joists, cause spalling (concrete degradation) in concrete slabs, promote mould growth, and reduce property value. What starts as a $1,500 repair can turn into a $20,000+ rebuild if ignored.",
   },
   {
     category: "General",
     question: "Do you remove tiles to fix shower leaks?",
-    answer: "In most cases, no. Our epoxy grout technology allows us to fix shower leaks without removing tiles. We remove the old damaged grout, clean the joints, and apply premium waterproof epoxy grout. This is faster, cleaner, and more cost-effective than re-tiling.",
+    answer: "In most cases, no. Our epoxy regrouting process removes the old damaged grout, cleans the joints, and rebuilds them with premium waterproof epoxy grout — no tile removal, no demolition, no re-tiling. It's faster, cleaner, and a fraction of the cost of a full bathroom rebuild.",
   },
+
+  // ============ PRICING & QUOTES ============
   {
-    category: "Pricing",
+    category: "Pricing & Quotes",
     question: "How much does shower leak repair cost?",
-    answer: "The cost of shower leak repairs depends on the size of the shower, extent of the damage, and any additional work required. Contact us for a free, detailed quote with no hidden costs.",
+    answer: "Most shower epoxy regrouting repairs in Sydney sit in the $1,200–$2,800 range, depending on shower size, condition of the existing grout, and access. Use our pricing calculator on the Shower Repairs page for an estimate, or book a free on-site inspection for a firm written quote.",
   },
   {
-    category: "Pricing",
+    category: "Pricing & Quotes",
     question: "How much does balcony leak repair cost?",
-    answer: "The cost of balcony repairs depends on the size and condition of the balcony. Complex repairs involving membrane replacement or structural work may cost more. Contact us for a detailed assessment and quote after inspection.",
+    answer: "Balcony repairs typically range from $1,500–$4,000 for sealing and regrouting work. Larger balconies or jobs requiring full re-waterproofing membrane replacement run $4,500–$12,000+. We provide a written quote after on-site inspection so there are no surprises.",
   },
   {
-    category: "Process",
+    category: "Pricing & Quotes",
+    question: "Can you quote my repair over the phone?",
+    answer: "We can give you a rough indication over the phone after a few quick questions about size, age, and symptoms — but a firm price always requires an on-site inspection. Sealing leaks isn't one-size-fits-all, and we'd rather quote you accurately than guess.",
+  },
+  {
+    category: "Pricing & Quotes",
+    question: "Do you charge a callout fee?",
+    answer: "No. Inspections and quotes are completely free and obligation-free across Sydney. You only pay if you decide to proceed with the repair.",
+  },
+  {
+    category: "Pricing & Quotes",
+    question: "Are there any hidden costs?",
+    answer: "No. You receive a detailed written quote before any work starts, and the quoted price is what you pay. If we discover something unexpected mid-job (which is rare), we stop and get your written approval before doing anything extra.",
+  },
+  {
+    category: "Pricing & Quotes",
+    question: "How do I pay?",
+    answer: "We accept EFT bank transfer, credit and debit card, and BPAY. Payment is only required after the job is complete and you're fully satisfied with the work.",
+  },
+  {
+    category: "Pricing & Quotes",
+    question: "Do you offer payment plans?",
+    answer: "Get in touch with us directly on 0400 000 000 and we'll discuss what's possible based on the scope of your job.",
+  },
+
+  // ============ PROCESS & PREPARATION ============
+  {
+    category: "Process & Preparation",
     question: "How long does a shower repair take?",
-    answer: "Most shower repairs are completed in one day. The epoxy grout typically needs 24 hours to fully cure before you can use the shower. For larger jobs or multiple bathrooms, we'll provide a timeline during the quote.",
+    answer: "Most shower epoxy regrouting jobs are completed in 3–6 hours on the same day. The shower then needs an overnight cure (typically usable by the next morning) and reaches full cure at 48 hours.",
   },
   {
-    category: "Process",
+    category: "Process & Preparation",
     question: "How long does a balcony repair take?",
-    answer: "Balcony repairs typically take 2-5 days depending on the size and complexity. This includes membrane work, grout application, and curing time. We'll minimize disruption and coordinate with you on timing.",
+    answer: "Sealing and regrouting work on a balcony typically takes 1–2 days. Full re-waterproofing jobs that involve membrane replacement can take 3–5 days depending on size and weather. We'll give you a clear timeline in the quote.",
   },
   {
-    category: "Warranty",
+    category: "Process & Preparation",
+    question: "What should I do to prepare my bathroom before you arrive?",
+    answer: "A few simple steps help us get straight to work: take your last shower by 9pm the night before so the area can dry, remove shampoo bottles and personal items from the shower, and give the tiles a light clean if you can. We'll handle everything else.",
+  },
+  {
+    category: "Process & Preparation",
+    question: "How much mess and noise is involved?",
+    answer: "Far less than a renovation. We use drop sheets to protect your home, dust-controlled grout-removal tools, and we vacuum and wipe down before leaving. There's some moderate tool noise during the grout removal stage, but most clients are surprised at how tidy the job is.",
+  },
+  {
+    category: "Process & Preparation",
+    question: "Will I need to leave the house during the repair?",
+    answer: "No, you can stay home as normal. The bathroom or balcony being worked on will be unavailable for a few hours, but the rest of your home is unaffected.",
+  },
+  {
+    category: "Process & Preparation",
+    question: "Do I need to be home for the whole job?",
+    answer: "We need access at the start and end of the job, but you don't need to be present the whole time. Many clients let us in, head to work, and we lock up and message you when we're done.",
+  },
+  {
+    category: "Process & Preparation",
+    question: "Can you do extra work on the same day?",
+    answer: "Sometimes — if the additional scope is small and we have time. For larger extra work (e.g. a second bathroom or balcony), we'll usually provide a separate quote and schedule it as its own visit so we can do it properly.",
+  },
+  {
+    category: "Process & Preparation",
+    question: "What's the difference between regrouting and resealing?",
+    answer: "Regrouting is replacing the grout in the tile joints (the lines between tiles). Resealing is replacing the silicone in the corners and internal angles where two surfaces meet. Most leaks are fixed with both — and we include both in our standard shower repair.",
+  },
+
+  // ============ AFTER THE SERVICE ============
+  {
+    category: "After the Service",
+    question: "How long before I can use my shower again?",
+    answer: "Typically the next morning — the epoxy grout needs an overnight cure (around 12 hours) before the shower can be used. Full cure is reached at 48 hours, after which the seal is at maximum strength.",
+  },
+  {
+    category: "After the Service",
+    question: "How long before I can use my balcony again?",
+    answer: "For sealing and regrouting work, foot traffic is usually fine after 24–48 hours. Heavy furniture or planters should wait the full 48 hours. Membrane jobs may need longer — we'll tell you exactly on the day.",
+  },
+  {
+    category: "After the Service",
+    question: "There's a fine white powder on my tiles — is that normal?",
+    answer: "Yes, completely normal. It's a thin haze of grout residue from the application process. Wipe it down with a damp microfibre cloth and it lifts away easily.",
+  },
+  {
+    category: "After the Service",
+    question: "When can I fix the damaged ceiling or wall caused by the leak?",
+    answer: "Wait at least 6–8 weeks before patching, painting, or repairing the affected ceiling or wall. The trapped moisture inside the structure needs time to fully dry out — patching too early traps moisture behind the paint and the damage will reappear.",
+  },
+  {
+    category: "After the Service",
+    question: "Will my shower look better after the repair?",
+    answer: "Usually yes — fresh, clean grout lines and new silicone make a noticeable visual improvement, even though our goal is sealing the leak rather than cleaning. You can also choose a colour-matched grout to refresh the look.",
+  },
+  {
+    category: "After the Service",
+    question: "How do I clean and maintain my repaired shower?",
+    answer: "Use non-abrasive cleaners (avoid bleach-heavy products and abrasive scourers, which can dull the epoxy over time). Epoxy grout naturally resists mould and mildew far better than cement grout, so general bathroom cleaning is all that's needed to keep it looking good.",
+  },
+
+  // ============ WARRANTY & GUARANTEES ============
+  {
+    category: "Warranty & Guarantees",
     question: "What warranty do you offer?",
-    answer: "All our repairs come with a 10-Year Warranty covering materials and workmanship. This gives you peace of mind that if any issues arise, we'll fix them at no additional cost.",
+    answer: "Every repair is backed by our 10-Year Warranty covering both materials and workmanship. If a sealed area leaks again within the warranty period, we re-attend at no cost.",
   },
   {
-    category: "Warranty",
+    category: "Warranty & Guarantees",
     question: "What does the warranty cover?",
-    answer: "Our warranty covers all aspects of the repair work including epoxy grout failure, waterproofing membrane issues, and workmanship defects. It does not cover damage caused by external factors or subsequent building works.",
+    answer: "The warranty covers epoxy grout failure, silicone seal failure, and workmanship defects on the specific areas we sealed. You receive a written warranty document with every completed job.",
+  },
+  {
+    category: "Warranty & Guarantees",
+    question: "What is NOT covered by your warranty?",
+    answer: "The warranty doesn't cover plumbing leaks (these are a separate trade), structural building movement that creates new cracks, third-party damage (e.g. another tradesperson cutting into the area), or work later modified by someone else.",
+  },
+  {
+    category: "Warranty & Guarantees",
+    question: "Is the warranty transferable if I sell my home?",
+    answer: "The warranty is tied to the property address rather than the owner, so it remains valid for the new homeowner during the warranty period. Pass on the warranty document at settlement.",
+  },
+  {
+    category: "Warranty & Guarantees",
+    question: "How do I make a warranty claim?",
+    answer: "Just call us on 0400 000 000 or use the contact form. We'll book a return visit, inspect the area, and if it falls under the warranty we re-do the work at no cost to you.",
+  },
+  {
+    category: "Warranty & Guarantees",
+    question: "Is the repair a permanent solution?",
+    answer: "Epoxy regrouting and resealing is a long-lasting repair — backed by our 10-year warranty, with most jobs lasting well beyond that with normal use. It's far more durable than the cement grout originally installed in most bathrooms.",
+  },
+
+  // ============ TECHNICAL ============
+  {
+    category: "Technical",
+    question: "What's the difference between epoxy grout and cement grout?",
+    answer: "Cement grout is porous, absorbs water, stains easily, and cracks over time as the building moves. Epoxy grout is 100% waterproof, doesn't crack, resists stains and chemicals, and naturally resists mould. It's the gold standard for wet areas.",
   },
   {
     category: "Technical",
     question: "What is epoxy grout and why is it better?",
-    answer: "Epoxy grout is a high-performance grout made from epoxy resins instead of cement. It's 100% waterproof, highly durable, resistant to stains and chemicals, and doesn't crack like cement grout. It's the gold standard for waterproof tiling.",
+    answer: "Epoxy grout is made from epoxy resins instead of cement. It's flexible enough to handle minor building movement without cracking, fully waterproof, and lasts decades. It's the same material used in commercial kitchens, hospitals, and swimming pools.",
   },
   {
     category: "Technical",
     question: "What is spalling (concrete degradation)?",
-    answer: "Concrete degradation (spalling) occurs when water penetrates concrete and reaches the steel reinforcement inside. The steel rusts and expands, cracking the concrete further. Left untreated, it can cause serious structural damage. Proper waterproofing prevents this.",
+    answer: "Spalling happens when water penetrates concrete and reaches the steel reinforcement inside. The steel rusts, expands, and cracks the surrounding concrete from within. It's a common cause of balcony deterioration in Sydney apartments — and proper waterproofing prevents it.",
   },
   {
-    category: "Service",
+    category: "Technical",
+    question: "Do you replace the waterproofing membrane?",
+    answer: "Only when sealing and regrouting won't solve the problem. Membrane replacement is a much bigger job — it involves removing tiles, applying a new membrane, and re-tiling. We'll always recommend the least invasive option that will actually fix your leak.",
+  },
+  {
+    category: "Technical",
+    question: "Why don't you need to remove tiles?",
+    answer: "In the vast majority of leaking showers, the tile joints (grout and silicone) are the failure point — not the tiles or the membrane underneath. Rebuilding those joints with waterproof epoxy stops the water entry without disturbing the tiles.",
+  },
+  {
+    category: "Technical",
+    question: "Can you fix a leaking balcony without removing the tiles?",
+    answer: "Yes, in most cases. Sealing the joints and regrouting with epoxy stops most balcony leaks. In severe cases where the membrane has failed across the whole slab, full re-waterproofing with tile removal is required — we'll tell you honestly which option you need.",
+  },
+  {
+    category: "Technical",
+    question: "Is the epoxy safe for kids and pets?",
+    answer: "Yes. Once fully cured (48 hours), epoxy grout is inert, food-safe, and non-toxic. It's the same product used in commercial food prep areas. There's no ongoing exposure or off-gassing.",
+  },
+  {
+    category: "Technical",
+    question: "Can I choose the grout colour?",
+    answer: "Yes — we carry a range of colour-matched epoxy grout options. Most clients match the original grout colour, but it's also a good chance to update the look if you want to.",
+  },
+
+  // ============ SERVICE AREA & BOOKING ============
+  {
+    category: "Service Area & Booking",
     question: "Do you service all Sydney suburbs?",
-    answer: "Yes, we service all Sydney suburbs from the CBD to the outer regions. We also service the Central Coast, Blue Mountains, and Wollongong areas. Contact us to confirm service availability in your area.",
+    answer: "Yes — we service every Sydney suburb from the CBD and Eastern Suburbs through the Inner West, North Shore, Northern Beaches, Hills District, Sutherland Shire and Western Sydney. See our Suburbs page for the full list.",
   },
   {
-    category: "Service",
+    category: "Service Area & Booking",
+    question: "How quickly can you attend?",
+    answer: "We typically attend for inspections within 24–48 hours of your enquiry. Urgent jobs are prioritised — call us on 0400 000 000 if your leak is causing active damage.",
+  },
+  {
+    category: "Service Area & Booking",
+    question: "Do you do Saturday appointments?",
+    answer: "Yes. Our Saturday hours are 8:30am–1:00pm, subject to availability. Weekend slots fill up quickly, so book early. Our weekday hours are Monday–Friday 7:30am–3:00pm.",
+  },
+  {
+    category: "Service Area & Booking",
+    question: "Do you do emergency repairs?",
+    answer: "Yes, urgent leaks get priority booking. Call 0400 000 000 directly and explain the situation — if water is actively damaging your property, we'll do everything we can to attend the same day or next morning.",
+  },
+  {
+    category: "Service Area & Booking",
+    question: "Are your technicians police-checked and insured?",
+    answer: "Yes. All Sydney Sealed technicians are background-checked and we carry full public liability insurance. You can request proof of insurance before any job — strata managers and property managers receive it as standard with the quote.",
+  },
+
+  // ============ STRATA & PROPERTY MANAGERS ============
+  {
+    category: "Strata & Property Managers",
     question: "Do you work with strata managers?",
-    answer: "Absolutely. We have a dedicated strata services program with priority scheduling, volume pricing, and comprehensive documentation for strata records. Visit our Strata page or contact us directly.",
+    answer: "Absolutely — strata is a major part of our work. We have a dedicated strata coordination process with priority scheduling, written reports, and clear documentation. Visit our Strata page for full details.",
+  },
+  {
+    category: "Strata & Property Managers",
+    question: "Do you accept work orders from strata managers and real estate agents?",
+    answer: "Yes. We work to your standard work order process, send invoices direct to the managing agency, and follow your communication and reporting requirements.",
+  },
+  {
+    category: "Strata & Property Managers",
+    question: "Can you provide a detailed report for strata records?",
+    answer: "Yes. Every strata job comes with a written report including before/after photos, scope of work completed, materials used, and the warranty document — formatted for committee meetings and building records.",
+  },
+  {
+    category: "Strata & Property Managers",
+    question: "Can you coordinate access with tenants directly?",
+    answer: "Yes. Once you share the tenant's contact details, we liaise directly with them to book a suitable time, send confirmation reminders, and report back to you once the job is complete.",
+  },
+  {
+    category: "Strata & Property Managers",
+    question: "Do you offer volume pricing for multiple units?",
+    answer: "Yes. Building-wide and multi-unit jobs receive volume pricing. Get in touch with the unit count and scope, and we'll put together a tailored proposal.",
   },
 ];
 
-const categories = ["General", "Pricing", "Process", "Warranty", "Technical", "Service"];
+const categories = [
+  "General",
+  "Pricing & Quotes",
+  "Process & Preparation",
+  "After the Service",
+  "Warranty & Guarantees",
+  "Technical",
+  "Service Area & Booking",
+  "Strata & Property Managers",
+];
 
 export default function FAQ() {
   const breadcrumbItems = [
@@ -93,9 +308,10 @@ export default function FAQ() {
     <>
       <SEOHead
         title="Shower & Balcony Leak Repair FAQ · Sydney Sealed"
-        description="Answers to common questions about leaking shower repairs, balcony waterproofing, pricing, warranties, and how our repair process works across Sydney."
+        description="40+ answers about leaking shower repairs, balcony waterproofing, epoxy regrouting, pricing, warranty, preparation, after-care, and strata services across Sydney."
         canonical="https://sydneysealed.com.au/faq"
       />
+      <FAQSchema faqs={faqs.map(({ question, answer }) => ({ question, answer }))} />
 
       <div className="min-h-screen bg-background">
         <Header />
