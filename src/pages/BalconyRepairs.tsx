@@ -9,6 +9,7 @@ import { CTAButton } from "@/components/CTAButton";
 import { WarrantyBadge } from "@/components/WarrantyBadge";
 import { QuoteForm } from "@/components/QuoteForm";
 import { SEOHead, ServiceSchema, Breadcrumbs, FAQSchema } from "@/components/seo";
+import balconyHeroImage from "@/assets/balcony-tiled-sydney-highrise.avif";
 import {
   Accordion,
   AccordionContent,
@@ -169,10 +170,12 @@ export default function BalconyRepairs() {
   return (
     <>
       <SEOHead
-        title="Leaking Balcony Repairs & Waterproofing Sydney | Sydney Sealed"
-        description="Stop balcony leaks and prevent spalling concrete. Sydney epoxy regrouting & membrane repairs. Strata-approved. 10-year warranty."
+        title="Leaking Balcony Repairs Sydney · No Tile Removal"
+        description="Fix leaking balconies in Sydney without tile removal. Epoxy regrouting, membrane repairs & waterproofing. Strata-approved. 10-year warranty."
         canonical="https://sydneysealed.com.au/services/balcony-repairs"
-        keywords="leaking balcony repairs sydney, balcony waterproofing, balcony leak repair, balcony sealing sydney, spalling prevention, strata balcony repairs sydney"
+        image="/src/assets/balcony-tiled-sydney-highrise.avif"
+        imageAlt="Tiled Sydney high-rise balcony with glass doors — leaking balcony waterproofing & epoxy regrouting by Sydney Sealed"
+        keywords="leaking balcony repairs sydney, balcony waterproofing sydney, balcony leak repair, balcony sealing, balcony regrouting, spalling prevention, strata balcony repairs, apartment balcony leak"
       />
       <ServiceSchema
         name="Leaking Balcony Repair Service Sydney"
@@ -246,14 +249,15 @@ export default function BalconyRepairs() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="relative hidden lg:block"
               >
-                <div className="aspect-[4/3] rounded-xl bg-gradient-to-br from-card to-muted border border-border overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center p-8">
-                      <Building2 className="w-16 h-16 text-secondary/40 mx-auto mb-4" />
-                      <p className="text-muted-foreground">Balcony Repair Image</p>
-                      <p className="text-xs text-muted-foreground/60">Waterproofing in progress</p>
-                    </div>
-                  </div>
+                <div className="aspect-[4/3] rounded-xl border border-border overflow-hidden shadow-xl">
+                  <img
+                    src={balconyHeroImage}
+                    alt="Tiled Sydney high-rise balcony with beige tiles and glass doors — professional leaking balcony repair and waterproofing by Sydney Sealed"
+                    className="w-full h-full object-cover"
+                    loading="eager"
+                    width={1200}
+                    height={900}
+                  />
                 </div>
               </motion.div>
             </div>
