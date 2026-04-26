@@ -156,11 +156,21 @@ export default function Contact() {
         mediaUrls = await uploadFilesToStorage();
       }
 
-      // Log the submission (in production, send to backend/email service)
-      console.log("Contact form submission:", {
-        ...data,
-        mediaUrls,
-      });
+      const { error: insertError } = await supabase
+        .from("contact_submissions")
+        .insert({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          suburb: data.address,
+          property_type: data.callerType,
+          service_type: data.serviceType,
+          message: `Subject: ${data.subject}\nUrgency: ${data.urgency}\n\n${data.message}`,
+          media_urls: mediaUrls,
+          source: "contact",
+        });
+
+      if (insertError) throw insertError;
 
       toast({
         title: "Message Sent!",
