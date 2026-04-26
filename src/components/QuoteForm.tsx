@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { AddressAutocomplete } from "@/components/AddressAutocomplete";
+import { supabase } from "@/integrations/supabase/client";
 
 // Form schema
 const CALLER_TYPES = [
@@ -183,20 +184,49 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
   const onSubmit = async (data: QuoteFormData) => {
     setIsSubmitting(true);
     
-    // Simulate API call - replace with actual Supabase integration
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      
-      console.log("Form data:", data);
-      console.log("Files:", files);
-      
+      // Upload any attached files via the existing edge function
+      const mediaUrls: string[] = [];
+      for (const file of files) {
+        const formData = new FormData();
+        formData.append("file", file);
+        const { data: uploadData, error: uploadError } = await supabase.functions.invoke(
+          "upload-contact-media",
+          { body: formData }
+        );
+        if (uploadError) throw uploadError;
+        if (uploadData?.publicUrl) mediaUrls.push(uploadData.publicUrl);
+      }
+
+      const serviceType =
+        data.issueType === "Other" && data.otherServiceDescription
+          ? `Other: ${data.otherServiceDescription}`
+          : data.issueType;
+
+      const { error: insertError } = await supabase
+        .from("contact_submissions")
+        .insert({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          suburb: data.address,
+          property_type: data.propertyType,
+          service_type: serviceType,
+          message: `Subject: ${data.subject}\nCaller: ${data.callerType}\nUrgency: ${data.urgency}\nPreferred contact time: ${data.preferredTime}\n\n${data.description ?? ""}`,
+          media_urls: mediaUrls,
+          source: "quote_form",
+        });
+
+      if (insertError) throw insertError;
+
       toast({
         title: "Quote Request Submitted!",
         description: "We'll be in touch within 24 hours.",
       });
       
       onSuccess?.();
-    } catch {
+    } catch (err) {
+      console.error("Quote submission error:", err);
       toast({
         title: "Error",
         description: "Something went wrong. Please try again.",
