@@ -1,0 +1,7 @@
+ALTER TABLE public.contact_submissions
+  ADD COLUMN IF NOT EXISTS address TEXT,
+  ADD COLUMN IF NOT EXISTS caller_type TEXT,
+  ADD COLUMN IF NOT EXISTS urgency TEXT,
+  ADD COLUMN IF NOT EXISTS subject TEXT,
+  ADD COLUMN IF NOT EXISTS preferred_contact_time TEXT,
+  ADD COLUMN IF NOT EXISTS description TEXT;
