@@ -9,7 +9,7 @@ import { CTAButton } from "@/components/CTAButton";
 import { WarrantyBadge } from "@/components/WarrantyBadge";
 import { QuoteForm } from "@/components/QuoteForm";
 import { SEOHead, ServiceSchema, Breadcrumbs, FAQSchema } from "@/components/seo";
-import balconyHeroImage from "@/assets/balcony-tiled-sydney-highrise.avif";
+import balconyHeroImage from "@/assets/balcony-sydney-highrise-view.avif";
 import {
   Accordion,
   AccordionContent,
@@ -170,12 +170,12 @@ export default function BalconyRepairs() {
   return (
     <>
       <SEOHead
-        title="Leaking Balcony Repairs Sydney · No Tile Removal"
-        description="Fix leaking balconies in Sydney without tile removal. Epoxy regrouting, membrane repairs & waterproofing. Strata-approved. 10-year warranty."
+        title="Apartment Balcony Leak Repairs Sydney · No Tile Removal"
+        description="Stop leaking high-rise balconies in Sydney without removing tiles. Epoxy regrouting, membrane repairs & waterproofing. Strata-approved. 10-year warranty."
         canonical="https://sydneysealed.com.au/services/balcony-repairs"
-        image="/src/assets/balcony-tiled-sydney-highrise.avif"
-        imageAlt="Tiled Sydney high-rise balcony with glass doors — leaking balcony waterproofing & epoxy regrouting by Sydney Sealed"
-        keywords="leaking balcony repairs sydney, balcony waterproofing sydney, balcony leak repair, balcony sealing, balcony regrouting, spalling prevention, strata balcony repairs, apartment balcony leak"
+        image="/src/assets/balcony-sydney-highrise-view.avif"
+        imageAlt="High-rise Sydney apartment balcony with beige tiles, glass doors and city skyline view — leaking balcony repair & waterproofing by Sydney Sealed"
+        keywords="leaking balcony repairs sydney, apartment balcony leak repair, high-rise balcony waterproofing, balcony sealing sydney, balcony regrouting, epoxy grout balcony, spalling prevention, strata balcony repairs"
       />
       <ServiceSchema
         name="Leaking Balcony Repair Service Sydney"
@@ -252,7 +252,7 @@ export default function BalconyRepairs() {
                 <div className="aspect-[4/3] rounded-xl border border-border overflow-hidden shadow-xl">
                   <img
                     src={balconyHeroImage}
-                    alt="Tiled Sydney high-rise balcony with beige tiles and glass doors — professional leaking balcony repair and waterproofing by Sydney Sealed"
+                    alt="Sydney high-rise apartment balcony with beige tiles, glass sliding doors and city skyline view — professional leaking balcony repair & waterproofing by Sydney Sealed"
                     className="w-full h-full object-cover"
                     loading="eager"
                     width={1200}
