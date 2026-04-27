@@ -9,7 +9,7 @@ import { CTAButton } from "@/components/CTAButton";
 import { WarrantyBadge } from "@/components/WarrantyBadge";
 import { QuoteForm } from "@/components/QuoteForm";
 import { SEOHead, ServiceSchema, Breadcrumbs, FAQSchema } from "@/components/seo";
-import balconyHeroImage from "@/assets/balcony-sydney-highrise-view.avif";
+import balconyHeroImage from "@/assets/sydney-balcony-leak-repair-high-rise-epoxy.avif";
 import {
   Accordion,
   AccordionContent,
@@ -170,8 +170,8 @@ export default function BalconyRepairs() {
   return (
     <>
       <SEOHead
-        title="Apartment Balcony Leak Repairs Sydney · No Tile Removal"
-        description="Stop leaking high-rise balconies in Sydney without removing tiles. Epoxy regrouting, membrane repairs & waterproofing. Strata-approved. 10-year warranty."
+        title="Balcony Leak Repairs Sydney | High-Rise Waterproofing Experts"
+        description="Fix leaking Sydney balconies without removing tiles. Epoxy regrouting & membrane repairs for high-rise apartments. Strata-approved, 10-year warranty."
         canonical="https://sydneysealed.com.au/services/balcony-repairs"
         image="/src/assets/balcony-sydney-highrise-view.avif"
         imageAlt="High-rise Sydney apartment balcony with beige tiles, glass doors and city skyline view — leaking balcony repair & waterproofing by Sydney Sealed"
