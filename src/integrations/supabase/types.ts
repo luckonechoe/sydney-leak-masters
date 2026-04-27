@@ -32,7 +32,6 @@ export type Database = {
           source: string
           status: string
           subject: string | null
-          suburb: string | null
           updated_at: string
           urgency: string | null
         }
@@ -53,7 +52,6 @@ export type Database = {
           source?: string
           status?: string
           subject?: string | null
-          suburb?: string | null
           updated_at?: string
           urgency?: string | null
         }
@@ -74,7 +72,6 @@ export type Database = {
           source?: string
           status?: string
           subject?: string | null
-          suburb?: string | null
           updated_at?: string
           urgency?: string | null
         }
