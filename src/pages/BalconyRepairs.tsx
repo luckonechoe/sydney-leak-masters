@@ -9,7 +9,7 @@ import { CTAButton } from "@/components/CTAButton";
 import { WarrantyBadge } from "@/components/WarrantyBadge";
 import { QuoteForm } from "@/components/QuoteForm";
 import { SEOHead, ServiceSchema, Breadcrumbs, FAQSchema } from "@/components/seo";
-import balconyHeroImage from "@/assets/balcony-leak-specialists-sydney-harbour-view.avif";
+import balconyHeroImage from "@/assets/balcony-leak-specialists-sydney-harbour-view-2.avif";
 import {
   Accordion,
   AccordionContent,
@@ -170,8 +170,8 @@ export default function BalconyRepairs() {
   return (
     <>
       <SEOHead
-        title="Balcony Leak Specialists Sydney | Harbour-View Apartment Repairs"
-        description="Sydney's trusted balcony leak specialists. Repair leaking harbour-view & high-rise apartment balconies without removing tiles. Strata-approved, 10-year warranty."
+        title="Sydney Balcony Waterproofing & Leak Repairs | Harbour-View Apartments"
+        description="Expert balcony leak repairs for Sydney harbour-view apartments & high-rises. Epoxy regrouting, no tile removal, strata-approved with a 10-year warranty."
         canonical="https://sydneysealed.com.au/services/balcony-repairs"
         image="/src/assets/balcony-sydney-highrise-view.avif"
         imageAlt="High-rise Sydney apartment balcony with beige tiles, glass doors and city skyline view — leaking balcony repair & waterproofing by Sydney Sealed"
