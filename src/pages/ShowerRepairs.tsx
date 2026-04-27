@@ -9,6 +9,7 @@ import { CTAButton } from "@/components/CTAButton";
 import { WarrantyBadge } from "@/components/WarrantyBadge";
 import { QuoteForm } from "@/components/QuoteForm";
 import { SEOHead, ServiceSchema, Breadcrumbs, FAQSchema } from "@/components/seo";
+import showerHeroImage from "@/assets/leaking-shower-repair-sydney-epoxy-grout-waterproof-sealing.avif";
 import {
   Accordion,
   AccordionContent,
@@ -165,8 +166,8 @@ export default function ShowerRepairs() {
   return (
     <>
       <SEOHead
-        title="Leaking Shower Repairs Sydney · No Tile Removal | Sydney Sealed"
-        description="Fix leaking showers in Sydney without removing tiles. Premium epoxy regrouting, free on-site inspection, 10-year warranty."
+        title="Leaking Shower Repairs Sydney | Epoxy Grout & Waterproof Sealing"
+        description="Stop leaking showers in Sydney without removing tiles. Premium epoxy regrouting & waterproof sealing, free on-site inspection, 10-year warranty."
         canonical="https://sydneysealed.com.au/services/shower-repairs"
         keywords="leaking shower repairs sydney, shower leak repair, epoxy regrouting sydney, shower waterproofing, fix leaking shower without removing tiles, bathroom leak repair sydney"
       />
@@ -237,14 +238,13 @@ export default function ShowerRepairs() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="relative hidden lg:block"
               >
-                <div className="aspect-[4/3] rounded-xl bg-gradient-to-br from-card to-muted border border-border overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center p-8">
-                      <Droplets className="w-16 h-16 text-secondary/40 mx-auto mb-4" />
-                      <p className="text-muted-foreground">Shower Repair Image</p>
-                      <p className="text-xs text-muted-foreground/60">Before & After comparison</p>
-                    </div>
-                  </div>
+                <div className="aspect-[4/3] rounded-xl border border-border overflow-hidden shadow-elegant">
+                  <img
+                    src={showerHeroImage}
+                    alt="Leaking shower repair in Sydney using epoxy grout and waterproof sealing"
+                    className="w-full h-full object-cover"
+                    loading="eager"
+                  />
                 </div>
               </motion.div>
             </div>
