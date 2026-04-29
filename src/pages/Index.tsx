@@ -1,5 +1,5 @@
-import { lazy, Suspense } from "react";
-import { m } from "framer-motion";
+import { lazy, Suspense, useEffect, useState } from "react";
+import { AnimatePresence, m } from "framer-motion";
 import { Shield, Droplets, Clock, Award, CheckCircle2, ArrowRight, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
@@ -12,6 +12,25 @@ import { SEOHead, LocalBusinessSchema } from "@/components/seo";
 import { FAQSchema } from "@/components/seo/FAQSchema";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import heroImage from "@/assets/hero-sydney-leak-repair.avif";
+import beforeAfter1 from "@/assets/before-after-sydney-tiled-balcony-waterproofing-experts.avif";
+import beforeAfter2 from "@/assets/before-after-sydney-apartment-balcony-tile-sealing.avif";
+import beforeAfter3 from "@/assets/before-after-sydney-balcony-leak-prevention-sealing.avif";
+import beforeAfter4 from "@/assets/before-after-sydney-leaking-balcony-epoxy-grout-repair.avif";
+import beforeAfter5 from "@/assets/before-after-sydney-modern-balcony-tile-sealing-services.avif";
+import beforeAfter6 from "@/assets/before-after-sydney-residential-balcony-leak-repair-suburbs.avif";
+import beforeAfter7 from "@/assets/before-after-sydney-balcony-leak-repair-tiled-pavers.avif";
+import beforeAfter8 from "@/assets/before-after-sydney-shower-leak-repair-epoxy-grout.avif";
+
+const beforeAfterGallery = [
+  { src: beforeAfter1, alt: "Sydney tiled balcony waterproofing — before and after epoxy regrouting by Sydney Sealed" },
+  { src: beforeAfter2, alt: "Sydney apartment balcony tile sealing and leak repair results" },
+  { src: beforeAfter3, alt: "Balcony leak prevention sealing on a Sydney high-rise apartment" },
+  { src: beforeAfter4, alt: "Leaking Sydney balcony repaired with premium epoxy grout system" },
+  { src: beforeAfter5, alt: "Modern Sydney balcony tile sealing service — restored waterproof finish" },
+  { src: beforeAfter6, alt: "Residential balcony leak repair across Sydney suburbs" },
+  { src: beforeAfter7, alt: "Sydney balcony leak repair on tiled pavers using waterproof sealant" },
+  { src: beforeAfter8, alt: "Sydney shower leak repair using premium epoxy grout — no tile removal" },
+];
 
 // Lazy-load below-fold components to reduce initial JS
 const ProcessTimeline = lazy(() => import("@/components/ProcessTimeline").then(m => ({ default: m.ProcessTimeline })));
