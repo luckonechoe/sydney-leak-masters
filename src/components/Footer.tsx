@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
-import logoImg from "@/assets/logo.png";
+import logoImg from "@/assets/logo.svg";
 import { WarrantyBadge } from "./WarrantyBadge";
 import { PHONE_NUMBER, PHONE_HREF } from "./CTAButton";
 
