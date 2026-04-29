@@ -1,5 +1,5 @@
-import { lazy, Suspense } from "react";
-import { m } from "framer-motion";
+import { lazy, Suspense, useEffect, useState } from "react";
+import { AnimatePresence, m } from "framer-motion";
 import { Shield, Droplets, Clock, Award, CheckCircle2, ArrowRight, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
@@ -12,6 +12,25 @@ import { SEOHead, LocalBusinessSchema } from "@/components/seo";
 import { FAQSchema } from "@/components/seo/FAQSchema";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import heroImage from "@/assets/hero-sydney-leak-repair.avif";
+import beforeAfter1 from "@/assets/before-after-sydney-tiled-balcony-waterproofing-experts.avif";
+import beforeAfter2 from "@/assets/before-after-sydney-apartment-balcony-tile-sealing.avif";
+import beforeAfter3 from "@/assets/before-after-sydney-balcony-leak-prevention-sealing.avif";
+import beforeAfter4 from "@/assets/before-after-sydney-leaking-balcony-epoxy-grout-repair.avif";
+import beforeAfter5 from "@/assets/before-after-sydney-modern-balcony-tile-sealing-services.avif";
+import beforeAfter6 from "@/assets/before-after-sydney-residential-balcony-leak-repair-suburbs.avif";
+import beforeAfter7 from "@/assets/before-after-sydney-balcony-leak-repair-tiled-pavers.avif";
+import beforeAfter8 from "@/assets/before-after-sydney-shower-leak-repair-epoxy-grout.avif";
+
+const beforeAfterGallery = [
+  { src: beforeAfter1, alt: "Sydney tiled balcony waterproofing — before and after epoxy regrouting by Sydney Sealed" },
+  { src: beforeAfter2, alt: "Sydney apartment balcony tile sealing and leak repair results" },
+  { src: beforeAfter3, alt: "Balcony leak prevention sealing on a Sydney high-rise apartment" },
+  { src: beforeAfter4, alt: "Leaking Sydney balcony repaired with premium epoxy grout system" },
+  { src: beforeAfter5, alt: "Modern Sydney balcony tile sealing service — restored waterproof finish" },
+  { src: beforeAfter6, alt: "Residential balcony leak repair across Sydney suburbs" },
+  { src: beforeAfter7, alt: "Sydney balcony leak repair on tiled pavers using waterproof sealant" },
+  { src: beforeAfter8, alt: "Sydney shower leak repair using premium epoxy grout — no tile removal" },
+];
 
 // Lazy-load below-fold components to reduce initial JS
 const ProcessTimeline = lazy(() => import("@/components/ProcessTimeline").then(m => ({ default: m.ProcessTimeline })));
@@ -73,6 +92,15 @@ const serviceAreas = [
 ];
 
 export default function Index() {
+  const [galleryIndex, setGalleryIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setGalleryIndex((i) => (i + 1) % beforeAfterGallery.length);
+    }, 4000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <>
       <SEOHead
@@ -343,12 +371,35 @@ export default function Index() {
                 viewport={{ once: true }}
                 className="relative"
               >
-                <div className="aspect-square rounded-xl bg-gradient-to-br from-card to-muted border border-border overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center p-8">
-                      <Award className="w-16 h-16 text-accent/40 mx-auto mb-4" />
-                      <p className="text-muted-foreground">Before/After Image</p>
-                    </div>
+                <div className="relative aspect-square rounded-xl bg-gradient-to-br from-card to-muted border border-border overflow-hidden shadow-lg">
+                  <AnimatePresence mode="wait">
+                    <m.img
+                      key={galleryIndex}
+                      src={beforeAfterGallery[galleryIndex].src}
+                      alt={beforeAfterGallery[galleryIndex].alt}
+                      width={1200}
+                      height={1200}
+                      loading="lazy"
+                      decoding="async"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.6 }}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </AnimatePresence>
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+                    {beforeAfterGallery.map((_, i) => (
+                      <button
+                        key={i}
+                        type="button"
+                        aria-label={`Show before/after image ${i + 1}`}
+                        onClick={() => setGalleryIndex(i)}
+                        className={`h-1.5 rounded-full transition-all ${
+                          i === galleryIndex ? "w-6 bg-secondary" : "w-1.5 bg-background/70 hover:bg-background"
+                        }`}
+                      />
+                    ))}
                   </div>
                 </div>
               </m.div>
