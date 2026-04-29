@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { m, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, Sun, Moon } from "lucide-react";
-import logoImg from "@/assets/logo.png";
+import logoImg from "@/assets/logo.svg";
 import { cn } from "@/lib/utils";
 import { CTAButton, PHONE_NUMBER } from "./CTAButton";
 import { Button } from "@/components/ui/button";
