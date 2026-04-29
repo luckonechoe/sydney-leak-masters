@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect, useState } from "react";
-import { AnimatePresence, m } from "framer-motion";
+import { m } from "framer-motion";
 import { Shield, Droplets, Clock, Award, CheckCircle2, ArrowRight, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
@@ -97,7 +97,7 @@ export default function Index() {
   useEffect(() => {
     const id = setInterval(() => {
       setGalleryIndex((i) => (i + 1) % beforeAfterGallery.length);
-    }, 4000);
+    }, 6000);
     return () => clearInterval(id);
   }, []);
 
@@ -372,22 +372,21 @@ export default function Index() {
                 className="relative"
               >
                 <div className="relative aspect-square rounded-xl bg-gradient-to-br from-card to-muted border border-border overflow-hidden shadow-lg">
-                  <AnimatePresence mode="wait">
-                    <m.img
-                      key={galleryIndex}
-                      src={beforeAfterGallery[galleryIndex].src}
-                      alt={beforeAfterGallery[galleryIndex].alt}
+                  {beforeAfterGallery.map((img, i) => (
+                    <img
+                      key={i}
+                      src={img.src}
+                      alt={img.alt}
                       width={1200}
                       height={1200}
-                      loading="lazy"
+                      loading={i === 0 ? "eager" : "lazy"}
                       decoding="async"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.6 }}
-                      className="absolute inset-0 w-full h-full object-cover"
+                      aria-hidden={i !== galleryIndex}
+                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-150 ${
+                        i === galleryIndex ? "opacity-100" : "opacity-0"
+                      }`}
                     />
-                  </AnimatePresence>
+                  ))}
                   <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
                     {beforeAfterGallery.map((_, i) => (
                       <button
