@@ -371,12 +371,35 @@ export default function Index() {
                 viewport={{ once: true }}
                 className="relative"
               >
-                <div className="aspect-square rounded-xl bg-gradient-to-br from-card to-muted border border-border overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center p-8">
-                      <Award className="w-16 h-16 text-accent/40 mx-auto mb-4" />
-                      <p className="text-muted-foreground">Before/After Image</p>
-                    </div>
+                <div className="relative aspect-square rounded-xl bg-gradient-to-br from-card to-muted border border-border overflow-hidden shadow-lg">
+                  <AnimatePresence mode="wait">
+                    <m.img
+                      key={galleryIndex}
+                      src={beforeAfterGallery[galleryIndex].src}
+                      alt={beforeAfterGallery[galleryIndex].alt}
+                      width={1200}
+                      height={1200}
+                      loading="lazy"
+                      decoding="async"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.6 }}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </AnimatePresence>
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+                    {beforeAfterGallery.map((_, i) => (
+                      <button
+                        key={i}
+                        type="button"
+                        aria-label={`Show before/after image ${i + 1}`}
+                        onClick={() => setGalleryIndex(i)}
+                        className={`h-1.5 rounded-full transition-all ${
+                          i === galleryIndex ? "w-6 bg-secondary" : "w-1.5 bg-background/70 hover:bg-background"
+                        }`}
+                      />
+                    ))}
                   </div>
                 </div>
               </m.div>
