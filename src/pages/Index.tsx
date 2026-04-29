@@ -92,6 +92,15 @@ const serviceAreas = [
 ];
 
 export default function Index() {
+  const [galleryIndex, setGalleryIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setGalleryIndex((i) => (i + 1) % beforeAfterGallery.length);
+    }, 4000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <>
       <SEOHead
