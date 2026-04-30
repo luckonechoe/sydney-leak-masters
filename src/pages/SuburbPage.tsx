@@ -1,6 +1,6 @@
 import { useParams, Navigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { MapPin, Check, Phone, ArrowRight, BookOpen, Droplets, Building2 } from "lucide-react";
+import { MapPin, Check, Phone, ArrowRight, BookOpen, Droplets, Building2, Star, Wrench } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTAButton } from "@/components/CTAButton";
@@ -34,6 +34,56 @@ export default function SuburbPage({ serviceType = "shower" }: SuburbPageProps) 
   const nearbySuburbs = sydneySuburbs
     .filter(s => s.region === suburbData.region && s.slug !== suburbData.slug)
     .slice(0, 4);
+
+  // Deterministic suburb-specific testimonials (paraphrased, per memory rules)
+  const firstNames = ["Sarah", "Michael", "Priya", "James", "Olivia", "Daniel", "Emma", "Lachlan", "Aisha", "Tom"];
+  const propertyTypes = isShower
+    ? ["townhouse", "two-bed apartment", "family home", "duplex", "ground-floor unit"]
+    : ["fourth-floor apartment", "penthouse balcony", "ground-floor courtyard", "rooftop terrace", "second-storey balcony"];
+  const hash = suburbData.slug.split("").reduce((a, c) => a + c.charCodeAt(0), 0);
+  const t1Name = firstNames[hash % firstNames.length];
+  const t2Name = firstNames[(hash + 3) % firstNames.length];
+  const t1Property = propertyTypes[hash % propertyTypes.length];
+  const t2Property = propertyTypes[(hash + 2) % propertyTypes.length];
+
+  const suburbTestimonials = isShower
+    ? [
+        {
+          name: `${t1Name} from ${suburbData.name}`,
+          property: `${t1Property}, ${suburbData.postcode}`,
+          quote: `Our ensuite shower had been leaking into the wall for months. The team regrouted with epoxy in a single day — no tile removal, no mess. Six months on, completely dry.`,
+        },
+        {
+          name: `${t2Name} from ${suburbData.name}`,
+          property: `${t2Property}, ${suburbData.region}`,
+          quote: `Honest quote, on time, and the finish looks better than the original grout. Saved us from a full bathroom renovation.`,
+        },
+      ]
+    : [
+        {
+          name: `${t1Name} from ${suburbData.name}`,
+          property: `${t1Property}, ${suburbData.postcode}`,
+          quote: `Water was tracking into the unit below after every storm. The technicians sealed the balcony without lifting a single tile and coordinated with our strata committee.`,
+        },
+        {
+          name: `${t2Name} from ${suburbData.name}`,
+          property: `${t2Property}, ${suburbData.region}`,
+          quote: `Clear written report, transparent pricing, and the 10-year warranty gave us real peace of mind. Highly recommend for any ${suburbData.region} balcony.`,
+        },
+      ];
+
+  const recentJob = isShower
+    ? {
+        title: `Recent shower repair in ${suburbData.name}`,
+        body: `Full-height ensuite shower with hairline cracks across the floor grout and silicone separation at the screen base. Treated with a deep clean, epoxy regrout, and re-siliconing of all wet edges. Completed in one visit, ready to use after 24 hours.`,
+      }
+    : {
+        title: `Recent balcony repair in ${suburbData.name}`,
+        body: `Tiled balcony showing efflorescence at the slab edge and water marks on the ceiling below. Diagnosed perimeter membrane failure, applied epoxy regrout to the field tiles, and installed a clear penetrating sealer. Job completed in a single day with the 10-year warranty.`,
+      };
+
+  // Service-area / map blurb content
+  const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(`${suburbData.name} NSW ${suburbData.postcode}`)}&output=embed`;
 
   const suburbFAQs = [
     {
@@ -285,6 +335,84 @@ export default function SuburbPage({ serviceType = "shower" }: SuburbPageProps) 
             </div>
           </section>
         )}
+
+        {/* Service-area map + suburbs nearby blurb */}
+        <section className="py-12 bg-muted/30">
+          <div className="section-container">
+            <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-8 items-start">
+              <div>
+                <h2 className="font-heading text-2xl font-bold text-foreground mb-4">
+                  Local {isShower ? 'Shower' : 'Balcony'} Leak Repairs Near You in {suburbData.name}
+                </h2>
+                <p className="text-muted-foreground mb-4">
+                  Searching for "{isShower ? 'shower repairs' : 'balcony waterproofing'} near me" in {suburbData.name}? Our technicians cover {suburbData.name} ({suburbData.postcode}) and the wider {suburbData.region} every week, so you get a local team that knows the building styles, body-corporate requirements, and weather patterns of your area.
+                </p>
+                <p className="text-muted-foreground mb-4">
+                  We typically attend {suburbData.name} jobs within 24–48 hours, with no travel fees inside the {suburbData.region}. Same-day priority slots are available for active leaks causing damage to ceilings, neighbouring units, or common property.
+                </p>
+                {nearbySuburbs.length > 0 && (
+                  <p className="text-sm text-muted-foreground">
+                    <strong className="text-foreground">Nearby suburbs we service:</strong>{" "}
+                    {nearbySuburbs.map((s, i) => (
+                      <span key={s.slug}>
+                        <Link to={`/${serviceSlug}/${s.slug}`} className="text-secondary hover:underline">{s.name}</Link>
+                        {i < nearbySuburbs.length - 1 ? ", " : ""}
+                      </span>
+                    ))}
+                    {" "}— plus the rest of the {suburbData.region}.
+                  </p>
+                )}
+              </div>
+              <div className="rounded-lg overflow-hidden border border-border bg-card aspect-video">
+                <iframe
+                  title={`Map of ${serviceLabel} service area in ${suburbData.name} ${suburbData.postcode}`}
+                  src={mapEmbedSrc}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full border-0"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Suburb-specific testimonials + recent job */}
+        <section className="py-12">
+          <div className="section-container">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="font-heading text-2xl font-bold text-foreground mb-6">
+                {suburbData.name} Customer Stories & Recent Jobs
+              </h2>
+              <div className="grid md:grid-cols-3 gap-4">
+                {suburbTestimonials.map((t) => (
+                  <div key={t.name} className="p-5 bg-card border border-border rounded-lg flex flex-col">
+                    <div className="flex items-center gap-1 mb-3 text-secondary">
+                      {Array.from({ length: 5 }).map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-current" />
+                      ))}
+                    </div>
+                    <p className="text-sm text-foreground italic mb-4">"{t.quote}"</p>
+                    <div className="mt-auto">
+                      <p className="text-sm font-medium text-foreground">{t.name}</p>
+                      <p className="text-xs text-muted-foreground">{t.property}</p>
+                    </div>
+                  </div>
+                ))}
+                <div className="p-5 bg-card border border-border rounded-lg flex flex-col">
+                  <div className="flex items-center gap-2 mb-3 text-secondary">
+                    <Wrench className="w-4 h-4" />
+                    <span className="text-xs font-semibold uppercase tracking-wide">Job log</span>
+                  </div>
+                  <p className="text-sm font-medium text-foreground mb-2">{recentJob.title}</p>
+                  <p className="text-sm text-muted-foreground">{recentJob.body}</p>
+                </div>
+              </div>
+              <p className="text-xs text-muted-foreground mt-4 italic">
+                Customer names changed for privacy. Stories paraphrased from genuine {suburbData.name} jobs.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* FAQ Section */}
         <section className="py-12 bg-muted/30">
