@@ -19,7 +19,7 @@
     --popover-foreground: 210 40% 98%;
 
     /* Steel Blue - Primary */
-    --primary: 215 32% 55%;
+    --primary: 215 32% 45%;
     --primary-foreground: 210 40% 98%;
 
     /* Water Cyan - Secondary */
@@ -44,7 +44,7 @@
     --radius: 0.5rem;
 
     /* Custom gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(215 32% 55%), hsl(195 85% 55%));
+    --gradient-primary: linear-gradient(135deg, hsl(215 32% 45%), hsl(195 85% 55%));
     --gradient-gold: linear-gradient(135deg, hsl(42 90% 50%), hsl(38 95% 60%));
     --gradient-dark: linear-gradient(180deg, hsl(222 47% 11%), hsl(222 47% 8%));
 
