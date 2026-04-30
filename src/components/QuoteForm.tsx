@@ -335,7 +335,7 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
                     value={watch("callerType")}
                     onValueChange={(value) => setValue("callerType", value, { shouldValidate: true })}
                   >
-                    <SelectTrigger className="mt-1">
+                    <SelectTrigger className="mt-1" aria-label="I am a">
                       <SelectValue placeholder="Select your role" />
                     </SelectTrigger>
                     <SelectContent>
