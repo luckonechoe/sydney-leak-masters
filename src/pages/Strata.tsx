@@ -462,7 +462,11 @@ export default function Strata() {
                 for more answers.
               </p>
 
-              <Accordion type="single" collapsible className="w-full">
+              <Accordion
+                type="multiple"
+                defaultValue={strataFAQs.map((_, index) => `item-${index}`)}
+                className="w-full"
+              >
                 {strataFAQs.map((faq, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
                     <AccordionTrigger className="text-left text-foreground font-medium">
