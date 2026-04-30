@@ -654,3 +654,26 @@ export function getSuburbBySlug(slug: string): SuburbData | undefined {
 export function getAllSuburbSlugs(): string[] {
   return sydneySuburbs.map((suburb) => suburb.slug);
 }
+
+// Approximate geo coordinates (region centroids) used for per-suburb LocalBusiness/Service JSON-LD.
+// Precise enough to associate each suburb page with the correct local area in Google's Knowledge Graph.
+const regionGeo: Record<string, { latitude: number; longitude: number }> = {
+  "Eastern Suburbs": { latitude: -33.9173, longitude: 151.2589 },
+  "Inner Sydney": { latitude: -33.8836, longitude: 151.2099 },
+  "Inner West": { latitude: -33.8966, longitude: 151.1547 },
+  "Lower North Shore": { latitude: -33.8311, longitude: 151.2151 },
+  "Northern Sydney": { latitude: -33.8000, longitude: 151.1100 },
+  "Upper North Shore": { latitude: -33.7333, longitude: 151.1167 },
+  "Northern Beaches": { latitude: -33.7470, longitude: 151.2870 },
+  "North Shore": { latitude: -33.8000, longitude: 151.1833 },
+  "Hills District": { latitude: -33.7333, longitude: 150.9833 },
+  "Western Sydney": { latitude: -33.8150, longitude: 150.9990 },
+  "South Western Sydney": { latitude: -33.9200, longitude: 150.9300 },
+  "Macarthur": { latitude: -34.0700, longitude: 150.8200 },
+  "St George": { latitude: -33.9667, longitude: 151.1167 },
+  "Sutherland Shire": { latitude: -34.0333, longitude: 151.0667 },
+};
+
+export function getSuburbGeo(suburb: SuburbData): { latitude: number; longitude: number } {
+  return regionGeo[suburb.region] ?? { latitude: -33.8688, longitude: 151.2093 };
+}

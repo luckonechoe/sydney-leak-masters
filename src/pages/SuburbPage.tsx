@@ -7,8 +7,8 @@ import { CTAButton } from "@/components/CTAButton";
 import { WarrantyBadge } from "@/components/WarrantyBadge";
 import { ServiceCard } from "@/components/ServiceCard";
 import { QuoteForm } from "@/components/QuoteForm";
-import { SEOHead, ServiceSchema, Breadcrumbs, FAQSchema } from "@/components/seo";
-import { getSuburbBySlug, sydneySuburbs } from "@/lib/suburbs";
+import { SEOHead, ServiceSchema, Breadcrumbs, FAQSchema, LocalBusinessSchema } from "@/components/seo";
+import { getSuburbBySlug, getSuburbGeo, sydneySuburbs } from "@/lib/suburbs";
 
 interface SuburbPageProps {
   serviceType?: "shower" | "balcony";
@@ -85,22 +85,31 @@ export default function SuburbPage({ serviceType = "shower" }: SuburbPageProps) 
   // Service-area / map blurb content
   const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(`${suburbData.name} NSW ${suburbData.postcode}`)}&output=embed`;
 
+  const nearbyNamesList = nearbySuburbs.map((s) => s.name).join(", ") || suburbData.region;
   const suburbFAQs = [
     {
       question: `How much does a ${isShower ? 'shower' : 'balcony'} leak repair cost in ${suburbData.name}?`,
-      answer: `The cost of ${isShower ? 'shower' : 'balcony'} leak repairs in ${suburbData.name} depends on the size of the area, extent of damage, and repair method required. Most standard epoxy grout repairs start from $800. We provide free, no-obligation quotes so you know exactly what to expect.`,
+      answer: `The cost of ${isShower ? 'shower' : 'balcony'} leak repairs in ${suburbData.name} (${suburbData.postcode}) depends on the size of the wet area, extent of damage, and the repair method required. Most standard epoxy regrout jobs we complete in ${suburbData.name} start from around $800, with full re-waterproofing projects priced after an on-site inspection. Every ${suburbData.name} quote is free, written, and obligation-free.`,
     },
     {
       question: `Do you service ${suburbData.name} ${suburbData.postcode}?`,
-      answer: `Yes! We provide professional ${isShower ? 'shower' : 'balcony'} leak repair services throughout ${suburbData.name} (${suburbData.postcode}) and the wider ${suburbData.region} area. No travel fees apply.`,
+      answer: `Yes — ${suburbData.name} (${suburbData.postcode}) is one of our regular service areas in the ${suburbData.region}. Our technicians attend ${suburbData.name} weekly for ${isShower ? 'shower' : 'balcony'} leak repairs, with no call-out or travel fees applied to any job inside the suburb or surrounding ${suburbData.region} postcodes.`,
     },
     {
       question: `How quickly can you attend a leak in ${suburbData.name}?`,
-      answer: `We typically schedule inspections in ${suburbData.name} within 24–48 hours. Priority service is available for active leaks that are causing immediate water damage.`,
+      answer: `Most ${suburbData.name} inspections are booked within 24–48 hours of your call. Because we already work across ${suburbData.region} regularly, we can usually slot ${suburbData.name} jobs in the same week, and active leaks causing visible water damage are given priority on the next available run through ${suburbData.postcode}.`,
     },
     {
       question: `Can you fix a leaking ${isShower ? 'shower' : 'balcony'} in ${suburbData.name} without removing tiles?`,
-      answer: `In most cases, yes. Our epoxy regrouting and sealing process repairs ${isShower ? 'shower' : 'balcony'} leaks without removing any tiles — saving you time and money compared to a full renovation.`,
+      answer: `In the majority of ${suburbData.name} homes we visit, yes. Our epoxy regrouting and sealing process repairs ${isShower ? 'shower' : 'balcony'} leaks without lifting tiles — saving ${suburbData.name} homeowners thousands compared to a full bathroom or balcony renovation. If our on-site inspection finds drummy tiles or membrane failure, we'll explain the alternative options before any work starts.`,
+    },
+    {
+      question: `Is the 10-year warranty valid for jobs completed in ${suburbData.name}?`,
+      answer: `Yes. Every ${isShower ? 'shower' : 'balcony'} repair we complete in ${suburbData.name} ${suburbData.postcode} is covered by the same written 10-year warranty we provide across the ${suburbData.region} and Greater Sydney. If a sealed area starts leaking again within the warranty period, we return to ${suburbData.name} and rectify the issue at no additional cost.`,
+    },
+    {
+      question: `Which suburbs near ${suburbData.name} do you also cover?`,
+      answer: `Alongside ${suburbData.name}, we regularly service nearby ${suburbData.region} suburbs including ${nearbyNamesList}. If you're in a postcode adjacent to ${suburbData.postcode} we can almost always combine your ${isShower ? 'shower' : 'balcony'} inspection with another job in the area, which keeps response times fast and pricing competitive.`,
     },
   ];
 
@@ -128,6 +137,17 @@ export default function SuburbPage({ serviceType = "shower" }: SuburbPageProps) 
         name={`${serviceLabel} - ${suburbData.name} ${suburbData.postcode}`}
         description={`Professional ${serviceLabel.toLowerCase()} in ${suburbData.name}, ${suburbData.region}. ${suburbData.description}`}
         areaServed={`${suburbData.name}, ${suburbData.postcode}, NSW, Australia`}
+        url={canonicalUrl}
+        geo={getSuburbGeo(suburbData)}
+        postalCode={suburbData.postcode}
+      />
+      <LocalBusinessSchema
+        id={`${canonicalUrl}#localbusiness`}
+        description={`Sydney Sealed provides ${serviceLabel.toLowerCase()} in ${suburbData.name} (${suburbData.postcode}), ${suburbData.region}. Epoxy grout specialists with a 10-year written warranty.`}
+        areaServed={`${suburbData.name}, ${suburbData.region}, NSW`}
+        addressLocality={suburbData.name}
+        postalCode={suburbData.postcode}
+        geo={getSuburbGeo(suburbData)}
       />
       <FAQSchema faqs={suburbFAQs} />
 
