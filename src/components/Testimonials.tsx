@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Star, Quote } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -46,7 +46,7 @@ export function Testimonials({ className }: TestimonialsProps) {
   return (
     <div className={cn("grid grid-cols-1 md:grid-cols-3 gap-6", className)}>
       {testimonials.map((testimonial, index) => (
-        <motion.div
+        <m.div
           key={testimonial.id}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -91,7 +91,7 @@ export function Testimonials({ className }: TestimonialsProps) {
               {testimonial.service}
             </span>
           </div>
-        </motion.div>
+        </m.div>
       ))}
     </div>
   );
