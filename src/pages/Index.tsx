@@ -295,7 +295,7 @@ export default function Index() {
                     to="/preventative-maintenance"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground font-bold rounded-lg hover:bg-secondary/90 transition-colors"
                   >
-                    Learn More <ArrowRight className="w-4 h-4" />
+                    Learn About Preventative Maintenance <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
