@@ -154,6 +154,26 @@ const showerFAQs = [
     question: "What if my tiles are cracked or loose — can you still repair without removing them?",
     answer: "If tiles are cracked, loose, or hollow (drummy), a seal-only approach may not be sufficient. In these cases, we may recommend partial tile replacement and re-waterproofing to ensure a lasting result. Our inspection will identify exactly what's needed before any work begins.",
   },
+  {
+    question: "Do you repair leaking showers in Eastern Suburbs areas like Bondi, Coogee and Randwick?",
+    answer: "Yes — Bondi, Coogee, Randwick and the wider Eastern Suburbs are some of our most regular service areas. Coastal salt spray accelerates grout breakdown in these postcodes, so we use UV- and salt-tolerant epoxy systems specifically suited to Bondi, Coogee and Randwick bathrooms.",
+  },
+  {
+    question: "Can you fix a leaking shower in an Inner West terrace in suburbs like Marrickville or Newtown?",
+    answer: "Absolutely. Heritage terraces in Marrickville, Newtown, Leichhardt and the wider Inner West often have outdated waterproofing that no longer meets current Australian Standards. Our epoxy regrout process restores the seal in these older Marrickville and Newtown bathrooms without disturbing original tiles or character finishes.",
+  },
+  {
+    question: "How long does a shower repair take in a North Shore home in Chatswood, Lane Cove or Mosman?",
+    answer: "Most shower repairs in Chatswood, Lane Cove and Mosman are completed in a single day on site. We typically arrive in the morning, finish the epoxy regrout by mid-afternoon, and the shower is safe to use within 24 hours — minimising disruption for North Shore households.",
+  },
+  {
+    question: "Do you service Western Sydney suburbs like Parramatta, Westmead and Blacktown?",
+    answer: "Yes — Parramatta, Westmead, Blacktown and the broader Western Sydney area are covered with no travel fees. Clay-rich soils across Parramatta and Blacktown cause significant building movement, so we recommend our flexible epoxy systems for shower repairs in these Western Sydney postcodes.",
+  },
+  {
+    question: "Can you repair leaking showers in Hills District new builds in Kellyville or Bella Vista?",
+    answer: "Yes. Newer estates in Kellyville, Bella Vista, Castle Hill and Rouse Hill often develop construction-defect leaks within the first few years. Our technicians regularly attend Hills District properties to seal these early-life shower leaks before they cause structural damage.",
+  },
 ];
 
 export default function ShowerRepairs() {
