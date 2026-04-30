@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -284,7 +284,7 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
           <AnimatePresence mode="wait">
             {/* Step 1: Contact Details */}
             {currentStep === 1 && (
-              <motion.div
+              <m.div
                 key="step1"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -350,12 +350,12 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
                     <p className="text-destructive text-sm mt-1">{errors.callerType.message}</p>
                   )}
                 </div>
-              </motion.div>
+              </m.div>
             )}
 
             {/* Step 2: Property Info */}
             {currentStep === 2 && (
-              <motion.div
+              <m.div
                 key="step2"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -475,12 +475,12 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
                     rows={3}
                   />
                 </div>
-              </motion.div>
+              </m.div>
             )}
 
             {/* Step 3: File Upload */}
             {currentStep === 3 && (
-              <motion.div
+              <m.div
                 key="step3"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -538,12 +538,12 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
                     ))}
                   </div>
                 )}
-              </motion.div>
+              </m.div>
             )}
 
             {/* Step 4: Confirm */}
             {currentStep === 4 && (
-              <motion.div
+              <m.div
                 key="step4"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -589,7 +589,7 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
                     )}
                   </div>
                 </div>
-              </motion.div>
+              </m.div>
             )}
           </AnimatePresence>
         </div>
