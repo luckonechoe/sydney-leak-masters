@@ -5,6 +5,14 @@ interface LocalBusinessSchemaProps {
   email?: string;
   areaServed?: string;
   priceRange?: string;
+  /** Optional override for @id (used by suburb pages so each page has a unique business node). */
+  id?: string;
+  /** Optional locality override (suburb name). */
+  addressLocality?: string;
+  /** Optional postcode for the suburb. */
+  postalCode?: string;
+  /** Optional precise geo coordinates for the suburb. */
+  geo?: { latitude: number; longitude: number };
 }
 
 export function LocalBusinessSchema({
@@ -14,31 +22,36 @@ export function LocalBusinessSchema({
   email = "info@sydneysealed.com.au",
   areaServed = "Sydney, NSW, Australia",
   priceRange = "$$",
+  id = "https://sydneysealed.com.au",
+  addressLocality = "Sydney",
+  postalCode,
+  geo,
 }: LocalBusinessSchemaProps) {
-  const schema = {
+  const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://sydneysealed.com.au",
+    "@id": id,
     name,
     description,
     telephone,
     email,
     areaServed: {
-      "@type": "City",
+      "@type": "Place",
       name: areaServed,
     },
     priceRange,
     image: "https://sydneysealed.com.au/og-image.jpg",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Sydney",
+      addressLocality,
+      ...(postalCode ? { postalCode } : {}),
       addressRegion: "NSW",
       addressCountry: "AU",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -33.8688,
-      longitude: 151.2093,
+      latitude: geo?.latitude ?? -33.8688,
+      longitude: geo?.longitude ?? 151.2093,
     },
     openingHoursSpecification: [
       {
