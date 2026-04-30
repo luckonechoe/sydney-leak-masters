@@ -562,7 +562,7 @@ export const sydneySuburbs: SuburbData[] = [
     description: "Expert leak repair specialists in Roseville. Quality waterproofing for established family homes and heritage properties on the North Shore.",
   },
   {
-    slug: "castle-hill-north",
+    slug: "bella-vista",
     name: "Bella Vista",
     region: "Hills District",
     postcode: "2153",
