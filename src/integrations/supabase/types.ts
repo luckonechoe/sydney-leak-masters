@@ -14,7 +14,72 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      contact_submissions: {
+        Row: {
+          address: string | null
+          caller_type: string | null
+          created_at: string
+          description: string | null
+          email: string
+          id: string
+          media_urls: string[] | null
+          message: string | null
+          name: string
+          phone: string | null
+          preferred_contact_time: string | null
+          property_type: string | null
+          service_type: string | null
+          source: string
+          status: string
+          subject: string | null
+          suburb: string | null
+          updated_at: string
+          urgency: string | null
+        }
+        Insert: {
+          address?: string | null
+          caller_type?: string | null
+          created_at?: string
+          description?: string | null
+          email: string
+          id?: string
+          media_urls?: string[] | null
+          message?: string | null
+          name: string
+          phone?: string | null
+          preferred_contact_time?: string | null
+          property_type?: string | null
+          service_type?: string | null
+          source?: string
+          status?: string
+          subject?: string | null
+          suburb?: string | null
+          updated_at?: string
+          urgency?: string | null
+        }
+        Update: {
+          address?: string | null
+          caller_type?: string | null
+          created_at?: string
+          description?: string | null
+          email?: string
+          id?: string
+          media_urls?: string[] | null
+          message?: string | null
+          name?: string
+          phone?: string | null
+          preferred_contact_time?: string | null
+          property_type?: string | null
+          service_type?: string | null
+          source?: string
+          status?: string
+          subject?: string | null
+          suburb?: string | null
+          updated_at?: string
+          urgency?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
