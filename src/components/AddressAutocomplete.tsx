@@ -14,9 +14,14 @@ function loadGoogleMapsScript(): Promise<void> {
   if (mapsScriptPromise) return mapsScriptPromise;
 
   mapsScriptPromise = new Promise((resolve, reject) => {
+    const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+    if (!apiKey) {
+      mapsScriptPromise = null;
+      reject(new Error("Missing VITE_GOOGLE_MAPS_API_KEY"));
+      return;
+    }
     const script = document.createElement("script");
-    script.src =
-      "https://maps.googleapis.com/maps/api/js?key=AIzaSyBUkRDAOkJcR8EAz6DwnZJzUGc6_lvXpMY&libraries=places";
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places`;
     script.async = true;
     script.defer = true;
     script.onload = () => resolve();

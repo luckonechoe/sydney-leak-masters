@@ -79,12 +79,10 @@ Deno.serve(async (req) => {
       );
     }
 
-    const { data: { publicUrl } } = supabase.storage
-      .from("contact-uploads")
-      .getPublicUrl(fileName);
-
+    // Bucket is private — return the storage path. Admins generate signed
+    // URLs server-side when they need to view the file.
     return new Response(
-      JSON.stringify({ publicUrl }),
+      JSON.stringify({ path: fileName, bucket: "contact-uploads" }),
       { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   } catch (err) {

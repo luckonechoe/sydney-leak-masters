@@ -141,7 +141,8 @@ export default function Contact() {
         throw error;
       }
 
-      uploadedUrls.push(data.publicUrl);
+      // Bucket is private — store the storage path; admins generate signed URLs.
+      uploadedUrls.push(data.path);
     }
     
     return uploadedUrls;
