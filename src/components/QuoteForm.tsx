@@ -322,7 +322,7 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
                     id="phone"
                     type="tel"
                     {...register("phone")}
-                    placeholder="0400 000 000"
+                    placeholder="0466 532 444"
                     className="mt-1"
                   />
                   {errors.phone && (

@@ -12,8 +12,8 @@ interface CTAButtonProps {
   size?: "default" | "sm" | "lg";
 }
 
-const PHONE_NUMBER = "0400 000 000";
-const PHONE_HREF = "tel:+61400000000";
+const PHONE_NUMBER = "0466 532 444";
+const PHONE_HREF = "tel:+61466532444";
 
 export function CTAButton({ variant, to, children, className, size = "default" }: CTAButtonProps) {
   const isMobile = useIsMobile();

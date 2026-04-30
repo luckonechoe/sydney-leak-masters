@@ -611,11 +611,11 @@ export default function Strata() {
                   </h3>
                   <div className="space-y-3">
                     <a 
-                      href="tel:+61400000000" 
+                      href="tel:+61466532444" 
                       className="flex items-center gap-3 text-foreground hover:text-secondary transition-colors"
                     >
                       <Phone className="w-5 h-5 text-secondary" />
-                      Strata Priority Line: 0400 000 000
+                      Strata Priority Line: 0466 532 444
                     </a>
                     <a 
                       href="mailto:strata@sydneysealed.com.au"

@@ -1,19 +1,36 @@
-## Update Balcony Repairs hero image + SEO
+## Plan: llms.txt + Phone Number Update
 
-**Page:** `/services/balcony-repairs` (`src/pages/BalconyRepairs.tsx`)
+### 1. Add `public/llms.txt` (served at root, next to robots.txt)
 
-### Changes
+Use the uploaded llms.txt as the base, with these enhancements tailored to our actual site:
 
-1. **Add new image asset**
-   - Copy uploaded file to `src/assets/sydney-balcony-leak-repair-high-rise-epoxy-3.avif`.
+- **Add a "Markdown Mirrors / Plain-Text Sources" section** listing canonical `.md` style endpoints AI crawlers should look at — pointed at the live HTML pages for now (since SPA has no separate .md endpoints yet), each described as the authoritative source for that topic. This makes the file fully aligned with the "markdown mirrors" pattern even before we ship physical .md files.
+- **Replace the Suburbs section** with the actual current suburb list from `src/lib/suburbs.ts` (50+ suburbs, grouped by region) so each generated suburb URL is discoverable: e.g. `https://sydneysealed.com.au/leaking-shower-repairs/{slug}`.
+- **Add a "Key Guides & Blog Posts" section** listing every post in `public/sitemap.xml` (epoxy regrouting, signs of shower leak, balcony leak detection, waterproof membrane failure, etc.) with a one-line description each — gives LLMs a content map.
+- **Add a "Schema / Structured Data" note** confirming LocalBusiness, Service, FAQ, HowTo, Review, and Breadcrumb JSON-LD are present on relevant pages.
+- **Update Contact block** with real phone `0466 532 444` (`tel:+61466532444`).
+- **Update "Publishing Notes"** — remove the "0400 000 000 placeholder" reminder (no longer a placeholder), confirm sydneysealed.com.au as production.
+- Add `# llms.txt` reference to `public/robots.txt` so crawlers can find it (`Llms: https://sydneysealed.com.au/llms.txt` style hint as a comment + link).
 
-2. **Swap hero image import**
-   - Replace current import (`balcony-leak-specialists-sydney-harbour-view-2.avif`) with the new asset. Hero `<img>` already uses `balconyHeroImage`, so no JSX changes needed.
+### 2. Phone number replacement: `0400 000 000` → `0466 532 444`
 
-3. **Update SEO `<SEOHead>` title and description** to a more keyword-targeted pair:
-   - **Title:** `Sydney Balcony Leak Repairs | High-Rise Epoxy Waterproofing Experts`
-   - **Description:** `Sydney high-rise balcony leak repair specialists. Epoxy regrouting & waterproofing without removing tiles. Strata-approved with a 10-year warranty.`
+Replace in these files (display + tel: links, both formatted and E.164):
 
-### Notes
-- Image alt text on the hero `<img>` will be kept aligned with the new filename/SEO ("Sydney high-rise balcony leak repair using epoxy waterproofing").
-- No other content, schema, or layout changes.
+| File | Change |
+|---|---|
+| `src/components/CTAButton.tsx` | `PHONE_NUMBER = "0466 532 444"`, `PHONE_HREF = "tel:+61466532444"` |
+| `index.html` | JSON-LD `"telephone": "+61466532444"` |
+| `src/components/seo/LocalBusinessSchema.tsx` | default `telephone = "+61466532444"` |
+| `src/pages/FAQ.tsx` | 4 visible mentions of `0400 000 000` → `0466 532 444` |
+| `src/pages/Strata.tsx` | `tel:+61466532444` + `Strata Priority Line: 0466 532 444` |
+| `src/pages/Contact.tsx` | placeholder text `0466 532 444` |
+| `src/components/QuoteForm.tsx` | placeholder text `0466 532 444` |
+
+### 3. Verification pass
+
+After edits, grep the repo for any remaining `0400 000 000`, `400000000`, or `tel:+61400000000` and fix any stragglers.
+
+### Out of scope (not requested)
+
+- Generating actual `.md` mirror endpoints for every route (would require build-time pre-render or edge function — flag as separate follow-up).
+- Domain DNS/connection setup (handled by user in Lovable settings when ready).
