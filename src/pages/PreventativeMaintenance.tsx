@@ -477,7 +477,11 @@ export default function PreventativeMaintenance() {
             </motion.div>
 
             <div className="max-w-3xl mx-auto">
-              <Accordion type="single" collapsible className="space-y-4">
+              <Accordion
+                type="multiple"
+                defaultValue={faqs.map((_, idx) => `faq-${idx}`)}
+                className="space-y-4"
+              >
                 {faqs.map((faq, idx) => (
                   <AccordionItem
                     key={idx}
