@@ -484,7 +484,11 @@ export default function Index() {
               viewport={{ once: true }}
               className="max-w-3xl mx-auto"
             >
-              <Accordion type="single" collapsible className="w-full">
+              <Accordion
+                type="multiple"
+                defaultValue={homepageFaqs.map((_, index) => `faq-${index}`)}
+                className="w-full"
+              >
                 {homepageFaqs.map((faq, index) => (
                   <AccordionItem key={index} value={`faq-${index}`}>
                     <AccordionTrigger className="text-left text-base font-semibold text-foreground">
