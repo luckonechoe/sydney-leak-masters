@@ -36,12 +36,12 @@ export function CTAButton({ variant, to, children, className, size = "default" }
         size={size}
       >
         {isMobile ? (
-          <a href={PHONE_HREF} aria-label="Call us now">
+          <a href={PHONE_HREF}>
             <Phone className="w-4 h-4 mr-2" />
             {children || PHONE_NUMBER}
           </a>
         ) : (
-          <Link to="/contact" aria-label="Contact us for a free quote">
+          <Link to="/contact">
             <Phone className="w-4 h-4 mr-2" />
             {children || PHONE_NUMBER}
           </Link>
