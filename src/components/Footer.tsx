@@ -57,10 +57,10 @@ export function Footer() {
             </Link>
             
             <p className="text-muted-foreground mb-6 max-w-sm">
-              Sydney's trusted specialists in <Link to="/services/shower-repairs" className="text-secondary hover:underline">shower leak repairs</Link> and{" "}
-              <Link to="/services/balcony-repairs" className="text-secondary hover:underline">balcony waterproofing</Link>.{" "}
+              Sydney's trusted specialists in <Link to="/services/shower-repairs" className="text-secondary underline underline-offset-2">shower leak repairs</Link> and{" "}
+              <Link to="/services/balcony-repairs" className="text-secondary underline underline-offset-2">balcony waterproofing</Link>.{" "}
               Premium epoxy grout solutions with a 10-year warranty. Servicing{" "}
-              <Link to="/suburbs" className="text-secondary hover:underline">50+ Sydney suburbs</Link>.
+              <Link to="/suburbs" className="text-secondary underline underline-offset-2">50+ Sydney suburbs</Link>.
             </p>
             
             <WarrantyBadge size="sm" animated={false} className="mb-6" />
