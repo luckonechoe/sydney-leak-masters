@@ -508,7 +508,11 @@ export default function CompleteGuide() {
                 <h2 className="font-heading text-2xl lg:text-3xl font-bold text-foreground mb-6">
                   People Also Ask
                 </h2>
-                <Accordion type="single" collapsible className="space-y-3">
+                <Accordion
+                  type="multiple"
+                  defaultValue={pillarFaqs.map((_, index) => `faq-${index}`)}
+                  className="space-y-3"
+                >
                   {pillarFaqs.map((faq, index) => (
                     <AccordionItem
                       key={index}
