@@ -105,7 +105,7 @@ export default function Index() {
     <>
       <SEOHead
         title="Leaking Shower & Balcony Repairs Sydney | Sydney Sealed"
-        description="Stop shower & balcony leaks for good. Premium epoxy grout repairs, no tile removal, 10-year warranty. Free quotes across Greater Sydney."
+        description="Searching for shower or balcony leak repairs near you in Sydney? Sydney Sealed fixes leaks with epoxy grout — no tile removal, 10-year warranty, free on-site quotes across Greater Sydney."
         canonical="https://sydneysealed.com.au/"
         keywords="leaking shower repairs sydney, shower leak repair, balcony leak repairs sydney, epoxy regrouting sydney, waterproof sealing sydney, shower waterproofing, balcony waterproofing sydney"
         image={heroImage}
@@ -137,8 +137,10 @@ export default function Index() {
                 </h1>
                 
                 <p className="text-lg text-muted-foreground mb-8 max-w-xl leading-relaxed">
-                  Sydney Sealed specialises in permanent leak repairs using premium epoxy grout systems. 
-                  No tile removal. No unnecessary demolition. Just expert workmanship backed by a 10-Year Warranty.
+                  Looking for leaking shower or balcony repairs near you in Sydney? Sydney Sealed delivers permanent fixes
+                  using premium epoxy grout systems — no tile removal, no unnecessary demolition. Trusted by homeowners and
+                  strata managers across the Eastern Suburbs, North Shore, Inner West, and Greater Sydney, every job is
+                  backed by our 10-Year Warranty.
                 </p>
                 
                 {/* Trust Points */}
