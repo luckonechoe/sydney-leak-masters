@@ -709,7 +709,11 @@ export default function ShowerRepairs() {
                 </Link>.
               </p>
 
-              <Accordion type="single" collapsible className="w-full">
+              <Accordion
+                type="multiple"
+                defaultValue={showerFAQs.map((_, index) => `item-${index}`)}
+                className="w-full"
+              >
                 {showerFAQs.map((faq, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
                     <AccordionTrigger className="text-left text-foreground font-medium">

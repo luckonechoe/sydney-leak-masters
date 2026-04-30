@@ -4,7 +4,7 @@ import { ArrowRight, Shield, CheckCircle, AlertTriangle, Wrench, BookOpen, MapPi
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTAButton } from "@/components/CTAButton";
-import { SEOHead, Breadcrumbs, FAQSchema, ServiceSchema, ReviewSchema } from "@/components/seo";
+import { SEOHead, Breadcrumbs, FAQSchema, ServiceSchema, ReviewSchema, HowToSchema } from "@/components/seo";
 import {
   Accordion,
   AccordionContent,
@@ -110,6 +110,45 @@ export default function CompleteGuide() {
         canonical="https://sydneysealed.com.au/guides/complete-guide-leak-repairs-sydney"
       />
       <FAQSchema faqs={pillarFaqs} />
+      <HowToSchema
+        name="How to Inspect a Leaking Shower or Balcony in Sydney"
+        description="A professional six-step inspection process to identify the source, extent and best repair method for shower and balcony leaks in Sydney homes and strata buildings."
+        totalTime="PT2H"
+        estimatedCost={{ currency: "AUD", value: "0" }}
+        tool={[
+          "Calibrated moisture meter",
+          "Tile tap test rod",
+          "Drain plug for flood test",
+          "Torch and inspection mirror",
+        ]}
+        steps={[
+          {
+            name: "Visual assessment",
+            text: "Examine tiles, grout, silicone joints and visible surfaces for cracking, gaps, discolouration, efflorescence and signs of water damage.",
+            url: "https://sydneysealed.com.au/guides/complete-guide-leak-repairs-sydney#inspection",
+          },
+          {
+            name: "Moisture testing",
+            text: "Use a calibrated moisture meter to detect elevated moisture levels in walls, floors and ceilings adjacent to the suspected leak.",
+          },
+          {
+            name: "Tap testing",
+            text: "Lightly tap each tile to identify hollow or debonded areas — a hollow sound indicates the tile has lost its bond and water has penetrated below.",
+          },
+          {
+            name: "Flood testing",
+            text: "Where appropriate, block drains and fill the shower base or balcony with water for up to 24 hours to confirm the leak source.",
+          },
+          {
+            name: "Below-level inspection",
+            text: "Examine ceilings, walls and soffits below the suspected leak for water staining, dampness, peeling paint or active dripping.",
+          },
+          {
+            name: "Detailed report",
+            text: "Document findings, identify the leak source and recommend the most appropriate and cost-effective repair method with transparent pricing.",
+          },
+        ]}
+      />
       <ServiceSchema
         name="Shower & Balcony Leak Repair Services"
         description="Professional leaking shower repairs and balcony waterproofing across Sydney. Epoxy regrouting, membrane restoration, tile sealing. 10-year warranty."
@@ -469,7 +508,11 @@ export default function CompleteGuide() {
                 <h2 className="font-heading text-2xl lg:text-3xl font-bold text-foreground mb-6">
                   People Also Ask
                 </h2>
-                <Accordion type="single" collapsible className="space-y-3">
+                <Accordion
+                  type="multiple"
+                  defaultValue={pillarFaqs.map((_, index) => `faq-${index}`)}
+                  className="space-y-3"
+                >
                   {pillarFaqs.map((faq, index) => (
                     <AccordionItem
                       key={index}
