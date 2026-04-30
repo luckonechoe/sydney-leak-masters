@@ -9,3 +9,6 @@ Disallow: /admin/
 
 # Sitemap
 Sitemap: https://sydneysealed.com.au/sitemap.xml
+
+# AI / LLM crawler guidance (llms.txt convention)
+# https://sydneysealed.com.au/llms.txt

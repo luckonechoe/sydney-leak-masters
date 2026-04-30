@@ -81,7 +81,7 @@ const faqs: FAQItem[] = [
   {
     category: "Pricing & Quotes",
     question: "Do you offer payment plans?",
-    answer: "Get in touch with us directly on 0400 000 000 and we'll discuss what's possible based on the scope of your job.",
+    answer: "Get in touch with us directly on 0466 532 444 and we'll discuss what's possible based on the scope of your job.",
   },
 
   // ============ PROCESS & PREPARATION ============
@@ -182,7 +182,7 @@ const faqs: FAQItem[] = [
   {
     category: "Warranty & Guarantees",
     question: "How do I make a warranty claim?",
-    answer: "Just call us on 0400 000 000 or use the contact form. We'll book a return visit, inspect the area, and if it falls under the warranty we re-do the work at no cost to you.",
+    answer: "Just call us on 0466 532 444 or use the contact form. We'll book a return visit, inspect the area, and if it falls under the warranty we re-do the work at no cost to you.",
   },
   {
     category: "Warranty & Guarantees",
@@ -241,7 +241,7 @@ const faqs: FAQItem[] = [
   {
     category: "Service Area & Booking",
     question: "How quickly can you attend?",
-    answer: "We typically attend for inspections within 24–48 hours of your enquiry. Urgent jobs are prioritised — call us on 0400 000 000 if your leak is causing active damage.",
+    answer: "We typically attend for inspections within 24–48 hours of your enquiry. Urgent jobs are prioritised — call us on 0466 532 444 if your leak is causing active damage.",
   },
   {
     category: "Service Area & Booking",
@@ -251,7 +251,7 @@ const faqs: FAQItem[] = [
   {
     category: "Service Area & Booking",
     question: "Do you do emergency repairs?",
-    answer: "Yes, urgent leaks get priority booking. Call 0400 000 000 directly and explain the situation — if water is actively damaging your property, we'll do everything we can to attend the same day or next morning.",
+    answer: "Yes, urgent leaks get priority booking. Call 0466 532 444 directly and explain the situation — if water is actively damaging your property, we'll do everything we can to attend the same day or next morning.",
   },
   {
     category: "Service Area & Booking",

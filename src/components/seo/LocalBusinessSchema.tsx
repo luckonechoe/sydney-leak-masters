@@ -18,7 +18,7 @@ interface LocalBusinessSchemaProps {
 export function LocalBusinessSchema({
   name = "Sydney Sealed",
   description = "Sydney's trusted specialists in shower and balcony leak repairs. Premium epoxy grout solutions with a 10-year warranty.",
-  telephone = "+61400000000",
+  telephone = "+61466532444",
   email = "info@sydneysealed.com.au",
   areaServed = "Sydney, NSW, Australia",
   priceRange = "$$",
