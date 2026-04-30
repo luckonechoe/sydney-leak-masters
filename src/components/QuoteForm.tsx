@@ -368,7 +368,7 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
                     value={watch("propertyType")}
                     onValueChange={(value) => setValue("propertyType", value)}
                   >
-                    <SelectTrigger className="mt-1">
+                    <SelectTrigger className="mt-1" aria-label="Property Type">
                       <SelectValue placeholder="Select property type" />
                     </SelectTrigger>
                     <SelectContent>
@@ -399,7 +399,7 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
                     value={watch("issueType")}
                     onValueChange={(value) => setValue("issueType", value)}
                   >
-                    <SelectTrigger className="mt-1">
+                    <SelectTrigger className="mt-1" aria-label="Service Required">
                       <SelectValue placeholder="Select service type" />
                     </SelectTrigger>
                     <SelectContent>
@@ -436,7 +436,7 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
                     value={watch("urgency")}
                     onValueChange={(value) => setValue("urgency", value, { shouldValidate: true })}
                   >
-                    <SelectTrigger className="mt-1">
+                    <SelectTrigger className="mt-1" aria-label="How Urgent">
                       <SelectValue placeholder="Select urgency level" />
                     </SelectTrigger>
                     <SelectContent>
