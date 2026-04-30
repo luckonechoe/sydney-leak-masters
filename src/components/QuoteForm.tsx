@@ -195,7 +195,8 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
           { body: formData }
         );
         if (uploadError) throw uploadError;
-        if (uploadData?.publicUrl) mediaUrls.push(uploadData.publicUrl);
+        // Bucket is private — store the storage path; admins generate signed URLs.
+        if (uploadData?.path) mediaUrls.push(uploadData.path);
       }
 
       const serviceType =
