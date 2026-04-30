@@ -5,6 +5,12 @@ interface ServiceSchemaProps {
   areaServed?: string;
   price?: string;
   priceCurrency?: string;
+  /** Optional URL identifying the service page (used as @id for de-duplication). */
+  url?: string;
+  /** Optional precise geo coordinates of the served suburb. */
+  geo?: { latitude: number; longitude: number };
+  /** Optional postcode of the served suburb. */
+  postalCode?: string;
 }
 
 export function ServiceSchema({
@@ -14,6 +20,9 @@ export function ServiceSchema({
   areaServed = "Sydney, NSW, Australia",
   price,
   priceCurrency = "AUD",
+  url,
+  geo,
+  postalCode,
 }: ServiceSchemaProps) {
   const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -23,12 +32,33 @@ export function ServiceSchema({
     provider: {
       "@type": "LocalBusiness",
       name: provider,
+      ...(url ? { url } : {}),
     },
     areaServed: {
-      "@type": "City",
+      "@type": "Place",
       name: areaServed,
+      ...(geo
+        ? {
+            geo: {
+              "@type": "GeoCoordinates",
+              latitude: geo.latitude,
+              longitude: geo.longitude,
+            },
+          }
+        : {}),
+      ...(postalCode
+        ? {
+            address: {
+              "@type": "PostalAddress",
+              postalCode,
+              addressRegion: "NSW",
+              addressCountry: "AU",
+            },
+          }
+        : {}),
     },
     serviceType: "Home Repair",
+    ...(url ? { "@id": `${url}#service`, url } : {}),
   };
 
   if (price) {
