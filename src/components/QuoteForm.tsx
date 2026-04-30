@@ -556,7 +556,7 @@ export function QuoteForm({ className, onSuccess }: QuoteFormProps) {
                     value={watch("preferredTime")}
                     onValueChange={(value) => setValue("preferredTime", value)}
                   >
-                    <SelectTrigger className="mt-1">
+                    <SelectTrigger className="mt-1" aria-label="Preferred Contact Time">
                       <SelectValue placeholder="When should we call?" />
                     </SelectTrigger>
                     <SelectContent>
