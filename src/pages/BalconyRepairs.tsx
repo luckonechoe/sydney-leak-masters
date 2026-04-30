@@ -158,6 +158,26 @@ const balconyFAQs = [
     question: "How much does a leaking balcony repair cost in Sydney?",
     answer: "The cost depends on the size of the balcony, the extent of damage, and the repair method required. A seal-and-regrout approach is significantly more affordable than full membrane replacement. We provide obligation-free quotes so you can make an informed decision — no hidden costs or surprises.",
   },
+  {
+    question: "Do you repair high-rise balconies in CBD-fringe suburbs like Surry Hills, Darlinghurst and Woolloomooloo?",
+    answer: "Yes — we regularly attend high-rise apartment buildings in Surry Hills, Darlinghurst and Woolloomooloo. These inner-Sydney towers face heavy rainfall runoff and strong wind exposure, so we focus on perimeter seal failure and drainage detailing when repairing balconies in Surry Hills, Darlinghurst and Woolloomooloo apartments.",
+  },
+  {
+    question: "Can you waterproof balconies on coastal apartments in Bondi, Maroubra and Manly?",
+    answer: "Absolutely. Coastal balconies in Bondi, Maroubra, Manly and the Northern Beaches suffer accelerated membrane breakdown from constant salt spray and UV exposure. We use UV-stable, salt-resistant epoxy systems specifically chosen for Bondi, Maroubra and Manly oceanfront balconies.",
+  },
+  {
+    question: "How do you coordinate balcony repairs across strata buildings in Chatswood, St Leonards and North Sydney?",
+    answer: "For multi-unit strata buildings in Chatswood, St Leonards and North Sydney, we coordinate directly with the strata committee or building manager. We provide a written scope, staged access plan, and unit-by-unit progress reporting so that balcony repairs across Chatswood, St Leonards and North Sydney towers cause minimal disruption to residents.",
+  },
+  {
+    question: "Do you repair balcony leaks in Inner West suburbs like Marrickville, Leichhardt and Ashfield?",
+    answer: "Yes — Marrickville, Leichhardt and Ashfield are core Inner West service areas. Many balconies in these suburbs were added to original terraces or 1970s walk-up units and have outdated falls and detailing. We re-seal these Marrickville, Leichhardt and Ashfield balconies with epoxy regrout and perimeter membrane upgrades.",
+  },
+  {
+    question: "Can you waterproof balconies on new apartments in Parramatta, Westmead and Macquarie Park?",
+    answer: "Yes. Newer high-density developments in Parramatta, Westmead and Macquarie Park frequently develop early-life balcony leaks from construction defects. Our technicians regularly attend these towers to seal joints, repair grout and certify the work — extending the life of Parramatta, Westmead and Macquarie Park balconies before structural damage develops.",
+  },
 ];
 
 export default function BalconyRepairs() {
