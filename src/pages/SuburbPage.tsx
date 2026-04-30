@@ -85,24 +85,6 @@ export default function SuburbPage({ serviceType = "shower" }: SuburbPageProps) 
   // Service-area / map blurb content
   const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(`${suburbData.name} NSW ${suburbData.postcode}`)}&output=embed`;
 
-  const suburbFAQs = [
-    {
-      question: `How much does a ${isShower ? 'shower' : 'balcony'} leak repair cost in ${suburbData.name}?`,
-      answer: `The cost of ${isShower ? 'shower' : 'balcony'} leak repairs in ${suburbData.name} depends on the size of the area, extent of damage, and repair method required. Most standard epoxy grout repairs start from $800. We provide free, no-obligation quotes so you know exactly what to expect.`,
-    },
-    {
-      question: `Do you service ${suburbData.name} ${suburbData.postcode}?`,
-      answer: `Yes! We provide professional ${isShower ? 'shower' : 'balcony'} leak repair services throughout ${suburbData.name} (${suburbData.postcode}) and the wider ${suburbData.region} area. No travel fees apply.`,
-    },
-    {
-      question: `How quickly can you attend a leak in ${suburbData.name}?`,
-      answer: `We typically schedule inspections in ${suburbData.name} within 24–48 hours. Priority service is available for active leaks that are causing immediate water damage.`,
-    },
-    {
-      question: `Can you fix a leaking ${isShower ? 'shower' : 'balcony'} in ${suburbData.name} without removing tiles?`,
-      answer: `In most cases, yes. Our epoxy regrouting and sealing process repairs ${isShower ? 'shower' : 'balcony'} leaks without removing any tiles — saving you time and money compared to a full renovation.`,
-    },
-  ];
   const nearbyNamesList = nearbySuburbs.map((s) => s.name).join(", ") || suburbData.region;
   const suburbFAQs = [
     {
