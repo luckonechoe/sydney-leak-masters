@@ -10,73 +10,11 @@ export type Database = {
   // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
-    PostgrestVersion: "14.4"
+    PostgrestVersion: "14.5"
   }
   public: {
     Tables: {
-      contact_submissions: {
-        Row: {
-          address: string | null
-          caller_type: string | null
-          created_at: string
-          description: string | null
-          email: string
-          id: string
-          media_urls: string[] | null
-          message: string | null
-          name: string
-          phone: string | null
-          preferred_contact_time: string | null
-          property_type: string | null
-          service_type: string | null
-          source: string
-          status: string
-          subject: string | null
-          updated_at: string
-          urgency: string | null
-        }
-        Insert: {
-          address?: string | null
-          caller_type?: string | null
-          created_at?: string
-          description?: string | null
-          email: string
-          id?: string
-          media_urls?: string[] | null
-          message?: string | null
-          name: string
-          phone?: string | null
-          preferred_contact_time?: string | null
-          property_type?: string | null
-          service_type?: string | null
-          source?: string
-          status?: string
-          subject?: string | null
-          updated_at?: string
-          urgency?: string | null
-        }
-        Update: {
-          address?: string | null
-          caller_type?: string | null
-          created_at?: string
-          description?: string | null
-          email?: string
-          id?: string
-          media_urls?: string[] | null
-          message?: string | null
-          name?: string
-          phone?: string | null
-          preferred_contact_time?: string | null
-          property_type?: string | null
-          service_type?: string | null
-          source?: string
-          status?: string
-          subject?: string | null
-          updated_at?: string
-          urgency?: string | null
-        }
-        Relationships: []
-      }
+      [_ in never]: never
     }
     Views: {
       [_ in never]: never
